@@ -428,7 +428,7 @@ When reviewing content, ask:
 - [Value Trigger Chain](value-trigger-chain-guide.md) - Strategic context for content
 
 **Workflows:**
-- [Content Creation Workshop](../../workflows/shared/content-creation-workshop/content-creation-workshop-guide.md) - Using purpose in content generation
+- [Content Creation Workshop](../src/workflows/shared/content-creation-workshop/content-creation-workshop-guide.md) - Using purpose in content generation
 
 ---
 

@@ -35,10 +35,10 @@ Struggling with the business side of design? Feel uncomfortable talking about mo
 <https://whiteport.com/whiteport-design-studio/>
 
 Project Pitch Guide:
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/deliverables/project-pitch.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/deliverables/project-pitch.md>
 
 Service Agreement Templates:
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/deliverables/service-agreement.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/deliverables/service-agreement.md>
 
 UX-Design channel in the BMad Discord Community:
 <https://discord.gg/Pn63gAuX>
@@ -53,7 +53,7 @@ Next Module: Module 04 - Product Brief
 <https://youtu.be/yhKxkuLq1kQ>
 
 Full Course:
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/00-course-overview.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/00-course-overview.md>
 
 ✅ *When to Use This Module:*
 ✅ Consultant pitching to client

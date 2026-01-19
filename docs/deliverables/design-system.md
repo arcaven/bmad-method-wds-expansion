@@ -152,7 +152,7 @@ Freya the UX Designer will analyze your existing specs and guide the extraction 
 
 **Hands-on Tutorial:** [Module 09: Design System](../module-09-design-system/tutorial-09.md)
 
-**Workflow Reference:** [Design System Workflow](../../workflows/5-design-system/)
+**Workflow Reference:** [Design System Workflow](../src/workflows/5-design-system/)
 
 ---
 

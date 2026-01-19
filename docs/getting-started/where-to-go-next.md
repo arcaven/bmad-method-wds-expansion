@@ -125,8 +125,8 @@ Join the WDS community for:
 
 - [Course](../learn-wds/00-course-overview.md)
 - [Workflows](../wds-workflows-guide.md)
-- [Modular Architecture](../../workflows/4-ux-design/modular-architecture/00-MODULAR-ARCHITECTURE-GUIDE.md)
-- [Conceptual Specifications](../../workflows/4-ux-design/CONCEPTUAL-SPECIFICATIONS.md)
+- [Modular Architecture](../src/workflows/4-ux-design/modular-architecture/00-MODULAR-ARCHITECTURE-GUIDE.md)
+- [Conceptual Specifications](../src/workflows/4-ux-design/CONCEPTUAL-SPECIFICATIONS.md)
 
 ---
 

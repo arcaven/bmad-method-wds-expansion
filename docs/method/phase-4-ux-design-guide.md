@@ -107,7 +107,7 @@ If the prototype looks functional but not visually appealing (design system inco
 
 This iterative refinement enables you to build the design system organically as you create prototypes, rather than requiring a complete design system upfront.
 
-See: [Figma Integration](../../workflows/5-design-system/figma-integration/prototype-to-figma-workflow.md)
+See: [Figma Integration](../src/workflows/5-design-system/figma-integration/prototype-to-figma-workflow.md)
 
 ### 4E: PRD Update
 

@@ -157,7 +157,7 @@ Idunn the Technical Architect will analyze your specifications and guide the org
 
 **Hands-on Tutorial:** [Module 10: Design Delivery](../module-10-design-delivery/tutorial-10.md)
 
-**Workflow Reference:** [Design Delivery Workflow](../../workflows/6-design-deliveries/)
+**Workflow Reference:** [Design Delivery Workflow](../src/workflows/6-design-deliveries/)
 
 ---
 

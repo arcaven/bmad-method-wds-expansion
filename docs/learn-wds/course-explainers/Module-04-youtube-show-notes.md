@@ -51,7 +51,7 @@ Data & Privacy - Collection, storage, compliance
 <https://whiteport.com/whiteport-design-studio/>
 
 📖 *Tutorial 04:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/module-04-product-brief/tutorial-04.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/module-04-product-brief/tutorial-04.md>
 
 📖 *Project Brief Template:*
 <https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/workflows/1-project-brief/project-brief/complete/project-brief.template.md>
@@ -69,7 +69,7 @@ Data & Privacy - Collection, storage, compliance
 <https://youtu.be/xs_cRk-NoJk>
 
 📚 *Full Course:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/00-course-overview.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/00-course-overview.md>
 
 ⚡ *The WDS Advantage*
 

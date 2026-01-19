@@ -255,7 +255,7 @@ DD-XXX for everything (instead of DD-XXX + SU-XXX) reduced complexity while main
 ## Related Resources
 
 - **WDS Method Guides:** `../../method/`
-- **WDS Workflows:** `../../../workflows/`
+- **WDS Workflows:** `../../src/workflows/`
 - **Other Examples:** `../` (WDS Presentation, etc.)
 - **Course Materials:** `../../learn-wds/`
 

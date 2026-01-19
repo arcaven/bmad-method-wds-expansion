@@ -63,7 +63,7 @@ Sound familiar? This 6-minute guided walkthrough takes you from complete beginne
 <https://www.youtube.com/watch?v=TKjOLlU8UCE>
 
 📚 *Full Course:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/00-course-overview.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/00-course-overview.md>
 
 ✅ *Next Steps:*
 1. Complete the 4-lesson setup (follow along!)

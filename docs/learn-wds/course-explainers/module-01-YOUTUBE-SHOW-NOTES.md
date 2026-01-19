@@ -35,7 +35,7 @@ This 30-minute deep dive explores why designers are irreplaceable in the AI era 
 <https://whiteport.com/whiteport-design-studio/>
 
 🛠️ *Installation Guide:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/getting-started/installation.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/getting-started/installation.md>
 
 📚 *Linchpin Book by Seth Godin:*
 <https://www.amazon.com/Linchpin-Are-You-Indispensable-ebook/dp/B00354Y9ZU>
@@ -53,7 +53,7 @@ This 30-minute deep dive explores why designers are irreplaceable in the AI era 
 <https://www.youtube.com/watch?v=tYifpxFVVks>
 
 📚 *Full Course:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/00-course-overview.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/00-course-overview.md>
 
 ✅ *Next Steps:*
 1. Complete the three written lessons (30 min)

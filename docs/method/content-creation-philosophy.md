@@ -303,7 +303,7 @@ Which resonates with your brand voice?"
 - [Badass Users](../models/kathy-sierra-badass-users.md) - How to make users feel capable
 
 **Workshop:**
-- [Content Creation Workshop](../../workflows/shared/content-creation-workshop/content-creation-workshop-guide.md) - The systematic process
+- [Content Creation Workshop](../src/workflows/shared/content-creation-workshop/content-creation-workshop-guide.md) - The systematic process
 
 ---
 

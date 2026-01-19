@@ -452,8 +452,8 @@ Does your tone still work, or does it feel inappropriate?
 
 **Related WDS Guides:**
 - [Content Purpose Guide](content-purpose-guide.md) - For strategic content
-- [Content Creation Workshop](../../workflows/shared/content-creation-workshop/content-creation-workshop-guide.md) - For headlines/features
-- [Product Brief Workflow](../../workflows/1-project-brief/) - Where ToV is defined
+- [Content Creation Workshop](../src/workflows/shared/content-creation-workshop/content-creation-workshop-guide.md) - For headlines/features
+- [Product Brief Workflow](../src/workflows/1-project-brief/) - Where ToV is defined
 
 **External Resources:**
 - Mailchimp's Voice & Tone Guide

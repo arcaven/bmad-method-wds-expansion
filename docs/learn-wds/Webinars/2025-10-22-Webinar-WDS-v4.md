@@ -154,10 +154,10 @@ https://github.com/whiteport-collective/whiteport-design-studio
 
 📖 Learn More About WDS
 WDS Presentation Page - Discover how WDS transforms designers into strategic leaders in the AI era
-https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/examples/WDS-Presentation/docs/4-scenarios/1.1-wds-presentation/1.1-wds-presentation.md
+https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/examples/WDS-Presentation/docs/4-scenarios/1.1-wds-presentation/1.1-wds-presentation.md
 
 WDS Course Overview - Complete learning path from designer to linchpin, master the full methodology
-https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/00-course-overview.md
+https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/00-course-overview.md
 
 🛠️ Foundation & Related Tools
 BMAD Method - The open-source AI-augmented development framework that powers WDS

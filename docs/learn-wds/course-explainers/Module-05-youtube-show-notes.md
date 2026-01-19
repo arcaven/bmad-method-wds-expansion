@@ -27,13 +27,13 @@ Visual one-page Trigger Map connecting:
 <https://whiteport.com/whiteport-design-studio/>
 
 📖 *Module 05 Overview:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/module-05-trigger-mapping/module-05-overview.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/module-05-trigger-mapping/module-05-overview.md>
 
 📖 *Tutorial 05:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/module-05-trigger-mapping/tutorial-05.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/module-05-trigger-mapping/tutorial-05.md>
 
 📖 *Trigger Mapping Guide:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/method/phase-2-trigger-mapping-guide.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/method/phase-2-trigger-mapping-guide.md>
 
 💬 *UX-Design channel in the BMad Discord Community:*
 <https://discord.gg/Pn63gAuX>
@@ -47,7 +47,7 @@ Visual one-page Trigger Map connecting:
 ▶️ *Next Module:* Module 06 - Scenarios (Coming Soon)
 
 📚 *Full Course:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/00-course-overview.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/00-course-overview.md>
 
 ⚡ Key Insight
 

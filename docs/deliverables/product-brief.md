@@ -129,7 +129,7 @@ Saga the Analyst will begin the conversation and guide you through the process.
 
 **Hands-on Tutorial:** [Module 04: Project Brief](../module-04-project-brief/tutorial-04.md)
 
-**Workflow Reference:** [Project Brief Workflow](../../workflows/1-project-brief/)
+**Workflow Reference:** [Project Brief Workflow](../src/workflows/1-project-brief/)
 
 ---
 

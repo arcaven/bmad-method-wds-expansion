@@ -33,16 +33,16 @@ Standing at a crossroads? This 15-minute video explores the most important choic
 *Four Core Deliverables:*
 • Product Brief • Trigger Map • Scenario Specifications • Design System Foundation
 
-📚 Course Resources
+ Course Resources
 
-🌊 *WDS Presentation:*
+ *WDS Presentation:*
 <https://whiteport.com/whiteport-design-studio/>
 
  Installation Guide:
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/getting-started/installation.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/getting-started/installation.md>
 
  Quick Start:
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/getting-started/quick-start.md>
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/getting-started/quick-start.md>
 
  UX-Design channel in the BMad Discord Community:
 <https://discord.gg/Pn63gAuX>
@@ -53,10 +53,10 @@ Standing at a crossroads? This 15-minute video explores the most important choic
  Next Module: Module 01 - Why WDS Matters
 <https://www.youtube.com/watch?v=Xhw5JB7mpxw>
 
-📚 *Full Course:*
-<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/src/modules/wds/docs/learn-wds/00-course-overview.md>
+ *Full Course:*
+<https://github.com/whiteport-collective/whiteport-design-studio/blob/main/docs/learn-wds/00-course-overview.md>
 
-✅ *Next Steps:*
+ *Next Steps:*
 1. Watch Module 01
 2. Download an IDE (Cursor, VS Code, Windsurf)
 3. Install WDS

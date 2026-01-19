@@ -589,7 +589,7 @@ BMM workflows take over for testing, iteration, and ongoing development.
 ## Next Steps
 
 **Want to learn more?**
-- Review the [Design Delivery Workflow](../../workflows/6-design-deliveries/) for advanced topics
+- Review the [Design Delivery Workflow](../src/workflows/6-design-deliveries/) for advanced topics
 - Explore BMM (BMAD Management Method) for ongoing development
 
 **Start a new project?**

@@ -151,7 +151,7 @@ Idunn the Technical Architect will begin the conversation and guide you through 
 
 **Hands-on Tutorial:** [Module 06: Platform Architecture](../module-06-platform-architecture/tutorial-06.md)
 
-**Workflow Reference:** [Platform PRD Workflow](../../workflows/3-prd-platform/)
+**Workflow Reference:** [Platform PRD Workflow](../src/workflows/3-prd-platform/)
 
 ---
 
