@@ -25,7 +25,33 @@ Before you write any specification, ask:
 
 ---
 
-## Purpose-Based Naming
+## Object ID Structure & Hierarchy
+
+**Object IDs follow a consistent hierarchical pattern**
+
+### Structural Object IDs (Containers)
+These define the page architecture and visual grouping:
+
+- `{page-name}-page` - Top-level page wrapper
+- `{page-name}-header` - Header section container
+- `{page-name}-main` - Main content area
+- `{page-name}-form` - Form element wrapper
+- `{page-name}-{section}-section` - Section containers
+- `{page-name}-{section}-header-bar` - Section header bars
+
+**Purpose:** Organize page structure, enable Figma layer naming, support testing selectors
+
+### Interactive Object IDs (Components)
+These identify specific interactive elements:
+
+- `{page-name}-{section}-{element}` - Standard pattern
+- `{page-name}-input-{field}` - Form inputs
+- `{page-name}-button-{action}` - Buttons
+- `{page-name}-error-{field}` - Error messages
+
+**Purpose:** Enable user interaction, form validation, accessibility
+
+### Purpose-Based Naming
 
 **Name components by FUNCTION, not CONTENT**
 
@@ -46,6 +72,7 @@ Before you write any specification, ask:
 - Makes specs maintainable
 - Helps developers understand intent
 - Enables component reuse
+- Supports Figma html.to.design layer naming
 
 ---
 
@@ -87,13 +114,25 @@ Before you write any specification, ask:
 5. Start over
 
 ### Right Approach (Top-Down)
-1. **Identify page sections** - What major areas exist?
-2. **Define section purposes** - Why does each section exist?
-3. **Confirm flow logic** - Does the story make sense?
-4. **Detail each section** - Now design components
-5. **Specify components** - With clear purpose and context
+1. **Define structural containers** - Page, header, main, sections
+2. **Assign structural Object IDs** - `{page}-page`, `{page}-header`, etc.
+3. **Identify page sections** - What major areas exist?
+4. **Define section purposes** - Why does each section exist?
+5. **Confirm flow logic** - Does the story make sense?
+6. **Detail each section** - Now design components
+7. **Specify components** - With clear purpose and context
+8. **Assign interactive Object IDs** - `{page}-{section}-{element}`
 
-**Result:** Logical flow, no gaps, confident specifications
+**Result:** Logical flow, no gaps, confident specifications, complete Object ID coverage
+
+### Object ID Coverage Checklist
+- [ ] Page container (`{page}-page`)
+- [ ] Header section (`{page}-header`)
+- [ ] Main content area (`{page}-main`)
+- [ ] Form container if applicable (`{page}-form`)
+- [ ] Section containers (`{page}-{section}-section`)
+- [ ] Section header bars if visible (`{page}-{section}-header-bar`)
+- [ ] All interactive elements (`{page}-{section}-{element}`)
 
 ---
 
@@ -129,9 +168,13 @@ Before marking a spec "complete":
 - [ ] **Purpose-Based Names** - Named by function, not content?
 - [ ] **Clear Purpose** - Every component has a job description?
 - [ ] **Section-First** - Whole page flows logically?
+- [ ] **Structural Object IDs** - Page, header, main, sections all have IDs?
+- [ ] **Interactive Object IDs** - All buttons, inputs, links have IDs?
+- [ ] **Object ID Hierarchy** - IDs follow `{page}-{section}-{element}` pattern?
 - [ ] **Multi-Language** - All product languages included?
 - [ ] **No Hand-Waving** - No "probably" or "maybe" or "users will figure it out"?
 - [ ] **Developer-Ready** - Could someone build this confidently?
+- [ ] **Figma-Ready** - Object IDs support html.to.design layer naming?
 
 ---
 

@@ -47,6 +47,55 @@
 
 ---
 
+## Structural Object IDs
+
+### Page Container
+**OBJECT ID:** `{page-name}-page`  
+**Component:** Main page wrapper  
+**Purpose:** Top-level container for the entire page  
+**HTML Implementation:** `<div id="{page-name}-page">`  
+**Style:** {Full viewport height, background color, etc.}
+
+### Navigation Header Section
+**OBJECT ID:** `{page-name}-header`  
+**Component:** Header section container  
+**Purpose:** Contains navigation, title, and header elements  
+**HTML Implementation:** `<header id="{page-name}-header">`  
+**Style:** {Background, border, padding, etc.}
+
+### Main Content Area
+**OBJECT ID:** `{page-name}-main`  
+**Component:** Main content container  
+**Purpose:** Contains primary page content and sections  
+**HTML Implementation:** `<main id="{page-name}-main">`  
+**Style:** {Max-width, centering, padding, etc.}
+
+{#if has_form}
+### Form Container
+**OBJECT ID:** `{page-name}-form`  
+**Component:** Form element  
+**Purpose:** Groups all input fields and form controls  
+**HTML Implementation:** `<form id="{page-name}-form">`  
+**Behavior:** Handles form submission and validation
+{/if}
+
+{#if has_sections}
+### {Section Name} Section
+**OBJECT ID:** `{page-name}-{section-name}-section`  
+**Component:** Section container  
+**Purpose:** Groups related content and components  
+**HTML Implementation:** `<section id="{page-name}-{section-name}-section">`  
+**Style:** {Background, borders, spacing, etc.}
+
+#### Section Header Bar (if applicable)
+**OBJECT ID:** `{page-name}-{section-name}-header-bar`  
+**Component:** Header container with background  
+**Purpose:** Visual grouping header for section  
+**Style:** {Background color, padding, layout}
+{/if}
+
+---
+
 ## Components & Object IDs
 
 ### {Component Name 1}
