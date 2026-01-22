@@ -1,18 +1,6 @@
-# Step 03: Generate Persona Documents
+# Persona Document Template
 
-**Goal:** Create detailed persona profiles for each target user group
-
----
-
-## Purpose
-
-For EACH persona (Primary, Secondary, Tertiary), create a comprehensive document with:
-- Rich background and context
-- Current situation and challenges
-- Psychological profile
-- Complete driving forces (6 total: 3 wants, 3 fears)
-- Transformation journey
-- Strategic role and impact
+This template provides the comprehensive structure for generating detailed persona documents from trigger map data.
 
 ---
 
@@ -40,8 +28,8 @@ For EACH persona (Primary, Secondary, Tertiary), create a comprehensive document
 
 > [Priority] target - [One-line role in flywheel]
 
-**Priority:** [PRIMARY 🎓 / SECONDARY 💼 / TERTIARY 🏠]  
-**Role in Flywheel:** [How they contribute to goals]  
+**Priority:** [PRIMARY 🎓 / SECONDARY 💼 / TERTIARY 🏠]
+**Role in Flywheel:** [How they contribute to goals]
 **Created:** [Date]
 ```
 
@@ -68,7 +56,7 @@ For EACH persona (Primary, Secondary, Tertiary), create a comprehensive document
 
 "[Detailed prompt for AI image generation - include age, gender, profession, setting, emotional state, visual style, technical details like lighting and composition]"
 
-**Example:** 
+**Example:**
 "Professional headshot photograph of a 34-year-old Scandinavian female designer, shoulder-length blonde hair, sitting at modern desk with laptop, looking contemplative and slightly stressed, natural lighting, shallow depth of field, professional business casual attire, tech startup office background, photorealistic style, 4K quality"
 
 **Prompt Components:**
@@ -476,7 +464,7 @@ _Back to [Trigger Map](00-trigger-map.md)_
 
 **Length:** Each persona should be ~250-375 lines
 
-**Tone:** 
+**Tone:**
 - Rich, nuanced, human
 - Not "converting" but "creating awesome"
 - Natural language, storytelling
@@ -495,42 +483,3 @@ _Back to [Trigger Map](00-trigger-map.md)_
 - Show how personas interconnect
 - Explain the loop/flywheel
 - Make relationships clear
-
----
-
-## Generation Order
-
-1. **PRIMARY persona FIRST** (most detail, transformation)
-2. **SECONDARY persona SECOND** (validation focus)
-3. **TERTIARY persona THIRD** (benefits focus, optional)
-
----
-
-## Examples
-
-See:
-- `examples/WDS-Presentation/docs/2-trigger-map/02-Stina-the-Strategist.md` (PRIMARY - 282 lines)
-- `examples/WDS-Presentation/docs/2-trigger-map/03-Lars-the-Leader.md` (SECONDARY - 316 lines)
-- `examples/WDS-Presentation/docs/2-trigger-map/04-Felix-the-Full-Stack.md` (TERTIARY - 375 lines)
-
----
-
-## Output
-
-<output>✅ All persona documents created!</output>
-
-Store as:
-- `02-[Name]-the-[Role].md` (Primary)
-- `03-[Name]-the-[Role].md` (Secondary)
-- `04-[Name]-the-[Role].md` (Tertiary, if exists)
-
----
-
-## Next Step
-
-<output>Ready for Step 4: Generate Key Insights Document</output>
-
-<action>Load and execute: step-04-generate-key-insights.md</action>
-
-Do NOT skip ahead.
-

@@ -81,7 +81,7 @@
 - **35 substeps** organized into 6 phase folders
 
 **Step Files** (main workflow steps):
-- `src/modules/wds/workflows/1-project-brief/alignment-signoff/steps/step-01-start.md` (references substeps)
+- `src/modules/wds/workflows/1-project-brief/alignment-signoff/steps-c/step-01-start.md` (references substeps)
 
 **Workflow Phases** (organized in subfolders):
 1. **Start & Understand** (`01-start-understand/`) - substeps 01-05
