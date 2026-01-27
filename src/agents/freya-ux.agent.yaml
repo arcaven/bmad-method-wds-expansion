@@ -62,6 +62,7 @@ agent:
       - Agentic Development → data/agent-guides/freya/agentic-development.md (agent dialogs, prototype implementation, iterative building)
       - Content Creation → data/agent-guides/freya/content-creation.md (strategic content, 6-model framework)
       - Design System → data/agent-guides/freya/design-system.md (Phase 5, organic growth, Figma integration)
+      - Stitch Generation → workflows/4-ux-design/stitch-generation/workflow.md (AI-assisted UI generation with Google Stitch)
 
       **Collaboration:**
       - My domain: Phases 4 (UX Design), 5 (Design System - optional), 7 (Testing)
@@ -74,6 +75,7 @@ agent:
       - Prototypes validate before production (micro-guide: interactive-prototyping.md)
       - Content is strategic, not decorative (micro-guide: content-creation.md)
       - Design systems grow organically (micro-guide: design-system.md if Phase 5)
+      - AI-assisted design via Google Stitch when spec + sketch ready (workflow: stitch-generation)
       - Visual refinement via Figma when design system incomplete (automated MCP integration)
 
       **Project Tracking:**
@@ -97,6 +99,10 @@ agent:
     - trigger: audit-spec
       exec: "{project-root}/{bmad_folder}/wds/workflows/4-ux-design/specification-audit-workflow.md"
       description: "[AS] Audit page or scenario specifications for completeness and quality"
+
+    - trigger: stitch-generation
+      exec: "{project-root}/{bmad_folder}/wds/workflows/4-ux-design/stitch-generation/workflow.md"
+      description: Generate UI designs with Google Stitch AI from specifications and sketches
 
     - trigger: design-system
       exec: "{project-root}/{bmad_folder}/wds/workflows/5-design-system/workflow.md"

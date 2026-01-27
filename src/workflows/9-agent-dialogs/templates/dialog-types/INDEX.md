@@ -21,6 +21,7 @@ docs/F-Agent-Dialogs/
 | Type | Icon | Template | Use When |
 |------|------|----------|----------|
 | **Prototype Implementation** | 🔧 | [prototype-implementation.template.md](prototype-implementation.template.md) | Building UI from specifications |
+| **Stitch UI Generation** | 🪡 | [stitch-generation.template.md](stitch-generation.template.md) | AI-assisted UI design with Google Stitch |
 | **Bug Fix** | 🐛 | [bug-fix.template.md](bug-fix.template.md) | Fixing issues and defects |
 | **Design Exploration** | 🎨 | [design-exploration.template.md](design-exploration.template.md) | Exploring visual/UX directions |
 | **Capture** | 💾 | [../dialog-capture.template.md](../dialog-capture.template.md) | Saving ideas for later |
@@ -41,6 +42,25 @@ docs/F-Agent-Dialogs/
 - Specification summary with Object IDs
 - Section-by-section approval flow
 - Design system component mapping
+
+---
+
+### 🪡 Stitch UI Generation
+
+**Best for:**
+- Generating UI designs from specifications using Google Stitch AI
+- Rapid visual design iteration
+- Creating production-quality screens from sketches
+
+**Key sections:**
+- Input formula: Visual Reference + Sketch + Specification
+- Screen-by-screen generation tracking
+- Export and integration workflow
+
+**Input Formula:**
+```
+Visual Reference + Sketch + Specification (as prompt) = Stitch Generation
+```
 
 ---
 
@@ -104,7 +124,9 @@ docs/F-Agent-Dialogs/
 ```
 Start here:
     │
-    ├── Building from spec? → 🔧 Prototype Implementation
+    ├── Building code from spec? → 🔧 Prototype Implementation
+    │
+    ├── Generating UI designs with AI? → 🪡 Stitch UI Generation
     │
     ├── Fixing something broken? → 🐛 Bug Fix
     │
