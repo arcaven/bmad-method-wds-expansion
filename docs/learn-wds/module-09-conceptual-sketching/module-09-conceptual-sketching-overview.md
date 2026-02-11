@@ -1,6 +1,6 @@
 # Module 09: Conceptual Sketching
 
-**Time: 45 min | Agent: Freya | Phase: Design**
+**Time: 45 min | Agent: Freya | Phase: Design | Focus: UX**
 
 ---
 
@@ -62,6 +62,25 @@ You don't have to start from scratch.
 
 ---
 
+## The Collaborative Workflow
+
+Working with Freya, you can take two paths:
+
+**Path A: Already Sketched**
+1. Sketch on paper or tablet
+2. Share photo with Freya
+3. Get strategic feedback connected to your personas
+
+**Path B: Not Yet Sketched**
+1. Discuss the page with Freya
+2. Explore options together
+3. Sketch based on discussion
+4. Share for feedback
+
+Either way, the sketch becomes the thinking tool.
+
+---
+
 ## Ways to Visualize
 
 You can send anything visual. All methods work. Use them interchangeably within a scenario or storyboard.
@@ -109,7 +128,7 @@ No matter how cool your concept — you still create a specification. That's wha
 
 ## The Freya Method
 
-Freya helps you explore visually:
+Freya helps you explore visually while staying connected to strategy:
 
 > "Based on Felix's fear of complicated signups, what's the simplest layout?"
 > "Here are 3 approaches — which resonates with your trigger map?"
@@ -139,7 +158,7 @@ At this stage, don't worry about:
 - Exact spacing (too early)
 - Animations (too early)
 
-Those come in Visual Design (Module 13).
+Those come in Visual Design (Module 14).
 
 ---
 
@@ -160,12 +179,6 @@ Whatever method you use, these patterns communicate clearly.
 │   [ CTA Button ]    │
 └─────────────────────┘
 ```
-
-### Annotation
-
-Add notes explaining WHY:
-- "CTA prominent because Felix wants to try quickly"
-- "Minimal fields to reduce friction"
 
 ### Variants
 
@@ -190,8 +203,9 @@ Not polished. Not pretty. Just clear enough to:
 |---------|-----|
 | Too polished | Keep it rough |
 | Only one idea | Explore 3 variants |
-| Skipping annotation | Add the WHY |
 | Designing in isolation | Reference your scenario |
+| Starting with edge cases | Focus on default state |
+| Including colors/typography | Save for Module 14 |
 
 ---
 
@@ -201,8 +215,17 @@ Take one scenario from Module 08:
 
 1. Identify the key logical views
 2. Visualize each one (use any entry point)
-3. Annotate with WHY
+3. Explore variants
 4. Discuss with Freya
+
+---
+
+## Learn More
+
+- **[Lesson 1: Visualize First](lesson-01-visualize-first.md)** — Why seeing comes before specifying
+- **[Lesson 2: Sketching Techniques](lesson-02-sketching-techniques.md)** — Practical methods for all visualization approaches
+- **[Lesson 3: Why Hand Sketching is Still King](lesson-03-why-hand-sketching.md)** — The case for paper and tablet in the AI era
+- **[Tutorial: Sketch Your Views](tutorial-09.md)** — Hands-on practice with Freya
 
 ---
 

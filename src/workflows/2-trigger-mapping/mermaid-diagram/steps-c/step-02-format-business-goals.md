@@ -25,33 +25,33 @@ BGX["<br/>EMOJI TITLE<br/><br/>Point 1<br/>Point 2<br/>Point 3<br/><br/>"]
 
 ---
 
-### 2. Choose Appropriate Emoji and Highlight PRIMARY GOAL
+### 2. Choose Appropriate Emoji for Each Goal
 
-**PRIMARY GOAL (BG0) - THE ENGINE:**
-- ⭐ Use star emoji for PRIMARY GOAL
-- Title format: `⭐ PRIMARY GOAL: [TITLE]`
-- Include "THE ENGINE" as subtitle
-- This will get gold highlighting in styling step
-
-**Secondary & Tertiary Goals:**
+**Emoji Selection Based on Goal Theme:**
+- 💰 Revenue/Profitability/Business Success
+- 😊 Customer Satisfaction/Happiness
+- ⚡ Efficiency/Speed/Productivity
 - 🚀 Growth/Expansion/Adoption
 - 🌟 Community/Opportunities
 - 📊 Objectives/Metrics
-- 💰 Revenue/Business
-- 🤝 Partnerships/Community
+- 🤝 Partnerships/Relationships
 - 🎯 Goals/Targets
+
+**Note:** All business goals use consistent styling. Priority is indicated by vertical order (BG0 → BG1 → BG2), not by special formatting.
 
 ---
 
 ### 3. Example Implementation
 
 ```mermaid
-BG0["<br/>⭐ PRIMARY GOAL: 50 BETA CHAMPIONS<br/><br/>THE ENGINE<br/>50 power users who love the product<br/>Active in community + gave feedback<br/>Naturally recommend to others<br/>Timeline: 6 months<br/><br/>"]
+BG0["<br/>💰 Become More Profitable<br/><br/>20% profit margin<br/>10% revenue growth<br/>Page 1 ranking<br/><br/>"]
 
-BG1["<br/>🚀 USER GROWTH GOALS<br/><br/>5,000 active monthly users<br/>500 paying subscribers<br/>200 business accounts<br/>1,000 community members<br/>Timeline: 12 months<br/><br/>"]
+BG1["<br/>😊 Get Happier Customers<br/><br/>4.8+ Google rating<br/>70% repeat rate<br/>Year-round quality<br/><br/>"]
 
-BG2["<br/>🌟 COMMUNITY VALUE<br/><br/>25 user success stories<br/>100 testimonials published<br/>10 community meetups<br/>User-generated content<br/>Timeline: 12 months<br/><br/>"]
+BG2["<br/>⚡ Work Smarter<br/><br/>40% fewer calls<br/>70% self-service<br/>Work-life balance<br/><br/>"]
 ```
+
+**Note:** BG0 is listed first (top priority), then BG1, then BG2. Priority is indicated by order, not by special styling.
 
 ---
 

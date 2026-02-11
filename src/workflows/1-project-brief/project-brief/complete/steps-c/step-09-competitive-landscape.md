@@ -16,6 +16,21 @@ This step identifies competitive positioning and unique value proposition.
 
 Guide user to understand alternatives including direct competitors, different approaches, manual solutions, or doing nothing. For each alternative, explore strengths, weaknesses, and why users might choose them. Help identify their unfair advantage.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After analyzing competitive landscape, proceed to step-09-constraints.md

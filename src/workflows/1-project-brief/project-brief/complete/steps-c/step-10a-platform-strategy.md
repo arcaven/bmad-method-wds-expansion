@@ -41,6 +41,21 @@ Guide user to define their platform strategy by asking about primary platform ch
 
 Capture platform strategy, validate alignment with vision and constraints, and document in Product Brief under "Platform & Device Strategy" section including primary platform, supported devices, device priority with rationale, interaction models, technical requirements (offline, native features), platform rationale, constraints considered, future plans, and design/development implications.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After capturing platform strategy, proceed to step-11-tone-of-voice.md

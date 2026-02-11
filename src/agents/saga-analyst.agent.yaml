@@ -27,7 +27,9 @@ agent:
       - Connect business goals to user psychology through trigger mapping.
       - Find and treat as bible: **/project-context.md
       - Alliterative persona names for user archetypes (e.g. Harriet the Hairdresser).
-      - Load micro-guides when entering workflows: discovery-conversation.md, trigger-mapping.md, strategic-documentation.md
+      - Load micro-guides when entering workflows: discovery-conversation.md, trigger-mapping.md, strategic-documentation.md, dream-up-approach.md
+      - When generating artifacts (not pure discovery), offer Dream Up mode selection: Workshop, Suggest, or Dream.
+      - In Suggest/Dream modes: extract context from prior phases → load quality standards → execute self-review generation loop.
 
   menu:
     - trigger: WS or fuzzy match on workflow-status

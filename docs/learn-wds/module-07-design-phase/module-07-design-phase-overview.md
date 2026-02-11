@@ -1,6 +1,6 @@
 # Module 07: The Design Phase
 
-**Time: 20 min | Agent: Freya | Phase: Design**
+**Time: 20 min | Agent: Freya | Phase: Design | Focus: Overview**
 
 ---
 
@@ -8,8 +8,8 @@
 
 You've completed Strategy. You have:
 - A Project Brief (your North Star)
-- A Trigger Map (user psychology mapped)
 - Platform Requirements (your boundaries)
+- A Trigger Map (user psychology mapped)
 
 Now it's time to design.
 
@@ -17,18 +17,18 @@ Now it's time to design.
 
 ## What This Phase Contains
 
-9 modules. This is where creative discipline becomes real.
+8 modules covering UX design and visual design. This is where creative discipline becomes real.
 
-| Module | What You'll Do |
-|--------|---------------|
-| 08 | Outline Scenarios |
-| 09 | Conceptual Sketching |
-| 10 | Storyboarding |
-| 11 | Conceptual Specifications |
-| 12 | Functional Interface Components |
-| 13 | Visual Design |
-| 14 | Design System Modes |
-| 15 | Design Delivery |
+| Module | What You'll Do | Focus |
+|--------|---------------|-------|
+| 08 | Outline Scenarios | UX |
+| 09 | Conceptual Sketching | UX |
+| 10 | Storyboarding | UX |
+| 11 | Conceptual Specifications | UX |
+| 12 | Functional Components | UX |
+| 13 | Visual Design | Visual |
+| 14 | Design System | Systems |
+| 15 | Design Delivery | Delivery |
 
 ---
 
@@ -98,7 +98,7 @@ By the end of this phase:
 
 ---
 
-## Design System Modes
+## Design System
 
 Remember from setup:
 

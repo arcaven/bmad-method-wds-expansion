@@ -83,6 +83,21 @@ VTC is saved but NOT yet added to brief document.
 > 
 > Let's continue with the detailed discovery!"
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 Load, read full file, and execute: `step-05-business-model.md`

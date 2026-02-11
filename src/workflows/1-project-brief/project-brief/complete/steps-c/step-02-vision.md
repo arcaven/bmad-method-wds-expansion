@@ -29,6 +29,21 @@ This step captures the high-level, aspirational direction that will guide all de
    - Help crystallize into a clear vision statement
    - Use collaborative language: "What I'm hearing is..." or "It sounds like..."
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After capturing vision, proceed to step-03-positioning.md

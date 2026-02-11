@@ -5,111 +5,112 @@
 
 <workflow>
 
-<step n="1" goal="Welcome and determine approach">
-<output>Hi {user_name}! I'm Saga, and I'll facilitate your **Trigger Mapping** session.
+<step n="1" goal="Offer engagement mode">
+<output>**Phase 2: Trigger Mapping**
 
-Trigger Mapping connects your business goals to user psychology. It answers:
+Connect business goals to user psychology. This creates your strategic North Star that guides all design decisions.
 
-- **Why** will users engage with your product?
-- **What** motivates them (positive drivers)?
-- **What** do they want to avoid (negative drivers)?
-- **Which** features matter most?
+**We'll create:** Business Goals → Target Groups → Driving Forces → Prioritization</output>
 
-WDS offers **three approaches** depending on your situation:</output>
+<ask>**How do you want to create it?**
 
-<ask>**Which path fits your situation?**
+[W] **Workshop** - I facilitate, you provide insights (45-60 min)
+[S] **Suggest** - I suggest, you review after each step (20-35 min)
+[D] **Dream** - I create all steps autonomously, you review final result (15-25 min)</ask>
 
-1. **Starting from scratch** - Build your Trigger Map through guided workshops (60-90 min)
-   - No existing documentation
-   - We'll discover everything together
-   - Full strategic foundation
+<check if="mode == W">
+  <output>Workshop Mode selected.</output>
+  <ask>Run all 4 workshops now, or one at a time?
 
-2. **Quick validation** - Create a focused Value Trigger Chain (15-20 min)
-   - Single user journey
-   - No measurable goals
-   - Fast strategic check
-   - Lightweight version
+  [A] All now (45-60 min)
+  [O] One at a time</ask>
 
-3. **Existing documentation** - Synthesize your research into a Trigger Map (30-45 min)
-   - You have vision docs, user research, plans, or interviews
-   - I'll extract and organize the strategic elements
-   - Create actionable artifact from extensive documentation
-
-Which approach would you like?</ask>
-
-<check if="choice == 1">
-  <output>Great! We'll build your complete Trigger Map through 4 core workshops, plus 1 optional:
-
-1. **Business Goals** - Vision → Strategic objectives
-2. **Target Groups** - Who are your key users?
-3. **Driving Forces** - What motivates and concerns them?
-4. **Prioritization** - What matters most?
-5. **Feature Impact** (Optional) - Which features serve priorities best?
-
-Each workshop builds on the previous. You can run them all together (60-90 min) or spread across sessions.</output>
-  
-  <ask>Would you like to:
-  
-  a. **Full session** - All 4 core workshops now (Feature Impact optional at end)
-  b. **Workshop by workshop** - Start with Business Goals, continue later
-  c. **Jump to specific workshop** - If you've done some already</ask>
-  
-  <check if="subchoice == a">
+  <check if="subchoice == A">
     <action>Proceed through all workshops sequentially</action>
   </check>
-  
-  <check if="subchoice == b">
+
+  <check if="subchoice == O">
     <action>Run Workshop 1, then offer to save and continue later</action>
   </check>
-  
-  <check if="subchoice == c">
-    <ask>Which workshop?
-    1. Business Goals
-    2. Target Groups
-    3. Driving Forces
-    4. Prioritization
-    5. Feature Impact</ask>
-    <action>Jump to selected workshop</action>
+</check>
+
+<check if="mode == S or mode == D">
+    <output>{{mode}} selected. I'll generate the Trigger Map using WDS methodology + Product Brief + domain research.</output>
+
+    <action>Load dream-up-approach.md micro-guide</action>
+    <action>Inform user: "I'm creating an agent dialog to track my learning, research, generation, and self-review process."</action>
+    <action>Create agent dialog using ../../templates/dream-up-agent-dialog.template.md at {output_folder}/progress/agent-dialogs/{date}-trigger-map-{{mode}}.md</action>
+
+    <action>Execute Layer 1: Learn WDS Form (Static - loaded once)
+      - Read docs/method/phase-2-trigger-mapping-guide.md
+      - Read docs/quick-start/02-trigger-mapping.md
+      - Read src/data/agent-guides/saga/trigger-mapping.md
+      - Read docs/models/impact-effect-mapping.md
+      - Read docs/method/dream-up-rubric-phase-2.md
+      - Internalize: Structure, quality criteria, common mistakes, best practices
+      - Document in agent dialog "Layer 1: WDS Form Learned" section
+    </action>
+
+    <action>Execute Layer 2: Project Context (Initial load, grows with each step)
+      - Read {output_folder}/A-Product-Brief/product-brief.md
+      - Read {output_folder}/A-Product-Brief/content-language.md
+      - Read {output_folder}/A-Product-Brief/platform-requirements.md
+      - Read {output_folder}/A-Product-Brief/visual-direction.md
+      - Extract: business context, user archetypes, constraints, strategic direction
+      - Document in agent dialog "Layer 2: Project Context (Initial)" section
+      - NOTE: Layer 2 grows cumulatively - add Business Goals, Target Groups, Driving Forces, Prioritization as created
+    </action>
+
+    <action>For EACH step (Business Goals, Target Groups, Driving Forces, Prioritization):
+
+      Execute Layer 3: Domain Research (per step)
+        - WebSearch relevant to current step
+        - Example: "car mechanic rural tourist area customer types"
+        - Look for industry insights, user reviews, behavioral patterns
+        - Document findings in agent dialog "Layer 3: Domain Research - [Step]" section
+
+      Execute Layer 4: Generate
+        - Apply WDS Form (Layer 1)
+        - Use ALL Project Context (Layer 2 cumulative)
+        - Enhanced by Domain Research (Layer 3)
+        - Create this step's artifact
+
+      Execute Layer 5: Self-Review
+        - Check against rubric (completeness, quality, mistakes, practices)
+        - Calculate quality score
+        - Identify gaps if any
+        - Document in agent dialog "Generation & Self-Review - [Step] - Iteration N"
+
+      If gaps exist:
+        - Create refinement plan
+        - Regenerate (max 5 iterations per step)
+
+      If mode == S (Suggest):
+        - Show user: What created, Learning/Research applied, Self-review results
+        - Wait for user approval/feedback before continuing
+
+      If mode == D (Dream):
+        - Show progress update
+        - Continue autonomously
+
+      When step threshold met:
+        - Add to Layer 2 (cumulative context for next step)
+        - Proceed to next step
+
+      If 5 iterations without threshold:
+        - Offer to switch to Workshop Mode for this step
+    </action>
+
+    <action>When all steps complete:
+      - Assemble complete trigger-map.md at {output_folder}/B-Trigger-Map/trigger-map.md
+      - Create persona documents if needed
+      - Create mermaid diagram if generated
+      - Present final output to user
+      - Update agent dialog with final output section
+    </action>
+
+    <action>Skip to handover after generation complete</action>
   </check>
-</check>
-
-<check if="choice == 2">
-  <output>Perfect! We'll create a **Value Trigger Chain** - a focused, lightweight version.
-
-This takes 15-20 minutes and creates one clear path:
-- ONE strategic objective
-- ONE primary user
-- ONE key driver (usually negative, as it's often most powerful)
-- Clear connection from goal to psychology
-
-This is ideal for quick validation or focused features.</output>
-  
-  <action>Load and execute VTC workflow: ../../shared/vtc-workshop/instructions.md</action>
-  <action>Skip to handover after VTC complete</action>
-</check>
-
-<check if="choice == 3">
-  <output>Excellent! Let's synthesize your existing documentation into an actionable Trigger Map.
-
-This approach:
-- Extracts strategic elements from your docs
-- Organizes into clear Trigger Map structure
-- Identifies gaps and validates assumptions
-- Creates single-slide reference from hundreds of pages
-
-Much more useful for daily design work than reading through extensive documentation!</output>
-  
-  <ask>**What documentation do you have?** You can share:
-
-- Vision or strategy documents
-- User research or target group analysis
-- Interview transcripts or research reports
-- Project plans or roadmaps
-- Any combination of the above
-
-Please share what you have (paste content, upload files, or describe what's available).</ask>
-  
-  <action>Load and execute documentation synthesis workflow: workshops/0-documentation-synthesis/instructions.md</action>
 </check>
 </step>
 

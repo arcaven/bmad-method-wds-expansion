@@ -100,10 +100,46 @@ You have some code but unsure of the approach:
 
 ---
 
+## ASK ALIGNMENT REQUIREMENT
+
+<ask>
+**Do you need stakeholder approval before starting?**
+
+---
+
+**[A] No — Ready to start**
+
+You have approval, this is your own project, or it's an informal agreement.
+→ *Continue to project configuration*
+
+---
+
+**[B] Yes — Need to pitch/create agreement**
+
+You need to present this to stakeholders, create a proposal, or establish a contract before starting the product work.
+→ *Route to Alignment & Signoff workflow*
+→ *Includes: Pitch document, VTC, Service Agreement*
+
+---
+
+**Your choice (A or B):**
+</ask>
+
+---
+
 ## ROUTING
 
 <action>
-Based on user response:
+Based on user responses:
+
+**If alignment = [B] Need to pitch:**
+1. Confirm: "Let's create your pitch and alignment documents first."
+2. Route to: `{project-root}/{bmad_folder}/wds/workflows/1-project-brief/alignment-signoff/workflow.md`
+3. After alignment complete → Return here for project configuration
+
+**If alignment = [A] Ready to start:**
+
+Based on project type:
 
 **If [A] NEW Product:**
 1. Confirm: "Great! You'll follow Phases 1-7 to build your product."

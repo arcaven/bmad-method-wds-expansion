@@ -90,22 +90,22 @@ Each module contains:
 | Module | Title | Agent | Time |
 |--------|-------|-------|------|
 | 04 | [Project Brief](../module-04-product-brief/module-04-overview.md) | Saga | 60 min |
-| 05 | [Trigger Mapping](../module-05-trigger-mapping/module-05-overview.md) | Saga | 60 min |
-| 06 | [Platform Requirements](../module-06-platform-requirements/module-06-platform-requirements-overview.md) | Saga | 30 min |
+| 05 | [Platform Requirements](../module-05-platform-requirements/module-05-platform-requirements-overview.md) | Saga | 30 min |
+| 06 | [Trigger Mapping](../module-06-trigger-mapping/module-06-overview.md) | Saga | 60 min |
 
-### UX & Visual Design Phase (Modules 7-15) — Agent: Freya
+### Design Phase (Modules 7-15) — Agent: Freya
 
-| Module | Title | Agent | Time |
+| Module | Title | Focus | Time |
 |--------|-------|-------|------|
-| 07 | [Design Phase Introduction](../module-07-design-phase/module-07-design-phase-overview.md) | Freya | 15 min |
-| 08 | [Outline Scenarios](../module-08-outline-scenarios/module-08-outline-scenarios-overview.md) | Freya | 30 min |
-| 09 | [Conceptual Sketching](../module-09-conceptual-sketching/module-09-conceptual-sketching-overview.md) | Freya | 60 min |
-| 10 | [Storyboarding](../module-10-storyboarding/module-10-storyboarding-overview.md) | Freya | 45 min |
-| 11 | [Conceptual Specifications](../module-11-conceptual-specifications/module-11-conceptual-specifications-overview.md) | Freya | 60 min |
-| 12 | [Functional Interface Components](../module-12-functional-interface-components/module-12-functional-interface-components-overview.md) | Freya | 45 min |
-| 13 | [Visual Design](../module-13-visual-design/module-13-visual-design-overview.md) | Freya | 60 min |
-| 14 | [Design System Modes](../module-14-design-system-modes/module-14-design-system-modes-overview.md) | Freya | 30 min |
-| 15 | [Design Delivery](../module-15-design-delivery/module-15-design-delivery-overview.md) | Freya | 45 min |
+| 07 | [Design Phase Introduction](../module-07-design-phase/module-07-design-phase-overview.md) | Overview | 15 min |
+| 08 | [Outline Scenarios](../module-08-outline-scenarios/module-08-outline-scenarios-overview.md) | UX | 30 min |
+| 09 | [Conceptual Sketching](../module-09-conceptual-sketching/module-09-conceptual-sketching-overview.md) | UX | 60 min |
+| 10 | [Storyboarding](../module-10-storyboarding/module-10-storyboarding-overview.md) | UX | 45 min |
+| 11 | [Conceptual Specifications](../module-11-conceptual-specifications/module-11-conceptual-specifications-overview.md) | UX | 60 min |
+| 12 | [Functional Components](../module-12-functional-components/module-12-functional-components-overview.md) | UX | 45 min |
+| 13 | [Design System](../module-13-design-system/module-13-design-system-overview.md) | Systems | 30 min |
+| 14 | [Visual Design](../module-14-visual-design/module-14-visual-design-overview.md) | Visual | 60 min |
+| 15 | [Design Delivery](../module-15-design-delivery/module-15-design-delivery-overview.md) | Delivery | 45 min |
 
 ### Implementation Phase (Modules 16-18) — Agent: Idunn
 

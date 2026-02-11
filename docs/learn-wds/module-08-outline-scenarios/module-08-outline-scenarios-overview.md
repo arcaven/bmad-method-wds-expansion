@@ -1,6 +1,6 @@
 # Module 08: Outline Scenarios
 
-**Time: 30 min | Agent: Freya | Phase: Design**
+**Time: 30 min | Agent: Freya | Phase: Design | Focus: UX**
 
 ---
 
@@ -74,6 +74,8 @@ When elements **transform** within a single logical view — that's a storyboard
 | **Storyboard** | Elements within a view change | Button loading → success animation |
 
 This module focuses on **scenarios** — the journey between views.
+
+**You'll learn storyboarding in Module 10.** For now, focus on mapping the linear flow between screens. The detailed state transformations within each screen come later.
 
 ---
 

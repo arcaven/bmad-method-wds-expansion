@@ -173,9 +173,9 @@ You see the document building in real-time:
 
 **How it works:**
 
-**SMART Goal Validation:**
+**Applying the SMART Model:**
 - You: "We want to increase engagement"
-- Saga: "Let's make that measurable - by how much and by when?"
+- Saga: "Let's make that measurable using SMART - by how much and by when?"
 - You: "40% increase in daily active users within 3 months"
 - Saga: "Perfect - that's specific, measurable, and time-bound"
 

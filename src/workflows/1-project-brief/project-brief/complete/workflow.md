@@ -45,6 +45,64 @@ This uses **step-file architecture** for disciplined execution:
 
 ---
 
+## AGENT DIALOG INTEGRATION
+
+This workflow creates and maintains an **agent dialog** to track the conversation and decisions.
+
+### Purpose
+
+Agent dialogs provide:
+- Full conversation history (questions asked, answers given)
+- Context for resuming if interrupted
+- Documentation of "why" behind decisions
+- Audit trail for future reference
+- Handoff context for next workflow phases
+
+### On Workflow Start (Before Step 1)
+
+**1. Create agent dialog file:**
+```
+Location: {output_folder}/progress/agent-dialogs/{date}-product-brief.md
+Template: {project-root}/{bmad_folder}/wds/templates/agent-dialog.template.md
+```
+
+**2. Initialize with:**
+- **Workflow:** Phase 1 - Product Brief (Complete)
+- **Project:** {project_name}
+- **Status:** in_progress
+- **Context:** "Creating comprehensive product brief through collaborative discovery"
+- **Plan:** List the 12 steps to be completed
+
+**3. Inform user:**
+> "I'm creating an agent dialog to track our conversation. This helps us resume if interrupted and documents decisions."
+
+### During Each Step
+
+After completing each step's work and before loading the next step, update the agent dialog with:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Any important revelations or decisions]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
+### On Workflow Complete
+
+**1. Update agent dialog:**
+- Status: `complete`
+- Last Updated: timestamp
+- Mark all sections complete in Progress Status
+- List final artifact in Generated Artifacts
+
+**2. Note what's next:**
+- "Ready for Content & Language, Platform Requirements, and Visual Direction workflows"
+
+---
+
 ## INITIALIZATION SEQUENCE
 
 ### 1. Configuration Loading
@@ -53,7 +111,11 @@ Load and read full config from {project-root}/{bmad_folder}/wds/config.yaml and 
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`, `user_skill_level`
 
-### 2. First Step EXECUTION
+### 2. Agent Dialog Creation
+
+Create agent dialog file following the AGENT DIALOG INTEGRATION instructions above.
+
+### 3. First Step EXECUTION
 
 Load, read full file and then execute `{project-root}/{bmad_folder}/wds/workflows/1-project-brief/project-brief/complete/steps-c/step-01-init.md` to begin workflow.
 

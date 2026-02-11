@@ -1,6 +1,6 @@
 # Module 15: Design Delivery
 
-**Time: 45 min | Agent: Freya | Phase: Design**
+**Time: 45 min | Agent: Freya | Phase: Design | Focus: Delivery**
 
 ---
 

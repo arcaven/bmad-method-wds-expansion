@@ -22,6 +22,21 @@ This workflow establishes the strategic foundation by exploring:
 
 Welcome the user and explain that this is their strategic foundation. Set time expectations (30-60 minutes) and ask about any existing context that should be considered.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 When user confirms readiness, proceed to step-02-vision.md

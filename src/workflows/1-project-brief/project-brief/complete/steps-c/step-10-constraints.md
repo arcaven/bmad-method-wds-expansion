@@ -16,6 +16,21 @@ This step identifies real-world limitations and additional context.
 
 Guide user to identify constraints including timeline, budget, technical requirements, brand guidelines, regulatory needs, and integration requirements. Also ask for additional context like company stage, team capabilities, market conditions, or past attempts.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After capturing constraints, proceed to step-10a-platform-strategy.md

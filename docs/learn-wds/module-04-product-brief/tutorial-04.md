@@ -90,7 +90,7 @@ Specific, measurable objectives that define project success from a business pers
 
 ### How to do it:
 
-**Framework: SMART Goals**
+**Framework: The SMART Model**
 
 - **S**pecific - Clear and unambiguous
 - **M**easurable - Can track progress
@@ -120,7 +120,7 @@ List 3-5 business goals:
 **AI Support:**
 
 ```
-Agent: "Let's make these goals SMART. For each goal, I'll help you:
+Agent: "Let's express these goals using the SMART model. For each goal, I'll help you:
 - Make it specific and measurable
 - Set realistic targets
 - Define timeframes"
@@ -294,7 +294,7 @@ Define your success criteria:
 **Completeness:**
 
 - ✓ Vision is clear and compelling
-- ✓ Goals are SMART
+- ✓ Goals are expressed using the SMART model
 - ✓ All stakeholder groups identified
 - ✓ Constraints documented
 - ✓ Success criteria defined

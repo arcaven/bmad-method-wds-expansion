@@ -16,6 +16,21 @@ This step establishes measurable outcomes that indicate success.
 
 Guide user to define metrics and outcomes that indicate success. Help them think about user behavior, business outcomes, experience quality, and timeline. Work with them to make criteria SMART (Specific, Measurable, Achievable, Relevant, Time-bound).
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After defining success criteria, proceed to step-08-competitive-landscape.md

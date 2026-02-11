@@ -16,8 +16,7 @@ This workflow creates a visual trigger map with four-layer horizontal structure:
 4. **Usage Goals** (Right) - Positive (✅ green) and Negative (❌ red) drivers separated
 
 **Visual Features:**
-- Light gray professional styling
-- Gold-highlighted primary goal
+- Light gray professional styling (consistent for all business goals)
 - Emoji-decorated nodes
 - Clear left-to-right flow showing strategic connections
 

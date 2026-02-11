@@ -91,6 +91,21 @@ This VTC provides quick strategic reference and will inform all design decisions
 > 
 > Product Brief is now complete!"
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 Workflow complete. Update state and present completion.

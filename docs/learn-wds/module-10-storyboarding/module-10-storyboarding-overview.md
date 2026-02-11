@@ -1,6 +1,6 @@
 # Module 10: Storyboarding
 
-**Time: 45 min | Agent: Freya | Phase: Design**
+**Time: 45 min | Agent: Freya | Phase: Design | Focus: UX**
 
 ---
 
@@ -25,6 +25,43 @@ A scenario is the journey **across** pages.
 
 A storyboard is the transformation **within** a page.
 
+Think of it like a film: scenarios are scene changes, storyboards are what happens in each scene.
+
+---
+
+## The Comic Strip Analogy
+
+Think of storyboarding like a comic strip for your interface.
+
+```
+┌────────────────────────┐
+│  [Logo]      [Nav]     │     ┌──────────────────────────────────────────────┐
+├────────────────────────┤     │ SIGNUP FORM - STATE TRANSFORMATIONS          │
+│                        │     ├──────────────────────────────────────────────┤
+│   Hero Section         │     │                                              │
+│                        │     │  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐     │
+├────────────────────────┤     │  │  1   │  │  2   │  │  3   │  │  4   │     │
+│ ┌──────────────────┐   │ ──► │  │      │  │      │  │      │  │      │     │
+│ │                  │   │     │  │[btn] │  │ ...  │  │  ✓   │  │  🎉  │     │
+│ │   Signup Form    │◄──┼─┐   │  │      │  │      │  │      │  │      │     │
+│ │  (Focus area)    │   │ │   │  └──────┘  └──────┘  └──────┘  └──────┘     │
+│ └──────────────────┘   │ │   │   Click      Loading   Success   Celebrate  │
+│                        │ │   │   Button     State     Message   Animation   │
+├────────────────────────┤ │   │                                              │
+│   Footer               │ │   └──────────────────────────────────────────────┘
+└────────────────────────┘ │
+    Full Page              │
+    (Default State)        └─── Same section, 4 keyframes showing transformation
+```
+
+**The page stays the same. One section transforms.**
+
+Like a comic strip, each frame shows what changes:
+1. **Default** — User sees the button
+2. **Loading** — Button becomes spinner
+3. **Success** — Checkmark appears
+4. **Celebration** — Confetti animation
+
 ---
 
 ## The Default State
@@ -41,32 +78,32 @@ What happens next is the storyboard.
 
 ## What Storyboards Capture
 
-### Interactions
+Storyboards document **complex, non-standard transformations**:
 
-User does something. Element responds.
+### Async Operations
+- Form submission → Loading → Success/Error
+- Data fetching → Skeleton screens → Content
+- File upload → Progress → Complete
 
-- Button pressed → Loading spinner appears
-- Input focused → Placeholder fades, label moves
-- Accordion clicked → Content expands
-- Drag initiated → Element follows cursor
+### User Interactions (Complex)
+- Accordion expand/collapse with animation
+- Modal dialogs opening and closing
+- Multi-step wizards with validation
+- Searchable/filterable dropdowns
 
-### Animations
+### Animations (Custom)
+- Entrance effects when content loads
+- Success celebrations (confetti, checkmarks)
+- Error shake animations
+- Progressive disclosure reveals
 
-Something changes over time.
+### System State Changes
+- Real-time notifications appearing
+- Live data updates
+- Session timeout warnings
+- Conditional content showing/hiding
 
-- Form submitted → Success message fades in
-- Error occurs → Input shakes, border turns red
-- Timer counts down → Progress bar shrinks
-- Content loads → Skeleton replaced with data
-
-### State Transitions
-
-System state changes, view reflects it.
-
-- Logged out → Logged in (same page, different elements visible)
-- Empty → Has data
-- Loading → Loaded
-- Valid → Invalid
+**What storyboards DON'T capture:** Standard hover states, focus rings, simple link colors, or any behavior developers already know from design systems.
 
 ---
 
@@ -75,6 +112,22 @@ System state changes, view reflects it.
 Add the storyboard images to the section in question.
 
 Specify step by step:
+
+**Visual Example:**
+
+```
+K0: Default          K1: User Types      K2: Strong          K3: Show Password
+┌────────────────┐  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐
+│ Password       │  │ Password       │  │ Password       │  │ Password       │
+│ ┌────────────┐ │  │ ┌────────────┐ │  │ ┌────────────┐ │  │ ┌────────────┐ │
+│ │            │👁│  │ │ •••••      │👁│  │ │ ••••••••   │👁│  │ │MyP@ssw0rd! │👁│
+│ └────────────┘ │  │ └────────────┘ │  │ └────────────┘ │  │ └────────────┘ │
+│                │  │ [▌  ] Weak     │  │ [████▌] Strong │  │ [████▌] Strong │
+│                │  │                │  │      ✓         │  │      ✓         │
+└────────────────┘  └────────────────┘  └────────────────┘  └────────────────┘
+```
+
+**Documented Format:**
 
 ```markdown
 ## Password Field Storyboard
@@ -110,6 +163,20 @@ Specify step by step:
 
 Don't just show what changes. Explain **why**.
 
+```
+The Complete Picture:
+
+K0              K1              K2              K3
+Empty    ─────► Typing   ─────► Strong   ─────► Visible
+                  │               │               │
+                  ▼               ▼               ▼
+               WHY: User       WHY: User       WHY: User
+               needs           needs           wants to
+               feedback        visual          verify
+               while           reinforcement   what they
+               typing                          typed
+```
+
 | Keyframe | What Changes | Why |
 |----------|--------------|-----|
 | 0 → 1 | Strength indicator appears | User needs feedback while typing |
@@ -130,16 +197,41 @@ She ensures every state change serves the user.
 
 ---
 
-## Common Storyboard Elements
+## What Needs Storyboarding
 
-| Element | Common Transforms |
+Storyboard **complex, non-standard transformations**:
+
+```
+✅ DO STORYBOARD:                    ❌ DON'T STORYBOARD:
+
+Async Actions                        Button Hover
+┌──────┐ ┌──────┐ ┌──────┐          ┌──────┐ ┌──────┐
+│Submit│ │ ...  │ │  ✓   │          │Button│ │Button│
+└──────┘ └──────┘ └──────┘          └──────┘ └──────┘
+K0 → K1 → K2 → K3                    Default   Hover
+Complex flow                         Standard behavior
+
+Modal Dialog                         Focus Ring
+    ┌──────────────┐                 ┌──────────┐
+    │              │                 │ [Input ] │
+    │   Content    │                 └──────────┘
+    │              │                 Standard pattern
+    └──────────────┘
+Fade in, 200ms ease
+Custom animation
+```
+
+| Element | What to Storyboard |
 |---------|-------------------|
-| **Buttons** | Default → Hover → Active → Loading → Disabled |
-| **Forms** | Empty → Filling → Validating → Error/Success |
-| **Modals** | Closed → Opening → Open → Closing |
-| **Cards** | Collapsed → Expanded |
-| **Notifications** | Hidden → Appearing → Visible → Dismissing |
-| **Loaders** | Not visible → Spinning → Complete |
+| **Async Actions** | Submit → Loading → Success/Error states |
+| **Forms** | Multi-step validation, progressive disclosure, dynamic fields |
+| **Modals** | Open animation, content transitions, close behavior |
+| **Expandable Sections** | Collapsed → Expanded with content reveal |
+| **Complex Dropdowns** | Multi-level menus, filtered searches, dynamic options |
+| **Animations** | Entrance effects, celebration moments, transitions |
+| **Real-time Updates** | Live data appearing, notifications arriving |
+
+**Don't storyboard standard behaviors** like button hovers, link colors, or focus states — developers already know these.
 
 ---
 
@@ -176,6 +268,14 @@ Take one interactive section from your sketch:
 3. Draw/describe each keyframe
 4. Explain why each change happens
 5. Note timing if relevant
+
+---
+
+## Learn More
+
+- **[Lesson 1: Transformations](lesson-01-transformations.md)** — Understanding state changes within views
+- **[Lesson 2: Storyboard Format](lesson-02-storyboard-format.md)** — How to document keyframes effectively
+- **[Tutorial: Storyboard Your Views](tutorial-10.md)** — Hands-on practice with Freya
 
 ---
 

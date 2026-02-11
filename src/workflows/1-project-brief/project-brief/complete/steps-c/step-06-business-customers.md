@@ -12,6 +12,21 @@ Business customer profile determines who buys the product and influences purchas
 
 If business model is B2B or Both, guide user to define their ideal business customer. Ask about company size, industry, decision-making structure, and budget authority. Also identify buying roles (buyer vs. user).
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After identifying business customers, proceed to step-06-target-users.md

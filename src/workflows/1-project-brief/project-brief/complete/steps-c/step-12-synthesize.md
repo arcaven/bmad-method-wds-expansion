@@ -16,6 +16,21 @@ This step compiles all strategic foundation elements into a cohesive document.
 
 Present all captured information (vision, positioning, business model, business customers, target users, success criteria, competitive landscape, unfair advantage, constraints, tone of voice, and additional context). Ask for confirmation and make any requested adjustments. Generate final document using the template.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 Workflow complete. User can proceed to Phase 2: Trigger Mapping

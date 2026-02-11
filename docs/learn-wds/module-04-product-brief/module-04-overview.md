@@ -72,7 +72,7 @@ The unique features that ensure excellence:
 - AI-guided discovery (no blank page paralysis)
 - Conversational approach (talk it out, Saga writes it down)
 - Structured output (proper formatting automatically)
-- Built-in best practices (SMART goals, constraint checklists)
+- Built-in best practices (the SMART model, constraint checklists)
 - Two levels: Simplified vs Complete (based on project needs)
 
 ### [Lesson 5: Using Your Product Brief](lesson-05-using-brief.md)
@@ -135,7 +135,7 @@ Step-by-step hands-on guide to creating your Product Brief with Saga.
 - **Speed:** 30-45 min vs days of meetings
 - **AI-Guided:** Saga asks the right questions, no blank page
 - **Conversational:** Natural dialogue, not form-filling
-- **Professional:** Built-in best practices (SMART goals, checklists)
+- **Professional:** Built-in best practices (the SMART model, checklists)
 - **Flexible:** Two levels (simplified vs complete)
 - **Living:** Easy to update as you learn
 
@@ -189,6 +189,6 @@ By the end of this module, you will:
 
 ---
 
-[← Back to Course Overview](../00-course-overview.md) | [Next: Module 05: Trigger Mapping →](../module-05-trigger-mapping/module-05-overview.md)
+[← Back to Course Overview](../00-course-overview/00-course-overview.md) | [Next: Module 05: Platform Requirements →](../module-05-platform-requirements/module-05-platform-requirements-overview.md)
 
 *Part of the WDS Course: From Designer to Linchpin*

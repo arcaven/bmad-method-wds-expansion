@@ -20,6 +20,21 @@ Positioning statement format: "For [target customer] who [need/opportunity], [pr
 
 Guide user through positioning framework. Ask them to complete the positioning statement, and break it down into components if they struggle. Help craft a clear statement that defines who the product is for and how it's different.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 Load, read full file, and execute: `step-04-create-vtc.md`

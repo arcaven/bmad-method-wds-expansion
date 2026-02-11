@@ -16,6 +16,21 @@ This step identifies who we're designing for and what their needs are.
 
 Guide user to describe their ideal users in detail. Ask about their role, demographics, daily experience, frustrations, goals, and current solutions. Also identify any secondary users or stakeholders.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After identifying target users, proceed to step-07-success-criteria.md

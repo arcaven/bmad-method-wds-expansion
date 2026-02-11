@@ -123,6 +123,21 @@ Before proceeding:
 
 **See:** [substeps/11-output-template.md](substeps/11-output-template.md) for the complete Product Brief template.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 **→ Proceed to [Step 12: Synthesize and Create Brief](step-12-synthesize.md)**

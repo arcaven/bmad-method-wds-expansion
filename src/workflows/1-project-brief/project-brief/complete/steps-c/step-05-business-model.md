@@ -12,6 +12,21 @@ Business model determines who buys/uses the product and affects all strategic de
 
 Ask user whether their product is B2B, B2C, or both. Present clear options and explain the implications of each choice.
 
+
+## Agent Dialog Update
+
+After completing this step, update the agent dialog:
+
+```markdown
+### [Step Name]
+**Q:** [Key questions asked]
+**A:** [User responses - summarized]
+**Documented in:** product-brief.md ([section name])
+**Key insights:** [Important decisions or revelations]
+**Status:** Complete
+**Timestamp:** [HH:MM]
+```
+
 ## Next Step
 
 After determining business model, proceed to step-05-business-customers.md if B2B or Both, or step-06-target-users.md if B2C

@@ -35,8 +35,7 @@ The hub document serves as:
 <action>Load mermaid-diagram/instructions.md to generate the diagram</action>
 
 **Requirements:**
-- Gold highlighting for PRIMARY GOAL (BG0)
-- Light gray professional styling
+- Light gray professional styling (consistent for all business goals)
 - All nodes have proper padding (`<br/>`)
 - Emojis: ✅ for wants, ❌ for fears
 - Exactly 3 drivers per persona
@@ -121,9 +120,8 @@ The hub document serves as:
 The trigger map connects business goals (left) through the platform (center) to target user groups (right) and their driving forces (far right).
 
 **Priority:**
-- ⭐ **Gold box** = PRIMARY GOAL ([Goal name] - THE ENGINE)
-- 🚀 **Gray boxes** = Supporting goals driven by [primary goal]
-- 🌟 **Gray boxes** = Opportunities created for community members
+- **Top to bottom** = Business goals ordered by priority ([Primary goal] → [Secondary goals])
+- **1-2-3-4** = Target group priority (highest value/impact first)
 
 **Driving Forces:**
 - ✅ **Green checkmarks** = Positive goals (what users want)

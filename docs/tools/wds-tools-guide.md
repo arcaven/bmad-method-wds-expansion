@@ -49,7 +49,7 @@ WDS works best with a curated set of tools that support the concept-first, itera
 - When MCP server unavailable
 - **Status:** Optional for Phase 4-5
 
-**[NanoBanana](nanobanana.md)**
+**[NanoBanana MCP](nanobanana-mcp.md)**
 - AI-powered asset creation tool
 - Design inspiration and exploration
 - **Status:** Optional for pre-Phase 4
@@ -65,7 +65,7 @@ WDS works best with a curated set of tools that support the concept-first, itera
 | **[Figma](figma.md)** | Design | Visual refinement, design system | 4-5 | Optional |
 | **[Figma MCP](figma-mcp.md)** | Integration | Automated Figma ↔ WDS sync | 4-5 | Recommended |
 | **[html.to.design](html-to-design.md)** | Conversion | HTML → Figma (fallback) | 4-5 | Optional |
-| **[NanoBanana](nanobanana.md)** | AI Design | Asset creation, inspiration | Pre-4 | Optional |
+| **[NanoBanana MCP](nanobanana-mcp.md)** | AI Design | Asset creation, inspiration | Pre-4 | Optional |
 
 ---
 
@@ -92,12 +92,12 @@ WDS works best with a curated set of tools that support the concept-first, itera
 3. Create [Figma](figma.md) account
 4. Install and configure [Figma MCP](figma-mcp.md) server
 5. Set up Figma API access token
-6. Explore [NanoBanana](nanobanana.md) for asset creation
+6. Explore [NanoBanana](nanobanana-mcp.md) for asset creation
 
 ### Optional Tools
 
 - [html.to.design](html-to-design.md) - Fallback when MCP not available
-- [NanoBanana](nanobanana.md) - Asset creation and inspiration
+- [NanoBanana](nanobanana-mcp.md) - Asset creation and inspiration
 
 ---
 
