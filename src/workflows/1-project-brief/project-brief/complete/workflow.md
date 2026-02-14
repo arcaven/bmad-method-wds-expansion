@@ -93,7 +93,7 @@ Location: {root_folder}/progress/dialog/
 
 **2. Copy template files from:**
 ```
-Source: {project-root}/{bmad_folder}/wds/templates/project-brief-dialog/
+Source: {project-root}/_bmad/wds/templates/project-brief-dialog/
 Files:
   - README.md (progress tracker)
   - 00-context.md
@@ -149,7 +149,7 @@ Each step file has an **"Agent Dialog Update"** section specifying which dialog 
 
 ### 1. Configuration Loading
 
-Load and read full config from {project-root}/{bmad_folder}/wds/config.yaml and resolve:
+Load and read full config from {project-root}/_bmad/wds/config.yaml and resolve:
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`, `user_skill_level`
 
@@ -158,7 +158,7 @@ Load and read full config from {project-root}/{bmad_folder}/wds/config.yaml and 
 **BEFORE executing Step 1, create dialog folder structure:**
 
 1. Create folder: `{root_folder}/progress/dialog/`
-2. Copy ALL template files from `{project-root}/{bmad_folder}/wds/templates/project-brief-dialog/`:
+2. Copy ALL template files from `{project-root}/_bmad/wds/templates/project-brief-dialog/`:
    - progress-tracker.md (progress tracker)
    - 00-context.md
    - 02-vision.md
@@ -175,6 +175,6 @@ Load and read full config from {project-root}/{bmad_folder}/wds/config.yaml and 
 
 ### 3. First Step EXECUTION
 
-Load, read full file and then execute `{project-root}/{bmad_folder}/wds/workflows/1-project-brief/project-brief/complete/steps-c/step-01-init.md` to begin workflow.
+Load, read full file and then execute `{project-root}/_bmad/wds/workflows/1-project-brief/project-brief/complete/steps-c/step-01-init.md` to begin workflow.
 
-**Note:** Alignment & Signoff is now a separate, optional workflow. If you need stakeholder approval before starting, use the alignment & signoff workflow first: `{project-root}/{bmad_folder}/wds/workflows/1-project-brief/alignment-signoff/workflow.md`
+**Note:** Alignment & Signoff is now a separate, optional workflow. If you need stakeholder approval before starting, use the alignment & signoff workflow first: `{project-root}/_bmad/wds/workflows/1-project-brief/alignment-signoff/workflow.md`
