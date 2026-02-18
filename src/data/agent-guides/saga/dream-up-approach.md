@@ -873,7 +873,7 @@ Would you like to:
 
 **Save agent dialog at:**
 ```
-{output_folder}/progress/agent-dialogs/{date}-trigger-map-{{mode}}.md
+{output_folder}/_progress/agent-dialogs/{date}-trigger-map-{{mode}}.md
 ```
 
 ---

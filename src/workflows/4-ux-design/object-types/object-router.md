@@ -26,11 +26,11 @@
   </output>
   
   <action>Route immediately to `object-types/templates/heading-text.md`</action>
-  <action>Pass detected pairs to heading-text.md for analysis using SKETCH-TEXT-ANALYSIS-GUIDE.md</action>
+  <action>Pass detected pairs to heading-text.md for analysis using guides/SKETCH-TEXT-ANALYSIS-GUIDE.md</action>
   
   **→ Loading text-specific instructions...**
   
-  > **Reference:** Text detection rules in `TEXT-DETECTION-PRIORITY.md`, analysis methodology in `SKETCH-TEXT-ANALYSIS-GUIDE.md`
+  > **Reference:** Text detection rules in `TEXT-DETECTION-PRIORITY.md`, analysis methodology in `guides/SKETCH-TEXT-ANALYSIS-GUIDE.md`
 </check>
 
 ---

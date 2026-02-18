@@ -224,7 +224,7 @@ Based on user choice:
 
 This workshop uses:
 - **4b-sketch-analysis.md** - For actual section analysis
-- **SKETCH-TEXT-ANALYSIS-GUIDE.md** - For reading text markers
+- **guides/SKETCH-TEXT-ANALYSIS-GUIDE.md** - For reading text markers
 - **page-specification.template.md** - For document structure
 - **object-types/*.md** - For component specifications
 

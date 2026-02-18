@@ -39,7 +39,7 @@ Connect business goals to user psychology. This creates your strategic North Sta
 
     <action>Load dream-up-approach.md micro-guide</action>
     <action>Inform user: "I'm creating an agent dialog to track my learning, research, generation, and self-review process."</action>
-    <action>Create agent dialog using ../../templates/dream-up-agent-dialog.template.md at {output_folder}/progress/agent-dialogs/{date}-trigger-map-{{mode}}.md</action>
+    <action>Create agent dialog using ../../templates/dream-up-agent-dialog.template.md at {output_folder}/_progress/agent-dialogs/{date}-trigger-map-{{mode}}.md</action>
 
     <action>Execute Layer 1: Learn WDS Form (Static - loaded once)
       - Read docs/method/phase-2-trigger-mapping-guide.md

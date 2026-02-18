@@ -207,7 +207,7 @@ This will extend your design system and improve all future prototypes.</output>
   Choice [1/2]:</ask>
   
   <check if="choice == 1">
-    <action>Load and execute `workflows/5-design-system/figma-integration/prototype-to-figma-workflow.md` Phase 2</action>
+    <action>Load and execute `workflows/6-asset-generation/602-figma-integration/reference/prototype-to-figma-workflow.md` Phase 2</action>
     
     <output>**Injecting components to Figma...**
 

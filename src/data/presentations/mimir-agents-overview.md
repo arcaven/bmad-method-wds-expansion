@@ -33,7 +33,7 @@ WDS has three specialist agents. Each owns specific phases of product developmen
 
 ## Freya — WDS Designer Agent
 
-**Phases:** 4 (UX Design), 5 (Design System), 7 (Testing), 8 (Ongoing Development)
+**Phases:** 4 (UX Design), 7 (Design System), 9 (Testing), 10 (Product Evolution)
 
 **What she does:**
 - Creates detailed UX scenarios and page specifications

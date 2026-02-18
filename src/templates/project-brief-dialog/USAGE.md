@@ -66,7 +66,7 @@ All dialog files: 65-86 lines (well under 100-line target)
 
 **For multi-session work**, agents should maintain their own session dialog separate from project dialogs.
 
-**Location:** `{{root_folder}}/progress/agent-dialogs/{{session-date}}-{{agent-name}}-{{task}}.md`
+**Location:** `{{root_folder}}/_progress/agent-dialogs/{{session-date}}-{{agent-name}}-{{task}}.md`
 
 **Structure Pattern:**
 

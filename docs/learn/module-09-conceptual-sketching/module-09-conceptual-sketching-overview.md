@@ -225,6 +225,8 @@ Take one scenario from Module 08:
 - **[Lesson 1: Visualize First](lesson-01-visualize-first.md)** — Why seeing comes before specifying
 - **[Lesson 2: Sketching Techniques](lesson-02-sketching-techniques.md)** — Practical methods for all visualization approaches
 - **[Lesson 3: Why Hand Sketching is Still King](lesson-03-why-hand-sketching.md)** — The case for paper and tablet in the AI era
+- **[Lesson 4: Image Sketching Best Practices](lesson-04-image-sketching-best-practices.md)** — How to represent images in UI sketches
+- **[Lesson 5: Sketch Text Strategy](lesson-05-sketch-text-strategy.md)** — Actual text vs. markers in sketches
 - **[Tutorial: Sketch Your Views](tutorial-09.md)** — Hands-on practice with Freya
 
 ---

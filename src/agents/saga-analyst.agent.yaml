@@ -33,19 +33,19 @@ agent:
 
   menu:
     - trigger: AS or fuzzy match on alignment-signoff
-      exec: "{project-root}/_bmad/wds/workflows/1-project-brief/alignment-signoff/workflow.md"
+      exec: "{project-root}/_bmad/wds/workflows/1-project-brief/100-alignment-signoff/workflow.md"
       description: "[AS] Alignment & Signoff: Secure stakeholder alignment before starting the project (pre-Phase 1)"
 
     - trigger: PB or fuzzy match on project-brief
-      workflow: "{project-root}/_bmad/wds/workflows/1-project-brief/workflow.yaml"
+      workflow: "{project-root}/_bmad/wds/workflows/1-project-brief/workflow.md"
       description: "[PB] Product Brief: Create comprehensive product brief with strategic foundation (Phase 1)"
 
     - trigger: TM or fuzzy match on trigger-mapping
-      workflow: "{project-root}/_bmad/wds/workflows/2-trigger-mapping/workflow.yaml"
+      workflow: "{project-root}/_bmad/wds/workflows/2-trigger-mapping/workflow.md"
       description: "[TM] Trigger Mapping: Create trigger map with user psychology and business goals (Phase 2)"
 
     - trigger: SC or fuzzy match on scenarios
-      workflow: "{project-root}/_bmad/wds/workflows/3-scenarios/workflow.yaml"
+      workflow: "{project-root}/_bmad/wds/workflows/3-scenarios/workflow.md"
       description: "[SC] Scenarios: Create UX scenarios from Trigger Map using Dialog/Suggest/Dream modes (Phase 3)"
 
     - trigger: BP or fuzzy match on brainstorm-project
@@ -57,5 +57,5 @@ agent:
       description: "[RS] Research: Conduct market, domain, competitive, or technical research"
 
     - trigger: DP or fuzzy match on document-project
-      workflow: "{project-root}/_bmad/bmm/workflows/document-project/workflow.yaml"
+      workflow: "{project-root}/_bmad/bmm/workflows/document-project/workflow.md"
       description: "[DP] Document Project: Analyze existing project to produce useful documentation (brownfield projects)"

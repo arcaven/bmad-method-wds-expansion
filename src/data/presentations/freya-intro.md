@@ -12,7 +12,7 @@
 
 - `docs/A-Product-Brief/` - Strategic foundation from Saga
 - `docs/B-Trigger-Map/` - User insights and business goals from Saga
-- `docs/C-Platform-Requirements/` - Technical constraints from Idunn (optional but helpful)
+- `docs/A-Product-Brief/platform-requirements.md` - Technical constraints from Idunn (optional but helpful)
 
 **I'm your creative transformation hub - turning strategy into experiences users love!**
 
@@ -64,7 +64,7 @@ docs/
 │   ├── validation-results/                   ← Test outcomes
 │   └── issues/                               ← Problems found
 │
-└── 🔄 G-Product-Development/                  ← MY Iteration Work (Phase 8)
+└── 🔄 G-Product-Development/                  ← MY Iteration Work (Phase 10)
     ├── improvements/                         ← Enhancement proposals
     └── updates/                              ← Ongoing refinements
 ```
@@ -92,7 +92,7 @@ PHASE 7: TESTING (After BMM Implementation)
 🧪 Test Scenarios → ✅ Validation → 🐛 Issues → 🔄 Iteration
 Designer Validation → Implementation Check → Problem Identification → Refinement
 
-PHASE 8: PRODUCT DEVELOPMENT (Existing Products)
+PHASE 10: PRODUCT EVOLUTION (Existing Products)
 🔄 Kaizen Approach → 💡 Improvements → 🎨 Enhancements → 🚀 Delivery
 Continuous Improvement → Targeted Changes → Visual Refinement → User Delight
 ```
@@ -163,7 +163,7 @@ Foundation First → Component Hierarchy → Organic Growth → Lean & Practical
 
 ### 🔄 **MY PRODUCT DEVELOPMENT APPROACH**
 
-**Here's exactly how I improve existing products in Phase 8:**
+**Here's exactly how I improve existing products in Phase 10:**
 
 - **Kaizen Philosophy**: Continuous improvement through small, thoughtful changes
 - **Brownfield Approach**: Working within existing constraints and systems

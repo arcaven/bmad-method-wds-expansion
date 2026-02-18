@@ -65,7 +65,7 @@
 
 ## Key WDS Workflows
 
-### 1️⃣ **Alignment & Signoff** (`workflows/1-project-brief/alignment-signoff/`)
+### 1️⃣ **Alignment & Signoff** (`workflows/1-project-brief/100-alignment-signoff/`)
 **Agent**: Saga  
 **Purpose**: Get stakeholder alignment before starting the project  
 **Output**: Pitch document + Signoff/Contract/Service Agreement
@@ -80,25 +80,27 @@
 **Purpose**: Identify user pain points, triggers, and desired outcomes  
 **Output**: Trigger map with target groups and usage goals
 
-### 4️⃣ **PRD Platform** (`workflows/3-prd-platform/`)
-**Agent**: Idunn  
-**Purpose**: Define platform requirements and technical specifications  
-**Output**: Platform PRD document
+### 3️⃣ **UX Scenarios** (`workflows/3-scenarios/`)
+**Agent**: Saga
+**Purpose**: Create UX scenarios from Trigger Map
+**Output**: Scenario overview and detailed scenarios
 
-### 5️⃣ **UX Design** (`workflows/4-ux-design/`)
-**Agent**: Freya  
-**Purpose**: Create scenarios, pages, and interactive prototypes  
+### 4️⃣ **UX Design** (`workflows/4-ux-design/`)
+**Agent**: Freya
+**Purpose**: Create specifications, pages, and interactive prototypes
 **Output**: Scenario specifications, page specs, prototypes
 
-### 6️⃣ **Design System** (`workflows/5-design-system/`)
-**Agent**: Freya  
-**Purpose**: Build and maintain component libraries  
+### 7️⃣ **Design System** (`workflows/7-design-system/`)
+**Agent**: Freya
+**Purpose**: Build and maintain component libraries
 **Output**: Design system with tokens and components
 
-### 7️⃣ **Design Deliveries** (`workflows/6-design-deliveries/`)
-**Agent**: Idunn  
-**Purpose**: Export specifications for development  
+### 8️⃣ **Design Deliveries** (`workflows/8-design-deliveries/`)
+**Agent**: Idunn
+**Purpose**: Export specifications for development
 **Output**: Complete PRD with all specifications
+
+> **Note**: Platform Requirements is sub-workflow 106 under Phase 1 (Product Brief), not a separate phase.
 
 ---
 
@@ -137,13 +139,12 @@ Build prototypes:
 WDS projects use this documentation structure:
 
 ```
-docs/
-├── 1-project-brief/         # Product vision, goals, strategy
-├── 2-trigger-mapping/       # User psychology, triggers, outcomes
-├── 3-prd-platform/          # Platform requirements, tech specs
-├── 4-ux-design/             # Scenarios, pages, prototypes
-├── 5-design-system/         # Design tokens, components
-└── 6-design-deliveries/     # Final PRD, specifications
+{output_folder}/
+├── A-Product-Brief/         # Product vision, goals, strategy
+├── B-Trigger-Map/           # User psychology, triggers, outcomes
+├── C-UX-Scenarios/          # Scenarios, specs, prototypes, designs
+├── D-Design-System/         # Design tokens, components
+└── _progress/               # Agent dialogs, project outline
 ```
 
 Or for legacy projects (WPS2C v4):
@@ -152,7 +153,6 @@ Or for legacy projects (WPS2C v4):
 docs/
 ├── A-Product-Brief/
 ├── B-Trigger-Map/
-├── C-Platform-Requirements/
 ├── C-UX-Scenarios/
 ├── D-Design-System/
 ├── E-PRD/
@@ -303,8 +303,7 @@ When a user first activates you, check if WDS is properly set up:
 ### Check 1: WDS Repository Exists
 
 Look for:
-- `whiteport-design-studio/src/modules/wds/`
-- `../whiteport-design-studio/src/modules/wds/`
+- `{project-root}/_bmad/wds/`
 - `.cursor/rules/wds/`
 
 ### Check 2: Project Has docs/ Folder
@@ -316,13 +315,12 @@ If not, offer to create it:
 
 Should I create the WDS documentation structure for you?
 
-docs/
-├── 1-project-brief/
-├── 2-trigger-mapping/
-├── 3-prd-platform/
-├── 4-ux-design/
-├── 5-design-system/
-└── 6-design-deliveries/
+{output_folder}/
+├── A-Product-Brief/
+├── B-Trigger-Map/
+├── C-UX-Scenarios/
+├── D-Design-System/
+└── _progress/
 ```
 
 ### If WDS Repository NOT Found

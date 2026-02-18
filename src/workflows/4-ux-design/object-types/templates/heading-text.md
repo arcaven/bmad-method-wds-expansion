@@ -23,7 +23,7 @@ I can use this as a starting suggestion, but we can change it if needed.</output
 </check>
 
 <check if="sketch_has_line_markers">
-  <action>Analyze text placeholders using rules from SKETCH-TEXT-ANALYSIS-GUIDE.md:
+  <action>Analyze text placeholders using rules from guides/SKETCH-TEXT-ANALYSIS-GUIDE.md:
   - Count horizontal line pairs (pairs = text lines)
   - Measure line thickness (thickness → font weight)
   - Measure distance between line pairs (spacing → font size estimate)
@@ -47,7 +47,7 @@ I can use this as a starting suggestion, but we can change it if needed.</output
 
 ⚠️ **Note:** If spacing is very large (>60px), verify this is text and not an image placeholder.
 
-💡 **Analysis rules:** See `SKETCH-TEXT-ANALYSIS-GUIDE.md` for complete methodology.</output>
+💡 **Analysis rules:** See `guides/SKETCH-TEXT-ANALYSIS-GUIDE.md` for complete methodology.</output>
 </check>
 
 ---
@@ -346,7 +346,7 @@ If yes, describe behavior:</ask>
 - {{this}}: "{{content}}"
   {{/each}}
 
-> **Sketch Analysis:** Values derived using `SKETCH-TEXT-ANALYSIS-GUIDE.md` methodology. Designer should review and confirm.
+> **Sketch Analysis:** Values derived using `guides/SKETCH-TEXT-ANALYSIS-GUIDE.md` methodology. Designer should review and confirm.
 ```
 
 {{#each additional_language}}

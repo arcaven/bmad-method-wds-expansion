@@ -140,7 +140,7 @@ ELSE IF sees input box (rectangular border):
 
 **Once text markers are detected, route to `heading-text.md` for complete analysis.**
 
-The detailed analysis rules are documented in **`SKETCH-TEXT-ANALYSIS-GUIDE.md`**, which covers:
+The detailed analysis rules are documented in **`guides/SKETCH-TEXT-ANALYSIS-GUIDE.md`**, which covers:
 
 - Line thickness → font weight
 - Line spacing between pairs → font size
@@ -148,7 +148,7 @@ The detailed analysis rules are documented in **`SKETCH-TEXT-ANALYSIS-GUIDE.md`*
 - Line count → number of text lines
 - Line length → character capacity
 
-**This file focuses on DETECTION only. For ANALYSIS, see `SKETCH-TEXT-ANALYSIS-GUIDE.md`.**
+**This file focuses on DETECTION only. For ANALYSIS, see `guides/SKETCH-TEXT-ANALYSIS-GUIDE.md`.**
 
 ---
 
@@ -318,7 +318,7 @@ def detect_object_type(sketch_element):
 - ✅ **Pair detected** → This is TEXT
 - **Route to:** `heading-text.md` for detailed analysis
 
-**For complete analysis of thickness, spacing, size, see:** `SKETCH-TEXT-ANALYSIS-GUIDE.md`
+**For complete analysis of thickness, spacing, size, see:** `guides/SKETCH-TEXT-ANALYSIS-GUIDE.md`
 
 ---
 
@@ -339,7 +339,7 @@ def detect_object_type(sketch_element):
 - ✅ **2 pairs detected** → This is TEXT (2 lines)
 - **Route to:** `heading-text.md` for detailed analysis
 
-**For complete analysis of thickness, spacing, size, see:** `SKETCH-TEXT-ANALYSIS-GUIDE.md`
+**For complete analysis of thickness, spacing, size, see:** `guides/SKETCH-TEXT-ANALYSIS-GUIDE.md`
 
 ---
 
@@ -371,7 +371,7 @@ Section 2 content...
 3. **Detect text FIRST** before checking for other object types
 4. **Count pairs to get text line count** (3 pairs = 3 lines of text)
 
-### Analysis Rules (See SKETCH-TEXT-ANALYSIS-GUIDE.md)
+### Analysis Rules (See guides/SKETCH-TEXT-ANALYSIS-GUIDE.md)
 
 5. **Line thickness → font weight**
 6. **Spacing between pairs → font size**
@@ -382,10 +382,10 @@ Section 2 content...
 
 ## Related Documentation
 
-- **`SKETCH-TEXT-ANALYSIS-GUIDE.md`** ← Complete analysis rules (MASTER GUIDE)
+- **`guides/SKETCH-TEXT-ANALYSIS-GUIDE.md`** ← Complete analysis rules (MASTER GUIDE)
 - **`heading-text.md`** ← Text object instruction file (uses analysis rules)
-- **`SKETCH-TEXT-QUICK-REFERENCE.md`** ← Quick lookup table
+- **`guides/SKETCH-TEXT-QUICK-REFERENCE.md`** ← Quick lookup table
 
 ---
 
-**This file: DETECTION logic. For detailed ANALYSIS rules, see SKETCH-TEXT-ANALYSIS-GUIDE.md** 🎯
+**This file: DETECTION logic. For detailed ANALYSIS rules, see guides/SKETCH-TEXT-ANALYSIS-GUIDE.md** 🎯

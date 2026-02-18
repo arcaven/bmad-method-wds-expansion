@@ -1,6 +1,6 @@
 code: wds
-name: "WDS: Whiteport Design System"
-header: "Whiteport Design System for Professional Level UX Design"
+name: "WDS: Whiteport Design Studio"
+header: "Whiteport Design Studio for Professional UX Design processes"
 subheader: "Configure the settings for the WDS design-first methodology"
 description: ""
 default_selected: false
@@ -131,7 +131,6 @@ directories:
 wds_folders:
   - A-Product-Brief
   - B-Trigger-Map
-  - C-Platform-Requirements
   - C-UX-Scenarios
   - D-Design-System
   - E-PRD

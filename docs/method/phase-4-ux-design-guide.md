@@ -381,7 +381,7 @@ See: `examples/dog-week-patterns/C-UX-Scenarios/` for complete scenario specific
 
 **Workflows:**
 - Scenario Initialization: `workflows/4-ux-design/scenario-init/scenario-init/00-SCENARIO-INIT-GUIDE.md`
-- VTC Workshop: `workflows/shared/vtc-workshop/vtc-workshop-guide.md`
+- VTC Advanced Usage: `docs/learn/module-06-trigger-mapping/lesson-12-vtc-advanced-usage.md`
 
 ---
 

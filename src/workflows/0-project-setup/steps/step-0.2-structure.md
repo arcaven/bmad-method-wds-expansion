@@ -378,17 +378,17 @@ Automatically derive:
 **Create folder structure:**
 
 1. **Create root folder:** `{{root_folder}}/`
-2. **Create progress folder:** `{{root_folder}}/progress/`
+2. **Create progress folder:** `{{root_folder}}/_progress/`
 3. **Create phase folders:**
-   - Greenfield: `{{root_folder}}/A-Product-Brief/`, `B-Trigger-Map/`, `C-Platform-Requirements/`, `D-UX-Scenarios/`, `E-Design-System/`, `F-PRD/`, `G-Testing/`
+   - Greenfield: `{{root_folder}}/A-Product-Brief/`, `B-Trigger-Map/`, `C-UX-Scenarios/`, `D-Design-System/`, `E-PRD/`, `F-Testing/`
    - Brownfield: `{{root_folder}}/A-Product-Brief/`, `improvements/`, `deliveries/`
 
-**Generate `{{root_folder}}/progress/wds-project-outline.yaml`:**
+**Generate `{{root_folder}}/_progress/wds-project-outline.yaml`:**
 
 ```yaml
 # WDS Project Outline
 # Generated: {{date}}
-# Location: {{root_folder}}/progress/wds-project-outline.yaml
+# Location: {{root_folder}}/_progress/wds-project-outline.yaml
 
 project:
   name: "{{project_name}}"
@@ -430,11 +430,10 @@ existing_materials:
 folders:
   product_brief: "{{root_folder}}/A-Product-Brief"
   trigger_map: "{{root_folder}}/B-Trigger-Map"
-  platform_requirements: "{{root_folder}}/C-Platform-Requirements"
-  scenarios: "{{root_folder}}/D-UX-Scenarios"
-  design_system: "{{root_folder}}/E-Design-System"
-  prd: "{{root_folder}}/F-PRD"
-  testing: "{{root_folder}}/G-Testing"
+  scenarios: "{{root_folder}}/C-UX-Scenarios"
+  design_system: "{{root_folder}}/D-Design-System"
+  prd: "{{root_folder}}/E-PRD"
+  testing: "{{root_folder}}/F-Testing"
 
 phases:
   {{generated_phases}}
@@ -470,7 +469,7 @@ Started: {{date}}
 _Use this log to track major decisions, insights, and progress through the design process._
 ```
 
-**Create agent dialogs folder:** `{{root_folder}}/progress/agent-dialogs/`
+**Create agent dialogs folder:** `{{root_folder}}/_progress/agent-dialogs/`
 
 </action>
 
@@ -507,7 +506,7 @@ _Use this log to track major decisions, insights, and progress through the desig
 [A] Start Phase 1 now
 [B] Hand off to Saga (specialist)
 
-**[BROWNFIELD]** Ready for Phase 8: Existing Product
+**[BROWNFIELD]** Ready for Phase 10: Existing Product
 
 [A] Create Limited Brief now
 [B] Scan my codebase first
@@ -526,7 +525,7 @@ _Use this log to track major decisions, insights, and progress through the desig
 **Brownfield:**
 - [A] → Load Limited Brief template
 - [B] → Scan codebase, then brief
-- [C] → Phase 8.1 Identify Opportunity
+- [C] → Phase 10.1 Identify Opportunity
 </action>
 
 ---

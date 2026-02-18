@@ -27,14 +27,14 @@ Let me check what you're working on...
 
 **IMPORTANT: Skip WDS/BMad system repos** (e.g., `bmad-method-wds-expansion`, `whiteport-team/.bmad/`) unless user specifically requests work in them.
 
-**Check ALL attached repositories for WDS projects:**
+**Find WDS projects in attached repositories:**
 
-1. Look for `.bmad/wds/` folders in all workspace repos
-2. Filter out system repos (WDS, BMad expansion modules)
-3. For each WDS project repo found:
-   - Read `config.yaml` to get project name
-   - Check `project-outline.md` for phase status
-   - Look in `.bmad/wds/agent-dialogs/` for files with status `in_progress`
+1. Look for `_progress/wds-project-outline.yaml` files in all workspace repos (any depth)
+2. Also check `.bmad/wds/` folders as fallback
+3. Filter out system repos (WDS, BMad expansion modules)
+4. For each WDS project repo found:
+   - Read `wds-project-outline.yaml` for project name and phase status
+   - Scan `_progress/agent-dialogs/` for dialog files with status `In Progress` or `Not Started`
    - Note any open dialogs related to Phases 3-4
 
 **Multi-project branching logic:**
@@ -63,7 +63,7 @@ Which project would you like to work on?
   - `B-Trigger-Map/trigger-map.md` (Phase 2) — Required
 - Check for my artifacts:
   - `C-UX-Scenarios/` folder (Phase 3)
-  - `D-UX-Design/` folder (Phase 4)
+  - `C-UX-Scenarios/` folder (Phase 3+4)
 - Check for open agent dialogs in that project
 - Note phase completion status
 
@@ -95,12 +95,15 @@ Phase 4: UX Design        [✓ complete / ⏳ in-progress / ○ not started]
 
 **Only shown for single-project scenario.** Based on status, offer appropriate actions:
 
-**If unfinished dialog found:**
+**If unfinished dialog found (default: resume):**
 ```
-I see we have unfinished work. Should I:
-1. Resume where we left off
-2. Start fresh (archive previous dialog)
+I found unfinished work in [dialog-file-name.md]:
+→ [task description from dialog]
+
+Picking up where we left off...
 ```
+Read the dialog file, find the next incomplete step, and continue naturally.
+Only ask before resuming if the user's message clearly indicates a different task.
 
 **If prerequisites missing:**
 ```

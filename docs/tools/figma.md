@@ -205,7 +205,7 @@ Styles: Typography
 
 **Related WDS Documentation:**
 - [Figma MCP](figma-mcp.md) - Automated integration
-- Figma Designer Guide: `workflows/5-design-system/figma-integration/figma-designer-guide.md`
+- Figma Designer Guide: `workflows/6-asset-generation/602-figma-integration/reference/figma-designer-guide.md`
 
 ---
 

@@ -36,7 +36,7 @@ Agentic Development is a **workflow approach** that produces various outputs:
 **When awakened, always check for pending dialogs:**
 
 ```
-1. Check: docs/F-Agent-Dialogs/
+1. Check: {output_folder}/_progress/agent-dialogs/
 2. Find dialogs where:
    - Status = "Not Started" or "In Progress"
    - Agent matches the awakened agent
@@ -71,7 +71,7 @@ Agent Dialogs bridge **specifications** and **development**:
 ## Dialog Folder Structure
 
 ```
-docs/F-Agent-Dialogs/
+{output_folder}/_progress/agent-dialogs/
 └── {DATE}-{agent}-{feature-name}/
     ├── {DATE}-{agent}-{feature-name}-dialog.md    ← Main file
     └── steps/
@@ -213,11 +213,11 @@ For each Object ID:
 
 ## Related Resources
 
-- **Agent Dialog Workflow:** `workflows/9-agent-dialogs/workflow.md`
-- **Dialog Template:** `workflows/9-agent-dialogs/templates/dialog.template.md`
-- **Step Template:** `workflows/9-agent-dialogs/templates/step.template.md`
+- **Agent Dialog Workflow:** `workflows/_agent-dialogs/workflow.md`
+- **Dialog Template:** `workflows/_agent-dialogs/templates/dialog.template.md`
+- **Step Template:** `workflows/_agent-dialogs/templates/step.template.md`
 - **Phase 4 UX Design:** `workflows/4-ux-design/workflow.md`
-- **Inline Testing Guide:** `workflows/4-ux-design/agentic-development/guides/INLINE-TESTING-GUIDE.md`
+- **Inline Testing Guide:** `workflows/5-agentic-development/guides/INLINE-TESTING-GUIDE.md`
 
 ---
 

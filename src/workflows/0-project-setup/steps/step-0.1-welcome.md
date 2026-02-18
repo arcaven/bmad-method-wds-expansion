@@ -21,7 +21,7 @@ WDS is a **design methodology** that helps you create great digital products thr
 - Phase 7: Validate quality (Testing)
 
 **For EXISTING products** (Brownfield):
-- Phase 8: Strategic improvements (Kaizen approach)
+- Phase 10: Strategic improvements (Kaizen approach)
 - Limited Brief (document what exists)
 - Focused improvements (not complete redesigns)
 - Continuous iteration cycles
@@ -80,7 +80,7 @@ You're improving something that exists:
 - Want to add features or fix issues
 - Improving, not rebuilding
 
-→ *Leads to Phase 8: Existing Product Entry*
+→ *Leads to Phase 10: Existing Product Entry*
 
 ---
 
@@ -134,7 +134,7 @@ Based on user responses:
 
 **If alignment = [B] Need to pitch:**
 1. Confirm: "Let's create your pitch and alignment documents first."
-2. Route to: `{project-root}/_bmad/wds/workflows/1-project-brief/alignment-signoff/workflow.md`
+2. Route to: `{project-root}/_bmad/wds/workflows/1-project-brief/100-alignment-signoff/workflow.md`
 3. After alignment complete → Return here for project configuration
 
 **If alignment = [A] Ready to start:**
@@ -147,9 +147,9 @@ Based on project type:
 3. Then route to: Phase 1 Project Brief
 
 **If [B] EXISTING Product:**
-1. Confirm: "Perfect! You'll use Phase 8 with the Kaizen approach."
+1. Confirm: "Perfect! You'll use Phase 10 with the Kaizen approach."
 2. Continue to: `step-0.2-structure.md` (setup brownfield structure)
-3. Then route to: Phase 8.1 Identify Opportunity
+3. Then route to: Phase 10.1 Identify Opportunity
 
 **If [C] NOT SURE:**
 1. Ask: "Let me scan your project to understand what exists."
@@ -193,7 +193,7 @@ User: B
 
 Agent: Perfect! You're improving an existing product.
 
-You'll use the Brownfield workflow (Phase 8):
+You'll use the Brownfield workflow (Phase 10):
 ├─ Create Limited Brief (document what exists)
 ├─ Identify improvement opportunities
 ├─ Design focused updates (not complete redesigns)
@@ -222,7 +222,7 @@ Scanning...
 
 Analysis: You have a substantial existing codebase.
 
-Recommendation: Use the BROWNFIELD workflow (Phase 8)
+Recommendation: Use the BROWNFIELD workflow (Phase 10)
 - Document what exists with a Limited Brief
 - Identify specific improvements to make
 - Use Kaizen approach for incremental changes

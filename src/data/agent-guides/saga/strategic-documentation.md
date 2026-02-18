@@ -215,7 +215,7 @@ Created in Step 4 (early in the brief) to provide strategic grounding:
 
 Generate complete Product Brief document using template.
 
-**See:** `../../workflows/1-project-brief/project-brief/complete/project-brief.template.md`
+**See:** `{project-root}/_bmad/wds/templates/1-project-brief/project-brief.template.md`
 
 ---
 

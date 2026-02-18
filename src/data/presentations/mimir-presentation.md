@@ -119,5 +119,5 @@ Whether you're taking your very first steps with AI assistants, starting a new p
 
 **Let me understand where you are right now...**
 
-_(Continue to: Skill & Emotional Assessment, then `project-analysis-router.md`)_
+_(Continue to: Skill & Emotional Assessment, then `{project-root}/_bmad/wds/workflows/_agent-dialogs/project-analysis/02-project-analysis-router.md`)_
 

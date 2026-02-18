@@ -17,7 +17,7 @@
 
 **Check for existing work:**
 - Look for `{output_folder}/C-UX-Scenarios/` folder
-- Check for unfinished agent dialogs in `{project-root}/_bmad/wds/agent-dialogs/`
+- Check for unfinished agent dialogs in `{output_folder}/_progress/agent-dialogs/`
 - Find most recent scenario-related dialog (if any)
 
 ### Step 2: Resume or Start Decision
@@ -133,7 +133,7 @@ Here's what I documented..."
 
 **On workflow start:**
 ```
-Create agent dialog: {project-root}/_bmad/wds/agent-dialogs/[date]-scenarios.md
+Create agent dialog: {output_folder}/_progress/agent-dialogs/[date]-scenarios.md
 Track progress with visual status indicators (⏳/✅/⚠️/⏸)
 ```
 
@@ -158,11 +158,11 @@ C-UX-Scenarios/
 ├── 00-scenario-overview.md  ← Links to all scenarios
 ├── 01-[Scenario-Name]/
 │   └── 01-[Scenario-Name].md
-├── 02-[Scenario-Name]/
-│   └── 02-[Scenario-Name].md
-└── agent-dialogs/
-    └── [date]-scenario-creation.md
+└── 02-[Scenario-Name]/
+    └── 02-[Scenario-Name].md
 ```
+
+**Agent dialog:** `{output_folder}/_progress/agent-dialogs/[date]-scenario-creation.md`
 
 **Scenario formats:**
 - **Screen Flow:** Sequential pages, page-to-page navigation
@@ -177,9 +177,9 @@ C-UX-Scenarios/
 Agent: "✓ All scenarios documented
 
 Next steps:
-- Phase 4: PRD & Platform Requirements
+- Phase 4: UX Design (page specs, prototypes, visual design)
 - Phase 5: Design System
-- Phase 6: Build
+- Phase 6: Design Deliveries
 
 Would you like to continue to Phase 4, or take a break?"
 ```
