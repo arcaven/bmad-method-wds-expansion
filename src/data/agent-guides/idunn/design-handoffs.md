@@ -399,7 +399,7 @@ docs/E-PRD/Design-Deliveries/
 
 ## Related Resources
 
-- **Phase 8 Workflow:** `../../workflows/8-design-deliveries/`
+- **Handover Workflow:** `../../workflows/4-ux-design/workflow-handover.md`
 - **DD Template:** `../../templates/design-delivery.template.yaml`
 - **BMM Phase 4:** Where these deliveries are implemented
 - **Complete PRD:** Synthesis of Platform + Functional requirements

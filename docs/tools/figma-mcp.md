@@ -436,8 +436,8 @@ The extracted data was automatically converted from React/Tailwind format to str
 ## Resources
 
 **Documentation:**
-- MCP Server Integration Guide: `workflows/6-asset-generation/602-figma-integration/reference/mcp-server-integration.md`
-- Prototype to Figma Workflow: `workflows/6-asset-generation/602-figma-integration/reference/prototype-to-figma-workflow.md`
+- MCP Server Integration Guide: `workflows/6-asset-generation/data/mcp-server-integration.md`
+- Prototype to Figma Workflow: `workflows/6-asset-generation/data/prototype-to-figma-workflow.md`
 
 **Configuration:**
 - Example config: `.wds/figma-mcp-config.yaml`

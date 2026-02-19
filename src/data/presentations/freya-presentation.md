@@ -33,8 +33,8 @@ docs/
 │   ├── tokens/               ← Colors, fonts, spacing
 │   └── components/           ← Reusable UI elements
 │
-└── 9-testing/                ← Quality Validation
-    └── usability-tests/
+└── 8-product-evolution/      ← Continuous Improvement
+    └── kaizen-cycles/
 ```
 
 ---

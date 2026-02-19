@@ -178,7 +178,7 @@ The browser extension method allows capturing mobile, tablet, and desktop simult
 
 **Related WDS Documentation:**
 - [Figma MCP](figma-mcp.md) - Recommended automated method
-- Prototype to Figma Workflow: `workflows/6-asset-generation/602-figma-integration/reference/prototype-to-figma-workflow.md`
+- Prototype to Figma Workflow: `workflows/6-asset-generation/data/prototype-to-figma-workflow.md`
 
 ---
 

@@ -83,7 +83,7 @@ config:
 
 ## 4. Sketch Analysis (4B)
 
-**File:** `substeps/4b-sketch-analysis.md`
+**Phase:** 4-ux-design [W] Visual Design
 
 **Agent analyzes sketch:**
 

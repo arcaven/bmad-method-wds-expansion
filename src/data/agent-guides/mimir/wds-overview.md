@@ -90,15 +90,25 @@
 **Purpose**: Create specifications, pages, and interactive prototypes
 **Output**: Scenario specifications, page specs, prototypes
 
+### 5️⃣ **Agentic Development** (`workflows/5-agentic-development/`)
+**Agent**: Idunn
+**Purpose**: 7-activity menu — Prototyping, Development, Bugfixing, Evolution, Analysis, Reverse Engineering, Acceptance Testing
+**Output**: Working code, verified implementations, test reports
+
+### 6️⃣ **Asset Generation** (`workflows/6-asset-generation/`)
+**Agent**: Freya
+**Purpose**: Creative production pipeline — Wireframes, Page Designs, UI Elements, Icons, Images, Videos, Content, Figma Export
+**Output**: Visual assets with style library consistency
+
 ### 7️⃣ **Design System** (`workflows/7-design-system/`)
 **Agent**: Freya
 **Purpose**: Build and maintain component libraries
 **Output**: Design system with tokens and components
 
-### 8️⃣ **Design Deliveries** (`workflows/8-design-deliveries/`)
+### 8️⃣ **Product Evolution** (`workflows/8-product-evolution/`)
 **Agent**: Idunn
-**Purpose**: Export specifications for development
-**Output**: Complete PRD with all specifications
+**Purpose**: Continuous improvement of live products
+**Output**: Kaizen cycles — analyze, scope, design, implement, test, deploy
 
 > **Note**: Platform Requirements is sub-workflow 106 under Phase 1 (Product Brief), not a separate phase.
 

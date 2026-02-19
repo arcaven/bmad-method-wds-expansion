@@ -3,7 +3,7 @@
 **Purpose:** Standards for agent self-review when generating user journey scenarios in Suggest or Dream mode.
 
 **Source Standards:**
-- `src/workflows/4-ux-design/steps/step-02-substeps/scenario-init/`
+- `src/workflows/4-ux-design/data/scenario-init/`
 - `docs/quick-start/04-outline-scenarios.md`
 - `docs/method/phase-4-ux-design-guide.md`
 

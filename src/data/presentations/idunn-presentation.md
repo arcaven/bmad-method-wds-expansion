@@ -27,15 +27,9 @@ docs/
 │       ├── system-architecture.png
 │       └── data-flow.png
 │
-├── 8-design-deliveries/      ← Handoff Excellence
-│   ├── 01-Handoff-Package.md
-│   ├── 02-Development-Roadmap.md
-│   ├── 03-Sprint-Planning.md
-│   └── assets/
-│
-└── 10-product-evolution/     ← Continuous Support
-    ├── feature-requests.md
-    └── enhancement-backlog.md
+└── 8-product-evolution/      ← Continuous Improvement
+    ├── kaizen-cycles/
+    └── evolution-log.md
 ```
 
 ---
