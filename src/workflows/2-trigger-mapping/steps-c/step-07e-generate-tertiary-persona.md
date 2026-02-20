@@ -36,7 +36,7 @@ Create the TERTIARY persona document with organic value discovery focus, benefit
 - 🎯 Focus on creating tertiary persona with organic discovery and benefits focus
 - 🚫 FORBIDDEN to use "converting" or "targeting" language
 - 💬 Approach: Rich, nuanced, human storytelling - emphasize organic value recognition
-- 📋 Use template from {project-root}/_bmad/wds/templates/2-trigger-mapping/persona-document.template.md
+- 📋 Use template from ../templates/persona-document.template.md
 - 📋 Each driving force MUST have a Product Answer; target ~250-375 lines
 
 ## EXECUTION PROTOCOLS:

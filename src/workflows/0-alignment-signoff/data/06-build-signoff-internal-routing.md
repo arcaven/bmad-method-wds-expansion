@@ -19,7 +19,7 @@ web_bundle: true
 | 01 | [Build Internal Signoff](01-build-internal-signoff.md) | Build the internal signoff document |
 | 02 | [Finalize Signoff](02-finalize-signoff.md) | Finalize and present signoff document |
 
-**Template:** `{project-root}/_bmad/wds/templates/1-project-brief/signoff.template.md`
+**Template:** `../../1-project-brief/templates/signoff.template.md`
 
 ---
 

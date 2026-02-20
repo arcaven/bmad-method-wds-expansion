@@ -36,7 +36,7 @@ Create the PRIMARY persona document with full transformation journey, champion c
 - 🎯 Focus on creating the most detailed persona document (PRIMARY gets most detail)
 - 🚫 FORBIDDEN to use "converting" language - use "creating awesome" language
 - 💬 Approach: Rich, nuanced, human storytelling - not template-like
-- 📋 Use template from {project-root}/_bmad/wds/templates/2-trigger-mapping/persona-document.template.md
+- 📋 Use template from ../templates/persona-document.template.md
 - 📋 Each driving force MUST have a Product Promise; target ~250-375 lines
 
 ## EXECUTION PROTOCOLS:
@@ -64,7 +64,7 @@ From trigger map data:
 
 ### 2. Generate Document
 
-Use the comprehensive persona document template: `{project-root}/_bmad/wds/templates/2-trigger-mapping/persona-document.template.md`
+Use the comprehensive persona document template: `../templates/persona-document.template.md`
 
 This template provides the complete structure for sections 1-13.
 

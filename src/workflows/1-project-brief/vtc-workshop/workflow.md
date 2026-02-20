@@ -146,7 +146,7 @@ Load, read and execute `steps-c/step-01b-load-trigger-map.md`
 **IF Creation Workshop:**
 Load, read and execute `steps-c/step-01a-define-business-goal.md`
 
-**Template:** `{project-root}/_bmad/wds/templates/1-project-brief/vtc-template.yaml`
+**Template:** `../templates/vtc-template.yaml`
 
 ---
 

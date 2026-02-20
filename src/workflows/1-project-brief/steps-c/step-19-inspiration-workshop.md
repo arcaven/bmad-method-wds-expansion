@@ -72,7 +72,7 @@ After all sites:
 
 ### 4. Document
 
-Create `inspiration-analysis.md` in the Product Brief output folder using the template at `{project-root}/_bmad/wds/templates/1-project-brief/inspiration-analysis.template.md`.
+Create `inspiration-analysis.md` in the Product Brief output folder using the template at `../templates/inspiration-analysis.template.md`.
 
 ### 5. Agent Dialog Integration
 

@@ -90,7 +90,7 @@ Output: "{{mode}} selected. I'll generate the Trigger Map using WDS methodology 
 
 Inform user: "I'm creating an agent dialog to track my learning, research, generation, and self-review process."
 
-Create agent dialog using {project-root}/_bmad/wds/templates/dream-up-agent-dialog.template.md at {output_folder}/_progress/agent-dialogs/{date}-trigger-map-{{mode}}.md
+Create agent dialog using ../../_agent-dialogs/templates/dream-up-agent-dialog.template.md at {output_folder}/_progress/agent-dialogs/{date}-trigger-map-{{mode}}.md
 
 Execute Layer 1: Learn WDS Form (Static - loaded once)
 - Read docs/method/phase-2-trigger-mapping-guide.md

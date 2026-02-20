@@ -131,7 +131,7 @@ vtc:
 
 ### 5. Create VTC File (7E)
 
-**Use template:** Copy from `{project-root}/_bmad/wds/templates/1-project-brief/vtc-template.yaml`
+**Use template:** Copy from `../../templates/vtc-template.yaml`
 
 **Fill in all sections:**
 

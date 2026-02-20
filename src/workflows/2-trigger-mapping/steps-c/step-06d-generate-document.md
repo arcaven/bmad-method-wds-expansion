@@ -36,7 +36,7 @@ Generate the complete Feature Impact Analysis document with the confirmed assess
 - 🎯 Focus on generating complete, well-structured document
 - 🚫 FORBIDDEN to save without user review of summary
 - 💬 Approach: Generate document, present summary, iterate if needed
-- 📋 Use template from {project-root}/_bmad/wds/templates/2-trigger-mapping/feature-impact.template.md
+- 📋 Use template from ../templates/feature-impact.template.md
 - 📋 Include Must Have/Consider/Defer prioritization tiers
 
 ## EXECUTION PROTOCOLS:
@@ -57,7 +57,7 @@ Generate the complete Feature Impact Analysis document with the confirmed assess
 
 ### 1. Generate Document
 
-Use the template: `{project-root}/_bmad/wds/templates/2-trigger-mapping/feature-impact.template.md`
+Use the template: `../templates/feature-impact.template.md`
 
 Include:
 1. **Header** with project name, date, and scoring legend

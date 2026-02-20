@@ -29,7 +29,7 @@ web_bundle: true
 | 11 | [Approval](11-build-section-11-approval.md) | Build Approval section |
 | 12 | [Finalize](12-finalize-contract.md) | Finalize and present contract |
 
-**Template:** `{project-root}/_bmad/wds/templates/1-project-brief/contract.template.md` or `service-agreement.template.md`
+**Template:** `../../1-project-brief/templates/contract.template.md` or `service-agreement.template.md`
 
 ---
 

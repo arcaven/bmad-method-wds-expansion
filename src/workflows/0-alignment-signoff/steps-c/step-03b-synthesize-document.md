@@ -42,7 +42,7 @@ Create the alignment document from all explored sections, using framework thinki
 
 - 🎯 Create the alignment document using confirmed content
 - 💾 Save to `docs/1-project-brief/pitch.md`
-- 📖 Use template at `{project-root}/_bmad/wds/templates/1-project-brief/pitch.template.md`
+- 📖 Use template at `../../1-project-brief/templates/pitch.template.md`
 - 🚫 Do not add content that wasn't confirmed in step-03a
 
 ## CONTEXT BOUNDARIES:
@@ -80,7 +80,7 @@ Help crystallize into a clear, compelling narrative using framework thinking:
 
 **Structure**: Use the 10-section structure covered in the exploration
 
-**Template reference**: `{project-root}/_bmad/wds/templates/1-project-brief/pitch.template.md`
+**Template reference**: `../../1-project-brief/templates/pitch.template.md`
 
 **Ask**: "Does this present your idea in the best light?"
 

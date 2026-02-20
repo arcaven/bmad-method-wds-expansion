@@ -36,7 +36,7 @@ Create the SECONDARY persona document with validation strategy, trust building f
 - 🎯 Focus on creating secondary persona with validation and trust focus
 - 🚫 FORBIDDEN to use "converting" language - use "creating awesome" language
 - 💬 Approach: Rich, nuanced, human storytelling - not template-like
-- 📋 Use template from {project-root}/_bmad/wds/templates/2-trigger-mapping/persona-document.template.md
+- 📋 Use template from ../templates/persona-document.template.md
 - 📋 Each driving force MUST have a Product Answer; target ~250-375 lines
 
 ## EXECUTION PROTOCOLS:
