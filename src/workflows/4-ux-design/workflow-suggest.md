@@ -11,6 +11,15 @@ description: 'Build a scenario's page flow step by step, with the agent proposin
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Entry
 
 Load scenario context from `{output_folder}/C-UX-Scenarios/`.
@@ -52,8 +61,8 @@ Execute steps in `./steps-s/`:
 
 ---
 
-## After Completion
+## AFTER COMPLETION
 
-Each page created can proceed to:
-- **[P] Specify** — to add full specification detail
-- Return to scenario dashboard for next page
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

@@ -11,6 +11,15 @@ description: 'Analyze user-provided sketches (photos, screenshots, wireframes) a
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Entry
 
 User provides sketch (image file, photo, or description of sketch).
@@ -30,8 +39,8 @@ Execute steps in `./steps-k/`:
 
 ---
 
-## After Completion
+## AFTER COMPLETION
 
-Sketch interpretation creates a preliminary page structure. Proceed to:
-- **[P] Specify** — to detail the interpreted page into a full specification
-- **[S] Suggest** — to build out more pages in the scenario
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

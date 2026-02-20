@@ -9,6 +9,15 @@ description: Preview selected design system components rendered in localhost
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Select Components
@@ -57,5 +66,6 @@ If the user notes issues or desired changes:
 
 ## AFTER COMPLETION
 
+1. Update design log
 1. Stop localhost server
 2. Return to Phase 7 Activity Menu

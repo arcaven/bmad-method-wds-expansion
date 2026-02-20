@@ -9,6 +9,15 @@ description: Build a new design system or add components from specifications
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## ENTRY ROUTING
 
 Check design system status:
@@ -60,5 +69,6 @@ Based on assessment result or direct selection:
 
 ## AFTER COMPLETION
 
+1. Update design log
 1. Run catalog generation (step-08e) to update component catalog
 2. Return to Phase 7 Activity Menu

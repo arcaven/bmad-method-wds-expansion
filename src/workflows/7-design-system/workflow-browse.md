@@ -9,6 +9,15 @@ description: Generate a disposable localhost app to explore tokens, components, 
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Load Design System Data
@@ -76,5 +85,6 @@ If the user identifies changes while browsing:
 
 ## AFTER COMPLETION
 
+1. Update design log
 1. Stop localhost server, discard generated app
 2. Return to Phase 7 Activity Menu

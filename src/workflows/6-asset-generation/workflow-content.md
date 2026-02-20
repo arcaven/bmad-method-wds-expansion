@@ -9,6 +9,15 @@ description: Strategic text content generation using the 5-model framework
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## The Five-Model Framework
 
 1. **Content Purpose** — The job to do
@@ -38,4 +47,6 @@ Execute steps in `./steps-c/`:
 
 ## AFTER COMPLETION
 
-Return to Phase 6 Activity Menu.
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

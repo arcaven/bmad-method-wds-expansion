@@ -10,6 +10,15 @@ borrows_from: Phase 4 [H] (design delivery)
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Pre-Deploy Checklist

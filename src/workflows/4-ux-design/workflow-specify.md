@@ -11,6 +11,15 @@ description: 'Create a complete, implementation-ready page specification with la
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Entry
 
 Load page context from existing page structure in `{output_folder}/D-UX-Design/`.
@@ -38,9 +47,8 @@ Execute steps in `./steps-p/`:
 
 ---
 
-## After Completion
+## AFTER COMPLETION
 
-Page specification is complete. Proceed to:
-- **[V] Validate** — audit the specification
-- Return to scenario dashboard for next page
-- **[W] Visual Design** — create visual mockups
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

@@ -11,6 +11,15 @@ description: 'Define, update, and review design system components used across pa
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Entry
 
 Load design system from `{output_folder}/D-UX-Design/design-system/` (if exists).
@@ -32,8 +41,8 @@ Execute steps in `./steps-m/`:
 
 ---
 
-## After Completion
+## AFTER COMPLETION
 
-Design system updated. Return to scenario dashboard or proceed to:
-- **[V] Validate** — audit design system consistency
-- **[P] Specify** — apply updated components to page specs
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

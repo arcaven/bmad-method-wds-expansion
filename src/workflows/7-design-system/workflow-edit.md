@@ -9,6 +9,15 @@ description: Open design system components in Figma for visual editing
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Select Components
@@ -69,6 +78,7 @@ Report any issues for resolution.
 
 ## AFTER COMPLETION
 
+1. Update design log
 1. Run catalog generation to update component catalog
 2. Suggest [V] View Components to verify changes
 3. Return to Phase 7 Activity Menu

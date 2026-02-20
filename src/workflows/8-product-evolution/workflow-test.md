@@ -10,6 +10,15 @@ borrows_from: Phase 5 [T] (acceptance testing)
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Load Test Context
@@ -77,5 +86,6 @@ If tests fail:
 
 ## AFTER COMPLETION
 
-If all tests pass, suggest proceeding to [P] Deploy.
-If tests fail, suggest returning to [I] Implement or [D] Design Solution.
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

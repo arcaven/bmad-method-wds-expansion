@@ -11,6 +11,15 @@ description: 'Collaboratively explore what a scenario's design should achieve be
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Entry
 
 Load scenario context (VTC, scenario overview) from `{output_folder}/C-UX-Scenarios/`.
@@ -29,8 +38,8 @@ Execute steps in `./steps-c/`:
 
 ---
 
-## After Completion
+## AFTER COMPLETION
 
-Return to scenario dashboard (workflow.md) or proceed to:
-- **[S] Suggest** — to start building the scenario step by step
-- **[P] Specify** — to detail a specific page
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

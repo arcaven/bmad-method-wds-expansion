@@ -11,6 +11,15 @@ description: 'Create visual representations of page designs using external tools
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Entry
 
 Load page specification from `{output_folder}/D-UX-Design/`.
@@ -38,6 +47,8 @@ Execute steps in `./steps-w/`:
 
 ---
 
-## After Completion
+## AFTER COMPLETION
 
-Visual artifacts are linked in the page specification. Return to scenario dashboard or continue with other activities.
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

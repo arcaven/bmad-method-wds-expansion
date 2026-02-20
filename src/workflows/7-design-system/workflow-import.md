@@ -9,6 +9,15 @@ description: Import an existing design system into the WDS format
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Identify Source
@@ -68,5 +77,6 @@ Present validation report. Fix issues interactively.
 
 ## AFTER COMPLETION
 
+1. Update design log
 1. Suggest running [B] Browse Design System to explore the import
 2. Return to Phase 7 Activity Menu

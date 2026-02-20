@@ -11,6 +11,27 @@ description: 'Systematically audit page specifications for completeness, consist
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+### Configuration Loading
+
+1. Load project config
+2. Locate page specifications at `{output_folder}/D-UX-Design/`
+3. Begin: Load and execute `./steps-v/step-01-page-metadata.md`
+
+**Reference data:**
+- `./data/quality-guide.md`
+- `./data/validation-standards.md`
+- `./templates/diagnostic-report-template.md`
+
+---
+
 ## Validation Sequence
 
 Execute each step in order. Each step produces a section of the validation report.
@@ -28,19 +49,16 @@ Execute each step in order. Each step produces a section of the validation repor
 | 09 | Design System Consistency | Cross-page component usage |
 | 10 | Final Validation | Overall quality assessment |
 
-## Initialization
-
-1. Load project config
-2. Locate page specifications at `{output_folder}/D-UX-Design/`
-3. Begin: Load and execute `./steps-v/step-01-page-metadata.md`
-
-**Reference data:**
-- `./data/quality-guide.md`
-- `./data/validation-standards.md`
-- `./templates/diagnostic-report-template.md`
-
 ---
 
 ## Final Output
 
 Save validation report to `{output_folder}/D-UX-Design/validation-report.md`
+
+---
+
+## AFTER COMPLETION
+
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

@@ -12,6 +12,15 @@ web_bundle: true
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## WHEN TO USE
 
 Send code to Figma when:

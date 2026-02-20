@@ -13,20 +13,34 @@ validateWorkflow: './steps-v/step-01-target-group-coverage.md'
 
 ---
 
-## INITIALIZATION SEQUENCE
+## INITIALIZATION
 
-### 1. Configuration Loading
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+### Configuration Loading
 
 Load and read full config from `{project-root}/_bmad/wds/config.yaml` and resolve:
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`
 
-### 2. Load Trigger Map Data
+### Load Trigger Map Data
 
 Load all trigger map documents from `{output_folder}/B-Trigger-Map/`.
 
-### 3. Route to Validation
+### Route to Validation
 
 Load, read completely, and execute `{validateWorkflow}` (steps-v/step-01-target-group-coverage.md)
 
 Auto-proceed through all validation steps. Present final report at the end.
+
+---
+
+## AFTER COMPLETION
+
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

@@ -10,6 +10,15 @@ borrows_from: Phase 3 (scenarios)
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Load Product Context
@@ -60,4 +69,6 @@ Save analysis to `{output_folder}/evolution/analysis/`:
 
 ## AFTER COMPLETION
 
-Suggest proceeding to [S] Scope Improvement for the selected target.
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

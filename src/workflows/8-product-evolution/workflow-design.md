@@ -10,6 +10,15 @@ borrows_from: Phase 4 (UX design)
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Load Scenario
@@ -78,4 +87,6 @@ Present the specification for user sign-off:
 
 ## AFTER COMPLETION
 
-Suggest proceeding to [I] Implement for this specification.
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

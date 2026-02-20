@@ -10,6 +10,15 @@ borrows_from: Phase 5 (development)
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Load Specification
@@ -69,4 +78,6 @@ Before handing off:
 
 ## AFTER COMPLETION
 
-Suggest proceeding to [T] Acceptance Test to validate the implementation.
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

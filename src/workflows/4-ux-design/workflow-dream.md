@@ -11,6 +11,15 @@ description: 'The agent creates a complete scenario flow autonomously, then pres
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Entry
 
 Load scenario context from `{output_folder}/C-UX-Scenarios/`.
@@ -37,10 +46,8 @@ The Dream workflow uses the same steps as Suggest (`./steps-s/`) but with **auto
 
 ---
 
-## After Completion
+## AFTER COMPLETION
 
-Present complete scenario for review. User can:
-- Accept the scenario as-is
-- Request specific changes
-- Switch to **[S] Suggest** for step-by-step refinement
-- Proceed to **[P] Specify** for individual pages
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

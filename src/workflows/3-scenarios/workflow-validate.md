@@ -13,20 +13,34 @@ validateWorkflow: './steps-v/step-01-scenario-coverage.md'
 
 ---
 
-## INITIALIZATION SEQUENCE
+## INITIALIZATION
 
-### 1. Configuration Loading
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+### Configuration Loading
 
 Load and read full config from `{project-root}/_bmad/wds/config.yaml` and resolve:
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`
 
-### 2. Load Scenario Files
+### Load Scenario Files
 
 Load all scenario files from `{output_folder}/C-UX-Scenarios/` and the scenario index `00-ux-scenarios.md`.
 
-### 3. Route to Validation
+### Route to Validation
 
 Load, read completely, and execute `{validateWorkflow}` (steps-v/step-01-scenario-coverage.md)
 
 Auto-proceed through all validation steps. Present final report at the end.
+
+---
+
+## AFTER COMPLETION
+
+1. Update design log
+2. Suggest next action
+3. Return to activity menu

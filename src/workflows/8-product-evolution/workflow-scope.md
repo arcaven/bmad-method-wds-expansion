@@ -10,6 +10,15 @@ borrows_from: Phase 3 (scenarios)
 
 ---
 
+## INITIALIZATION
+
+### Agent Dialog Gate
+
+1. Check for pending activity dialogs
+2. If none, suggest creating one
+3. Load dialog context
+
+
 ## Steps
 
 ### Step 1: Load Analysis
@@ -79,4 +88,6 @@ Present for user approval.
 
 ## AFTER COMPLETION
 
-Suggest proceeding to [D] Design Solution for this scenario.
+1. Update design log
+2. Suggest next action
+3. Return to activity menu
