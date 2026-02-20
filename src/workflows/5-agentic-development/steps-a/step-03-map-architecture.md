@@ -1,10 +1,63 @@
-# Step 03: Map Architecture
+---
+name: 'step-03-map-architecture'
+description: 'Build a detailed map of components, data flow, dependencies, and patterns as the analytical core of the workflow'
 
-**Goal:** Build a detailed map of components, data flow, dependencies, and patterns. This is the analytical core of the workflow.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-a/step-03-map-architecture.md'
+nextStepFile: '{workflow_path}/steps-a/step-04-document-findings.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-analysis.md'
 ---
 
-## Process
+# Step 3: Map Architecture
+
+## STEP GOAL:
+
+Build a detailed map of components, data flow, dependencies, and patterns. This is the analytical core of the workflow.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on mapping components, tracing data flows, identifying layers, integrations, state, dependencies, and patterns
+- 🚫 FORBIDDEN to begin writing the final architecture document — that is the next step
+- 💬 Approach: Deep dive into codebase structure with user, tracing flows and mapping dependencies collaboratively
+- 📋 Use the scan observations from Step 2 as your starting point
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Create comprehensive component inventory, data flow traces, and dependency maps
+- 💾 Document component map, data flows, layers, integrations, state management, dependencies, and patterns
+- 📖 Reference scan results from Step 2 and original questions from Step 1
+- 🚫 Do not write the final document yet — focus on raw analysis
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Analysis question and scope from Step 1; scan observations from Step 2
+- Focus: Deep architectural analysis — components, flows, dependencies, patterns
+- Limits: No final document writing — raw analysis only
+- Dependencies: Steps 1 and 2 must be complete
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Map Component and Module Structure
 
@@ -90,9 +143,7 @@ Document patterns you observe:
 - **Error handling:** Centralized, per-module, try-catch patterns, error boundaries
 - **Testing:** Unit/integration/e2e split, mocking approach, test data strategy
 
----
-
-## Checklist
+### 8. Verify Checklist
 
 - [ ] Component/module inventory created
 - [ ] At least one data flow traced end-to-end
@@ -102,8 +153,40 @@ Document patterns you observe:
 - [ ] Key dependencies mapped (especially high fan-in/fan-out)
 - [ ] Architectural patterns identified
 
+### 9. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 4: Document Findings"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the architectural mapping is complete with components, flows, and dependencies documented will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-04-document-findings.md
+### ✅ SUCCESS:
+- Component/module inventory created
+- At least one data flow traced end-to-end
+- Architectural layers identified
+- External integrations mapped
+- State management approach documented
+- Key dependencies mapped (especially high fan-in/fan-out)
+- Architectural patterns identified
+
+### ❌ SYSTEM FAILURE:
+- Skipping data flow tracing
+- Not mapping external integrations
+- Beginning final document creation before analysis is complete
+- Ignoring dependency relationships
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

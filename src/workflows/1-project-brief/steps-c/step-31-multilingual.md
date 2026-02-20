@@ -1,123 +1,161 @@
-# Step 5: Multilingual & SEO
+---
+name: 'step-31-multilingual'
+description: 'Document multilingual requirements and technical SEO needs'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Document language requirements and technical SEO needs.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-31-multilingual.md'
+nextStepFile: '{workflow_path}/steps-c/step-32-platform-synthesize.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Context for Agent
+# Step 31: Multilingual & SEO
 
-Multilingual setup affects plugin choices, URL structure, and content workflow. SEO requirements inform technical implementation.
+## STEP GOAL:
+Document language requirements and technical SEO needs for the platform.
 
-**Reference Guide:** Load `seo-strategy-guide.md` from Saga's agent guides for comprehensive SEO best practices including URL structure, structured data, hreflang implementation, and more.
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Key Elements
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-- Language requirements
-- URL structure for languages
-- Translation workflow
-- Technical SEO requirements
+### Role Reinforcement:
+- You are a Strategic Business Analyst documenting multilingual setup and technical SEO requirements
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-## Instructions
+### Step-Specific Rules:
+- Focus: Language needs, URL structure, translation workflow, technical SEO, performance targets
+- FORBIDDEN: Do not skip structured data planning
+- Approach: Determine language needs, recommend URL structure, plan translation workflow, document SEO requirements
+- **Reference Guide:** Load `seo-strategy-guide.md` from agent guides for comprehensive SEO best practices
 
-1. **Determine language needs**
+## EXECUTION PROTOCOLS:
+- Primary goal: Multilingual requirements and SEO technical specs documented
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-   Ask: "What languages does the site need to support?"
-   - Single language — simpler setup
-   - Multiple languages — requires plugin and strategy
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, language strategy (from content steps), technology stack
+- Focus: Technical implementation of multilingual and SEO
+- Limits: Platform-level requirements, not content-level SEO
+- Dependencies: Step 30 completed
 
-2. **If multilingual:**
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-   **Recommend URL structure:**
-   ```
-   example.com/           → Primary language (Swedish)
-   example.com/en/        → English
-   example.com/de/        → German
-   ```
+### 1. Determine Language Needs
 
-   **Plugin recommendation:**
-   - **Polylang** — Free tier works, good SEO support
-   - **WPML** — More features, paid
-   - **TranslatePress** — Visual translation
+Ask: "What languages does the site need to support?"
+- Single language - simpler setup
+- Multiple languages - requires plugin and strategy
 
-   **Translation workflow:**
-   - Who translates? (client, translator, agency)
-   - Full translation or priority pages?
-   - Ongoing updates process
+### 2. If Multilingual:
 
-   **Technical requirements:**
-   - hreflang tags (automatic with good plugins)
-   - Language switcher placement
-   - Default language handling
+**Recommend URL structure:**
+```
+example.com/           -> Primary language (Swedish)
+example.com/en/        -> English
+example.com/de/        -> German
+```
 
-3. **SEO technical requirements**
+**Plugin recommendation:**
+- **Polylang** - Free tier works, good SEO support
+- **WPML** - More features, paid
+- **TranslatePress** - Visual translation
 
-   Document needs:
-   - **Meta tags** — Title, description per page (all languages)
-   - **Structured data** — Schema.org markup per page type:
-     - `LocalBusiness` / `AutoRepair` — Business identity (all pages)
-     - `Service` — Individual service pages
-     - `Article` — Blog/news articles
-     - `FAQPage` — FAQ sections
-     - `BreadcrumbList` — Navigation breadcrumbs
-   - **Sitemap** — XML sitemap generation (includes all language versions)
-   - **Robots.txt** — Crawl directives
-   - **Page speed** — Core Web Vitals targets (LCP < 2.5s, FID < 100ms, CLS < 0.1)
-   - **Mobile-first** — Responsive, mobile-optimized
-   - **Canonical URLs** — Self-referencing canonical on every page
-   - **hreflang tags** — Language alternates declared on every page
-   - **404 handling** — Custom 404 page with navigation
+**Translation workflow:**
+- Who translates? (client, translator, agency)
+- Full translation or priority pages?
+- Ongoing updates process
 
-   **Canonical URL strategy:**
-   - Each language version has its own canonical URL
-   - `x-default` points to the primary language
-   - No duplicate content between language versions
+**Technical requirements:**
+- hreflang tags (automatic with good plugins)
+- Language switcher placement
+- Default language handling
 
-   **Redirect strategy:**
-   - 301 redirects for old URLs (if site migration)
-   - Language detection redirect (optional, from root to user's language)
-   - Trailing slash consistency
+### 3. SEO Technical Requirements
 
-   **SEO plugin recommendation:**
-   - **Rank Math** — Feature-rich, free tier excellent
-   - **Yoast** — Industry standard, some features paid
+Document needs:
+- **Meta tags** - Title, description per page (all languages)
+- **Structured data** - Schema.org markup per page type:
+  - `LocalBusiness` / `AutoRepair` - Business identity (all pages)
+  - `Service` - Individual service pages
+  - `Article` - Blog/news articles
+  - `FAQPage` - FAQ sections
+  - `BreadcrumbList` - Navigation breadcrumbs
+- **Sitemap** - XML sitemap generation (includes all language versions)
+- **Robots.txt** - Crawl directives
+- **Page speed** - Core Web Vitals targets (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+- **Mobile-first** - Responsive, mobile-optimized
+- **Canonical URLs** - Self-referencing canonical on every page
+- **hreflang tags** - Language alternates declared on every page
+- **404 handling** - Custom 404 page with navigation
 
-4. **Performance targets**
+### 4. Performance Targets
 
-   Discuss realistic targets:
-   - Page load time goal (e.g., < 3 seconds on 4G)
-   - Core Web Vitals targets
-   - Mobile performance priority
+Discuss realistic targets:
+- Page load time goal (e.g., < 3 seconds on 4G)
+- Core Web Vitals targets
+- Mobile performance priority
 
-5. **Update output document**
-   - Fill in Multilingual Requirements section
-   - Fill in SEO Requirements section
-   - Add Performance Targets
+### 5. Update Output Document
+- Fill in Multilingual Requirements section
+- Fill in SEO Requirements section
+- Add Performance Targets
 
-
-## Agent Dialog Update
-
+### 6. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### [Step Name]
-**Q:** [Key questions asked]
+### Step 31: Multilingual & SEO
+**Q:** Language needs? SEO technical requirements? Performance targets?
 **A:** [User responses - summarized]
-**Documented in:** platform-requirements.md ([section name])
+**Documented in:** platform-requirements.md (Multilingual, SEO sections)
 **Key insights:** [Important decisions or revelations]
 **Status:** Complete
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing multilingual/SEO, proceed to step-32-platform-synthesize.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-tech-stack.md', 'step-03-integrations.md', 'step-04-contact-strategy.md', 'step-05-multilingual.md']
-languages: '[list]'
-seo_plugin: '[choice]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Language requirements documented
+- URL structure defined (if multilingual)
+- Translation workflow planned
+- SEO technical requirements documented
+- Structured data plan created
+- Performance targets set
+- User confirmed
+
+### FAILURE:
+- Skipped structured data planning
+- Generated SEO requirements without user input
+- Did not document translation workflow
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

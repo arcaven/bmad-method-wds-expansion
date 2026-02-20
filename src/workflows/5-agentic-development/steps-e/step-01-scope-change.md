@@ -1,10 +1,63 @@
-# Step 01: Scope Change
+---
+name: 'step-01-scope-change'
+description: 'Define exactly what is new, what is modified, and what must remain untouched'
 
-**Goal:** Define exactly what is new, what is modified, and what must remain untouched.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-e/step-01-scope-change.md'
+nextStepFile: '{workflow_path}/steps-e/step-02-analyze-impact.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-evolution.md'
 ---
 
-## Process
+# Step 1: Scope Change
+
+## STEP GOAL:
+
+Define exactly what is new, what is modified, and what must remain untouched.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on defining scope: new functionality, existing unchanged functionality, boundary map, and integration points
+- 🚫 FORBIDDEN to begin analyzing impact or planning implementation — those are later steps
+- 💬 Approach: Help user categorize all affected areas into new/modified/untouched
+- 📋 Every integration point must be identified and documented
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Produce a clear boundary map categorizing all areas as new, modified, or untouched
+- 💾 Update dialog file with scope definition, boundary map, and integration points
+- 📖 Reference the feature spec or change request
+- 🚫 Do not analyze dependencies or plan implementation yet
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Feature specification or change request
+- Focus: Scoping what changes and what stays the same
+- Limits: No impact analysis, no implementation planning
+- Dependencies: A feature spec or change request must exist
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Load Feature Spec
 
@@ -41,9 +94,7 @@ Categorize all affected areas:
 - Are there shared components that need to support both old and new behavior?
 - Document each integration point and its risk level
 
----
-
-## Checklist
+### 6. Verify Checklist
 
 - [ ] Feature spec loaded and understood
 - [ ] New functionality listed
@@ -52,8 +103,39 @@ Categorize all affected areas:
 - [ ] Integration points identified
 - [ ] Dialog file updated with scope definition
 
+### 7. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 2: Analyze Impact"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the scope is fully defined with boundary map and integration points will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-02-analyze-impact.md
+### ✅ SUCCESS:
+- Feature spec loaded and understood
+- New functionality listed
+- Existing functionality that must stay unchanged listed
+- Boundary map created (new / modified / untouched)
+- Integration points identified
+- Dialog file updated with scope definition
+
+### ❌ SYSTEM FAILURE:
+- Beginning impact analysis before scope is defined
+- Not identifying what must remain untouched
+- Skipping integration point identification
+- Leaving ambiguities in the feature spec unresolved
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

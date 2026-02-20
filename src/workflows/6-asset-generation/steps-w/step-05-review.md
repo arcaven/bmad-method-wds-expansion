@@ -1,59 +1,115 @@
-# Step 05: Review and Iterate
-
-**Goal:** Review generated wireframes as a set, ensure consistency, and iterate on any that need work.
-
+---
+name: 'step-05-review'
+description: 'Review generated wireframes as a set for consistency and iterate on flagged items'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-w/step-05-review.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-wireframes.md'
 ---
 
-## Actions
+# Step 5: Review and Iterate
+
+## STEP GOAL:
+
+Review all generated wireframes as a cohesive set, verify consistency across pages, iterate on any that need work, and save the final approved set.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a creative production partner conducting quality review
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring visual consistency expertise, user brings final approval
+
+### Step-Specific Rules:
+
+- 🎯 Review as a complete set, not individual wireframes in isolation
+- 🚫 FORBIDDEN to save without user approval
+- 💬 Present desktop and mobile side by side
+- 📋 Check grid alignment, navigation placement, typography hierarchy, spacing
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Save to `{output_folder}/E-Assets/wireframes/`
+- 📖 Check consistency: grid, navigation, typography, spacing, labels
+- 🚫 FORBIDDEN to skip consistency checks
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All generated wireframes, style configuration
+- Focus: Quality review and final approval
+- Limits: This is the final step — focus on quality and delivery
+- Dependencies: Generated wireframes from Step 4
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Present Full Set
 
-Display all generated wireframes grouped by page:
-- Desktop and mobile side by side (where both exist)
-- Highlight any that look inconsistent with the set
+Display all wireframes grouped by page, desktop and mobile side by side.
 
 ### 2. Consistency Check
 
-Verify across the set:
-- [ ] Grid alignment consistent across pages
-- [ ] Navigation placement consistent
-- [ ] Typography hierarchy consistent
-- [ ] Spacing feels uniform
-- [ ] Content zones properly labeled (if annotations on)
+Verify: grid alignment consistent, navigation placement consistent, typography hierarchy consistent, spacing uniform, content zones properly labeled (if annotations on).
 
 ### 3. User Review
 
-```
-Review wireframes:
-
-[A] Approve all        — Save and continue
-[R] Regenerate [#]     — Pick specific wireframes to redo
-[S] Style adjust       — Change fidelity/style and regenerate all
-[E] Edit annotations   — Adjust labels and notes
-```
+Present: [A] Approve all, [R] Regenerate specific, [S] Style adjust and regenerate all, [E] Edit annotations.
 
 ### 4. Iterate
 
-For any wireframes marked for regeneration:
-- Gather user feedback on what to change
-- Adjust prompt accordingly
-- Regenerate with updated parameters
-- Use approved wireframes as reference for consistency
+For flagged wireframes: gather feedback, adjust prompt, regenerate with approved wireframes as reference, re-review in context.
 
 ### 5. Save Approved Set
 
-Save all approved wireframes to `{output_folder}/E-Assets/wireframes/`:
-- `{page-name}-desktop.png`
-- `{page-name}-mobile.png`
-- `wireframe-set-summary.md` — index of all wireframes with notes
+Save to `{output_folder}/E-Assets/wireframes/`: `{page-name}-desktop.png`, `{page-name}-mobile.png`, `wireframe-set-summary.md`.
 
 ### 6. Update Design Log
 
-Record in design log:
-- Wireframes generated: [count]
-- Style used: [fidelity + design style]
-- Pages covered: [list]
+Record: wireframes generated count, style used (fidelity + design style), pages covered.
+
+### 7. Present MENU OPTIONS
+
+Display: **"Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF M: Save set, update design log, return to Activity Menu in {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#7-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+
+## CRITICAL STEP COMPLETION NOTE
+
+This is the final step of the Wireframes workflow. When M is selected and set is saved, return to the Activity Menu.
 
 ---
 
-**Complete.** → [M] Return to Activity Menu
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Full set presented for review
+- Consistency checks completed
+- User approved final set
+- Saved to correct output location
+- Design log updated
+
+### ❌ SYSTEM FAILURE:
+
+- Saving without user approval
+- Skipping consistency checks
+- Not updating design log
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

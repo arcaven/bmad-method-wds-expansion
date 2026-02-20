@@ -1,10 +1,63 @@
-# Step 02: Setup Environment
+---
+name: 'step-02-setup-environment'
+description: 'Verify the development environment is ready, all dependencies are installed, and the project runs cleanly before writing any new code'
 
-**Goal:** Verify the development environment is ready, all dependencies are installed, and the project runs cleanly before writing any new code.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-d/step-02-setup-environment.md'
+nextStepFile: '{workflow_path}/steps-d/step-03-implement.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-development.md'
 ---
 
-## Process
+# Step 2: Setup Environment
+
+## STEP GOAL:
+
+Verify the development environment is ready, all dependencies are installed, and the project runs cleanly before writing any new code.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on verifying environment, installing dependencies, starting dev server, and establishing test baseline
+- 🚫 FORBIDDEN to begin implementing features — that is the next step
+- 💬 Approach: Walk through environment verification systematically with user
+- 📋 Document any pre-existing issues so they are not confused with regressions later
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Confirm environment is clean and ready for implementation
+- 💾 Document test baseline and any pre-existing issues in the dialog file
+- 📖 Reference project configuration files and existing documentation
+- 🚫 Do not write any feature code during this step
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Implementation plan from Step 1; project configuration files
+- Focus: Environment verification, dependency installation, baseline establishment
+- Limits: No feature implementation
+- Dependencies: Step 1 must be complete (plan exists, branch created)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Verify Tech Stack Requirements
 
@@ -72,9 +125,7 @@ Record the result:
 - **Some fail:** Document which tests fail BEFORE you start. These are pre-existing failures and not your responsibility, but you need to know they exist so you do not accidentally claim them as regressions.
 - **No tests exist:** Note this. Consider whether the spec requires tests (Step 03 will address test writing).
 
----
-
-## Checklist
+### 7. Verify Checklist
 
 - [ ] Runtime and tooling versions verified
 - [ ] Dependencies installed without blocking errors
@@ -84,8 +135,39 @@ Record the result:
 - [ ] Existing test suite run, baseline documented
 - [ ] Any pre-existing issues noted in dialog file
 
+### 8. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 3: Implement"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the environment is verified clean, dependencies installed, and test baseline documented will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to **step-03-implement.md**
+### ✅ SUCCESS:
+- Runtime and tooling versions verified
+- Dependencies installed without blocking errors
+- Dev server starts and existing pages load
+- Design tokens / design system accessible
+- Existing test suite run, baseline documented
+- Pre-existing issues noted
+
+### ❌ SYSTEM FAILURE:
+- Starting implementation with unresolved environment issues
+- Not establishing test baseline
+- Not documenting pre-existing failures
+- Skipping dependency installation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

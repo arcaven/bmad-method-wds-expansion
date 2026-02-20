@@ -1,27 +1,66 @@
-# Step 03: Update Design Log
+---
+name: 'step-35-update-design-log'
+description: 'Document Phase 1 completion in the project design log'
 
-**Goal:** Document Phase 1 completion in the project design log.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-35-update-design-log.md'
+nextStepFile: '{workflow_path}/steps-c/step-36-provide-activation.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Why This Step Exists
+# Step 35: Update Design Log
 
-The design log is the project's memory. It lets any agent or human understand what happened, when, and why — without re-reading all artifacts. Do not skip this step.
+## STEP GOAL:
+Document Phase 1 completion in the project design log - the project's memory.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## 1. Read the Current Log
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+- You are a Strategic Business Analyst documenting project progress for future reference
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
+
+### Step-Specific Rules:
+- Focus: Append progress entry, record key decisions, list ALL artifacts
+- FORBIDDEN: Do not skip listing every artifact file - do not summarize with "etc."
+- Approach: Read current log, append progress entry, record key decisions, verify
+
+## EXECUTION PROTOCOLS:
+- Primary goal: Design log updated with Phase 1 completion entry
+- Save/document outputs appropriately
+- Do not skip this step
+
+## CONTEXT BOUNDARIES:
+- Available context: All Phase 1 artifacts and decisions
+- Focus: Design log update
+- Limits: Documenting what happened, not new work
+- Dependencies: Step 34 completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Read the Current Log
 
 Read `{output_folder}/_progress/00-progress.md` to understand existing entries and format.
 
----
-
-## 2. Append Progress Entry
+### 2. Append Progress Entry
 
 Add the following under the `## Progress` section (after the last entry):
 
 ```
-### [date] — Phase 1: Product Brief Complete
+### [date] - Phase 1: Product Brief Complete
 
 **Agent:** Mimir (Project Brief)
 **Brief Level:** [standard / simplified]
@@ -32,17 +71,15 @@ Add the following under the `## Progress` section (after the last entry):
 
 **Summary:** [2-3 sentences: business context established, key constraints identified, what was defined]
 
-**Next:** Phase 2 — Trigger Mapping
+**Next:** Phase 2 - Trigger Mapping
 ```
 
 **Rules:**
-- List every artifact file — do not summarize with "etc."
+- List every artifact file - do not summarize with "etc."
 - Summary must mention specific business context, not generic statements
 - Use the actual date, not a placeholder
 
----
-
-## 3. Record Key Decisions
+### 3. Record Key Decisions
 
 Add rows to the `## Key Decisions` table for any significant choices made during Phase 1:
 
@@ -58,25 +95,43 @@ Examples of key decisions worth logging:
 
 If no significant decisions were made, skip this section.
 
----
-
-## 4. Verify
+### 4. Verify
 
 - [ ] Progress entry appended (not overwriting existing entries)
 - [ ] All artifact files listed
 - [ ] Summary is specific, not generic
 - [ ] Key decisions recorded (if any)
 
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
+
 ---
 
-## Output
+## SYSTEM SUCCESS/FAILURE METRICS
 
-<output>Design log updated. Phase 1: Product Brief documented in _progress/00-progress.md</output>
+### SUCCESS:
+- Design log updated with progress entry
+- All artifacts listed individually
+- Summary is specific to this project
+- Key decisions recorded
+- Verification checklist passed
 
----
+### FAILURE:
+- Summarized artifacts with "etc."
+- Used generic summary
+- Overwrote existing entries
+- Skipped this step entirely
 
-## Next Step
-
-<action>Load and execute: step-36-provide-activation.md</action>
-
-Do NOT skip ahead.
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

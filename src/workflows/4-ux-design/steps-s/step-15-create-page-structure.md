@@ -1,6 +1,64 @@
-# Step 8: Create Page Structure
-
 ---
+name: 'step-15-create-page-structure'
+description: 'Create the physical page folder structure, specification document, and update tracking'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-s/step-15-create-page-structure.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-suggest.md'
+---
+
+# Step 15: Create Page Structure
+
+## STEP GOAL:
+
+Create the physical page folder structure, generate the initial specification document, and update scenario tracking.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on creating the page structure and starter document
+- 🚫 FORBIDDEN to skip scenario-tracking.yaml update
+- 💬 Approach: Execute creation, present results, offer next actions
+- 📋 This is the last step in the Suggest activity chain
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Create page folder, specification document, and sketches subfolder
+- 💾 Save all files and update tracking
+- 📖 Use all stored page data to populate the specification
+- 🚫 FORBIDDEN to proceed without confirming file creation
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All page definition data (name, purpose, entry points, mental state, goals, variants)
+- Focus: File and folder creation
+- Limits: Create starter document only — full specification happens in steps-p/
+- Dependencies: All page definition data must be present
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Create Page Structure
 
 <action>
 **Determine page folder path:**
@@ -37,10 +95,10 @@ Content:
 # {{page_number}} {{page_name}}
 
 {{#if scenario_name}}
-**Scenario:** {{scenario_name}}  
+**Scenario:** {{scenario_name}}
 {{/if}}
-**Page Number:** {{page_number}}  
-**Created:** {{date}}  
+**Page Number:** {{page_number}}
+**Created:** {{date}}
 **Method:** Whiteport Design Studio (WDS)
 
 ---
@@ -107,7 +165,7 @@ If this is a scenario-based project:
 - Update page status in pages_list
 </action>
 
-<output>✅ **Page structure created:**
+<output>**Page structure created:**
 
 **Page:** {{page_number}} {{page_name}}
 
@@ -122,20 +180,46 @@ If this is a scenario-based project:
 
 **Next Steps:**
 - Add sketches to the sketches folder
-- Continue with page design (Step 3)
+- Continue with page design</output>
 
-Ready to design! 🎨</output>
+### 2. Present MENU OPTIONS
+
+Display: "**Select an Option:** [A] Add Another Page | [S] Add Another Scenario | [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF A: Load, read entire file, then execute {workflow_path}/steps-s/step-08-page-context.md
+- IF S: Load, read entire file, then execute {workflow_path}/steps-s/step-01-core-feature.md
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#2-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user selects an option from the menu and the page structure has been created will you proceed as directed. This is the last step in the Suggest activity chain.
 
 ---
 
-<output>[C] Continue to Step 3 (Page Design)
-[A] Add Another Page
-[S] Add Another Scenario (if multi-scenario project)</output>
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-<action>
-- If user selects [C], load `steps-c/step-03-design-page.md`
-- If user selects [A], reload `step-08-page-context.md`
-- If user selects [S], load `step-01-core-feature.md`
-</action>
+### ✅ SUCCESS:
 
+- Page folder created with sketches subfolder
+- Variant folders created if applicable
+- Page specification document generated with all captured data
+- scenario-tracking.yaml updated if applicable
+- User confirmed creation and chose next action
 
+### ❌ SYSTEM FAILURE:
+
+- Creating structure without all page data
+- Skipping sketches subfolder
+- Not updating scenario-tracking.yaml
+- Generating specification with missing fields
+- Proceeding without user confirmation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

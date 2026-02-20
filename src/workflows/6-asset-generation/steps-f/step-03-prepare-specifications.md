@@ -1,138 +1,124 @@
+---
+name: 'step-03-prepare-specifications'
+description: 'Locate or create specifications with OBJECT IDs for consistent Figma layer naming'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-f/step-03-prepare-specifications.md'
+nextStepFile: '{workflow_path}/steps-f/step-04-generate-validate.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-figma.md'
+---
+
 # Step 3: Prepare Specifications
 
-**Progress: Step 3 of 5** - Next: Generate & Validate
+## STEP GOAL:
 
-**Duration:** 5-15 minutes (depending on whether specs exist)
+Locate existing specifications with OBJECT IDs for all components in the export scope, or create them if they do not exist, ensuring consistent Figma layer naming.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## YOUR TASK
+### Universal Rules:
 
-Locate existing specifications with OBJECT IDs, or create them if they don't exist.
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
----
+### Role Reinforcement:
 
-## GOAL
+- ✅ You are a specification analyst ensuring design-code parity through OBJECT IDs
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring specification methodology, user brings project context
+- ✅ Maintain a meticulous, detail-oriented tone
 
-Ensure all components have proper OBJECT IDs from specifications for consistent Figma layer naming.
+### Step-Specific Rules:
 
----
+- 🎯 Focus ONLY on locating or creating specifications with OBJECT IDs
+- 🚫 FORBIDDEN to generate HTML in this step
+- 💬 Offer to reverse-engineer specifications from code if none exist
+- 📋 Achieve 100% specification coverage before proceeding
 
-## EXECUTION
+## EXECUTION PROTOCOLS:
 
-### Search for Specification Documents
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document specification coverage report
+- 📖 Search in `docs/C-UX-Scenarios/` and `docs/D-Design-System/` for existing specs
+- 🚫 FORBIDDEN to proceed without OBJECT IDs for all components
 
-<action>
-Search for specification files that may contain OBJECT IDs:
+## CONTEXT BOUNDARIES:
 
-1. Search in `docs/C-UX-Scenarios/` for scenario specifications
-2. Search in `docs/D-Design-System/` for component documentation
-3. Use grep_search to find files containing "OBJECT ID"
-4. Look for markdown files matching component/page name
-</action>
+- Available context: Export scenario type, ID naming pattern from Step 2
+- Focus: Finding or creating OBJECT IDs for all components in scope
+- Limits: Do not generate HTML — just prepare the ID specifications
+- Dependencies: Confirmed scenario type from Step 2
 
----
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-### Decision Point: Specifications Found?
+### 1. Search for Specification Documents
 
-**If specifications exist with OBJECT IDs:**
+Search for specification files containing OBJECT IDs:
+- `docs/C-UX-Scenarios/` for scenario specifications
+- `docs/D-Design-System/` for component documentation
+- Search for files containing "OBJECT ID"
+- Look for markdown files matching component/page name
 
-<output>✅ Found specification documents with OBJECT IDs:
+### 2. Handle Found Specifications
 
-{list of files and IDs found}
+If specifications exist with OBJECT IDs: extract all OBJECT ID field values, map to components in code, store mapping for HTML generation.
 
-I'll use these OBJECT IDs for the export.</output>
+### 3. Handle Missing Specifications
 
-<action>
-Extract OBJECT IDs from specifications:
-- Read specification files
-- Extract all OBJECT ID field values
-- Map to components in code
-- Store mapping for HTML generation
-</action>
-
-**→ Skip to validation and proceed to Step 4**
-
----
-
-**If NO specifications exist:**
-
-<output>📝 No specifications found for these components.
-
-To maintain design-code parity and proper naming in Figma, I recommend creating a specification document.
-
-I can:
+If no specifications exist, offer to:
 1. Analyze the code and reverse-engineer specifications
 2. Generate OBJECT IDs following project conventions
-3. Create a specification document for your review
+3. Create a specification document for review
 
-Would you like me to create specifications for these components?</output>
+Reference `{workflow_path}/data/figma-spec-preparation.md` for detailed guidance.
 
-<ask>Create specifications? [Yes/No]:</ask>
+### 4. Validate Coverage
 
-**If Yes:** Execute substeps  
-**If No:** Auto-generate temporary IDs (with warning)
+For each component in export scope, verify it has an OBJECT ID. Generate a coverage report showing validated components and any gaps.
 
----
+### 5. Resolve Gaps
 
-## SPECIFICATION REFERENCE (Execute if creating specifications)
+If partial coverage: offer to create missing specs or auto-generate IDs. Target 100% coverage before proceeding.
 
-**→ [Figma Specification Preparation Guide](../data/figma-spec-preparation.md)**
+### 6. Present MENU OPTIONS
 
-After completing specification preparation, return here with generated OBJECT IDs.
+Display: **"Select an Option:** [C] Continue"
 
----
+#### Menu Handling Logic:
 
-## VALIDATION
+- IF C: Save specification mapping, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
 
-<action>
-Validate specification coverage:
+#### EXECUTION RULES:
 
-FOR EACH component in export scope:
-  IF component has OBJECT ID:
-    ✅ Mark as validated
-  ELSE:
-    ⚠️ Add to "missing specification" list
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
 
-Generate coverage report
-</action>
+## CRITICAL STEP COMPLETION NOTE
 
-<output>📋 Specification Coverage Report:
-
-✅ Components with OBJECT IDs: {count}
-  - {list}
-
-⚠️ Components missing OBJECT IDs: {count}
-  - {list}
-
-Coverage: {percentage}%</output>
-
-**If 100% coverage:** Proceed to next step  
-**If partial coverage:** Offer to create missing specs or auto-generate IDs
+ONLY WHEN C is selected and all components have OBJECT IDs will you load {nextStepFile} to begin generating and validating HTML.
 
 ---
 
-## NEXT STEP
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Once all components have OBJECT IDs:
+### ✅ SUCCESS:
 
-**→ Proceed to [Step 4: Generate & Validate](./step-04-generate-validate.md)**
+- Specification search completed across all relevant locations
+- OBJECT IDs found or created for all components
+- 100% specification coverage achieved
+- Coverage report presented to user
 
----
+### ❌ SYSTEM FAILURE:
 
-## OUTPUT AT THIS POINT
+- Starting HTML generation without OBJECT IDs
+- Not searching all specification locations
+- Proceeding with partial coverage without user acknowledgment
+- Not waiting for user input at menu
 
-You now have:
-- ✅ MCP connection verified
-- ✅ Export scenario identified
-- ✅ OBJECT IDs assigned to all components
-- ✅ ID naming pattern established
-
-Still need:
-- ⏸️ HTML generated with proper IDs
-- ⏸️ Validation completed
-- ⏸️ Final export executed
-
----
-
-*Step 3 complete - Specifications ready*
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

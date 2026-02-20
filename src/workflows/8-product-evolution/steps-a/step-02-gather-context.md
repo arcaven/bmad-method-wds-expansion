@@ -1,26 +1,84 @@
-# Step 02: Gather Context
+---
+name: 'step-02-gather-context'
+description: 'Understand the existing product context before making changes'
 
-## Your Task
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Understand the existing product context before making changes.
+# File References
+thisStepFile: '{workflow_path}/steps-a/step-02-gather-context.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-analyze.md'
 
+# Data References
+contextTemplates: '{workflow_path}/data/context-templates.md'
 ---
 
-## Before You Start
+# Step 2: Gather Context
 
-**Ensure you have:**
+## STEP GOAL:
 
-- ✅ Completed step 01 (opportunity identified)
-- ✅ Limited brief or improvement file created
-- ✅ Clear understanding of the problem
+Understand the existing product context deeply before designing improvements - whether you're joining an existing product for the first time or iterating on a product you designed.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Context A: Existing Product Entry Point
+### Universal Rules:
 
-### Gather Existing Materials
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-**You're joining an existing product. Collect everything:**
+### Role Reinforcement:
+
+- ✅ You are Idunn, a product evolution specialist guiding continuous improvement
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring UX research expertise and product insight, user brings domain knowledge and product experience
+- ✅ Maintain curious and analytical tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on gathering existing context - no solution design yet
+- 🚫 FORBIDDEN to propose solutions or design changes
+- 💬 Approach: Ask questions to understand deeply, help user synthesize insights
+- 📋 Experience the product yourself if possible - firsthand understanding is critical
+- 📋 Distinguish between two contexts: new product entry vs continuous improvement
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Guide user through appropriate context path (A or B) based on their situation
+- 💾 Help user collect and organize materials systematically
+- 📖 Reference templates from {contextTemplates} for all deliverables
+- 🚫 Do not skip to solutions - root cause identification comes first
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Limited brief or improvement file (from step 01), context templates
+- Focus: Understanding current state, identifying root causes, forming hypotheses
+- Limits: Do not design solutions, do not scope work (that's step S)
+- Dependencies: Requires completed step 01 (opportunity identified), limited brief or improvement file created
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Determine Context Path
+
+**Clarify user's situation:**
+
+Are you:
+- **A) Joining an existing product** (first time working on this product)
+- **B) Continuous improvement** (you designed this product, now improving it)
+
+Guide user to appropriate section below.
+
+### 2. Context A: Existing Product Entry Point
+
+**For users joining an existing product:**
+
+#### 2a. Gather Existing Materials
+
+**Help user collect everything:**
 
 | Category | Upload To | Review For |
 |----------|-----------|------------|
@@ -28,103 +86,132 @@ Understand the existing product context before making changes.
 | **Users** | `A-Project-Brief/existing-context/users/` | Who are users, needs, pain points |
 | **Product** | `A-Project-Brief/existing-context/product/` | Features, tech stack, constraints |
 
----
+**Prompt user to upload materials they have available.**
 
-### Use the Product
+#### 2b. Use the Product
 
 **Critical: Experience it yourself!**
 
+Guide user through:
 1. Download/access the product
 2. Create an account, go through onboarding
 3. Use all major features
 4. Document your experience
 
-**See:** [data/context-templates.md](../data/context-templates.md) for First Impressions template
+**Reference:** Use First Impressions template from {contextTemplates}
 
----
-
-### Create Focused Trigger Map
+#### 2c. Create Focused Trigger Map
 
 **Based on your strategic challenge:**
 
 **File:** `B-Trigger-Map/focused-trigger-map.md`
 
-**See:** [data/context-templates.md](../data/context-templates.md) for Focused Trigger Map template
+**Reference:** Use Focused Trigger Map template from {contextTemplates}
 
----
+Help user identify:
+- Trigger moment (when does this happen?)
+- Current experience (what happens now?)
+- Desired outcome (what should happen?)
+- Barriers (what's preventing success?)
+- Solution focus (what will we change?)
 
-## Context B: Continuous Improvement
+### 3. Context B: Continuous Improvement
 
-### You Already Know the Product
+**For users who designed the product:**
 
-**You designed it! But gather fresh data:**
-
-### 1. Analytics Deep Dive
+#### 3a. Analytics Deep Dive
 
 Focus on the specific feature/flow you're improving.
 
-**See:** [data/context-templates.md](../data/context-templates.md) for Analytics template
+**Reference:** Use Analytics template from {contextTemplates}
 
-### 2. User Feedback Analysis
+Help user analyze:
+- Usage metrics for specific feature
+- User segments (new vs returning vs power users)
+- Drop-off points
+- Time spent
+- Key insights
+
+#### 3b. User Feedback Analysis
 
 Categorize feedback about this specific feature.
 
-**See:** [data/context-templates.md](../data/context-templates.md) for User Feedback template
+**Reference:** Use User Feedback template from {contextTemplates}
 
-### 3. Review Original Design Intent
+Guide user to identify:
+- Themes (confusion, requests, praise)
+- Frequency of mentions
+- Specific quotes
+- Patterns
 
-Why did you design it this way? What assumptions did you make?
+#### 3c. Review Original Design Intent
 
-### 4. Competitive Analysis
+**Ask user to reflect:**
+- Why did you design it this way?
+- What assumptions did you make?
+- What constraints existed?
+- What has changed since?
 
-How do competitors handle this? What can we learn?
+#### 3d. Competitive Analysis
 
----
+**Guide user to research:**
+- How do competitors handle this?
+- What patterns work well?
+- What can we learn?
+- What should we avoid?
 
-## Synthesis
+### 4. Synthesis (Both Paths)
 
 **Combine all context into actionable insights:**
 
-**See:** [data/context-templates.md](../data/context-templates.md) for Context Synthesis template
+**Reference:** Use Context Synthesis template from {contextTemplates}
 
-Key elements:
-- What we know (key insights)
-- Root cause (why is this happening)
-- Hypothesis (what will solve it)
-- Validation plan (how will we know)
+Help user create synthesis with:
+- **What we know** (key insights from all sources)
+- **Root cause** (why is this happening?)
+- **Hypothesis** (what will solve it?)
+- **Validation plan** (how will we know?)
 
----
+**Critical:** Root cause must be identified before moving forward.
 
-## Next Step
+### 5. Present MENU OPTIONS
 
-After gathering context:
+Display: "**Select an Option:** [M] Return to Activity Menu (suggest [S] Scope Improvement)"
 
-```
-[M] Return to Activity Menu — suggest [S] Scope Improvement
-```
+#### Menu Handling Logic:
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
----
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-## Success Metrics
+## CRITICAL STEP COMPLETION NOTE
 
-✅ All existing materials gathered
-✅ Product experienced firsthand
-✅ Focused trigger map created (if new entry)
-✅ Analytics analyzed (if continuous improvement)
-✅ User feedback categorized
-✅ Root cause identified
-✅ Hypothesis formed
+ONLY WHEN user selects [M] and context gathering is complete will you then return to the activity workflow to suggest next step [S] Scope Improvement.
 
 ---
 
-## Failure Modes
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-❌ Not using the product yourself
-❌ Relying only on documentation
-❌ Ignoring user feedback
-❌ Not identifying root cause
-❌ Jumping to solutions too quickly
+### ✅ SUCCESS:
+- All relevant materials gathered (Context A) or fresh data collected (Context B)
+- Product experienced firsthand (Context A required)
+- Focused trigger map created (Context A) or analytics analyzed (Context B)
+- User feedback categorized and themed
+- Root cause clearly identified with evidence
+- Hypothesis formed with expected impact
+- Validation plan defined
+- Context synthesis document complete
 
----
+### ❌ SYSTEM FAILURE:
+- Not using the product yourself (Context A)
+- Relying only on documentation without firsthand experience
+- Ignoring user feedback or analytics data
+- Not identifying root cause (jumping to symptoms)
+- Jumping to solutions too quickly (skipping analysis)
+- Generating content without user input
+- Proposing design changes (not this step's purpose)
+- Skipping synthesis step
 
-**Remember:** Understanding context deeply leads to better solutions!
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

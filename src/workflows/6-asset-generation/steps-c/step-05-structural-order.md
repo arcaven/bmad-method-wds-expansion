@@ -1,156 +1,99 @@
+---
+name: 'step-05-structural-order'
+description: 'Apply the Golden Circle to create persuasive WHY-HOW-WHAT content flow'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-c/step-05-structural-order.md'
+nextStepFile: '{workflow_path}/steps-c/step-06-generate-content.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-content.md'
+---
+
 # Step 5: Determine Structural Order
 
-**Apply the Golden Circle to create persuasive content flow**
+## STEP GOAL:
 
----
+Apply Simon Sinek's Golden Circle to sequence all content from previous steps into a persuasive WHY-HOW-WHAT flow that moves users emotionally first, then logically, then to action.
 
-## Purpose
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Simon Sinek's Golden Circle provides the structural order that makes content persuasive: **WHY → HOW → WHAT**. Most content does it backward (WHAT → HOW → WHY) and fails to inspire action. This step sequences your content for maximum impact.
+### Universal Rules:
 
----
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Duration
+### Role Reinforcement:
 
-⏱️ **3-5 minutes**
+- ✅ You are a strategic content architect applying Golden Circle methodology
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structural persuasion expertise, user brings their content priorities
+- ✅ Maintain a clear, structured tone
 
----
+### Step-Specific Rules:
 
-## The Single Task
+- 🎯 Focus ONLY on sequencing content into WHY-HOW-WHAT structure
+- 🚫 FORBIDDEN to generate final content text in this step
+- 💬 Map all essential information from previous steps to WHY, HOW, or WHAT
+- 📋 Validate the persuasive flow end-to-end before proceeding
 
-**Map all content from previous steps into WHY → HOW → WHAT sequence**
+## EXECUTION PROTOCOLS:
 
----
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document the structural order in structured format
+- 📖 Reference all content elements from Steps 3-4 (Action Filter + Empowerment Frame)
+- 🚫 FORBIDDEN to proceed without a validated WHY-HOW-WHAT structure
 
-## Context from Previous Steps
+## CONTEXT BOUNDARIES:
 
-**VTC:** Business goal, user, driving forces  
-**Awareness Strategy:** Language, information priorities, emotional journey  
-**Action Filter:** Essential information that enables action  
-**Empowerment Frame:** Transformation, capability framing, "aha moment"
+- Available context: Purpose (Step 0), VTC (Step 1), Awareness (Step 2), Action Filter (Step 3), Empowerment Frame (Step 4)
+- Focus: Sequencing existing content elements into persuasive order
+- Limits: Do not write final content — organize the structure for it
+- Dependencies: All previous steps provide the content elements to sequence
 
----
-
-## The Golden Circle
-
-**Quick Reference:** See [data/05-golden-circle-guide.md](../data/05-golden-circle-guide.md) for detailed framework explanation.
-
-```
-WHY (Emotion) → HOW (Method) → WHAT (Specifics)
-```
-
-**WHY** - Emotional truth, purpose (connects to driving forces)  
-**HOW** - Method, approach (bridges emotion to action)  
-**WHAT** - Specifics, proof (enables action)
-
----
-
-## Questions for the User
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Identify the WHY
 
-**"What's the emotional opening that connects to their driving forces?"**
+Ask: **"What's the emotional opening that connects to their driving forces?"**
 
-- Opens with user's current emotional state (from Empowerment Frame)
-- Connects to driving forces (from VTC)
-- Makes them care before explaining solution
-
-**"What's the opening that makes them say 'that's me'?"**
-
----
+Opens with user's current emotional state, connects to driving forces from VTC, makes them care before explaining the solution.
 
 ### 2. Identify the HOW
 
-**"What's the method that bridges emotional need to specific solution?"**
+Ask: **"What's the method that bridges emotional need to specific solution?"**
 
-- Explains the approach or process
-- Shows how transformation happens
-- Uses capability framing (from Step 4)
-- Contains the "aha moment" insight
-
-**"Which essential information belongs in the HOW section?"**
-
----
+Explains the approach, shows how transformation happens, uses capability framing from Step 4, contains the "aha moment" insight.
 
 ### 3. Identify the WHAT
 
-**"What are the concrete specifics and call to action?"**
+Ask: **"What are the concrete specifics and call to action?"**
 
-- Names the product/offer
-- Provides social proof
-- Clear CTA with capability framing
-- Risk removal
-
-**"Which information belongs in WHAT—the final specifics?"**
-
----
+Names the product/offer, provides social proof, clear CTA with capability framing, risk removal.
 
 ### 4. Map Content to Structure
 
-**"Let's organize all essential information into WHY-HOW-WHAT:"**
-
-Present all content from Steps 3-4 (Action Filter + Empowerment Frame).
-
-**Work together to assign each piece:**
-- This goes in WHY (emotional opening)
-- This goes in HOW (method/bridge)
-- This goes in WHAT (specifics/proof)
-
----
+Present all content elements from Steps 3-4. Work together to assign each piece to WHY (emotional opening), HOW (method/bridge), or WHAT (specifics/proof).
 
 ### 5. Sequence Within Sections
 
-**"Within each section, what's the most persuasive order?"**
+Within each section, determine the most persuasive order:
 
-**WHY section:** Problem → Validation → Aspiration  
-**HOW section:** Approach → Differentiator → Transformation  
-**WHAT section:** Naming → Proof → Action → Risk Removal
-
-**"Does the sequence within each section flow smoothly?"**
-
----
+- **WHY section:** Problem → Validation → Aspiration
+- **HOW section:** Approach → Differentiator → Transformation
+- **WHAT section:** Naming → Proof → Action → Risk Removal
 
 ### 6. Validate Persuasive Flow
 
-**"Does WHY → HOW → WHAT create natural emotional → logical → action flow?"**
+Ask: **"Does WHY → HOW → WHAT create natural emotional → logical → action flow?"**
 
 - Can user understand WHY without knowing WHAT yet?
 - Does HOW bridge the gap naturally?
-- Does WHAT feel like natural conclusion (not premature)?
+- Does WHAT feel like a natural conclusion (not premature)?
 
-**"Does anything feel out of order or jarring?"**
-
----
-
-## Agent Actions
-
-1. **Help user identify** the WHY (emotional truth/purpose)
-2. **Help user identify** the HOW (method/bridge)
-3. **Help user identify** the WHAT (specifics/proof)
-4. **Map all essential information** from previous steps into WHY-HOW-WHAT
-5. **Sequence content within sections** for smooth flow
-6. **Validate persuasive flow** end-to-end
-7. **Document the structure**
-
----
-
-## Validation
-
-Before proceeding to Step 6:
-
-- [ ] WHY is identified (emotional opening, purpose)
-- [ ] HOW is identified (method, bridge, differentiator)
-- [ ] WHAT is identified (specifics, proof, CTA)
-- [ ] All essential information assigned to WHY, HOW, or WHAT
-- [ ] Content sequenced within each section
-- [ ] Flow feels natural and persuasive (WHY → HOW → WHAT)
-- [ ] Nothing feels out of order or premature
-
----
-
-## Output
-
-**Structural Order Document:**
+### 7. Document Structural Order
 
 ```yaml
 structural_order:
@@ -163,7 +106,6 @@ structural_order:
       - order: 2
         element: "[Validation or aspiration]"
         rationale: "[Why this comes second]"
-  
   section_how:
     purpose: "Method / Bridge from emotion to specifics"
     content_elements:
@@ -176,7 +118,6 @@ structural_order:
       - order: 3
         element: "[Transformation path]"
         rationale: "[Why this comes last in HOW]"
-  
   section_what:
     purpose: "Specifics / Proof / Action"
     content_elements:
@@ -189,39 +130,49 @@ structural_order:
       - order: 3
         element: "[CTA]"
         rationale: "[Why action comes last]"
-  
   flow_validation:
     feels_natural: "[yes/no + notes]"
     persuasive_arc: "[Does WHY → HOW → WHAT create emotional → logical → action flow?]"
 ```
 
----
+### 8. Present MENU OPTIONS
 
-## Next Step
+Display: **"Select an Option:** [C] Continue"
 
-Once structure is determined:
+#### Menu Handling Logic:
 
-**→ Proceed to [Step 6: Generate & Review Content](step-06-generate-content.md)**
+- IF C: Save structural order, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#8-present-menu-options)
 
----
+#### EXECUTION RULES:
 
-## Example
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
 
-**See:** [data/05-example-golden-circle.md](../data/05-example-golden-circle.md)
+## CRITICAL STEP COMPLETION NOTE
 
-This shows complete WHY → HOW → WHAT sequencing for hairdresser newsletter content, with detailed rationale for each element's placement and order
-
----
-
-## Notes
-
-- The Golden Circle is fractal—you can apply WHY-HOW-WHAT at page level AND within each section
-- If WHAT comes before WHY, content feels salesy and pushy
-- If WHY is missing, content feels cold and transactional
-- The "aha moment" from Step 4 often lives in the HOW section (the insight that bridges emotion to action)
-- This structure works for pages, sections, paragraphs, even sentences
+ONLY WHEN C is selected and the structural order is documented will you load {nextStepFile} to begin generating and reviewing content.
 
 ---
 
-**⚠️ ALPHA:** Did this structural sequencing feel helpful? Or was it redundant with previous steps? Feedback appreciated.
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
+### ✅ SUCCESS:
+
+- WHY is identified (emotional opening, purpose)
+- HOW is identified (method, bridge, differentiator)
+- WHAT is identified (specifics, proof, CTA)
+- All essential information assigned to WHY, HOW, or WHAT
+- Content sequenced within each section
+- Flow feels natural and persuasive
+
+### ❌ SYSTEM FAILURE:
+
+- Generating final content text in this step
+- Putting WHAT before WHY (salesy, pushy)
+- Missing the WHY section entirely (cold, transactional)
+- Not mapping all essential information to a section
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

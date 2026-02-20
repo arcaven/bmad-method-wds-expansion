@@ -1,28 +1,66 @@
-# Step 02: Asset Inventory
-
-**Goal:** Create a complete inventory of UI elements to generate, organized by component type and state.
-
+---
+name: 'step-02-inventory'
+description: 'Create a complete inventory of UI elements organized by component type, variant, and state'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-u/step-02-inventory.md'
+nextStepFile: '{workflow_path}/steps-u/step-03-select-style.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-ui-elements.md'
 ---
 
-## Actions
+# Step 2: Asset Inventory
+
+## STEP GOAL:
+
+Create a complete inventory of UI elements to generate, organized by component type, variant, and state — with priority levels and scope selection.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a creative production partner organizing component inventory
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring component library organization expertise, user brings scope decisions
+
+### Step-Specific Rules:
+
+- 🎯 Focus ONLY on cataloging UI elements for generation
+- 🚫 FORBIDDEN to generate elements in this step
+- 💬 Calculate total assets (variants x states)
+- 📋 Wait for user scope selection
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document inventory with total asset count
+- 📖 Check `{output_folder}/E-Assets/ui-elements/` for existing assets
+- 🚫 FORBIDDEN to proceed without user scope selection
+
+## CONTEXT BOUNDARIES:
+
+- Available context: UI element context from Step 1
+- Focus: Organizing elements into a generation-ready inventory
+- Limits: Do not generate — just catalog
+- Dependencies: Context from Step 1
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. List Component Types
 
-| # | Component | Variants | States | Total Assets |
-|---|-----------|----------|--------|-------------|
-| 1 | Button | primary, secondary, ghost, destructive | default, hover, focus, active, disabled | 20 |
-| 2 | Input | text, email, password, search | default, focus, filled, error, disabled | 20 |
-| 3 | Card | content, product, feature | default, hover | 6 |
-| ... | ... | ... | ... | ... |
+Table: component, variants, states, total assets (variants x states).
 
 ### 2. Prioritize
 
-```
-Priority levels:
-[H] High   — Used on every page (buttons, inputs, navigation)
-[M] Medium — Used on multiple pages (cards, alerts)
-[L] Low    — Used on specific pages (specialized components)
-```
+[H] High (used every page: buttons, inputs, navigation), [M] Medium (multiple pages: cards, alerts), [L] Low (specific pages: specialized components).
 
 ### 3. Check Existing Assets
 
@@ -30,19 +68,42 @@ Scan `{output_folder}/E-Assets/ui-elements/` for already-generated components.
 
 ### 4. Present Inventory
 
-```
-UI Element Inventory:
-- Component types: [count]
-- Total variants x states: [count] assets
-- Already generated: [count]
-- Need generation: [count]
+Show: component types count, total variants x states, already generated, need generation. Present scope: [A] All, [H] High priority only, [S] Select specific.
 
-Generate scope:
-[A] All components      — Full component library
-[H] High priority only  — Core components first
-[S] Select specific     — Pick components to generate
-```
+### 5. Present MENU OPTIONS
+
+Display: **"Select an Option:** [C] Continue"
+
+#### Menu Handling Logic:
+
+- IF C: Save inventory and scope, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#5-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and scope is confirmed will you load {nextStepFile} to begin selecting rendering style.
 
 ---
 
-**Next:** → step-03-select-style.md
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- All component types cataloged with variants and states
+- Priority levels assigned
+- Existing assets checked
+- User selected scope
+
+### ❌ SYSTEM FAILURE:
+
+- Starting generation without inventory
+- Not calculating total assets
+- Not checking existing assets
+- Not waiting for user scope selection
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

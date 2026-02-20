@@ -1,181 +1,99 @@
+---
+name: 'step-04-empowerment-frame'
+description: 'Apply Badass Users principles to frame content around user capability and transformation'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-c/step-04-empowerment-frame.md'
+nextStepFile: '{workflow_path}/steps-c/step-05-structural-order.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-content.md'
+---
+
 # Step 4: Frame User Empowerment
 
-**Apply Kathy Sierra's Badass Users principles to tone and framing**
+## STEP GOAL:
 
----
+Apply Kathy Sierra's Badass Users framework to frame content around user capability and transformation — making users feel capable, showing their transformation path, creating "aha moments," and reducing cognitive load.
 
-## Purpose
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Kathy Sierra's core insight: **Don't make a better product. Make a better USER.**
+### Universal Rules:
 
-This step frames content to make users feel capable, show their transformation, create "aha moments," and reduce cognitive load. Content isn't about YOU—it's about them becoming badass.
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
----
+### Role Reinforcement:
 
-## Duration
+- ✅ You are a strategic content analyst applying Badass Users methodology
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring empowerment framing expertise, user brings their audience understanding
+- ✅ Maintain a user-centric, empowering tone
 
-⏱️ **5-7 minutes**
+### Step-Specific Rules:
 
----
+- 🎯 Focus ONLY on empowerment framing — transformation, capability, cognitive load
+- 🚫 FORBIDDEN to generate content text in this step
+- 💬 Reframe all feature-focused language to capability-focused language
+- 📋 All five Badass Users principles must be addressed
 
-## The Single Task
+## EXECUTION PROTOCOLS:
 
-**Apply Badass Users framework to frame content around user capability and transformation**
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document empowerment framing in structured format
+- 📖 Reference Badass Users principles data file when needed
+- 🚫 FORBIDDEN to proceed without transformation and capability framing defined
 
----
+## CONTEXT BOUNDARIES:
 
-## Context from Previous Steps
+- Available context: Purpose (Step 0), VTC (Step 1), Awareness (Step 2), Action Filter (Step 3)
+- Focus: Framing content around user capability, not product features
+- Limits: Do not write content — define the empowerment frame for it
+- Dependencies: Action Filter from Step 3
 
-**VTC:** User, driving forces, awareness positioning  
-**Awareness Strategy:** Emotional journey (start emotion → end emotion)  
-**Action Filter:** Required action and essential information
-
----
-
-## Badass Users Framework
-
-**Quick Reference:** See [data/04-badass-users-principles.md](../data/04-badass-users-principles.md) for detailed framework.
-
-**Core:** "You'll be able to..." not "Our product has..."
-
-**Five Principles:**
-1. Make Them Better (not product better)
-2. Show The Transformation (current → badass)
-3. Create "Aha Moments" (perspective shifts)
-4. Reduce Cognitive Load (simplify ruthlessly)
-5. Focus on Skills (not tools)
-
----
-
-## Questions for the User
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Define Current vs. Badass State
 
-**"What's the user's CURRENT state?"**
+Ask: **"What's the user's CURRENT state?"** — What are they struggling with? How do they feel?
 
-Be specific and empathetic:
-- What are they struggling with?
-- How do they feel? (frustrated, uncertain, overwhelmed, behind?)
-- What can't they do yet?
-
-**"What's their BADASS state after success?"**
-
-Paint the picture:
-- What will they be able to do?
-- How will they feel? (confident, capable, ahead?)
-- What transformation happened?
-
----
+Ask: **"What's their BADASS state after success?"** — What will they be able to do? How will they feel?
 
 ### 2. Identify the "Aha Moment"
 
-**"What insight or realization will make them say 'Oh! I get it!'?"**
+Ask: **"What insight or realization will make them say 'Oh! I get it!'?"**
 
-The "aha moment" isn't just understanding—it's a perspective shift:
-
-**Examples:**
-- "Oh! I don't need to follow 100 accounts—I just need THIS digest!"
-- "Oh! This is about my CLIENT'S reactions, not just knowing trends!"
-- "Oh! 60 seconds is all I need—I thought it would take hours!"
-
-**"What's the key insight that unlocks confidence?"**
-
----
+The aha moment is a perspective shift, not just understanding. It unlocks confidence.
 
 ### 3. Frame Around Capability
 
-**"How do we frame this content to highlight THEIR capability, not our features?"**
+Ask: **"How do we frame this content to highlight THEIR capability, not our features?"**
 
-Transform feature-focused language:
-
-**Before (feature-focus):**
-- "Our AI analyzes 10,000 beauty sources"
-- "We send weekly emails with 5 trends"
-
-**After (capability-focus):**
-- "You'll spot trends before your competitors"
-- "You'll always have something new to talk about with clients"
-
-**"How can we reframe essential information to focus on what THEY can do?"**
-
----
+Transform feature-focused language to capability-focused language:
+- Before: "Our AI analyzes 10,000 sources"
+- After: "You'll spot trends before your competitors"
 
 ### 4. Show the Transformation Path
 
-**"How do we make the transformation visible and achievable?"**
+Ask: **"How do we make the transformation visible and achievable?"**
 
-Users need to see:
-- Where they are (current state)
-- Where they're going (badass state)
-- That the path is real and manageable
-
-**"What makes the transformation feel real and achievable, not aspirational?"**
-
-Examples:
-- Specific numbers: "60 seconds per trend" (concrete)
-- Social proof: "2,000 stylists already there" (others did it)
-- Quick win: "Try it on your next client" (immediate)
-
----
+Users need to see where they are, where they are going, and that the path is real and manageable. Use specific numbers, social proof, and quick wins.
 
 ### 5. Reduce Cognitive Load
 
-**"Where might this content overwhelm or confuse?"**
+Ask: **"Where might this content overwhelm or confuse?"**
 
-Look for cognitive load issues:
-- Too many choices? → Reduce options or guide selection
-- Too much jargon? → Use plain language
-- Too many steps? → Break down or simplify
-- Unclear what to do? → Make next step obvious
-
-**"What can we simplify or cut to reduce mental effort?"**
-
----
+Look for: too many choices, too much jargon, too many steps, unclear next actions. Identify what to simplify or cut.
 
 ### 6. Focus on Skills Over Tools
 
-**"What skill or capability are we helping them develop?"**
+Ask: **"What skill or capability are we helping them develop?"**
 
-Not:
-- "Using our platform"
-- "Receiving emails"
+Not "using our platform" but "staying current effortlessly" or "becoming the local authority."
 
-But:
-- "Staying current effortlessly"
-- "Becoming the local authority"
-
-**"Can we frame this around the skill they gain, not the tool they use?"**
-
----
-
-## Agent Actions
-
-1. **Guide user to articulate** current vs. badass transformation
-2. **Identify the "aha moment"** that shifts perspective
-3. **Reframe essential information** from Step 3 using capability language
-4. **Map the transformation path** to make it visible
-5. **Identify and address** cognitive load issues
-6. **Document the empowerment framing**
-
----
-
-## Validation
-
-Before proceeding to Step 5:
-
-- [ ] Current state clearly defined (where user is now)
-- [ ] Badass state clearly defined (where they're going)
-- [ ] "Aha moment" identified (key insight that unlocks confidence)
-- [ ] Content framed around user capability (not features)
-- [ ] Transformation path visible and achievable
-- [ ] Cognitive load issues identified and addressed
-- [ ] Focus on skills gained, not tools used
-
----
-
-## Output
-
-**Empowerment Frame Document:**
+### 7. Document Empowerment Frame
 
 ```yaml
 empowerment_frame:
@@ -184,65 +102,70 @@ empowerment_frame:
       description: "[Where user is now]"
       feelings: ["frustrated", "uncertain", "behind"]
       capabilities: "[What they can't do yet]"
-    
     badass_state:
       description: "[Where they're going]"
       feelings: ["confident", "capable", "ahead"]
       capabilities: "[What they'll be able to do]"
-    
     visibility: "[How we make the transformation visible and achievable]"
-  
   aha_moment:
     insight: "[Key realization that shifts perspective]"
     why_powerful: "[Why this unlocks confidence]"
-  
   capability_framing:
     - feature: "[Product feature]"
       reframed: "[What USER can do because of it]"
     - feature: "[Product feature]"
       reframed: "[What USER can do because of it]"
-  
   cognitive_load:
     potential_issues:
       - issue: "[Where content might overwhelm]"
         solution: "[How we reduce load]"
-    
     simplifications:
       - "[What we simplified or cut]"
-  
   skill_focus:
     primary_skill: "[Main capability user develops]"
     supporting_skills: ["[Related capabilities]"]
     tools_secondary: "[Tools are means to skill, not the focus]"
 ```
 
----
+### 8. Present MENU OPTIONS
 
-## Next Step
+Display: **"Select an Option:** [C] Continue"
 
-Once empowerment framing is defined:
+#### Menu Handling Logic:
 
-**→ Proceed to [Step 5: Determine Structural Order](step-05-structural-order.md)**
+- IF C: Save empowerment frame, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#8-present-menu-options)
 
----
+#### EXECUTION RULES:
 
-## Example
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
 
-**See:** [data/04-example-empowerment-frame.md](../data/04-example-empowerment-frame.md)
+## CRITICAL STEP COMPLETION NOTE
 
-This shows complete Badass Users framework application for hairdresser newsletter, demonstrating transformation framing, aha moment, capability reframing, cognitive load reduction, and skill focus
-
----
-
-## Notes
-
-- This is where content shifts from "us-focused" to "you-focused"
-- The transformation must feel REAL, not aspirational marketing fluff
-- "Aha moments" are specific insights, not vague "understanding"
-- Cognitive load reduction often means cutting 30-40% of planned content
-- If you can't define a clear skill focus, content might be too product-centric
+ONLY WHEN C is selected and the empowerment frame is documented will you load {nextStepFile} to begin determining structural order.
 
 ---
 
-**⚠️ ALPHA:** Did this framing process help shift perspective? Or feel too abstract? Feedback welcome.
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
+### ✅ SUCCESS:
+
+- Current state clearly defined
+- Badass state clearly defined
+- "Aha moment" identified
+- Content framed around user capability (not features)
+- Transformation path visible and achievable
+- Cognitive load issues identified and addressed
+- Focus on skills gained, not tools used
+
+### ❌ SYSTEM FAILURE:
+
+- Generating content text in this step
+- Leaving content framed around product features
+- Not identifying the "aha moment"
+- Skipping cognitive load analysis
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

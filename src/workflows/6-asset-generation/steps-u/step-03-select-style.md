@@ -1,50 +1,107 @@
-# Step 03: Select Style
-
-**Goal:** Confirm the visual style for UI element generation — the design system tokens drive most decisions, but rendering approach matters.
-
+---
+name: 'step-03-select-style'
+description: 'Confirm rendering approach, state visualization, and design system token mapping for UI elements'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-u/step-03-select-style.md'
+nextStepFile: '{workflow_path}/steps-u/step-04-generate.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-ui-elements.md'
 ---
 
-## Actions
+# Step 3: Select Style
 
-### 1. Rendering Approach
+## STEP GOAL:
 
-```
-UI element rendering:
+Confirm the visual style for UI element generation — rendering approach, state visualization method, design system token mapping, and output parameters.
 
-[V] Vector/CSS     — Clean, scalable, code-ready appearance
-[R] Realistic      — Rendered with shadows and depth, presentation-quality
-[F] Flat           — Minimal, no shadows, pure color blocks
-```
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-### 2. State Visualization
+### Universal Rules:
 
-```
-How to show component states:
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-[G] Grid           — All states in a grid (design system documentation style)
-[I] Individual     — Each state as a separate asset
-[A] Animated       — State transitions shown as sequence
-```
+### Role Reinforcement:
 
-### 3. Apply Design System
+- ✅ You are a creative production partner defining UI element rendering standards
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring component rendering expertise, user brings visual preferences
 
-Map design tokens to visual properties:
-- Primary button: `color.primary.500` background, `color.white` text, `radius.md`, `shadow.sm`
-- Hover: `color.primary.600` background, `shadow.md`
-- Focus: `ring.2` `color.primary.300` outline
-- etc.
+### Step-Specific Rules:
+
+- 🎯 Focus ONLY on defining rendering style
+- 🚫 FORBIDDEN to generate elements in this step
+- 💬 Map design tokens to visual properties
+- 📋 Confirm complete configuration before proceeding
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document style configuration
+- 🚫 FORBIDDEN to proceed without confirmed style
+
+## CONTEXT BOUNDARIES:
+
+- Available context: UI inventory (Step 2), design system tokens
+- Focus: Defining rendering parameters
+- Limits: Do not generate — just define style
+- Dependencies: Inventory and scope from Step 2
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Select Rendering Approach
+
+[V] Vector/CSS (clean, scalable, code-ready), [R] Realistic (shadows, depth, presentation-quality), [F] Flat (minimal, no shadows, pure color blocks).
+
+### 2. Select State Visualization
+
+[G] Grid (all states in a grid, design system doc style), [I] Individual (each state as separate asset), [A] Animated (state transitions as sequence).
+
+### 3. Apply Design System Tokens
+
+Map tokens to visual properties: primary button colors, hover states, focus rings, shadows, etc.
 
 ### 4. Confirm Style
 
-```
-UI Element Style:
-- Rendering: [selected approach]
-- State display: [grid/individual/animated]
-- Design system: [name] applied
-- Background: [transparent / light / dark]
-- Scale: [1x / 2x / both]
-```
+Present: rendering approach, state display, design system applied, background, scale.
+
+### 5. Present MENU OPTIONS
+
+Display: **"Select an Option:** [C] Continue"
+
+#### Menu Handling Logic:
+
+- IF C: Save style, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#5-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and style is confirmed will you load {nextStepFile} to begin generating UI elements.
 
 ---
 
-**Next:** → step-04-generate.md
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Rendering approach selected
+- State visualization method selected
+- Design tokens mapped to properties
+- Complete configuration confirmed
+
+### ❌ SYSTEM FAILURE:
+
+- Generating without defined style
+- Not mapping design tokens
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

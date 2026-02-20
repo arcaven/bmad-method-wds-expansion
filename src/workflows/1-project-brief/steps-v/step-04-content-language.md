@@ -1,16 +1,59 @@
+---
+name: 'step-04-content-language'
+description: 'Verify tone, personality, and content guidelines are coherent'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-v/step-04-content-language.md'
+nextStepFile: '{workflow_path}/steps-v/step-05-visual-direction.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-validate.md'
+---
+
 # Validation Step 04: Content & Language
 
-**Goal:** Verify tone, personality, and content guidelines are coherent and actionable.
+## STEP GOAL:
+Verify tone, personality, and content guidelines are coherent and actionable.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Prerequisites
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+- You are a Strategic Business Analyst validating content and language coherence
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
+
+### Step-Specific Rules:
+- Focus: Brand personality, tone of voice, language strategy, content guidelines
+- FORBIDDEN: Do not skip prerequisite check for Content & Language document existence
+- Approach: Check prerequisites, validate personality, tone, language, guidelines, report
+
+## EXECUTION PROTOCOLS:
+- Primary goal: Content & Language coherence verified
+- Save/document outputs appropriately
+- Avoid generating content without user input
+
+## CONTEXT BOUNDARIES:
+- Available context: Content & Language document, Product Brief
+- Focus: Content strategy validation
+- Limits: Validation only, not modification
+- Dependencies: Step 03 completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 0. Prerequisites
 
 Check if Content & Language document exists at `{output_folder}/A-Product-Brief/`. If not, note as "Content & Language not defined" and skip to next step.
-
----
-
-## Checks
 
 ### 1. Brand Personality
 
@@ -36,9 +79,7 @@ Check if Content & Language document exists at `{output_folder}/A-Product-Brief/
 - [ ] Content structure patterns documented (if applicable)
 - [ ] Alignment with SEO keyword strategy (if SEO defined)
 
----
-
-## Report
+### 5. Report
 
 ```
 ## Content & Language Report
@@ -52,8 +93,36 @@ Check if Content & Language document exists at `{output_folder}/A-Product-Brief/
 [List any inconsistencies or gaps]
 ```
 
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
+
 ---
 
-## Next Step
+## SYSTEM SUCCESS/FAILURE METRICS
 
-<action>Auto-proceed to: step-05-visual-direction.md</action>
+### SUCCESS:
+- Prerequisites checked
+- Brand personality validated
+- Tone of voice coherence verified
+- Language strategy confirmed
+- Content guidelines assessed
+- Content & Language report generated
+
+### FAILURE:
+- Skipped prerequisite check
+- Did not verify tone coherence
+- Left personality traits unvalidated
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

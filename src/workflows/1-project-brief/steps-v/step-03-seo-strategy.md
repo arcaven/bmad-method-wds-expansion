@@ -1,16 +1,59 @@
+---
+name: 'step-03-seo-strategy'
+description: 'Verify keyword map completeness and page assignments'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-v/step-03-seo-strategy.md'
+nextStepFile: '{workflow_path}/steps-v/step-04-content-language.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-validate.md'
+---
+
 # Validation Step 03: SEO Strategy
 
-**Goal:** Verify the keyword map is complete and page assignments are actionable for downstream phases.
+## STEP GOAL:
+Verify the keyword map is complete and page assignments are actionable for downstream phases.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Prerequisites
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+- You are a Strategic Business Analyst validating SEO strategy completeness
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
+
+### Step-Specific Rules:
+- Focus: Keyword map completeness, page assignments, cross-phase readiness
+- FORBIDDEN: Do not skip prerequisite check for SEO content existence
+- Approach: Check prerequisites, validate keywords, verify page assignments, assess cross-phase readiness
+
+## EXECUTION PROTOCOLS:
+- Primary goal: SEO strategy validated for downstream phases
+- Save/document outputs appropriately
+- Avoid generating content without user input
+
+## CONTEXT BOUNDARIES:
+- Available context: Content & Language document, Product Brief
+- Focus: SEO keyword strategy validation
+- Limits: Validation only, not modification
+- Dependencies: Step 02 completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 0. Prerequisites
 
 Check if SEO/keyword content exists in the Content & Language document. If not, note as "SEO not defined" and skip to next step.
-
----
-
-## Checks
 
 ### 1. Keyword Map Completeness
 
@@ -31,9 +74,7 @@ Check if SEO/keyword content exists in the Content & Language document. If not, 
 - [ ] SEO priorities align with user priorities from VTC
 - [ ] Content structure supports keyword targeting
 
----
-
-## Report
+### 4. Report
 
 ```
 ## SEO Strategy Report
@@ -46,8 +87,35 @@ Check if SEO/keyword content exists in the Content & Language document. If not, 
 [List any gaps or conflicts in SEO strategy]
 ```
 
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
+
 ---
 
-## Next Step
+## SYSTEM SUCCESS/FAILURE METRICS
 
-<action>Auto-proceed to: step-04-content-language.md</action>
+### SUCCESS:
+- Prerequisites checked
+- Keyword map completeness verified
+- Page assignments validated
+- Cross-phase readiness assessed
+- SEO strategy report generated
+
+### FAILURE:
+- Skipped prerequisite check
+- Did not verify page assignments
+- Left keyword quality unchecked
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

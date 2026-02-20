@@ -1,16 +1,69 @@
-# Substep 4C-06: States
+---
+name: 'step-06-states'
+description: 'Define all possible page and component states'
 
-**Goal:** Define all possible page and component states
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-p/step-06-states.md'
+nextStepFile: '{workflow_path}/steps-p/step-07-validation.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-specify.md'
 ---
 
-## EXECUTION
+# Step 6: States
+
+## STEP GOAL:
+
+Define all possible page-level and component-level states — how the page and each component appear in different situations.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on both page-level states AND component-level states
+- 🚫 FORBIDDEN to define validation rules yet (next step)
+- 💬 Approach: Page states first, then component states
+- 📋 Cover default, empty, loading, error, success, hover, focus, disabled states
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Define page-level states first, then component-level states
+- 💾 Store page_states and component_states
+- 📖 Reference interactions for state trigger context
+- 🚫 FORBIDDEN to skip components with multiple states
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All previous step data including interactions
+- Focus: Visual and behavioral states
+- Limits: Do not define validation rules (next step)
+- Dependencies: Interactions must be defined
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Define Page-Level States
 
 <output>**Let's define all possible states.**
 
 States show how the page and components appear in different situations.</output>
-
-## PAGE-LEVEL STATES
 
 <ask>**What are the different page-level states?**
 
@@ -30,7 +83,7 @@ For each state, describe:
 
 <action>Store page_states with descriptions</action>
 
-## COMPONENT STATES
+### 2. Define Component States
 
 <output>**Now let's define component states.**
 
@@ -53,73 +106,48 @@ For components with multiple appearances, we'll specify each state.</output>
 <action>Store component_states</action>
 </action>
 
-<output>✅ **All states defined!**
+<output>**All states defined!**
 
 **Page states:** {{page_state_count}}
 **Component states:** {{component_state_count}}
 
 **Next:** We'll define validation rules.</output>
 
----
+### 3. Present MENU OPTIONS
 
-## MENU
+Display: "**Select an Option:** [C] Continue to Validation | [M] Return to Activity Menu"
 
-<ask>[C] Continue to 4C-07 (Validation)</ask>
+#### Menu Handling Logic:
 
----
+- IF C: Load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#3-present-menu-options)
 
-## EXAMPLE OUTPUT
+#### EXECUTION RULES:
 
-```yaml
-page_states:
-  default:
-    trigger: 'Page loads normally'
-    appearance: 'Empty form ready for input'
-    actions: 'User can fill form and submit'
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
 
-  loading:
-    trigger: 'After submit clicked'
-    appearance: 'Submit button shows spinner, form disabled'
-    actions: 'Wait for response'
+## CRITICAL STEP COMPLETION NOTE
 
-  error:
-    trigger: 'Authentication fails'
-    appearance: 'Error message above form, submit button re-enabled'
-    actions: 'User can retry with different credentials'
-
-  success:
-    trigger: 'Authentication succeeds'
-    appearance: 'Brief success message'
-    actions: 'Redirect to dashboard'
-
-component_states:
-  signin-form-email-input:
-    default:
-      appearance: 'Gray border, placeholder text'
-    focus:
-      appearance: 'Primary color border, label floats up'
-    filled:
-      appearance: 'Dark border, label stays up'
-    error:
-      appearance: 'Red border, error message below'
-    disabled:
-      appearance: 'Light gray background, cursor not-allowed'
-
-  signin-form-submit-button:
-    default:
-      appearance: 'Primary color background, white text'
-    hover:
-      appearance: 'Darker primary color'
-    active:
-      appearance: 'Even darker, slight scale down'
-    loading:
-      appearance: "Spinner icon, text 'Signing in...'"
-    disabled:
-      appearance: 'Gray background, lower opacity'
-```
+ONLY WHEN the user selects an option from the menu and all states have been defined will you proceed to the next step or return as directed.
 
 ---
 
-## NEXT STEP
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Load `step-07-validation.md`
+### ✅ SUCCESS:
+
+- Page-level states defined (default, empty, loading, error, success)
+- Component-level states defined for all multi-state components
+- State triggers and appearances documented
+- All states stored
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping page-level states
+- Missing component states for multi-state components
+- Generating states without user input
+- Proceeding with incomplete state definitions
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

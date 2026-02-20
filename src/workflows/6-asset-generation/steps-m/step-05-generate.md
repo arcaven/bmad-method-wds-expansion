@@ -1,85 +1,114 @@
-# Step 05: Generate Images
-
-**Goal:** Execute image generation for all batches, maintaining visual consistency through reference chaining.
-
+---
+name: 'step-05-generate'
+description: 'Execute image generation for all batches with reference chaining for consistency'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-m/step-05-generate.md'
+nextStepFile: '{workflow_path}/steps-m/step-06-review.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-images.md'
 ---
 
-## Actions
+# Step 5: Generate Images
+
+## STEP GOAL:
+
+Execute image generation for all batches, maintaining visual consistency through reference chaining — starting with hero/anchor images, getting approval, then using approved results as references for subsequent images.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a creative production partner executing image generation
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring prompt crafting and batch production expertise, user brings approval decisions
+
+### Step-Specific Rules:
+
+- 🎯 Start each batch with hero/anchor image, get approval before continuing
+- 🚫 FORBIDDEN to batch-generate without anchor approval
+- 💬 Offer variations for key images (heroes, features)
+- 📋 Track progress per batch with completion counts
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Track progress per batch
+- 📖 Chain approved results as references for subsequent images
+- 🚫 FORBIDDEN to skip anchor approval per batch
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Inventory (Step 2), style (Step 3), references (Step 4)
+- Focus: Prompt crafting and image generation execution
+- Limits: Generate only — full set review in Step 6
+- Dependencies: References and chaining strategy from Step 4
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Build Image Prompt
 
-For each image, construct a detailed prompt:
-
-```
-Generate a [content style] image: [description]
-
-Subject: [what the image shows]
-Mood: [emotional tone]
-Lighting: [lighting setup]
-Color palette: harmonize with [hex values from brand]
-Composition: [framing direction]
-Dimensions: [width] × [height]
-Style keywords: [from content style library]
-
-[Reference: attached — match the visual treatment of this reference]
-[Negative: avoid text, watermarks, logos, borders]
-```
+Per image: content style, subject, mood, lighting, color palette (hex from brand), composition, dimensions, style keywords, reference attachment, negative prompts.
 
 ### 2. Process Batches
 
-For each batch group:
-1. Start with the hero/anchor image of the batch
-2. Present for approval
-3. Chain approved result as reference for next
-4. Continue through all images in the batch
+Per batch: start with hero/anchor, present for approval, chain approved result for next, continue through batch.
 
 ### 3. Select Service
 
-```
-[G] Generate via MCP  — Direct AI generation
-[E] Export prompts     — Formatted for external service
-[U] Upload existing    — User provides images, skip generation
-```
-
-**MCP generation:**
-- Send prompt + reference image + dimensions
-- Receive generated image
-- Display for review
-
-**Prompt export:**
-- Save formatted prompts to `{output_folder}/E-Assets/images/prompts/`
-- Include reference image paths and service-specific parameters
-- User generates externally and imports results
+[G] Generate via MCP, [E] Export prompts (save to `{output_folder}/E-Assets/images/prompts/`), [U] Upload existing (user provides, skip generation).
 
 ### 4. Handle Variations
 
-For key images (heroes, feature images):
-```
-Generate variations?
-
-[1] Single best     — One generation, iterate if needed
-[3] Three options   — Generate 3 variations, pick best
-[5] Five options    — Generate 5, pick best (slower)
-```
+For key images: [1] Single best, [3] Three options (pick best), [5] Five options (slower).
 
 ### 5. Track Progress
 
-```
-Image Generation Progress:
+Display per-batch progress with completion counts.
 
-Hero images [3/5]:
-  ✓ Homepage hero — approved
-  ✓ About hero — approved
-  → Products hero — generating (variation 2/3)...
-  ○ Services hero — pending
-  ○ Contact hero — pending
+### 6. Present MENU OPTIONS
 
-Product shots [0/17]:
-  ○ All pending — starts after heroes
+Display: **"Select an Option:** [C] Continue"
 
-[5/34 total complete]
-```
+#### Menu Handling Logic:
+
+- IF C: Save generated images, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and all scoped images are generated will you load {nextStepFile} to begin reviewing the set.
 
 ---
 
-**Next:** → step-06-review.md
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Prompts crafted with all context
+- Anchor image approved per batch before continuing
+- Reference chaining applied
+- Variations offered for key images
+- Progress tracked per batch
+
+### ❌ SYSTEM FAILURE:
+
+- Batch-generating without anchor approval
+- Not using reference chaining
+- Skipping variation options for key images
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

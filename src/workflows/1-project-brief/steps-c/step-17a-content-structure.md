@@ -1,45 +1,112 @@
-# Step 5.5: Content Structure Principles
+---
+name: 'step-17a-content-structure'
+description: 'Capture content structure principles and client vision for product pages'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Capture the client's vision for what the product should contain — pages, sections, content priorities, and navigation principles.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-17a-content-structure.md'
+nextStepFile: '{workflow_path}/steps-c/step-18-content-synthesize.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Context for Agent
+# Step 17A: Content Structure Principles
 
-**This is NOT about detailed specifications.** It's about capturing the client's mental model at whatever level of detail they have. Some clients have a clear vision ("single-page site with hero, services, map, contact"). Others are still exploring ("maybe 5 pages?"). Both are valid.
+## STEP GOAL:
+Capture the client's vision for what the product should contain - pages, sections, content priorities, and navigation principles.
 
-**Why this matters:** Without this, Scenario Outlining (Phase 4) and Dream Up agents design flows through pages that may not match what the client envisions. Capturing principles now prevents costly misalignment later.
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-**Load agent guide:** `src/data/agent-guides/saga/content-structure-principles.md` for full strategic context.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Instructions
+### Role Reinforcement:
+- You are a Strategic Business Analyst capturing the client's mental model for product structure
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-1. **Open the conversation naturally**
+### Step-Specific Rules:
+- Focus: Pages, sections, content priorities, navigation principles - NOT detailed specifications
+- FORBIDDEN: Do not create detailed page specifications - capture principles and vision
+- Approach: Open conversation, surface priorities, capture navigation principles, document constraints and clarity level
+- **Load agent guide:** `src/data/agent-guides/saga/content-structure-principles.md` for full strategic context
 
-   The client has just discussed tone of voice, language, and SEO. Now shift to the product itself.
+## EXECUTION PROTOCOLS:
+- Primary goal: Content structure principles captured at the client's level of detail
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-   Explore what they're envisioning for the product structure. Adapt your questions based on the type of product (website, app, platform) and how specific or exploratory the client is.
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, tone, language, SEO strategy
+- Focus: Product structure vision and content priorities
+- Limits: Principles, not specifications. "Services should be easy to find" is a principle. "Hamburger menu with dropdown" is a specification.
+- Dependencies: Steps 13-17 completed
 
-2. **Surface content priorities**
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-   Understand what content is critical vs. secondary vs. nice-to-have. What must be visible immediately? What's important but can live deeper?
+### 1. Open the Conversation Naturally
 
-3. **Capture navigation principles**
+The client has just discussed tone of voice, language, and SEO. Now shift to the product itself.
 
-   Not navigation design — principles. "Services should be easy to find from any page" is a principle. "Hamburger menu with dropdown" is a specification.
+Explore what they're envisioning for the product structure. Adapt your questions based on the type of product (website, app, platform) and how specific or exploratory the client is.
 
-4. **Document explicit constraints**
+### 2. Surface Content Priorities
 
-   What should NOT be included? These are as valuable as what should. "No blog, no online booking" are clear scope boundaries.
+Understand what content is critical vs. secondary vs. nice-to-have. What must be visible immediately? What's important but can live deeper?
 
-5. **Note the client's clarity level**
+### 3. Capture Navigation Principles
 
-   Document whether the client has a strong vision, is exploring, or is completely open. This tells later phases how much latitude they have.
+Not navigation design - principles. "Services should be easy to find from any page" is a principle. "Hamburger menu with dropdown" is a specification.
 
-6. **Document in content-language.md**
+### 4. Document Explicit Constraints
 
-   Add a "Content Structure Principles" section with whatever emerged from the conversation. Use the format examples in the agent guide.
+What should NOT be included? These are as valuable as what should. "No blog, no online booking" are clear scope boundaries.
+
+### 5. Note the Client's Clarity Level
+
+Document whether the client has a strong vision, is exploring, or is completely open. This tells later phases how much latitude they have.
+
+### 6. Document in Content-Language.md
+
+Add a "Content Structure Principles" section with whatever emerged from the conversation. Use the format examples in the agent guide.
+
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
 ---
 
-<action>After completing this step, load and execute: `step-06-synthesize.md`</action>
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Content priorities surfaced (critical vs. secondary vs. nice-to-have)
+- Navigation principles captured (not specifications)
+- Explicit constraints documented
+- Client clarity level noted
+- Documented in output
+
+### FAILURE:
+- Created detailed page specifications instead of principles
+- Generated content structure without client input
+- Skipped constraint documentation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

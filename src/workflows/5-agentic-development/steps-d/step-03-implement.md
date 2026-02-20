@@ -1,10 +1,63 @@
-# Step 03: Implement
+---
+name: 'step-03-implement'
+description: 'Build every feature in the implementation plan, one at a time, following existing codebase patterns'
 
-**Goal:** Build every feature in the implementation plan, one at a time, following existing codebase patterns.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-d/step-03-implement.md'
+nextStepFile: '{workflow_path}/steps-d/step-04-verify.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-development.md'
 ---
 
-## Process
+# Step 3: Implement
+
+## STEP GOAL:
+
+Build every feature in the implementation plan, one at a time, following existing codebase patterns.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on implementing plan items one at a time in dependency order
+- 🚫 FORBIDDEN to skip ahead or implement multiple items simultaneously
+- 💬 Approach: Work through each item methodically — re-read spec, implement, test, commit
+- 📋 Follow existing codebase patterns for consistency; document any deviations
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Complete every work item from the implementation plan in order
+- 💾 Commit incrementally after each logical unit of work
+- 📖 Re-read the relevant spec section before implementing each item
+- 🚫 Do not accumulate large uncommitted changesets
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Implementation plan from Step 1; environment baseline from Step 2; approved spec
+- Focus: Building features one at a time in dependency order
+- Limits: Only implement what is in the plan — no scope creep
+- Dependencies: Steps 1 and 2 must be complete
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Work Through the Plan Item by Item
 
@@ -78,9 +131,7 @@ Each commit should represent one logical unit of work:
 
 Write clear commit messages that reference what was built. Do not accumulate large uncommitted changesets.
 
----
-
-## Checklist
+### 7. Verify Checklist
 
 - [ ] Working through plan items in dependency order
 - [ ] Each item: spec re-read before implementation
@@ -92,8 +143,41 @@ Write clear commit messages that reference what was built. Do not accumulate lar
 - [ ] Commits are incremental and logically scoped
 - [ ] Deviations from spec documented with rationale
 
+### 8. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 4: Verify"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN all plan items are implemented, tested, and committed will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to **step-04-verify.md**
+### ✅ SUCCESS:
+- All plan items implemented in dependency order
+- Spec re-read before each item implementation
+- Existing codebase patterns followed
+- Design tokens used consistently
+- All component states implemented
+- Tests run after each major change
+- Commits are incremental and logically scoped
+
+### ❌ SYSTEM FAILURE:
+- Implementing items out of order or simultaneously
+- Not re-reading spec before implementation
+- Hardcoding values instead of using design tokens
+- Accumulating large uncommitted changesets
+- Moving on with broken tests
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,63 +1,72 @@
+---
+name: 'step-03-positioning'
+description: 'Help user explore and articulate their positioning through natural conversation'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-03-positioning.md'
+nextStepFile: '{workflow_path}/steps-c/step-04-create-vtc.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
 # Step 3: Define Positioning
 
-## Purpose
+## STEP GOAL:
+Help the user explore and articulate their positioning through natural conversation about who it is for, what makes it different, and what alternatives exist — then YOU synthesize this into a positioning statement.
 
-Help user explore and articulate their positioning through natural conversation, then synthesize it into a clear positioning statement.
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Context for Agent
+### Universal Rules:
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-**Philosophy:** Don't ask the user to produce a positioning statement. Have an exploratory conversation about who it's for, what makes it different, and what alternatives exist - then YOU synthesize this into a positioning statement.
+### Role Reinforcement:
+- ✅ You are Saga, a strategic interviewer and positioning synthesizer
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring strategic thinking, user brings market knowledge and product insight
+- ✅ Maintain curious, strategic tone throughout
 
-**Your role:** Strategic interviewer + positioning synthesizer.
+### Step-Specific Rules:
+- 🎯 Focus only on positioning: target, need, category, benefit, alternatives, differentiator
+- 🚫 FORBIDDEN to ask user to "write a positioning statement" — YOU synthesize from conversation
+- 💬 Approach: Open-ended exploration, capture all positioning components naturally
+- 📋 Execute 4 micro substeps sequentially
 
-## Prerequisites
+## EXECUTION PROTOCOLS:
+- 🎯 Produce a clear positioning statement with all components
+- 💾 Update `dialog/07-positioning.md` with conversation and final positioning
+- 📖 Load agent guides: `src/data/agent-guides/saga/conversational-followups.md` and `src/data/agent-guides/saga/discovery-conversation.md`
+- 🚫 Avoid asking for a positioning statement directly
 
-**Load agent guides:**
-- `src/data/agent-guides/saga/conversational-followups.md` - Follow-up patterns
-- `src/data/agent-guides/saga/discovery-conversation.md` - General principles
+## CONTEXT BOUNDARIES:
+- Available context: Vision from Step 2, project config, stakes, working_relationship
+- Focus: Market positioning and differentiation
+- Limits: Not business model, not target users in detail, not success criteria
+- Dependencies: Steps 1-2 completed (vision captured)
 
-**Load project context from** `wds-project-outline.yaml`:
-- `project_context.stakes` - Shapes tone and documentation depth
-- `working_relationship.involvement_level` - Shapes explanation level
-- `working_relationship.recommendation_style` - Shapes directness
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
----
+### 1. Open Conversation (Substep 1)
+Load and reference `../data/positioning-open-conversation.md`. Introduce positioning naturally, invite user to think about market fit.
 
-## Workflow Steps
+### 2. Explore Positioning (Substep 2)
+Load and reference `../data/positioning-explore.md`. Listen for signals, capture all positioning components (target, need, category, benefit, alternatives, differentiator).
 
-This step executes 4 micro substeps sequentially:
+### 3. Reflect & Confirm (Substep 3)
+Load and reference `../data/positioning-reflect-confirm.md`. Synthesize positioning components, get user confirmation before creating final statement.
 
-### Substep 1: Open Conversation
-**File:** `../data/positioning-open-conversation.md`
-**Task:** Introduce positioning naturally, invite user to think about market fit
+### 4. Synthesize & Document (Substep 4)
+Load and reference `../data/positioning-synthesize.md`. Create positioning statement, document with components and rationale.
 
-### Substep 2: Explore Positioning
-**File:** `../data/positioning-explore.md`
-**Task:** Listen for signals, capture all positioning components (target, need, category, benefit, alternatives, differentiator)
-
-### Substep 3: Reflect & Confirm
-**File:** `../data/positioning-reflect-confirm.md`
-**Task:** Synthesize positioning components, get user confirmation before creating final statement
-
-### Substep 4: Synthesize & Document
-**File:** `../data/positioning-synthesize.md`
-**Task:** Create positioning statement, document with components and rationale
-
----
-
-## Execution
-
-Execute substeps in order. Each substep completes before moving to next.
-
-**Start:** Load and execute `../data/positioning-open-conversation.md`
-
----
-
-## Agent Dialog Update
-
+### 5. Agent Dialog Update
 **Mandatory:** Update `dialog/07-positioning.md` before marking this step complete.
-
-**Substep 4 handles this.**
 
 The dialog should capture:
 - Opening question + user's initial response
@@ -66,21 +75,38 @@ The dialog should capture:
 - Final positioning statement (with all components)
 - Strategic rationale
 
-**Then:** Mark Step 3 complete in `dialog/progress-tracker.md` progress tracker
+Mark Step 3 complete in `dialog/progress-tracker.md` progress tracker.
+
+### 6. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to Create VTC"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN positioning is synthesized and user confirms will you then load and read fully `{nextStepFile}`.
 
 ---
 
-## State Update
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-After completing all substeps, update frontmatter:
+### ✅ SUCCESS:
+- Positioning explored through natural conversation
+- All components captured (target, need, category, benefit, differentiator)
+- Positioning statement synthesized by agent from user input
+- User confirmed the synthesis
+- Agent dialog updated
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-vision.md', 'step-03-positioning.md']
-positioning: '[synthesized positioning statement]'
-```
+### ❌ SYSTEM FAILURE:
+- Asked user to write a positioning statement directly
+- Missed key positioning components
+- Generated positioning without user input
+- Did not get user confirmation
 
----
-
-## Next Step
-
-Load, read full file, and execute: `step-04-create-vtc.md`
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

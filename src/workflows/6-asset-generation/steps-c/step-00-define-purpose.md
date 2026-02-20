@@ -1,196 +1,154 @@
+---
+name: 'step-00-define-purpose'
+description: 'Define the measurable job and purpose for content before generation begins'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-c/step-00-define-purpose.md'
+nextStepFile: '{workflow_path}/steps-c/step-01-load-vtc-context.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-content.md'
+---
+
 # Step 0: Define Content Purpose
 
-**What job must this content do?**
+## STEP GOAL:
 
----
+Define a clear, testable purpose statement for the content to be created — answering what it must accomplish, for whom, and how success is measured — so that all subsequent strategic steps have a focused target.
 
-## Purpose
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Before generating any content, we must define its **measurable job**. Content purpose determines which strategic models to emphasize and enables objective review.
+### Universal Rules:
 
----
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Duration
+### Role Reinforcement:
 
-⏱️ **3-5 minutes**
+- ✅ You are a strategic content analyst guiding purpose definition
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring strategic content methodology, user brings their domain knowledge and context
+- ✅ Maintain a focused, outcome-oriented tone throughout
 
----
+### Step-Specific Rules:
 
-## What You're Doing
+- 🎯 Focus ONLY on defining the content's measurable job
+- 🚫 FORBIDDEN to generate any actual content text in this step
+- 💬 Push for specific, testable purpose statements — reject vague goals
+- 📋 Ensure model priority emphasis is discussed before proceeding
 
-Defining a clear, testable purpose statement that answers:
-- What must this content accomplish?
-- For whom? (audience/user state)
-- How will we know it succeeded?
+## EXECUTION PROTOCOLS:
 
----
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document purpose definition as structured output
+- 📖 Validate all five areas (context, job, audience, criteria, model priorities) before proceeding
+- 🚫 FORBIDDEN to proceed without a specific, outcome-focused purpose statement
 
-## Questions for the User
+## CONTEXT BOUNDARIES:
 
-### 1. Content Context
+- Available context: Project configuration, page specifications, design system
+- Focus: What job this content must do and for whom
+- Limits: Do not create content — only define its purpose
+- Dependencies: None — this is the first step in the content creation workflow
 
-**"What content are we creating?"**
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-Examples:
-- Landing page hero section
-- Product comparison table
-- Error message for invalid email
-- CTA button on pricing page
-- About page mission statement
+### 1. Establish Content Context
 
-### 2. The Job To Do
+Ask the user: **"What content are we creating?"**
 
-**"What must this content accomplish?"**
+Examples: Landing page hero section, Product comparison table, Error message for invalid email, CTA button on pricing page, About page mission statement.
 
-Not "what it says" but "what it does":
+### 2. Define the Job To Do
 
-**Good (outcome-focused):**
-- "Convince Problem Aware users that shelf life matters"
-- "Enable confident product selection between us and competitors"
-- "Help user fix validation error while maintaining confidence"
-- "Remove final purchase barrier with risk reversal"
+Ask: **"What must this content accomplish?"**
 
-**Bad (vague):**
-- "Describe the product"
-- "Explain benefits"
-- "Add social proof"
-- "Make it sound good"
+Guide toward outcome-focused statements, not descriptions:
 
-**"Can you describe the specific outcome this content needs to achieve?"**
+**Good:** "Convince Problem Aware users that shelf life matters" / "Enable confident product selection between us and competitors" / "Remove final purchase barrier with risk reversal"
 
-### 3. Target Audience/State
+**Bad:** "Describe the product" / "Explain benefits" / "Make it sound good"
 
-**"Who will read this? What state are they in?"**
+### 3. Identify Target Audience and State
 
-Be specific:
-- "Problem Aware hairdressers feeling behind on trends"
-- "Product Aware B2B buyers comparing options"
-- "New users who just made a validation error"
-- "Most Aware users at checkout with last-minute doubts"
+Ask: **"Who will read this? What state are they in?"**
 
-**"What's their mental/emotional state when they encounter this?"**
+Be specific: persona type, awareness level, emotional/mental state when they encounter this content.
 
-### 4. Success Criteria
+### 4. Establish Success Criteria
 
-**"How will we know this content succeeded?"**
+Ask: **"How will we know this content succeeded?"**
 
-Define measurable or observable outcomes:
-- "User recognizes themselves and continues reading"
-- "User can choose the right tier in < 30 seconds"
-- "User knows what happened and how to fix it"
-- "User clicks CTA feeling confident, not anxious"
+Define measurable or observable outcomes: "User recognizes themselves and continues reading" / "User can choose the right tier in < 30 seconds" / "User clicks CTA feeling confident, not anxious"
 
-**"What would 'working perfectly' look like?"**
+### 5. Discuss Model Priority Emphasis
 
-### 5. Model Priority Emphasis
+Ask: **"Which strategic models matter most for THIS job?"**
 
-**"Which strategic models matter most for THIS job?"**
+Present the Model Priority Matrix from the Content Purpose Guide. Different content types emphasize different models (Customer Awareness, Golden Circle, Badass Users, VTC, Action Mapping). Discuss and assign star ratings per model.
 
-Based on content type and purpose, some models are more critical:
+### 6. Document Purpose Definition
 
-Present the **Model Priority Matrix** from Content Purpose Guide and discuss:
-
-**Example: Error Message**
-- Badass Users ⭐⭐⭐ (maintain confidence)
-- Action Mapping ⭐⭐⭐ (enable recovery)
-- Customer Awareness ⭐ (keep simple)
-- Golden Circle ⭐ (not needed)
-- VTC ⭐ (context only)
-
-**Example: Landing Page Hero**
-- Customer Awareness ⭐⭐⭐ (hook at their level)
-- Golden Circle ⭐⭐⭐ (WHY-first)
-- Badass Users ⭐⭐ (transformation promise)
-- VTC ⭐⭐ (targeting/motivation)
-- Action Mapping ⭐ (CTA comes later)
-
-**"Which models should we emphasize for this content's purpose?"**
-
----
-
-## Agent Actions
-
-1. **Understand the content context** - What type of content is this?
-2. **Define the purpose collaboratively** - What job must it do?
-3. **Identify the audience/state** - Who will read it? When?
-4. **Establish success criteria** - How will we know it worked?
-5. **Select model priorities** - Which frameworks matter most?
-6. **Document the purpose** - Clear statement for traceability and review
-
----
-
-## Validation
-
-Before proceeding to Step 1:
-
-- [ ] Content type/context is clear
-- [ ] Purpose is specific and outcome-focused (not vague)
-- [ ] Audience and their state are defined
-- [ ] Success criteria are measurable or observable
-- [ ] Model priorities are selected based on purpose
-- [ ] Purpose statement is documented
-
----
-
-## Output
-
-**Purpose Definition:**
+Compile all answers into a structured purpose definition:
 
 ```yaml
 content_purpose:
   content_type: "[e.g., Landing page hero, Error message, CTA button]"
-  
   purpose_statement: "[Action verb] + [specific audience/state] + [desired outcome]"
-  
   audience:
     who: "[User persona or type]"
     state: "[Mental/emotional state, awareness level]"
     context: "[When/where they encounter this content]"
-  
   success_criteria:
     - "[Observable outcome 1]"
     - "[Observable outcome 2]"
-  
   model_priorities:
-    primary: ["[Model 1 ⭐⭐⭐]", "[Model 2 ⭐⭐⭐]"]
-    secondary: ["[Model 3 ⭐⭐]"]
-    tertiary: ["[Model 4 ⭐]"]
-  
+    primary: ["[Model 1]", "[Model 2]"]
+    secondary: ["[Model 3]"]
+    tertiary: ["[Model 4]"]
   review_question: "[How will we know this achieved its purpose?]"
 ```
 
----
+### 7. Present MENU OPTIONS
 
-## Next Step
+Display: **"Select an Option:** [C] Continue"
 
-Once purpose is defined:
+#### Menu Handling Logic:
 
-**→ Proceed to [Step 1: Load VTC Context](step-01-load-vtc-context.md)**
+- IF C: Save purpose definition, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#7-present-menu-options)
 
----
+#### EXECUTION RULES:
 
-## Examples & Templates
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
 
-**See:** [data/00-purpose-examples.md](../data/00-purpose-examples.md)
+## CRITICAL STEP COMPLETION NOTE
 
-This shows three complete examples:
-- Landing page hero (Problem Aware targeting)
-- Error message (functional content with empowerment focus)
-- Product comparison feature (competitive differentiation)
-
-Plus purpose templates for persuasion, education, functional, and brand content.
+ONLY WHEN C is selected and the purpose definition is documented will you load {nextStepFile} to begin loading VTC context.
 
 ---
 
-## Notes
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-- **Purpose comes first** - Everything else flows from this
-- **Be specific** - Vague purposes lead to vague content
-- **Make it testable** - "I like it" isn't a success criterion
-- **Different purposes emphasize different models** - One size doesn't fit all
-- **Purpose enables review** - Objective evaluation, not subjective preference
+### ✅ SUCCESS:
 
----
+- Content type/context is clear
+- Purpose is specific and outcome-focused (not vague)
+- Audience and their state are defined
+- Success criteria are measurable or observable
+- Model priorities are selected based on purpose
+- Purpose statement is documented
 
-**⚠️ ALPHA:** If this step felt unnecessary or too structured, please note feedback. Is purpose definition too formal for Quick Mode?
+### ❌ SYSTEM FAILURE:
 
+- Accepting vague purpose statements like "describe the product"
+- Generating actual content text in this step
+- Skipping model priority discussion
+- Proceeding without documented success criteria
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

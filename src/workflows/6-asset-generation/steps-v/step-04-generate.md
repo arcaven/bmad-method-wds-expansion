@@ -1,91 +1,116 @@
-# Step 04: Generate Motion Content
-
-**Goal:** Generate video and motion assets using appropriate tools per complexity level.
-
+---
+name: 'step-04-generate'
+description: 'Generate video and motion assets using appropriate tools per complexity level'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-v/step-04-generate.md'
+nextStepFile: '{workflow_path}/steps-v/step-05-review.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-videos.md'
 ---
 
-## Actions
+# Step 4: Generate Motion Content
+
+## STEP GOAL:
+
+Generate video and motion assets, routing each to the appropriate tool based on complexity level — CSS/SVG for simple, Lottie for medium, video production for complex, AI generation for generated.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a creative production partner executing motion content generation
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring multi-format motion production expertise, user brings approval decisions
+
+### Step-Specific Rules:
+
+- 🎯 Route each asset to the correct tool based on complexity
+- 🚫 FORBIDDEN to use wrong tool for complexity level
+- 💬 Preview each in context (how it looks on the page)
+- 📋 Track progress across all complexity levels
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Track progress per complexity group
+- 📖 Use reference frames from approved static images for AI video
+- 🚫 FORBIDDEN to skip preview and timing check per asset
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Inventory (Step 2), style (Step 3)
+- Focus: Generating motion content with correct tools
+- Limits: Generate only — full review in Step 5
+- Dependencies: Confirmed style and scoped inventory
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Route by Complexity
 
-**Simple (CSS/SVG):**
-- Generate CSS keyframe animations
-- Create SVG with SMIL animation or CSS animation
-- Output as code snippets ready for implementation
-
-**Medium (Lottie):**
-- Describe animation in detail for After Effects / Lottie creation
-- Generate Lottie JSON if MCP supports it
-- Export animation specification document
-
-**Complex (video production):**
-- Storyboard the sequence
-- Generate shot list
-- Produce via AI video generation or guide user to production
-
-**AI Generated:**
-- Craft video generation prompts
-- Include reference frames (from approved static images)
-- Define duration, aspect ratio, movement direction
+- Simple (CSS/SVG): Generate keyframe animations, SVG with SMIL/CSS animation
+- Medium (Lottie): Describe animation for After Effects/Lottie, generate Lottie JSON if MCP supports
+- Complex (video): Storyboard, shot list, guide to production
+- AI Generated: Craft video generation prompts with reference frames
 
 ### 2. Build Prompts (AI Generated)
 
-```
-Generate a [duration] video: [description]
-
-Subject: [what's shown]
-Movement: [camera movement or subject movement]
-Mood: [emotional tone matching motion personality]
-Style: [video treatment keywords]
-Color: [brand-harmonized palette]
-Dimensions: [width]×[height]
-FPS: [24/30/60]
-Loop: [yes/no — seamless loop for backgrounds]
-
-[Reference frame: attached — this is the starting or key frame]
-```
+Include: duration, subject, movement, mood, style keywords, color palette, dimensions, FPS, loop preference, reference frame.
 
 ### 3. Select Service
 
-```
-For AI video generation:
-[G] Generate via MCP  — Direct generation
-[E] Export prompts     — For external video service
-
-For CSS/SVG motion:
-[C] Generate code     — Output animation code directly
-[S] Spec document     — Motion specification for developer
-```
+For AI video: [G] Generate via MCP, [E] Export prompts. For CSS/SVG: [C] Generate code, [S] Spec document.
 
 ### 4. Generate and Preview
 
-For each motion asset:
-1. Generate/create the asset
-2. Preview in context (how it looks on the page)
-3. Check timing and feel
-4. Iterate if needed
+For each: generate/create, preview in page context, check timing and feel, iterate if needed.
 
 ### 5. Track Progress
 
-```
-Motion Content Progress:
+Display progress per complexity group with counts.
 
-Simple CSS/SVG [4/6]:
-  ✓ Hover transitions — code ready
-  ✓ Loading spinner — SVG animated
-  ✓ Menu transition — CSS ready
-  ✓ Scroll reveal — CSS ready
-  → Card hover — generating...
-  ○ Focus ring — pending
+### 6. Present MENU OPTIONS
 
-AI Generated [0/3]:
-  ○ Hero background loop — pending
-  ○ About page ambient — pending
-  ○ Product showcase — pending
+Display: **"Select an Option:** [C] Continue"
 
-[4/12 complete]
-```
+#### Menu Handling Logic:
+
+- IF C: Save generated motion content, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and all scoped motion content is generated will you load {nextStepFile} to begin reviewing the set.
 
 ---
 
-**Next:** → step-05-review.md
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Each asset routed to correct tool
+- Prompts crafted with motion style parameters
+- Preview and timing verified per asset
+- Progress tracked per complexity group
+
+### ❌ SYSTEM FAILURE:
+
+- Using wrong tool for complexity level
+- Not previewing in context
+- Skipping timing verification
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

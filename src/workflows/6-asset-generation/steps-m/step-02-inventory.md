@@ -1,56 +1,107 @@
-# Step 02: Asset Inventory
-
-**Goal:** Build a complete inventory of all images needed, organized by type and page.
-
+---
+name: 'step-02-inventory'
+description: 'Build a complete image inventory organized by type, page, and batch opportunity'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-m/step-02-inventory.md'
+nextStepFile: '{workflow_path}/steps-m/step-03-select-style.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-images.md'
 ---
 
-## Actions
+# Step 2: Asset Inventory
+
+## STEP GOAL:
+
+Build a complete inventory of all images needed, organized by type and page, identifying batch opportunities for consistent generation.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a creative production partner organizing image inventory
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring batch production methodology, user brings scope decisions
+
+### Step-Specific Rules:
+
+- 🎯 Focus ONLY on cataloging and organizing images
+- 🚫 FORBIDDEN to generate images in this step
+- 💬 Group by type for batch consistency (heroes, products, team, backgrounds, etc.)
+- 📋 Wait for user scope selection
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document inventory with batch groups
+- 🚫 FORBIDDEN to proceed without user scope selection
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Image context from Step 1
+- Focus: Organizing images for generation
+- Limits: Do not generate — just catalog
+- Dependencies: Context from Step 1
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Catalog All Image Placements
 
-| # | Image | Page | Type | Dimensions | Content |
-|---|-------|------|------|-----------|---------|
-| 1 | Hero banner | Homepage | hero | 1920×800 | [description] |
-| 2 | Team photo | About | people | 800×600 | [description] |
-| 3 | Product shot | Products | product | 600×600 | [description] |
-| 4 | Background | Contact | decorative | 1920×1080 | [description] |
-| ... | ... | ... | ... | ... | ... |
+Table: image, page, type (hero/product/team/background/illustration/decorative), dimensions, content description.
 
 ### 2. Group by Type
 
-Organize for batch generation:
-- **Hero images** — Large, prominent, define page mood
-- **Product images** — Consistent lighting and framing
-- **People/team** — Authentic feel, consistent treatment
-- **Backgrounds** — Subtle, support content without competing
-- **Illustrations** — Match chosen content style
-- **Decorative** — Textures, patterns, dividers
+Organize for batch generation: hero images, product images, people/team, backgrounds, illustrations, decorative.
 
 ### 3. Identify Batch Opportunities
 
-Images that should share visual consistency:
-- "All 17 vehicle images for product pages" → one batch, one style
-- "All team member photos" → one batch, one lighting setup
-- "All hero images" → one mood, varying subjects
+Images that should share visual consistency: "All 17 vehicle images" = one batch, "All team photos" = one lighting, "All heroes" = one mood.
 
 ### 4. Present Inventory
 
-```
-Image Inventory:
-- Total images needed: [count]
-- Batch groups: [count]
-- Can reuse existing: [count]
-- Need generation: [count]
+Show: total needed, batch groups, reusable existing, need generation. Present scope: [A] All, [B] By batch, [S] Select specific, [P] Priority (hero + above-fold).
 
-Largest batch: [name] ([count] images)
+### 5. Present MENU OPTIONS
 
-Generate scope:
-[A] All images      — Full generation run
-[B] By batch        — Select batch groups
-[S] Select specific — Pick individual images
-[P] Priority first  — Hero images and above-fold only
-```
+Display: **"Select an Option:** [C] Continue"
+
+#### Menu Handling Logic:
+
+- IF C: Save inventory and scope, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#5-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and scope is confirmed will you load {nextStepFile} to begin selecting image style.
 
 ---
 
-**Next:** → step-03-select-style.md
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- All image placements cataloged
+- Batch groups identified
+- Reusable assets noted
+- User selected scope
+
+### ❌ SYSTEM FAILURE:
+
+- Starting generation without inventory
+- Not identifying batch opportunities
+- Not waiting for user scope selection
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

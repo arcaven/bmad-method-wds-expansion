@@ -1,10 +1,63 @@
-# Step 02: Analyze Impact
+---
+name: 'step-02-analyze-impact'
+description: 'Understand how the proposed changes affect existing code and identify risks'
 
-**Goal:** Understand how the proposed changes affect existing code, and identify risks.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-e/step-02-analyze-impact.md'
+nextStepFile: '{workflow_path}/steps-e/step-03-plan-implementation.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-evolution.md'
 ---
 
-## Process
+# Step 2: Analyze Impact
+
+## STEP GOAL:
+
+Understand how the proposed changes affect existing code, and identify risks.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on reading affected code, mapping dependencies, identifying breaking change risks, and assessing database/API impacts
+- 🚫 FORBIDDEN to begin planning or implementing changes — that is a later step
+- 💬 Approach: Deep dive into affected code with user, mapping what depends on what
+- 📋 Document a risk assessment table with likelihood, impact, and mitigation
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Produce a dependency map, breaking change risk list, and risk assessment
+- 💾 Document risk assessment in the dialog file
+- 📖 Reference the boundary map and integration points from Step 1
+- 🚫 Do not plan implementation order or write any code
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Scope definition, boundary map, and integration points from Step 1
+- Focus: Impact analysis — dependencies, risks, breaking changes
+- Limits: No implementation planning, no code changes
+- Dependencies: Step 1 must be complete (scope defined)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Read Code for All Affected Areas
 
@@ -44,9 +97,7 @@ Write a risk assessment in the dialog file:
 | API change breaks mobile client | Low | High | Make change additive, not breaking |
 | State management conflict | Medium | Medium | Isolate new state, feature flag |
 
----
-
-## Checklist
+### 6. Verify Checklist
 
 - [ ] All affected code read and understood
 - [ ] Dependencies mapped
@@ -54,8 +105,38 @@ Write a risk assessment in the dialog file:
 - [ ] Database/API impacts assessed
 - [ ] Risk assessment documented in dialog file
 
+### 7. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 3: Plan Implementation"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the impact analysis is complete with dependencies mapped and risks documented will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-03-plan-implementation.md
+### ✅ SUCCESS:
+- All affected code read and understood
+- Dependencies mapped
+- Breaking change risks identified
+- Database/API impacts assessed
+- Risk assessment documented in dialog file
+
+### ❌ SYSTEM FAILURE:
+- Beginning implementation planning without completing impact analysis
+- Not reading all affected code
+- Skipping dependency mapping
+- Not documenting risks
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

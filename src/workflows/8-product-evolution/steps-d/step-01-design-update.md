@@ -1,87 +1,182 @@
-# Step 03: Design Update
+---
+name: 'step-01-design-update'
+description: 'Design incremental improvement using Kaizen principles'
 
-## Your Task
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Design the incremental improvement - not a complete redesign, but a targeted update.
+# File References
+thisStepFile: '{workflow_path}/steps-d/step-01-design-update.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-design.md'
 
+# Data References
+designTemplates: '{workflow_path}/data/design-templates.md'
 ---
 
-## Before You Start
+# Step 3: Design Update
 
-**Ensure you have:**
+## STEP GOAL:
 
-- ✅ Completed step 02 (context gathered)
-- ✅ Root cause identified
-- ✅ Hypothesis formed
-- ✅ Clear scope defined
+Design a targeted, incremental improvement using Kaizen principles - not a complete redesign, but a focused update that solves the root cause with minimal scope.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Kaizen Principle: Small, Focused Changes
+### Universal Rules:
 
-**Remember:**
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Idunn, a product evolution specialist guiding continuous improvement
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design thinking and Kaizen expertise, user brings product knowledge
+- ✅ Maintain focused and pragmatic tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on designing the smallest effective change
+- 🚫 FORBIDDEN to scope creep or suggest complete redesigns
+- 💬 Approach: Challenge scope expansion, validate against root cause, ensure measurability
+- 📋 Keep the Kaizen principle central: targeted improvement, not transformation
+- 📋 Document what's changing AND what's staying the same
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Guide user to define change boundaries first (what changes, what stays)
+- 💾 Help user create update specifications that reference v1.0 clearly
+- 📖 Reference templates from {designTemplates} for all deliverables
+- 🚫 Challenge any scope expansion with "Does this solve the root cause?" test
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Context gathered in step 02, root cause identified, hypothesis formed
+- Focus: Designing minimal effective change, documenting before/after, validating hypothesis
+- Limits: Do not expand scope beyond root cause solution, do not skip validation
+- Dependencies: Requires completed step 02, root cause identified, hypothesis formed, clear scope
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Kaizen Principle Reminder
+
+**Reinforce the approach:**
 
 | DO ✅ | DON'T ❌ |
 |-------|----------|
 | Targeted improvement | Complete redesign |
 | Change one thing well | Change everything |
 | Incremental update | Big bang release |
+| Surgical precision | Scope creep |
+| Focused on root cause | "While we're at it..." |
 
----
+**Ask user:** "What is the ONE thing we need to change to solve the root cause?"
 
-## Design Process
-
-### 1. Define What's Changing vs What's Staying
+### 2. Define What's Changing vs What's Staying
 
 **Create:** `C-UX-Scenarios/XX-update-name/change-scope.md`
 
-**See:** [data/design-templates.md](../data/design-templates.md) for Change Scope template
+**Reference:** Use Change Scope template from {designTemplates}
 
----
+Help user document:
 
-### 2. Create Update Specifications
+**What's Changing:**
+- Specific screens/features affected
+- Types of changes (copy, visual hierarchy, components, flow, interaction, data)
+- Specific change list (numbered, clear)
+
+**What's Staying:**
+- Unchanged elements (brand, typography, layout, navigation, tech stack, data model)
+- Rationale (why keeping these fixed?)
+
+**Critical question:** "Is everything in 'What's Changing' necessary to solve the root cause?"
+
+### 3. Create Update Specifications
 
 **For each screen/feature being updated:**
 
 **File:** `C-UX-Scenarios/XX-update-name/Frontend/specifications.md`
 
-**See:** [data/design-templates.md](../data/design-templates.md) for Update Specification template
+**Reference:** Use Update Specification template from {designTemplates}
 
-Key sections:
-- Change summary (what's different from v1.0)
-- Component changes (new, modified, removed, unchanged)
-- Interaction changes (before/after)
-- Copy changes with rationale
-- Success metrics
+Guide user to create:
 
----
+**Change Summary:**
+- What's different from v1.0? (brief list)
 
-### 3. Design New/Modified Components
+**Updated Screen Structure:**
+- Before (v1.0): [Describe old structure]
+- After (v2.0): [Describe new structure]
 
-**If you need new components:**
+**Component Changes:**
+- New components (name, purpose)
+- Modified components (name, what changed)
+- Removed components (name, why removed)
+- Unchanged components (name, still used as-is)
+
+**Interaction Changes:**
+- Before (v1.0): [Step-by-step flow]
+- After (v2.0): [Updated flow with NEW markers]
+
+**Copy Changes:**
+- Before/After pairs with rationale for each change
+
+**Visual Changes:**
+- Hierarchy, emphasis, spacing (before vs after)
+
+**Success Metrics:**
+- How will we measure if this update works?
+- Measurement period (typically 2 weeks after release)
+
+### 4. Design New/Modified Components (If Needed)
+
+**If new components required:**
 
 **File:** `D-Design-System/03-Atomic-Components/[Category]/[Component-Name].md`
 
-**See:** [data/design-templates.md](../data/design-templates.md) for New Component template
+**Reference:** Use New Component template from {designTemplates}
 
----
+Help user specify:
+- Purpose (why this component?)
+- Specifications (standard component spec format)
+- Usage (where used, when shown)
 
-### 4. Create Before/After Comparison
+**Caution:** Ask "Can we use an existing component instead?"
+
+### 5. Create Before/After Comparison
 
 **Visual documentation of the change:**
 
 **File:** `C-UX-Scenarios/XX-update-name/before-after.md`
 
-**See:** [data/design-templates.md](../data/design-templates.md) for Before/After template
+**Reference:** Use Before/After template from {designTemplates}
 
----
+Guide user to document:
 
-## Design Validation
+**Before (v1.0):**
+- Screenshot/description
+- User experience (sees, feels, problem)
+- Metrics (current state)
 
-**Before moving forward, validate your design:**
+**After (v2.0):**
+- Screenshot/description
+- User experience (sees, feels, improvement)
+- Expected metrics (targets)
 
-### Self-Review Checklist
+**Key Changes:**
+- List each change with before/after/impact
 
+### 6. Design Validation
+
+**Before moving forward, validate the design:**
+
+#### 6a. Self-Review Checklist
+
+Work through with user:
 - [ ] Does this solve the root cause?
 - [ ] Is this the smallest change that could work?
 - [ ] Does this align with existing design system?
@@ -90,63 +185,60 @@ Key sections:
 - [ ] Does this create new problems?
 - [ ] Have we considered edge cases?
 
----
+**All must be checked before proceeding.**
 
-### Hypothesis Validation
+#### 6b. Hypothesis Validation
 
-**See:** [data/design-templates.md](../data/design-templates.md) for Hypothesis Validation template
+**Reference:** Use Hypothesis Validation template from {designTemplates}
 
----
+Help user document:
+- Hypothesis (what do we believe will happen?)
+- Assumptions (what are we assuming?)
+- Risks (what could go wrong? mitigations?)
+- Success criteria (metrics, targets, timeframe)
+- Failure criteria (rollback thresholds)
 
-## Next Step
+### 7. Present MENU OPTIONS
 
-After designing the update:
+Display: "**Select an Option:** [M] Return to Activity Menu (suggest [I] Implement)"
 
-```
-[M] Return to Activity Menu — suggest [I] Implement
-```
+#### Menu Handling Logic:
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
----
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-## Success Metrics
+## CRITICAL STEP COMPLETION NOTE
 
-✅ Change scope clearly defined
-✅ Update specifications created
-✅ New/modified components designed
-✅ Before/after comparison documented
-✅ Hypothesis validated
-✅ Self-review complete
-✅ Smallest effective change identified
-
----
-
-## Failure Modes
-
-❌ Scope creep (changing too much)
-❌ Not documenting what's staying the same
-❌ No before/after comparison
-❌ Can't measure impact
-❌ Creating new problems
-❌ Not validating hypothesis
+ONLY WHEN user selects [M] and design is complete and validated will you then return to the activity workflow to suggest next step [I] Implement.
 
 ---
 
-## Tips
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-### DO ✅
+### ✅ SUCCESS:
+- Change scope clearly defined (what changes, what stays)
+- Update specifications created referencing v1.0
+- New/modified components designed (only if necessary)
+- Before/after comparison documented with metrics
+- Hypothesis validated with success/failure criteria
+- Self-review checklist completed (all items checked)
+- Smallest effective change identified and justified
+- No scope creep beyond root cause solution
+- All changes measurable
 
-**Be surgical:** Change only what's necessary, keep scope tight
+### ❌ SYSTEM FAILURE:
+- Scope creep (changing too much, "while we're at it" syndrome)
+- Not documenting what's staying the same
+- No before/after comparison
+- Can't measure impact (no metrics defined)
+- Creating new problems without mitigation
+- Not validating hypothesis before proceeding
+- Skipping self-review checklist
+- Complete redesign instead of incremental update
+- Generating specifications without user input
+- Not challenging unnecessary scope expansion
 
-**Be clear:** Document what's changing AND what's staying
-
-**Be measurable:** Define success metrics, set realistic targets
-
-### DON'T ❌
-
-**Don't scope creep:** "While we're at it..." ❌
-
-**Don't redesign:** Complete overhaul ❌ → Targeted improvement ✅
-
----
-
-**Remember:** Kaizen is about small, focused improvements that compound over time!
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

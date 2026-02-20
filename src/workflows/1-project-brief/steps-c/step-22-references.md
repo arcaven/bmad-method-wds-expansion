@@ -1,101 +1,141 @@
-# Step 3: Visual References
+---
+name: 'step-22-references'
+description: 'Gather visual references and inspiration sites'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-22-references.md'
+nextStepFile: '{workflow_path}/steps-c/step-23-design-style.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
+# Step 22: Visual References
+
+## STEP GOAL:
 Gather inspiration and reference sites that represent the desired visual direction.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Reference sites communicate visual preferences more effectively than words alone. Help the user articulate WHAT they like about each reference.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Instructions
+### Role Reinforcement:
+- You are a Strategic Business Analyst helping articulate visual preferences through references
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-1. **Request reference sites**
+### Step-Specific Rules:
+- Focus: Reference sites, specific element preferences, mood keywords, negative references
+- FORBIDDEN: Do not accept vague "I like it" without probing for specifics
+- Approach: Collect references, probe for specifics on each, include negative references, synthesize mood
 
-   Ask: "Are there any websites you like the look of? They don't have to be in the same industry."
+## EXECUTION PROTOCOLS:
+- Primary goal: Visual references collected with specific preferences and mood keywords
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-   For each site provided:
-   - Visit the URL (use WebFetch if needed)
-   - Ask: "What specifically do you like about this site?"
-   - Document the specific elements they're drawn to
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, existing brand assets, inspiration analysis
+- Focus: Visual references and specific element preferences
+- Limits: Gathering preferences, not making design decisions
+- Dependencies: Step 21 completed
 
-2. **Probe for specifics**
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-   For each reference, identify:
-   - **Layout:** How content is organized
-   - **Colors:** Palette, mood, contrast
-   - **Typography:** Font styles, sizes, weight
-   - **Imagery:** Photo style, illustrations
-   - **Effects:** Animations, shadows, interactions
-   - **Overall feel:** Modern, classic, bold, subtle
+### 1. Request Reference Sites
 
-3. **Industry-specific references**
+Ask: "Are there any websites you like the look of? They don't have to be in the same industry."
 
-   Ask: "Have you seen any [industry] websites that stood out?"
+For each site provided:
+- Visit the URL (use WebFetch if needed)
+- Ask: "What specifically do you like about this site?"
+- Document the specific elements they're drawn to
 
-   These show expectations within the sector and opportunities to differentiate.
+### 2. Probe for Specifics
 
-4. **Negative references**
+For each reference, identify:
+- **Layout:** How content is organized
+- **Colors:** Palette, mood, contrast
+- **Typography:** Font styles, sizes, weight
+- **Imagery:** Photo style, illustrations
+- **Effects:** Animations, shadows, interactions
+- **Overall feel:** Modern, classic, bold, subtle
 
-   Ask: "Are there any sites or styles you definitely DON'T want?"
+### 3. Industry-Specific References
 
-   Knowing what to avoid is as valuable as knowing what to pursue.
+Ask: "Have you seen any [industry] websites that stood out?"
 
-5. **Synthesize mood keywords**
+These show expectations within the sector and opportunities to differentiate.
 
-   Based on references, identify 3-5 mood keywords:
-   - Example: "Professional, modern, warm, trustworthy, local"
+### 4. Negative References
 
-   Validate with user: "Would you say the visual direction should feel [keywords]?"
+Ask: "Are there any sites or styles you definitely DON'T want?"
 
-6. **Document in output**
-   - Fill in Visual References section
-   - Add each reference with URL and what we like
-   - Capture mood description and keywords
+Knowing what to avoid is as valuable as knowing what to pursue.
 
-## Example Output
+### 5. Synthesize Mood Keywords
 
-```
-**Autoexperten (https://autoexperten.se)**
-- What we like: Dark, professional, clear trust badges
-- Relevance: Partner brand alignment
+Based on references, identify 3-5 mood keywords:
+- Example: "Professional, modern, warm, trustworthy, local"
 
-**Bosch Car Service (https://boschcarservice.com/se/sv/)**
-- What we like: Clean layout, clear CTAs, professional imagery
-- Relevance: Industry benchmark, lighter alternative
+Validate with user: "Would you say the visual direction should feel [keywords]?"
 
-**Local competitor**
-- What we DON'T like: Cluttered, outdated, hard to read
-- Learn: Keep it simple, modern
+### 6. Document in Output
+- Fill in Visual References section
+- Add each reference with URL and what we like
+- Capture mood description and keywords
 
-Mood: Professional, trustworthy, local, modern but not cold
-```
-
-
-## Agent Dialog Update
-
+### 7. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### [Step Name]
-**Q:** [Key questions asked]
+### Step 22: Visual References
+**Q:** Reference sites and what specifically you like about them?
 **A:** [User responses - summarized]
-**Documented in:** visual-direction.md ([section name])
+**Documented in:** visual-direction.md (Visual References section)
 **Key insights:** [Important decisions or revelations]
 **Status:** Complete
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing references, proceed to step-23-design-style.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-existing-brand.md', 'step-03-references.md']
-reference_count: '[number]'
-mood_keywords: '[keywords]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Reference sites collected with specific element preferences
+- Negative references captured
+- Mood keywords synthesized and validated
+- User confirmed mood direction
+- Documented in output
+
+### FAILURE:
+- Accepted vague preferences without probing
+- Skipped negative references
+- Generated mood keywords without user validation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

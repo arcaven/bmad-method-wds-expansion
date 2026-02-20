@@ -1,10 +1,63 @@
-# Step 01: Choose Visual Approach
+---
+name: 'step-01-visual-approach'
+description: 'Determine which visual tool and approach to use for page design'
 
-**Goal:** Determine which visual tool and approach to use for this page.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-w/step-01-visual-approach.md'
+nextStepFile: '{workflow_path}/steps-w/step-02-generate-visual.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-visual.md'
 ---
 
-## Process
+# Step 1: Choose Visual Approach
+
+## STEP GOAL:
+
+Determine which visual tool and approach to use for this page's visual design.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on tool selection and approach planning
+- 🚫 FORBIDDEN to start generating visuals without tool choice
+- 💬 Approach: Present options, let user choose, capture preferences
+- 📋 Route to Nano Banana setup if first time and [N] selected
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Review page specification, present tool options, capture choice
+- 💾 Store chosen approach and any specific instructions
+- 📖 Reference page specification for complexity context
+- 🚫 FORBIDDEN to assume tool choice
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Page specification, project config
+- Focus: Tool selection and approach planning
+- Limits: Do not generate visuals yet (next step)
+- Dependencies: Page specification must exist
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Review Page Specification
 
@@ -37,8 +90,42 @@ If user selects [N]:
 
 Record the chosen approach and any specific instructions (style preferences, reference images, etc.).
 
+### 5. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Generate Visual | [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF C: Load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#5-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user selects an option from the menu and the visual approach has been chosen will you proceed to the next step or return as directed.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-<action>Auto-proceed to: step-02-generate-visual.md</action>
+### ✅ SUCCESS:
+
+- Page specification reviewed for context
+- Tool options presented clearly
+- User chose an approach
+- Setup gate passed for Nano Banana if selected
+- Approach and preferences stored
+
+### ❌ SYSTEM FAILURE:
+
+- Assuming tool choice without asking
+- Skipping Nano Banana setup verification
+- Starting generation without confirmed approach
+- Not reviewing page spec for context
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

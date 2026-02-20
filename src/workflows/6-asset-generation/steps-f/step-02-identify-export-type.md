@@ -1,161 +1,112 @@
+---
+name: 'step-02-identify-export-type'
+description: 'Determine the code-to-Figma export scenario type for proper ID naming and structure'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-f/step-02-identify-export-type.md'
+nextStepFile: '{workflow_path}/steps-f/step-03-prepare-specifications.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-figma.md'
+---
+
 # Step 2: Identify Code to Figma Type
 
-**Progress: Step 2 of 5** - Next: Prepare Specifications
+## STEP GOAL:
 
-**Duration:** 2-3 minutes
+Determine which code-to-Figma export scenario applies to the current request — Prototype Page, Design System Component, or Frontend View/Component Block — to ensure proper ID naming and structure.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## YOUR TASK
+### Universal Rules:
 
-Determine which type of code-to-Figma scenario applies to the current request.
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
----
+### Role Reinforcement:
 
-## GOAL
+- ✅ You are a technical export specialist classifying the export scenario
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring export scenario expertise, user brings their specific export needs
+- ✅ Maintain a clear, analytical tone
 
-Match the user's request to one of three scenarios to ensure proper ID naming and structure.
+### Step-Specific Rules:
 
----
+- 🎯 Focus ONLY on identifying the export scenario type
+- 🚫 FORBIDDEN to start generating HTML or preparing specifications
+- 💬 Confirm scenario type with user before proceeding
+- 📋 Document the selected scenario and its ID naming pattern
 
-## EXECUTION
+## EXECUTION PROTOCOLS:
 
-### Analyze User Request
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document selected scenario type and ID naming pattern
+- 📖 Use the decision tree to classify the request
+- 🚫 FORBIDDEN to proceed without user confirmation of scenario type
 
-<action>
-Examine the user's request and extract:
-- Component/page name
-- Scope (full page vs. component vs. block)
-- Purpose (design system, prototype, visual adjustment)
-- States/variations mentioned
-</action>
+## CONTEXT BOUNDARIES:
 
----
+- Available context: Verified MCP connection, user's export request
+- Focus: Classifying the export into one of three scenario types
+- Limits: Do not start HTML generation — just classify and confirm
+- Dependencies: Verified connection from Step 1
 
-### Determine Scenario Type
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-<output>Based on your request, I need to determine the export type...</output>
+### 1. Analyze User Request
 
-**Decision Tree:**
+Examine the user's request and extract: component/page name, scope (full page vs. component vs. block), purpose (design system, prototype, visual adjustment), states/variations mentioned.
 
-```
-IF request mentions:
-  - Full page/screen
-  - Multiple sections (header, hero, footer)
-  - User flow or journey
-  - Page layout
-  → Scenario A: Prototype Page Export
+### 2. Apply Decision Tree
 
-ELSE IF request mentions:
-  - Component states (hover, active, disabled)
-  - Design system documentation
-  - Reusable component
-  - Component library
-  → Scenario B: Design System Component
+- Full page/screen, multiple sections, user flow → **Scenario A: Prototype Page Export** (ID: `{page}-{section}-{element}`)
+- Component states, design system docs, reusable component → **Scenario B: Design System Component** (ID: `{component}-{variant}-{state}`)
+- Visual adjustments, spacing iteration, specific UI block → **Scenario C: Frontend View/Component Block** (ID: `{component}-{element}-{descriptor}`)
+- Unclear → Ask user for clarification
 
-ELSE IF request mentions:
-  - Visual adjustments
-  - Spacing/layout iteration
-  - Specific UI block
-  - Rapid prototyping
-  → Scenario C: Frontend View/Component Block
+### 3. Confirm with User
 
-ELSE:
-  → Ask user for clarification
-```
+Present the identified scenario with its description, ID naming pattern, and expected outcome. Ask: **"Proceed with this scenario, or would you like to adjust the scope?"**
 
----
+Wait for user confirmation.
 
-### Confirm with User
+### 4. Present MENU OPTIONS
 
-<output>📋 I've identified this as:
+Display: **"Select an Option:** [C] Continue"
 
-**Scenario {A/B/C}: {Scenario Name}**
+#### Menu Handling Logic:
 
-This means we'll export:
-- {Description of what will be exported}
-- ID naming pattern: {pattern}
-- Expected outcome: {outcome}
+- IF C: Save scenario type and ID pattern, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#4-present-menu-options)
 
-Is this correct, or would you like to adjust the scope?</output>
+#### EXECUTION RULES:
 
-<ask>Proceed with this scenario? [Yes/Adjust/Cancel]:</ask>
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
 
-**Wait for user confirmation.**
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and the scenario type is confirmed will you load {nextStepFile} to begin preparing specifications.
 
 ---
 
-## SCENARIO DETAILS
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-### Scenario A: Prototype Page Export
+### ✅ SUCCESS:
 
-**When:** Full page/screen implementation ready for design review
+- Export request analyzed and classified
+- Scenario type confirmed with user
+- ID naming pattern documented
+- Expected outcome communicated
 
-**ID Pattern:** `{page}-{section}-{element}`
+### ❌ SYSTEM FAILURE:
 
-**Example IDs:**
-```
-start-page-header
-start-page-hero
-start-hero-headline
-start-hero-cta
-start-message-section
-```
+- Starting HTML generation before scenario is confirmed
+- Not confirming scenario type with user
+- Using wrong ID naming pattern
+- Not waiting for user input at menu
 
----
-
-### Scenario B: Design System Component
-
-**When:** Reusable component with states/variations needs documentation
-
-**ID Pattern:** `{component}-{variant}-{state}`
-
-**Example IDs:**
-```
-btn-cta-primary-default
-btn-cta-primary-hover
-btn-cta-primary-active
-btn-cta-primary-disabled
-```
-
----
-
-### Scenario C: Frontend View/Component Block
-
-**When:** Specific UI block needs visual iteration or adjustment
-
-**ID Pattern:** `{component}-{element}-{descriptor}`
-
-**Example IDs:**
-```
-language-selector-button
-language-selector-icon
-language-selector-dropdown
-language-selector-item-en
-```
-
----
-
-## NEXT STEP
-
-Once scenario confirmed:
-
-**→ Proceed to [Step 3: Prepare Specifications](./step-03-prepare-specifications.md)**
-
----
-
-## OUTPUT AT THIS POINT
-
-You now have:
-- ✅ MCP connection verified
-- ✅ Export scenario identified
-- ✅ ID naming pattern determined
-
-Still need:
-- ⏸️ Specifications located/created
-- ⏸️ HTML generated and validated
-- ⏸️ Final export executed
-
----
-
-*Step 2 complete - Export type identified*
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

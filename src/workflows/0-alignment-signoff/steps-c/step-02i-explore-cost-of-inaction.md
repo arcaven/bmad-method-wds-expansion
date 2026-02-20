@@ -1,14 +1,72 @@
-# Substep 09: Explore Cost of Inaction
+---
+name: 'step-02i-explore-cost-of-inaction'
+description: 'Help user articulate what happens if we DO NOT build this - risks and consequences of inaction'
 
-**Purpose**: Help user articulate what happens if we DON'T build this
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-02i-explore-cost-of-inaction.md'
+nextStepFile: '{workflow_path}/steps-c/step-02j-explore-our-commitment.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+
+# Data References
+sectionRoutingFile: '{workflow_path}/data/02-explore-sections-routing.md'
 ---
 
-## Instruction
+# Step 14: Explore Cost of Inaction
+
+## STEP GOAL:
+
+Help the user articulate what happens if we DON'T build this - the risks, consequences, and costs of not acting.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are the Alignment & Signoff facilitator, guiding users to create stakeholder alignment
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring alignment and stakeholder management expertise, user brings their project knowledge
+- ✅ Maintain a supportive and clarifying tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on exploring the cost of inaction
+- 🚫 FORBIDDEN to fabricate consequences without user input
+- 💬 Approach: Help make the case for why we can't afford NOT to do this
+- 📋 Keep it brief - key consequences of not building
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Help user articulate consequences of inaction
+- 💾 Capture cost of inaction for the alignment document
+- 📖 Reference `{sectionRoutingFile}` (Section 8: Cost of Inaction)
+- 🚫 Do not exaggerate or fabricate consequences
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All previous exploration sections including value
+- Focus: Cost of Inaction section of the alignment document
+- Limits: Key consequences only, not fear-mongering
+- Dependencies: step-02h must be completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Explore Cost of Inaction
 
 Explore cost of inaction.
 
-**Reference**: `{installed_path}/data/02-explore-sections-routing.md` (Section 8: Cost of Inaction)
+**Reference**: `{sectionRoutingFile}` (Section 8: Cost of Inaction)
 
 **Questions to explore**:
 - "What happens if we DON'T build this?"
@@ -20,7 +78,7 @@ Explore cost of inaction.
 
 **Keep it brief** - Key consequences of not building
 
-**Can include**: 
+**Can include**:
 - Financial cost (lost revenue, increased costs)
 - Opportunity cost (missed opportunities)
 - Competitive risk (competitors gaining advantage)
@@ -28,10 +86,36 @@ Explore cost of inaction.
 
 **Help them think**: Make the case for why we can't afford NOT to do this
 
+### 2. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to step-02j-explore-our-commitment"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user has articulated the cost of inaction will you then load and read fully `{nextStepFile}` to execute and begin the next step.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-After exploring cost of inaction:
-→ `step-02j-explore-our-commitment.md` (same folder)
+### ✅ SUCCESS:
+- Clear consequences of inaction are captured
+- Case for action is compelling but honest
+- Financial, opportunity, competitive, and operational impacts considered
 
+### ❌ SYSTEM FAILURE:
+- Fabricating or exaggerating consequences
+- Skipping this section
+- Not helping user think through different types of costs
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

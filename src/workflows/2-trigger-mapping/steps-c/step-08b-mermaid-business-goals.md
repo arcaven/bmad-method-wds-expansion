@@ -1,86 +1,144 @@
-# Step 02: Format Business Goals Nodes
+---
+name: 'step-08b-mermaid-business-goals'
+description: 'Format business goals nodes with emojis, titles, and key points'
 
-**Goal:** Create properly formatted business goals nodes with emojis and padding
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-08b-mermaid-business-goals.md'
+nextStepFile: '{workflow_path}/steps-c/step-08c-mermaid-platform.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Node Structure Template
+# Step 25: Format Business Goals Nodes
 
+## STEP GOAL:
+
+Create properly formatted business goals nodes with emojis, ALL CAPS titles, key points, and proper padding for the Mermaid diagram.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Saga the Analyst - creating professional diagram nodes
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structured facilitation and pattern recognition, user brings business knowledge and user insight
+- ✅ Work together as equals in a partnership, not a client-vendor relationship
+
+### Step-Specific Rules:
+
+- 🎯 Focus on formatting business goal nodes following exact template
+- 🚫 FORBIDDEN to use HTML tags (bold, italic) in nodes
+- 💬 Approach: Systematic node creation following template pattern
+- 📋 Each node: starts with `<br/>`, emoji + ALL CAPS title, 3-5 key points, ends with `<br/><br/>`
+- 📋 Priority indicated by vertical order (BG0 top), not special formatting
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Format each business goal as a properly structured node
+- 💾 Store business_goals_nodes and business_goals_count
+- 📖 Follow exact node structure template
+- 🚫 Do not use HTML formatting tags
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Business goals from workshops, diagram structure from step-08a
+- Focus: Formatting BG nodes for Mermaid diagram
+- Limits: Follow exact template pattern - no custom formatting
+- Dependencies: Requires diagram structure from step-08a
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Format Each Business Goal Node
+
+**Node Structure Template:**
 ```
 BGX["<br/>EMOJI TITLE<br/><br/>Point 1<br/>Point 2<br/>Point 3<br/><br/>"]
 ```
 
----
-
-## Instructions
-
-### 1. For Each Business Goal
-
-**Required elements:**
+**Required elements per node:**
 1. Start with `<br/>` (top padding)
 2. Emoji + Title in ALL CAPS
 3. Blank line (`<br/><br/>`)
 4. 3-5 key points (each on separate line with `<br/>`)
 5. End with `<br/><br/>` (bottom padding)
 
----
+### 2. Choose Appropriate Emoji
 
-### 2. Choose Appropriate Emoji for Each Goal
+Based on goal theme:
+- Revenue/Profitability: money bag
+- Customer Satisfaction: happy face
+- Efficiency/Speed: lightning bolt
+- Growth/Expansion: rocket
+- Community: star
+- Objectives/Metrics: chart
+- Partnerships: handshake
+- Goals/Targets: target
 
-**Emoji Selection Based on Goal Theme:**
-- 💰 Revenue/Profitability/Business Success
-- 😊 Customer Satisfaction/Happiness
-- ⚡ Efficiency/Speed/Productivity
-- 🚀 Growth/Expansion/Adoption
-- 🌟 Community/Opportunities
-- 📊 Objectives/Metrics
-- 🤝 Partnerships/Relationships
-- 🎯 Goals/Targets
+All business goals use consistent styling. Priority is indicated by vertical order (BG0 first = top priority).
 
-**Note:** All business goals use consistent styling. Priority is indicated by vertical order (BG0 → BG1 → BG2), not by special formatting.
+### 3. Verify Rules Checklist
 
----
+- Node ID follows pattern BG0, BG1, BG2
+- Starts with `<br/>`
+- Emoji at beginning of title
+- Title in ALL CAPS
+- Blank line after title (`<br/><br/>`)
+- 3-5 key points
+- Each point ends with `<br/>`
+- Ends with `<br/><br/>`
+- No HTML tags (bold, italic)
+- Proper quote and bracket closure `"]`
 
-### 3. Example Implementation
+Store business_goals_nodes and business_goals_count.
 
-```mermaid
-BG0["<br/>💰 Become More Profitable<br/><br/>20% profit margin<br/>10% revenue growth<br/>Page 1 ranking<br/><br/>"]
+### 4. Present MENU OPTIONS
 
-BG1["<br/>😊 Get Happier Customers<br/><br/>4.8+ Google rating<br/>70% repeat rate<br/>Year-round quality<br/><br/>"]
+Display: "**Select an Option:** [C] Continue to Format Platform Node | [M] Return to Activity Menu"
 
-BG2["<br/>⚡ Work Smarter<br/><br/>40% fewer calls<br/>70% self-service<br/>Work-life balance<br/><br/>"]
-```
+#### Menu Handling Logic:
+- IF C: Load and execute {nextStepFile}
+- IF M: Return to {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-**Note:** BG0 is listed first (top priority), then BG1, then BG2. Priority is indicated by order, not by special styling.
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
----
+## CRITICAL STEP COMPLETION NOTE
 
-## Rules Checklist
-
-- [ ] Node ID follows pattern `BG0`, `BG1`, `BG2`
-- [ ] Starts with `<br/>`
-- [ ] Emoji at beginning of title
-- [ ] Title in ALL CAPS
-- [ ] Blank line after title (`<br/><br/>`)
-- [ ] 3-5 key points
-- [ ] Each point ends with `<br/>`
-- [ ] Ends with `<br/><br/>`
-- [ ] No HTML tags (bold, italic)
-- [ ] Proper quote and bracket closure `"]`
-
----
-
-## Output
-
-Store:
-- `business_goals_nodes`: Array of formatted BG nodes
-- `business_goals_count`: Number of goals (for connections later)
+ONLY WHEN user selects [C] will you load the next step file. All business goal nodes must be formatted before proceeding.
 
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-→ **[Step 08c: Format Platform Node](step-08c-mermaid-platform.md)**
+### ✅ SUCCESS:
+- All business goal nodes formatted following template
+- Proper padding at top and bottom
+- Emoji + ALL CAPS titles
+- 3-5 key points per node
+- No HTML tags in any node
+- Priority indicated by order, not formatting
+- Nodes stored for assembly
 
-Create the central platform node with transformation statement.
+### ❌ SYSTEM FAILURE:
+- Missing padding
+- HTML tags in nodes
+- Titles not in ALL CAPS
+- Missing or too many key points
+- Improper node closure
+- Using special formatting for priority
 
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

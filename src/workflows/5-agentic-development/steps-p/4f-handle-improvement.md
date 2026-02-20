@@ -1,31 +1,69 @@
-# Phase 4f: Handle Improvement Suggestion
+---
+name: '4f-handle-improvement'
+description: 'Implement user improvement suggestion, capture learning, and consider specification update'
 
-**Purpose**: Implement user's improvement suggestion and capture learning
+# Path Definitions
+workflow_path: '{installed_path}'
 
-**Task**: Enhance the implementation based on user feedback
-
+# File References
+thisStepFile: '{workflow_path}/steps-p/4f-handle-improvement.md'
+nextStepFile: '{workflow_path}/steps-p/4g-section-approved.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-prototyping.md'
 ---
 
-## When to Use This Phase
+# Step 4f: Handle Improvement Suggestion
 
-- ✅ User suggested an improvement to the implemented section
+## STEP GOAL:
 
----
+Implement user's improvement suggestion and capture learning. Enhance the implementation based on user feedback.
 
-## Step 1: Acknowledge Improvement
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-**Your response**:
-> "Great suggestion! That would improve [specific aspect].
->
-> **Current approach**: [What we have]
-> **Proposed improvement**: [What user suggested]
-> **Benefit**: [Why it's better]
->
-> Let me implement that..."
+### Universal Rules:
 
----
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Step 2: Implement Improvement
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on acknowledging the improvement, implementing it, updating the story file, considering spec updates, and re-presenting
+- 🚫 FORBIDDEN to reject valid improvement suggestions without explanation
+- 💬 Approach: Acknowledge, implement, document, consider spec update, re-present
+- 📋 Ask user if the improvement should be reflected in the specification
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Improvement implemented, documented in story file, spec update considered
+- 💾 Update story file with improvement details
+- 📖 Reference the user's suggestion
+- 🚫 Keep changes focused on the improvement
+
+## CONTEXT BOUNDARIES:
+
+- Available context: User's improvement suggestion; current implementation; story file
+- Focus: Implementing the improvement and capturing the learning
+- Limits: Only implement the suggested improvement
+- Dependencies: User has suggested an improvement (from Step 4d)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Acknowledge Improvement
+
+Acknowledge the suggestion, describe current approach, proposed improvement, and benefit.
+
+### 2. Implement Improvement
 
 **Actions**:
 
@@ -34,71 +72,60 @@
 3. Ensure it enhances UX or code quality
 4. Keep changes focused
 
-**Console logging**:
-```
-💡 Implementing improvement: [description]
-✅ Improved: [what was enhanced]
-```
+### 3. Update Story File with Improvement
+
+Add to story file `stories/[View].[N]-[section-name].md`:
+- Original: What it was
+- Improved to: What it is now
+- Reason: Why it is better
+- Impact: How it improves UX/code
+- Learned: Pattern to use in future
+
+### 4. Consider Specification Update
+
+Ask user if the improvement should be reflected in the specification for future work.
+
+**If user says "Y"**: Note which spec files to update and what should be added.
+**If user says "N"**: Learning is captured in story file for reference.
+
+### 5. Re-present for Testing
+
+Present the improvement, explain what changed, why it is better, and request re-testing.
+
+After re-presenting, route back to Step 4d for user feedback.
+
+### 6. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 4d: Present for Testing (re-test)"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute `{workflow_path}/steps-p/4d-present-for-testing.md`
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the improvement is implemented and documented will you then loop back to present for testing again.
 
 ---
 
-## Step 3: Update Story File with Improvement
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-**Add to story file** `stories/[View].[N]-[section-name].md`:
+### ✅ SUCCESS:
+- Improvement acknowledged and understood
+- Implementation enhances UX or code quality
+- Story file updated with improvement details
+- Specification update considered
+- Re-presented for testing
 
-```markdown
-## Improvements Made
+### ❌ SYSTEM FAILURE:
+- Rejecting valid improvement without explanation
+- Not documenting the improvement in story file
+- Not asking about specification update
+- Implementing something different from what was suggested
 
-**[Date]**: Improved [aspect]
-- **Original**: [What it was]
-- **Improved to**: [What it is now]
-- **Reason**: [Why it's better]
-- **Impact**: [How it improves UX/code]
-- **Learned**: [Pattern to use in future]
-```
-
----
-
-## Step 4: Consider Specification Update
-
-**Your response**:
-> "✅ **Improvement implemented!**
->
-> **What changed**:
-> - [Specific improvement made]
->
-> **Why it's better**:
-> - [Benefit explanation]
->
-> This is a good improvement! Should we update the specification to include this pattern for future work? (Y/N)"
-
----
-
-## Step 5: Handle Specification Update Decision
-
-**If user says "Y"**:
-- Note which spec file(s) to update
-- Document what should be added
-- Ask: "Should I update it now, or would you like to do it later?"
-
-**If user says "N"**:
-- Learning is captured in story file
-- Can still reference later if needed
-
----
-
-## Step 6: Re-present for Testing
-
-**Your response**:
-> "Please test the improvement:
-> 1. [Specific test for the improvement]
-> 2. [General retest]
->
-> **Working well?**"
-
----
-
-## Next Phase
-
-**Loop**: Go back to `4d-present-for-testing.md` (user tests again)
-
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,10 +1,63 @@
-# Step 04: Verify
+---
+name: 'step-04-verify'
+description: 'Systematically confirm that the implementation satisfies every requirement in the spec'
 
-**Goal:** Systematically confirm that the implementation satisfies every requirement in the spec.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-d/step-04-verify.md'
+nextStepFile: '{workflow_path}/steps-d/step-05-finalize.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-development.md'
 ---
 
-## Process
+# Step 4: Verify
+
+## STEP GOAL:
+
+Systematically confirm that the implementation satisfies every requirement in the spec.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on verifying acceptance criteria, responsive behavior, interactive states, accessibility, and visual fidelity
+- 🚫 FORBIDDEN to add new features or refactor — only verify and fix issues found
+- 💬 Approach: Walk through each acceptance criterion with user, testing concretely
+- 📋 Fix failures immediately as they are found — do not batch them
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Every acceptance criterion tested and passing
+- 💾 Document verification results and any fixes applied
+- 📖 Reference acceptance criteria from Step 1 and the original spec
+- 🚫 Do not add scope — only verify what was planned
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Acceptance criteria from Step 1; implementation from Step 3; spec
+- Focus: Systematic verification against spec requirements
+- Limits: No new features, no refactoring beyond fixing issues
+- Dependencies: Step 3 must be complete (implementation done)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Walk Through Every Acceptance Criterion
 
@@ -79,9 +132,7 @@ With the spec open next to the running implementation:
 
 For projects using Puppeteer, follow the verification process in INLINE-TESTING-GUIDE.md: measure what you can measure programmatically, and present only qualitative questions to the user.
 
----
-
-## Checklist
+### 7. Verify Checklist
 
 - [ ] Every acceptance criterion tested and passing
 - [ ] All responsive breakpoints verified
@@ -94,8 +145,39 @@ For projects using Puppeteer, follow the verification process in INLINE-TESTING-
 - [ ] Visual comparison to spec completed — no unintended differences
 - [ ] All found issues fixed or documented as intentional deviations
 
+### 8. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 5: Finalize"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN all acceptance criteria are verified passing and all issues fixed will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to **step-05-finalize.md**
+### ✅ SUCCESS:
+- Every acceptance criterion tested and passing
+- All responsive breakpoints verified
+- All interactive states working
+- Accessibility checks completed
+- Visual comparison to spec completed
+- All found issues fixed or documented
+
+### ❌ SYSTEM FAILURE:
+- Assuming criteria pass without testing concretely
+- Skipping responsive or accessibility verification
+- Batching failures instead of fixing immediately
+- Not comparing implementation to spec visually
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

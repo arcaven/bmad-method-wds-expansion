@@ -1,229 +1,121 @@
+---
+name: 'step-05-execute-export'
+description: 'Send validated HTML to Figma via MCP and verify the export succeeded'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-f/step-05-execute-export.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-figma.md'
+---
+
 # Step 5: Send to Figma
 
-**Progress: Step 5 of 5** - Final Step
+## STEP GOAL:
 
-**Duration:** 2-5 minutes
+Execute the final export by sending validated HTML to Figma via MCP, verify the layers appear with proper OBJECT ID naming, and complete the Figma export workflow.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## YOUR TASK
+### Universal Rules:
 
-Send the code to Figma and verify success.
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
----
+### Role Reinforcement:
 
-## GOAL
+- ✅ You are a technical export specialist executing and verifying the Figma delivery
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring MCP export expertise, user brings their Figma verification
+- ✅ Maintain a confident, delivery-focused tone
 
-Send the validated HTML to Figma and confirm the layers appear with proper OBJECT ID naming.
+### Step-Specific Rules:
 
----
+- 🎯 Focus on executing the export and verifying success in Figma
+- 🚫 FORBIDDEN to skip user verification of export in Figma
+- 💬 Provide troubleshooting guidance if export is not visible
+- 📋 Document complete export summary with details
 
-## EXECUTION
+## EXECUTION PROTOCOLS:
 
-### Prepare Export Parameters
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Record export details (node ID, component count, OBJECT IDs)
+- 📖 Wait for MCP response before asking user to verify
+- 🚫 FORBIDDEN to mark workflow complete without user confirming export visible
 
-<action>
-Prepare MCP tool call parameters:
+## CONTEXT BOUNDARIES:
 
-- name: Descriptive title for Figma layer
-  Format: "{Component/Page Name} - {Purpose}"
-  Example: "CTA Button States - Design System"
+- Available context: Validated HTML, OBJECT IDs, scenario type
+- Focus: Executing the MCP export and verifying results
+- Limits: This is the final step — focus on delivery and verification
+- Dependencies: Validated HTML from Step 4
 
-- html: Complete validated HTML from Step 4
-  
-- intoNodeId: (optional) Only if updating existing Figma layer
-</action>
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
----
+### 1. Prepare Export Parameters
 
-### Execute Export
+Set up MCP tool call: descriptive name for Figma layer (format: "{Component/Page Name} - {Purpose}"), complete validated HTML, optional intoNodeId for updating existing layer.
 
-<output>Executing export to Figma...</output>
+### 2. Execute Export
 
-<action>
-Call MCP tool:
+Call the MCP tool with prepared parameters. Wait for response.
 
-```javascript
-mcp2_import-html({
-  name: "{export-name}",
-  html: `{validated-html}`
-})
-```
+### 3. Verify Export Response
 
-Wait for response.
-</action>
+Check response for success indicators: node ID returned, no error message, response contains node object.
 
----
+### 4. User Verification
 
-### Verify Export Response
+Ask: **"Please check your Figma file — can you see the export with proper layer names?"**
 
-**Expected Response:**
-```json
-{
-  "node": {
-    "id": "X:XXX",
-    "name": "{export-name} by html.to.design...",
-    "type": "SECTION"
-  }
-}
-```
+- If Yes: Proceed to success report
+- If No: Execute troubleshooting (check Figma is open, correct file active, layers panel, all pages, MCP connection)
 
-**Success Indicators:**
-- ✅ Node ID returned
-- ✅ No error message
-- ✅ Response contains node object
+### 5. Present Success Report
 
-**Failure Indicators:**
-- ❌ Error message in response
-- ❌ No node ID
-- ❌ Timeout or connection error
+Display complete export details: name, node ID, component count, OBJECT IDs used, layer names in Figma.
 
----
+### 6. Document Completion
 
-### Verify in Figma
+Record: scenario type, components exported, OBJECT IDs used, specification files referenced, Figma output location.
 
-<ask>Please check your Figma file:
+### 7. Present MENU OPTIONS
 
-1. Look for a new layer named "{export-name} by html.to.design..."
-2. Expand the layer to see the component structure
-3. Check that layer names match the OBJECT IDs we defined
+Display: **"Select an Option:** [M] Return to Activity Menu"
 
-Can you see the export in Figma with proper layer names? [Yes/No]:</ask>
+#### Menu Handling Logic:
 
-**Wait for user confirmation.**
+- IF M: Save export record, update design log, return to Activity Menu in {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#7-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then end with display again of the menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+This is the final step of the Figma Export workflow. When M is selected and the export is verified, return to the Activity Menu.
 
 ---
 
-### Success Report
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-**If user confirms success:**
+### ✅ SUCCESS:
 
-<output>✅ Export Successful!
+- Export executed via MCP without errors
+- User confirms export visible in Figma
+- Layer names match OBJECT IDs
+- Complete export summary documented
+- Design log updated
 
-**Export Details:**
-- Name: {export-name}
-- Node ID: {node-id}
-- Components: {count}
-- OBJECT IDs used: {list}
+### ❌ SYSTEM FAILURE:
 
-**Layer Names in Figma:**
-{list of OBJECT IDs that became layer names}
+- Not verifying export with user
+- Marking complete when export failed
+- Not providing troubleshooting for invisible exports
+- Skipping export summary documentation
 
-The export is now available in your Figma file. Layer names match the specification OBJECT IDs for easy identification and traceability.
-
-**Next Steps:**
-1. Review the export in Figma
-2. Make any visual adjustments needed
-3. Use Figma Import workflow to sync changes back to code (if needed)
-4. Update design system based on refinements
-
-**Documentation:**
-- Specification: {spec-file-path}
-- Export manifest: {manifest if created}
-- OBJECT IDs: {count} total</output>
-
----
-
-### Troubleshooting
-
-**If user reports export not visible:**
-
-<output>Troubleshooting export visibility...</output>
-
-<action>
-Check common issues:
-
-1. **Figma not open**
-   - Ensure Figma is running
-   - Ensure html.to.design plugin is active
-   - Retry export
-
-2. **Wrong file**
-   - Check which Figma file is active
-   - Ensure plugin is running in correct file
-   - Switch to correct file and retry
-
-3. **Layer hidden or collapsed**
-   - Look in layers panel (left sidebar)
-   - Expand all groups/sections
-   - Search for layer name
-
-4. **Export to different page**
-   - Check all pages in Figma file
-   - Plugin may have exported to active page
-   - Look through all pages
-
-5. **Connection issue**
-   - Check MCP server connection
-   - Restart plugin
-   - Retry export
-</action>
-
-<ask>After checking these items, can you see the export? [Yes/Still No]:</ask>
-
-**If still no:** Provide detailed error report and suggest manual verification steps.
-
----
-
-## COMPLETION
-
-<output>🎉 Code to Figma Workshop Complete!
-
-**Summary:**
-- ✅ MCP connection established
-- ✅ Export scenario identified: {scenario}
-- ✅ Specifications prepared with OBJECT IDs
-- ✅ HTML generated and validated
-- ✅ Export executed successfully
-- ✅ Verified in Figma
-
-**Achievements:**
-- {count} components exported
-- {count} OBJECT IDs defined
-- Design-code parity maintained
-- Traceability established
-
-**Files Created/Updated:**
-{list of specification files created}
-
-**Figma Output:**
-- Layer: {export-name}
-- Node ID: {node-id}
-- Location: {Figma file name}
-
-Thank you for using the Figma Export workflow! 🎨</output>
-
----
-
-## NEXT ACTIONS
-
-**Recommended next steps:**
-
-1. **Review in Figma**
-   - Check visual accuracy
-   - Verify all states/variations
-   - Note any design improvements needed
-
-2. **Design Refinement** (if needed)
-   - Make visual adjustments in Figma
-   - Update colors, spacing, typography
-   - Refine component states
-
-3. **Sync Back to Code** (if changes made)
-   - Use Figma Import workflow
-   - Extract updated design specs
-   - Update CSS/components
-
-4. **Update Design System**
-   - Document new patterns
-   - Add components to library
-   - Update design tokens
-
-5. **Share with Team**
-   - Present to stakeholders
-   - Get design approval
-   - Coordinate with developers
-
----
-
-*Workflow complete - Export successful!*
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

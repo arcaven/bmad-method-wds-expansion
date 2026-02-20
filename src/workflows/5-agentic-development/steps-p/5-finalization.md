@@ -1,158 +1,142 @@
-# Phase 5: Finalization
+---
+name: '5-finalization'
+description: 'Complete integration test and final approval for the logical view'
 
-**Purpose**: Complete integration test and final approval for the logical view
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-p/5-finalization.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-prototyping.md'
 ---
 
-## When to Use This Phase
+# Step 5: Finalization
 
-- ✅ All sections of the logical view are implemented and approved
+## STEP GOAL:
 
----
+Complete integration test and final approval for the logical view.
 
-## Step 1: Announce Completion
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-**Your response**:
-> "🎉 **All [N] sections complete for [Logical View Name]!**
->
-> **Sections implemented**:
-> - ✅ Section 1: [Name]
-> - ✅ Section 2: [Name]
-> - ✅ Section [N]: [Name]
->
-> **Files created**:
-> - `[View].html` (complete with all states)
-> - `stories/[View].1-[name].md` (✅)
-> - `stories/[View].[N]-[name].md` (✅)
-> - `work/[View]-Work.yaml` (complete plan)
->
-> **States covered**:
-> - [State 1] ([Step])
-> - [State 2] ([Step])
-> - [State 3] ([Step])
->
-> **Now let's do a complete integration test** to verify all states work correctly."
+### Universal Rules:
 
----
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Step 2: Integration Test Instructions
+### Role Reinforcement:
 
-**Your response**:
-> "**Complete Integration Test**:
->
-> **Test each state**:
->
-> **State 1: [State name]** ([Step])
-> 1. Clear browser data
-> 2. Open `[View].html`
-> 3. [Actions to trigger this state]
-> 4. Verify: [Expected result]
->
-> **State 2: [State name]** ([Step])
-> 1. [Actions to trigger this state]
-> 2. Verify: [Expected result]
->
-> **State 3: [State name]** ([Step])
-> 1. [Actions to trigger this state]
-> 2. Verify: [Expected result]
->
-> **Check**:
-> - All Object IDs present
-> - State transitions work smoothly
-> - No console errors
-> - Responsive at 375px
->
-> **Do all states work correctly? (Y/N)**"
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
 
----
+### Step-Specific Rules:
 
-## Step 3: Handle Final Issues or Approve
+- 🎯 Focus only on announcing completion, running integration tests across all states, handling final issues, and presenting the complete logical view
+- 🚫 FORBIDDEN to add new sections or features — only test and fix integration issues
+- 💬 Approach: Comprehensive integration testing across all states with user
+- 📋 All states must work correctly before marking the logical view as complete
 
-**If user reports issues**:
-- Fix issues
-- Update relevant story files with learnings
-- Update specifications if needed
-- Re-test
-- Loop until approved
+## EXECUTION PROTOCOLS:
 
-**If user approves**:
+- 🎯 Integration test complete, all states working, logical view approved
+- 💾 Final status recorded in work files and story files
+- 📖 Reference logical view map for all states that need testing
+- 🚫 Do not add new features — only fix integration issues
 
-**Your response**:
-> "✅ **Logical View Complete!**
->
-> **Summary**:
-> - **View**: [Logical View Name]
-> - **HTML File**: `[View].html`
-> - **Sections**: [N]/[N] complete
-> - **Object IDs**: [Count] implemented
-> - **States**: [N] states working
-> - **Device**: [Device type] optimized
-> - **Status**: Ready for user testing & developer handoff
->
-> **Quality Checklist**:
-> - [x] All sections implemented
-> - [x] All states tested
-> - [x] All Object IDs present
-> - [x] Mobile viewport tested
-> - [x] State transitions work
-> - [x] No console errors
-> - [x] Tailwind classes properly used
-> - [x] Story files document all sections
-> - [x] Learnings captured in docs
->
-> **Files**:
-> - ✅ `[View].html` (handles all states)
-> - ✅ `work/[View]-Work.yaml` (plan)
-> - ✅ `work/Logical-View-Map.md` (scenario map)
-> - ✅ `stories/[View].[1-N]-*.md` (section docs)
->
-> **Would you like to**:
-> - Build another logical view in this scenario?
-> - Start a new scenario?
-> - Refine this view?"
+## CONTEXT BOUNDARIES:
 
----
+- Available context: All completed sections; work file; logical view map; all story files
+- Focus: Integration testing across all states
+- Limits: No new features, only integration fixes
+- Dependencies: All sections must be approved (Step 4g complete for all)
 
-## Next Steps
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-**If building another logical view**: Go back to **Phase 3** (select next view)
+### 1. Announce Completion
 
-**If all logical views in scenario complete**: Scenario prototype complete! 🎉
+Present all completed sections, files created, and states covered.
 
-**If starting new scenario**: Go back to **Phase 1** (Prototype Setup)
+### 2. Integration Test Instructions
 
-**If done**: Celebrate! Your prototype is ready for:
-- User testing
-- Stakeholder demos  
-- Developer handoff
-- Design validation
+Provide test instructions for each state:
+- Clear browser data between states
+- Actions to trigger each state
+- Expected results for each state
 
----
+**Check**:
+- All Object IDs present
+- State transitions work smoothly
+- No console errors
+- Responsive at target device width
 
-## 📝 **Scenario Completion Check**
+### 3. Handle Final Issues or Approve
 
-**When all logical views complete**:
+**If user reports issues**: Fix issues, update story files with learnings, update specifications if needed, re-test, loop until approved.
 
-Review `work/Logical-View-Map.md`:
+**If user approves**: Present complete summary including:
+- View name and HTML file
+- Sections completed count
+- Object IDs implemented count
+- States working count
+- Device optimization
+- Quality checklist (all items checked)
+- All files created
+
+Present options:
+- Build another logical view in this scenario?
+- Start a new scenario?
+- Refine this view?
+
+### 4. Scenario Completion Check
+
+When all logical views complete, review `work/Logical-View-Map.md`:
 - Are all logical views built?
 - Are all scenario steps covered?
 - Are all states working?
 
-**If YES**: **Scenario prototype complete!** 🎉
+If YES: Scenario prototype complete!
 
-> "✅ **Scenario [N] prototype complete!**
->
-> **Logical views built**: [N]/[N]
-> **Scenario steps covered**: [M]/[M]
-> **Total HTML files**: [N]
-> **Total story files**: [X]
->
-> All scenario steps can now be demonstrated in the prototype!
->
-> **Ready for**:
-> - User testing
-> - Stakeholder presentations
-> - Developer handoff
->
-> **What's next?**"
+### 5. Present MENU OPTIONS
 
+Display: "**Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+- IF M: Update agent dialog, then load, read entire file, then execute {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed when user selects 'M'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the integration test passes and logical view is approved will you then load and read fully `{activityWorkflowFile}` to execute.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+- All sections complete and integrated
+- All states tested and working
+- All Object IDs present
+- Responsive at target device width
+- No console errors
+- Quality checklist fully checked
+- Complete summary presented to user
+
+### ❌ SYSTEM FAILURE:
+- Not testing all states
+- Skipping integration test
+- Not presenting complete summary
+- Leaving console errors unresolved
+- Not checking scenario completion status
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

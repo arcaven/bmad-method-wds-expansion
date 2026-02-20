@@ -1,84 +1,135 @@
-# Step 3: Integrations & Plugins
+---
+name: 'step-29-integrations'
+description: 'Document required integrations and third-party services'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-29-integrations.md'
+nextStepFile: '{workflow_path}/steps-c/step-30-contact-strategy.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
+# Step 29: Integrations & Plugins
+
+## STEP GOAL:
 Document required integrations, plugins, and third-party services.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Capture what external services and tools the site needs to connect with. Consider both current needs and future plans.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Key Elements
+### Role Reinforcement:
+- You are a Strategic Business Analyst capturing integration requirements and plugin needs
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-- Required plugins/packages
-- External service integrations
-- API connections
-- Analytics and tracking
-- Future integration plans
+### Step-Specific Rules:
+- Focus: Required plugins, external services, API connections, analytics, future plans
+- FORBIDDEN: Do not skip asking about future integration plans
+- Approach: Walk through common integration categories, capture needs and account ownership
 
-## Instructions
+## EXECUTION PROTOCOLS:
+- Primary goal: Integrations and plugin stack documented
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-1. **Identify required integrations**
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, technology stack
+- Focus: Third-party integrations and plugin requirements
+- Limits: Requirements, not implementation details
+- Dependencies: Step 28 completed
 
-   Ask about common needs:
-   - "Will you need any of these?"
-     - **Analytics:** Google Analytics, Plausible, etc.
-     - **Maps:** Google Maps for location
-     - **Forms:** Contact forms, booking systems
-     - **Email:** Newsletter, transactional email
-     - **Social:** Social media feeds, sharing
-     - **Payment:** If e-commerce
-     - **CRM:** Customer relationship management
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-2. **For each integration, capture:**
-   - What it does
-   - Why it's needed
-   - Any specific requirements
-   - Account ownership (client or developer?)
+### 1. Identify Required Integrations
 
-3. **Plugin stack (if WordPress)**
+Ask about common needs:
+- "Will you need any of these?"
+  - **Analytics:** Google Analytics, Plausible, etc.
+  - **Maps:** Google Maps for location
+  - **Forms:** Contact forms, booking systems
+  - **Email:** Newsletter, transactional email
+  - **Social:** Social media feeds, sharing
+  - **Payment:** If e-commerce
+  - **CRM:** Customer relationship management
 
-   Recommend standard stack:
-   - **SEO:** Rank Math or Yoast
-   - **Multilingual:** Polylang or WPML (if needed)
-   - **Performance:** Caching, image optimization
-   - **Security:** Firewall, backup
-   - **Forms:** Contact Form 7, WPForms, etc.
+### 2. For Each Integration, Capture:
+- What it does
+- Why it's needed
+- Any specific requirements
+- Account ownership (client or developer?)
 
-4. **Future integrations**
+### 3. Plugin Stack (if WordPress)
 
-   Ask: "Are there any integrations you might want in the future?"
-   - Document these for planning
-   - Note any architecture implications
+Recommend standard stack:
+- **SEO:** Rank Math or Yoast
+- **Multilingual:** Polylang or WPML (if needed)
+- **Performance:** Caching, image optimization
+- **Security:** Firewall, backup
+- **Forms:** Contact Form 7, WPForms, etc.
 
-5. **Update output document**
-   - Fill in Integrations section
-   - Fill in Plugin/Package Stack section
+### 4. Future Integrations
 
+Ask: "Are there any integrations you might want in the future?"
+- Document these for planning
+- Note any architecture implications
 
-## Agent Dialog Update
+### 5. Update Output Document
+- Fill in Integrations section
+- Fill in Plugin/Package Stack section
 
+### 6. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### [Step Name]
-**Q:** [Key questions asked]
+### Step 29: Integrations & Plugins
+**Q:** Required integrations, plugin stack, future plans?
 **A:** [User responses - summarized]
-**Documented in:** platform-requirements.md ([section name])
+**Documented in:** platform-requirements.md (Integrations section)
 **Key insights:** [Important decisions or revelations]
 **Status:** Complete
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing integrations, proceed to step-30-contact-strategy.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-tech-stack.md', 'step-03-integrations.md']
-integrations: '[list of integrations]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Required integrations identified
+- Account ownership documented for each
+- Plugin stack recommended (if applicable)
+- Future integration plans captured
+- User confirmed
+
+### FAILURE:
+- Skipped future integration planning
+- Generated integration list without user input
+- Did not capture account ownership
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

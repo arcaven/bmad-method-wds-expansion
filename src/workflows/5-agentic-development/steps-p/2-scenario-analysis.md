@@ -1,38 +1,72 @@
-# Phase 2: Scenario Analysis & Logical View Identification
+---
+name: '2-scenario-analysis'
+description: 'Analyze the entire scenario to identify all logical views and map which scenario steps use which views'
 
-**Purpose**: Analyze the entire scenario to identify all logical views and map which scenario steps use which views
+# Path Definitions
+workflow_path: '{installed_path}'
 
-**Note**: A "logical view" is a conceptual page/screen with multiple states. Multiple scenario steps can use the same logical view.
-
+# File References
+thisStepFile: '{workflow_path}/steps-p/2-scenario-analysis.md'
+nextStepFile: '{workflow_path}/steps-p/3-logical-view-breakdown.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-prototyping.md'
 ---
 
-## When to Use This Phase
+# Step 2: Scenario Analysis & Logical View Identification
 
-- ✅ Starting to prototype a new scenario
-- ✅ Prototype folder structure exists (from Phase 1)
-- ✅ All scenario step specifications exist
+## STEP GOAL:
 
----
+Analyze the entire scenario to identify all logical views and map which scenario steps use which views. A "logical view" is a conceptual page/screen with multiple states.
 
-## Step 1: Read All Scenario Step Specifications
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-**User says**: "Let's analyze the scenario to identify logical views"
+### Universal Rules:
 
-**Your response**:
-> "**Analyzing Scenario: [Scenario Number] [Scenario Name]**
->
-> Let me read all scenario step specifications to identify logical views..."
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on reading all scenario step specs, identifying logical views, getting user confirmation, and creating the logical view map
+- 🚫 FORBIDDEN to begin building any views or breaking them into sections — that is the next step
+- 💬 Approach: Present logical view mapping to user for review and confirmation
+- 📋 Multiple scenario steps can use the same logical view with different states
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Complete logical view map with all views identified and confirmed by user
+- 💾 Create `work/Logical-View-Map.md` with view mapping and build order
+- 📖 Read all scenario step specification files
+- 🚫 Do not begin section breakdown or implementation
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Prototype folder structure from Step 1; all scenario step specifications
+- Focus: Identifying logical views and mapping scenario steps to views
+- Limits: No section breakdown, no implementation
+- Dependencies: Step 1 must be complete (prototype folder exists)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Read All Scenario Step Specifications
 
 **Actions**:
 1. List all scenario step folders in `../[Scenario]/`
 2. Read each `[Step].md` specification file
 3. Note step names, purposes, and any "inherit from" or "base page" references
 
----
-
-## Step 2: Identify Logical Views
-
-**Actions**:
+### 2. Identify Logical Views
 
 For each scenario step, determine:
 - Is this a **new logical view** (new page/screen)?
@@ -49,31 +83,9 @@ For each scenario step, determine:
 - Different purpose and user context
 - No reference to inheriting from another step
 
-**Your response**:
-> "**Logical Views Identified:**
->
-> **View 1: [Logical View Name]**
-> - Used by: [Step], [Step], [Step]
-> - Type: [Full page / Modal / Overlay]
-> - States: [List different states]
->
-> **View 2: [Logical View Name]**
-> - Used by: [Step]
-> - Type: [Full page / Form / etc.]
-> - States: [List states]
->
-> **View 3: [Logical View Name]**
-> - Used by: [Step], [Step]
-> - Type: [Full page]
-> - States: [List states]
->
-> **Total**: [N] logical views identified across [M] scenario steps
->
-> **Does this mapping look correct?** (Y/N)"
+Present the mapping to user for confirmation.
 
----
-
-## Step 3: User Reviews & Confirms Mapping
+### 3. User Reviews & Confirms Mapping
 
 **Wait for response**
 
@@ -82,93 +94,43 @@ For each scenario step, determine:
 - Update logical view mapping
 - Re-present for confirmation
 
-**If user says "Y"**:
-> "✅ Logical view mapping confirmed!
->
-> **Which logical view should we build first?**
->
-> (Suggest starting with most foundational view)"
+**If user says "Y"**: Proceed to create the map document
+
+### 4. Create Logical View Map Document
+
+Create `work/Logical-View-Map.md` with view details, build order, and notes.
+
+### 5. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 3: Logical View Breakdown"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the logical view mapping is confirmed by user and the map document is created will you then load and read fully `{nextStepFile}` to execute.
 
 ---
 
-## Step 4: Create Logical View Map Document
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-**Actions**:
+### ✅ SUCCESS:
+- All scenario step specifications read
+- Logical views identified with correct grouping
+- User confirmed the mapping
+- Logical-View-Map.md created with build order
 
-Create `work/Logical-View-Map.md` with:
+### ❌ SYSTEM FAILURE:
+- Beginning to build views before analysis is complete
+- Not reading all scenario step specifications
+- Not getting user confirmation on the mapping
+- Not creating the map document
 
-```markdown
-# Scenario [N] - Logical View Map
-
-**Scenario**: [Scenario Name]
-**Created**: [Date]
-
-## Logical Views
-
-### [View Name]
-- **Type**: [Full page / Modal / Overlay]
-- **HTML File**: `[file-name].html`
-- **Used by**:
-  - [Step] [Step Name] - [State description]
-  - [Step] [Step Name] - [State description]
-- **States**:
-  1. [State name] - [Description]
-  2. [State name] - [Description]
-
-### [View Name]
-...
-
-## Build Order
-
-Suggested order:
-1. [View] (foundational)
-2. [View] (depends on 1)
-3. [View]
-...
-
-## Notes
-
-[Any important observations about the scenario structure]
-```
-
-**Your response**:
-> "✅ Created: `work/Logical-View-Map.md`
->
-> This document maps all logical views and their states for reference.
->
-> **Ready to proceed to Phase 3?** (Y)"
-
----
-
-## Next Phase
-
-**Go to**: `3-logical-view-breakdown.md` when user confirms
-
----
-
-## 📝 **Example Output**
-
-**Scenario 1: Customer Onboarding**
-
-**Logical Views Identified**:
-
-**View 1: Family Overview**
-- Used by: 1.5, 1.7, 1.9
-- Type: Full page
-- States: 
-  - Creator only (1.5)
-  - With dog (1.7)
-  - With dog + member (1.9)
-
-**View 2: Create Family Form**
-- Used by: 1.4
-- Type: Full page
-- States: Create mode, Edit mode
-
-**View 3: Add Dog Form**
-- Used by: 1.6
-- Type: Full page
-- States: Empty form, validation errors
-
-**Total**: 7 logical views across 9 scenario steps
-
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

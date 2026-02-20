@@ -1,241 +1,101 @@
-# Step 7: Define Success Criteria
+---
+name: 'step-08-success-criteria'
+description: 'Help user define measurable success criteria'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Help user explore and define what success looks like through conversational questioning, then synthesize into clear, measurable criteria.
-
-## Context for Agent
-
-**Philosophy:** Don't ask "What are your success criteria?" - have a conversation about what good looks like, how they'll know it's working, and what they hope changes. YOU synthesize SMART criteria from that conversation.
-
-**Your role:** Strategic interviewer helping user think through success from multiple angles.
-
-## Prerequisites
-
-**Load project context from** `wds-project-outline.yaml`:
-- `project_context.stakes` - Shapes how rigorous metrics need to be
-- `working_relationship.recommendation_style` - Shapes how directive to be
-- `existing_materials` - Check if success criteria already defined
-
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-08-success-criteria.md'
+nextStepFile: '{workflow_path}/steps-c/step-09-competitive-landscape.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Instructions
+# Step 8: Define Success Criteria
+
+## STEP GOAL:
+Help the user explore and define what success looks like through conversational questioning, then synthesize into clear, measurable SMART criteria.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with C, ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+- You are Saga, a strategic interviewer helping user think through success from multiple angles
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain professional, collaborative tone throughout
+
+### Step-Specific Rules:
+- Focus: Success from multiple angles: user behavior, business outcomes, experience quality, timeline
+- FORBIDDEN: Do not say this needs to be SMART - ask the questions that naturally make it SMART
+- Approach: Explore success dimensions naturally, help translate outcomes to metrics, prioritize
+
+## EXECUTION PROTOCOLS:
+- Primary goal: Measurable success criteria with primary/secondary metrics and timeline
+- Save/document outputs appropriately
+- Avoid generating content without user input
+
+## CONTEXT BOUNDARIES:
+- Available context: Vision, positioning, VTC, business model, target users, product concept
+- Focus: Measurable success criteria with primary/secondary metrics and timeline
+- Limits: Not business model changes, not competitive analysis
+- Dependencies: Steps 1-7a completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Open the Conversation
-
-**Check for existing materials first:**
-
-**WITHOUT existing materials** (`has_materials: false`):
-
-> "Let's talk about success. When this launches and it's working well, what's different? What changes?"
-
-**OR** (if business-focused):
-> "How will you know this was worth building? What needs to happen for you to call this a win?"
-
-**OR** (if user-focused):
-> "Picture this live and successful - what are users doing differently? What problems have disappeared?"
-
----
-
-**WITH existing materials** that mention success:
-
-Read materials first, then adapt:
-
-> "Your brief mentioned success means [quote]. Is that still the goal? Let's make sure we're measuring the right things."
-
-**OR** (if criteria seem unclear):
-> "You wrote that success looks like [reference]. Let's dig into that - how will you actually KNOW it's working?"
+Ask about what changes when this launches and is working well.
 
 ### 2. Explore Success from Multiple Angles
-
-**Listen and follow up on what they mention. Explore these dimensions:**
-
-**A) User Behavior Success**
-- "What do you want to see users actually doing?"
-- "How often? How many?"
-- "What would tell you they're getting value?"
-
-**B) Business Outcome Success**
-- "What business result does this drive?"
-- "Revenue? Efficiency? Growth? Retention?"
-- "By how much? In what timeframe?"
-
-**C) Experience Quality Success**
-- "How should it *feel* to use this?"
-- "What would users say about it?"
-- "What complaints should disappear?"
-
-**D) Timeline/Milestone Success**
-- "When do you need to see results?"
-- "Are there phases - like early wins vs long-term goals?"
-- "Any hard deadlines or key dates?"
-
-**Key principle:** Let them talk about outcomes first, then help translate to metrics.
+A) User Behavior Success B) Business Outcome Success C) Experience Quality D) Timeline
 
 ### 3. Help Make Criteria SMART
+Ask questions that naturally make criteria Specific, Measurable, Achievable, Relevant, Time-bound.
 
-**For each success area mentioned, ask:**
+### 4. Prioritize if Multiple
+Ask which is most important.
 
-- **Specific:** "Can you be more specific about what that looks like?"
-- **Measurable:** "How would you measure that?"
-- **Achievable:** "Is that realistic given [constraints discussed earlier]?"
-- **Relevant:** "How does that connect to [vision/positioning]?"
-- **Time-bound:** "By when?"
+### 5. Confirm and Document
+Reflect back. Get confirmation. Document in product brief.
 
-**Guide, don't lecture:** Don't say "this needs to be SMART" - just ask the questions that naturally make it SMART.
+### 6. Agent Dialog Update
+Mandatory: Append to dialog/decisions.md. Mark Step 8 complete.
 
-### 4. Prioritize if Multiple Criteria
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-**If they have many success indicators:**
-> "These are all good measures. If you had to pick the *most important* indicator of success - the one thing that matters most - what would it be?"
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-**Listen for:**
-- Primary vs secondary metrics
-- Leading vs lagging indicators
-- Must-haves vs nice-to-haves
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-### 5. Confirm & Document
-
-**Reflect back synthesized criteria:**
-> "Here's what I'm hearing as your success criteria:
->
-> **Primary Success:**
-> - [Main metric/outcome - SMART format]
->
-> **Secondary Success:**
-> - [Supporting metric 1]
-> - [Supporting metric 2]
->
-> **Timeline:**
-> - [When success will be measured]
->
-> Does this capture what success looks like?"
-
-**If user adjusts:** Update and confirm again.
-
-**Document in product brief:**
-
-```markdown
-## Success Criteria
-
-**Primary Success Metric:**
-[Most important indicator - SMART format]
-
-**Secondary Metrics:**
-- [Supporting metric 1]
-- [Supporting metric 2]
-- [Supporting metric 3 - if applicable]
-
-**Timeline:**
-[When success will be measured / key milestones]
-
-**How We'll Measure:**
-[Brief explanation of measurement approach - analytics, surveys, business data, etc.]
-```
-
-### 6. Update Agent Dialog
-
-**In `dialog/decisions.md`, append:**
-
-```markdown
-### Success Criteria (Step 7)
-
-**Opening question:** [what you asked]
-
-**User's initial response:** [how they described success - in their words]
-
-**Key exploration:**
-- User behavior discussed: [what users would do]
-- Business outcomes discussed: [revenue/efficiency/growth goals]
-- Experience quality discussed: [how it should feel]
-- Timeline discussed: [when/phases]
-
-**Synthesis & Confirmation:**
-[Your SMART-formatted criteria + user confirmed/corrected]
-
-**Final Success Criteria:**
-- **Primary:** [main metric]
-- **Secondary:** [supporting metrics]
-- **Timeline:** [when]
-
-**Measurement approach:** [how they'll track]
-```
-
-**Then:** Mark Step 7/8 complete in `dialog/progress-tracker.md` progress tracker
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
 ---
 
-## State Update
+## SYSTEM SUCCESS/FAILURE METRICS
 
-Update frontmatter:
+### SUCCESS:
+- Success explored through multiple angles
+- SMART criteria synthesized from conversation
+- Primary and secondary metrics identified
+- User confirmed
 
-```yaml
-stepsCompleted:
-  [
-    'step-01-init.md',
-    'step-02-vision.md',
-    'step-03-positioning.md',
-    'step-04-create-vtc.md',
-    'step-05-business-model.md',
-    'step-06-business-customers.md',
-    'step-07-target-users.md',
-    'step-08-success-criteria.md',
-  ]
-success_criteria:
-  primary: '[primary metric]'
-  secondary: ['[metric 1]', '[metric 2]']
-  timeline: '[when measured]'
-```
+### FAILURE:
+- Simply asked What are your success criteria without exploration
+- Generated criteria without user input
 
----
-
-## Next Step
-
-Load and execute: `step-09-competitive-landscape.md`
-
----
-
-## Example
-
-**Agent:** "Let's talk about success. When Källa's website launches and it's working well, what's different? What changes?"
-
-**User:** "Fewer calls asking 'do you service X type of vehicle?' - people can see right away we do everything."
-
-**Agent:** "That's a great concrete outcome. How many of those calls do you get now, roughly?"
-
-**User:** "Maybe 20-30% of calls? People asking if we do motorhomes, or tractors, or whatever. It's annoying because the answer is always yes."
-
-**Agent:** "So success would be reducing those by...how much would feel like it's working?"
-
-**User:** "If it cut them in half, that'd be huge. Save us time, less frustration."
-
-**Agent:** "Got it - 50% reduction in basic inquiry calls. What about the business side - does this drive more customers, or is it more about efficiency?"
-
-**User:** "Efficiency mainly. We're at capacity already. But maybe tourists find us easier in summer, that'd be good."
-
-**Agent:** "How would you know if more tourists are finding you?"
-
-**User:** "More summer calls I guess? Or just...people mentioning they found us online."
-
-**Agent:** "Makes sense. What timeframe are we talking - when would you expect to see these results?"
-
-**User:** "Summer's the big test - June through August. If it's not helping by then, it's not working."
-
-**Agent:** "Perfect. So here's what I'm hearing as your success criteria:
-
-**Primary Success:**
-- 50% reduction in basic inquiry calls ('do you service X?') within first 3 months (April-June)
-
-**Secondary Success:**
-- Increased tourist discovery (measured by summer call volume from new customers June-August)
-- Professional web presence that reflects 20+ years expertise and AutoExperten certification
-
-**Timeline:**
-- Primary metric measured by end of June
-- Summer tourist impact measured by end of August
-
-Does that capture what success looks like?"
-
-**User:** "Yeah, that's exactly it."
-
-**[Documents criteria, proceeds to next step]**
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

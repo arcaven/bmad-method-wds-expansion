@@ -1,108 +1,150 @@
-# Step 7: Synthesize & Review
+---
+name: 'step-26-visual-synthesize'
+description: 'Complete the Visual Direction document with clear actionable summary'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Complete the Visual Direction document with a clear, actionable summary.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-26-visual-synthesize.md'
+nextStepFile: '{workflow_path}/steps-c/step-27-platform-init.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Context for Agent
+# Step 26: Visual Direction Synthesize & Review
 
-Create a synthesis that designers can use as a clear reference. The "Visual DNA" summary should be memorable and directive.
+## STEP GOAL:
+Complete the Visual Direction document with a clear, actionable summary that designers can use as reference.
 
-## Instructions
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-1. **Compile design constraints**
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-   Gather constraints from:
-   - Platform Requirements (technical limitations)
-   - Brand requirements (partner badges, etc.)
-   - Content needs (multilingual, etc.)
+### Role Reinforcement:
+- You are a Strategic Business Analyst creating a synthesis that designers can use as clear reference
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-   List all constraints that affect design.
+### Step-Specific Rules:
+- Focus: Compile constraints, create Visual DNA summary, review completeness, confirm with user
+- FORBIDDEN: Do not skip the Visual DNA summary - it must be scannable and memorable
+- Approach: Gather constraints, synthesize, review completeness, validate key decisions, present next steps
 
-2. **Create Visual DNA summary**
+## EXECUTION PROTOCOLS:
+- Primary goal: Visual Direction document finalized with Visual DNA summary
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-   Synthesize all decisions into a quick-reference format:
+## CONTEXT BOUNDARIES:
+- Available context: Steps 20-25 (existing brand, references, style, layout, effects, imagery)
+- Focus: Synthesis and actionable summary
+- Limits: Finalizing what was captured, not adding major new elements
+- Dependencies: Steps 20-25 completed
 
-   ```
-   Style:        [UI style + aesthetic in one line]
-   Colors:       [Palette direction in one line]
-   Typography:   [Type approach in one line]
-   Mood:         [3-5 mood keywords]
-   Key Element:  [Single most important visual element]
-   ```
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-   This should be scannable and memorable.
+### 1. Compile Design Constraints
 
-3. **Review completeness**
+Gather constraints from:
+- Platform Requirements (technical limitations)
+- Brand requirements (partner badges, etc.)
+- Content needs (multilingual, etc.)
 
-   Check that all sections are filled:
-   - [ ] Existing Brand Assets
-   - [ ] Visual References
-   - [ ] Design Style
-   - [ ] Color Direction
-   - [ ] Typography Direction
-   - [ ] Layout Direction
-   - [ ] Visual Effects
-   - [ ] Photography & Imagery
-   - [ ] Design Constraints
+List all constraints that affect design.
 
-4. **Present summary to user**
+### 2. Create Visual DNA Summary
 
-   Show the Visual DNA summary:
-
-   "Here's the visual direction in a nutshell:"
-   [Show summary]
-
-   "Does this capture what you're envisioning?"
-
-5. **Validate with key decisions**
-
-   Confirm the most impactful choices:
-   - "We're going with [UI style] — correct?"
-   - "Colors will be [direction] — right?"
-   - "Photography will be [style] — good?"
-
-6. **Next steps guidance**
-
-   Explain what's next:
-   - "Visual Direction will guide all design work in Phase 4"
-   - "This feeds into the Design System in Phase 5"
-   - "Designers will reference this for every decision"
-
-7. **Finalize and save**
-
-   - Complete all template sections
-   - Save final document
-   - Confirm reference files are organized
-
-## Completion
-
-This workflow is complete when:
-- Visual Direction document is finalized
-- User has confirmed the direction
-- Visual DNA summary is clear and actionable
-- Reference files are organized
-
-## Example Visual DNA
+Synthesize all decisions into a quick-reference format:
 
 ```
-Style:        Flat/Material with dark professional base
-Colors:       Dark navy + white + warm accent (Autoexperten-aligned)
-Typography:   Geometric sans headlines, Humanist body (Inter/Open Sans)
-Mood:         Professional, trustworthy, local, capable, approachable
-Key Element:  Prominent phone number with workshop imagery
+Style:        [UI style + aesthetic in one line]
+Colors:       [Palette direction in one line]
+Typography:   [Type approach in one line]
+Mood:         [3-5 mood keywords]
+Key Element:  [Single most important visual element]
 ```
 
-## State Update
+This should be scannable and memorable.
 
-Update frontmatter of output file:
+### 3. Review Completeness
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-existing-brand.md', 'step-03-references.md', 'step-04-design-style.md', 'step-05-layout-effects.md', 'step-06-imagery.md', 'step-07-synthesize.md']
-status: complete
-```
+Check that all sections are filled:
+- [ ] Existing Brand Assets
+- [ ] Visual References
+- [ ] Design Style
+- [ ] Color Direction
+- [ ] Typography Direction
+- [ ] Layout Direction
+- [ ] Visual Effects
+- [ ] Photography & Imagery
+- [ ] Design Constraints
 
-## Output Location
+### 4. Present Summary to User
 
-Final document: `{output_folder}/visual-direction.md`
-Reference files: `{output_folder}/visual-references/`
+Show the Visual DNA summary:
+
+"Here's the visual direction in a nutshell:"
+[Show summary]
+
+"Does this capture what you're envisioning?"
+
+### 5. Validate Key Decisions
+
+Confirm the most impactful choices:
+- "We're going with [UI style] - correct?"
+- "Colors will be [direction] - right?"
+- "Photography will be [style] - good?"
+
+### 6. Next Steps Guidance
+
+Explain what's next:
+- "Visual Direction will guide all design work in Phase 4"
+- "This feeds into the Design System in Phase 5"
+- "Designers will reference this for every decision"
+
+### 7. Finalize and Save
+
+- Complete all template sections
+- Save final document
+- Confirm reference files are organized
+
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
+
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Design constraints compiled
+- Visual DNA summary created (scannable and memorable)
+- All sections reviewed for completeness
+- Key decisions validated with user
+- Document finalized and saved
+
+### FAILURE:
+- Skipped Visual DNA summary
+- Left sections incomplete
+- Did not validate key decisions with user
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

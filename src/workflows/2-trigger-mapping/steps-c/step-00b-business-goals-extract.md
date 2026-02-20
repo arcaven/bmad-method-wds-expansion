@@ -1,115 +1,111 @@
-# Documentation Synthesis - Step 1: Business Goals
+---
+name: 'step-00b-business-goals-extract'
+description: 'Extract and validate business goals from existing documentation'
 
-<critical>Frame as validation: "Your material suggests X, is this correct?"</critical>
-<critical>Fill gaps through conversation if documentation incomplete</critical>
+# Path Definitions
+workflow_path: '{installed_path}'
 
-<step>
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-00b-business-goals-extract.md'
+nextStepFile: '{workflow_path}/steps-c/step-00c-target-groups-extract.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-<action>Analyze documentation for vision and objectives</action>
+# Step 2: Business Goals Extraction
 
-<check if="clear_vision_found">
-  <output>**Vision Statement**
-  
-Your documentation suggests this vision:
+## STEP GOAL:
 
+Extract, validate, and refine business goals (vision statement and strategic objectives) from the user's existing documentation through collaborative dialogue.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Saga the Analyst - facilitating strategic clarity from existing documentation
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structured facilitation and pattern recognition, user brings business knowledge and user insight
+- ✅ Work together as equals in a partnership, not a client-vendor relationship
+
+### Step-Specific Rules:
+
+- 🎯 Focus on extracting and validating vision and objectives from documentation
+- 🚫 FORBIDDEN to invent business goals not supported by documentation or user input
+- 💬 Approach: Frame as validation - "Your material suggests X, is this correct?"
+- 📋 Fill gaps through conversation if documentation is incomplete
+- 📋 Help transform vague goals into SMART objectives
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Analyze documentation for vision statements and objectives
+- 💾 Store validated vision_statement and objectives
+- 📖 Present extracted goals for user validation
+- 🚫 Do not proceed until vision and objectives are confirmed
+
+## CONTEXT BOUNDARIES:
+
+- Available context: User's documentation from step-00a analysis
+- Focus: Vision statement and strategic objectives extraction/validation
+- Limits: Only extract what exists or fill gaps through dialogue - do not fabricate
+- Dependencies: Requires completed step-00a documentation analysis
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Extract Vision Statement
+
+Analyze documentation for vision and objectives.
+
+**If clear vision found:**
+Present: "Your documentation suggests this vision:
 > {{extracted_vision}}
+Is this the aspirational goal you're working toward?"
 
-Is this the aspirational goal you're working toward?</output>
+Ask: "Does this capture your vision, or should we refine it?"
 
-  <ask>Does this capture your vision, or should we refine it?</ask>
-  
-  <action>Refine based on feedback</action>
-  <template-output>vision_statement</template-output>
-</check>
-
-<check if="vague_vision_found">
-  <output>**Vision Statement**
-  
-I found some aspirational language in your documentation. It seems like your vision is:
-
+**If vague vision found:**
+Present: "I found some aspirational language in your documentation. It seems like your vision is:
 > {{interpreted_vision}}
+But this isn't explicitly stated. Is this accurate?"
 
-But this isn't explicitly stated. Is this accurate?</output>
+Ask: "Should we use this, or define a clearer vision statement?"
 
-  <ask>Should we use this, or define a clearer vision statement?</ask>
-  
-  <action>Refine or create vision statement</action>
-  <template-output>vision_statement</template-output>
-</check>
-
-<check if="no_vision_found">
-  <output>**Vision Statement**
-  
-I don't see an explicit vision statement in your documentation. However, based on your objectives and plans, the **implied vision** seems to be:
-
+**If no vision found:**
+Present: "I don't see an explicit vision statement in your documentation. However, based on your objectives and plans, the implied vision seems to be:
 > {{inferred_vision}}
+This is reverse-engineered from what you're trying to achieve."
 
-This is reverse-engineered from what you're trying to achieve.</output>
+Ask: "Does this capture your aspirational goal? Or should we define it differently?"
 
-  <ask>Does this capture your aspirational goal? Or should we define it differently?</ask>
-  
-  <action>Create vision statement through conversation</action>
-  <template-output>vision_statement</template-output>
-</check>
+Refine based on feedback and store vision_statement.
 
-<output>---
+### 2. Extract Strategic Objectives
 
-**Strategic Objectives**</output>
+**If SMART objectives found:**
+Present the extracted measurable objectives with their metrics, targets, and timelines. Note they look SMART. Ask for confirmation or adjustments.
 
-<check if="smart_objectives_found">
-  <output>Your documentation includes these measurable objectives:
+**If vague goals found:**
+Present the original vague goals alongside suggested SMART versions. Ask if the SMART versions capture what needs to be measured. Refine based on feedback.
 
-{{#each extracted_objectives}}
-**Objective {{@index + 1}}:** {{this.statement}}
-- Metric: {{this.metric}}
-- Target: {{this.target}}
-- Timeline: {{this.timeline}}
-{{/each}}
+**If no objectives found:**
+Ask: "What metrics would prove you're achieving your vision? Think about user metrics, business metrics, and quality metrics."
 
-These look SMART (Specific, Measurable, Achievable, Relevant, Time-bound).</output>
+Create objectives through conversation using SMART method.
 
-  <ask>Are these the right strategic objectives? Any adjustments?</ask>
-  
-  <template-output>objectives</template-output>
-</check>
+Store objectives.
 
-<check if="vague_goals_found">
-  <output>Your documentation mentions these goals:
+### 3. Present Workshop 1 Summary
 
-{{#each extracted_goals}}
-- "{{this.original}}"
-{{/each}}
-
-These aren't fully SMART yet. Let me help sharpen them:
-
-{{#each extracted_goals}}
-**From documentation:** "{{this.original}}"
-**Suggested SMART version:** {{this.smart_version}}
-{{/each}}</output>
-
-  <ask>Do these SMART versions capture what you need to measure?</ask>
-  
-  <action>Refine objectives based on feedback</action>
-  <template-output>objectives</template-output>
-</check>
-
-<check if="no_objectives_found">
-  <output>I don't see measurable objectives in your documentation. 
-
-Based on your vision and plans, what would indicate you're succeeding?</output>
-
-  <ask>What metrics would prove you're achieving your vision?
-
-Think about:
-- User metrics (adoption, engagement, retention)
-- Business metrics (revenue, growth, market share)
-- Quality metrics (satisfaction, referrals, reviews)</ask>
-  
-  <action>Create objectives through conversation using SMART method</action>
-  <template-output>objectives</template-output>
-</check>
-
-<output>**Workshop 1 Complete!** ✅
+Output:
+"**Workshop 1 Complete!**
 
 **Vision:**
 {{vision_statement}}
@@ -119,6 +115,43 @@ Think about:
 {{@index + 1}}. {{this.statement}}
 {{/each}}
 
-Next, we'll identify who can help you achieve these goals.</output>
+Next, we'll identify who can help you achieve these goals."
 
-</step>
+### 4. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Target Groups Extraction | [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+- IF C: Load and execute {nextStepFile}
+- IF M: Return to {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN user selects [C] will you load the next step file. Vision and objectives must be confirmed before proceeding to target group extraction.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+- Vision statement extracted or created through dialogue
+- Strategic objectives validated as SMART (Specific, Measurable, Achievable, Relevant, Time-bound)
+- Vague goals transformed into measurable objectives
+- User confirmed both vision and objectives
+- Gaps filled through collaborative conversation
+- Results stored for subsequent steps
+
+### ❌ SYSTEM FAILURE:
+- Inventing business goals not supported by documentation
+- Skipping vision statement
+- Accepting vague goals without making them SMART
+- Not getting user confirmation on extracted goals
+- Proceeding without stored vision_statement and objectives
+- Pure extraction without validation dialogue
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

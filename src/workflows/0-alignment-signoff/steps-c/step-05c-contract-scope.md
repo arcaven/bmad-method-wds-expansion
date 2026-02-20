@@ -1,10 +1,65 @@
-# Substep 03: Build Section 3 - Scope of Work
+---
+name: 'step-05c-contract-scope'
+description: 'Build Section 3 Scope of Work with explicit IN scope OUT of scope and deliverables'
 
-**Purpose**: Build the Scope of Work section with IN scope, OUT of scope, and deliverables
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-05c-contract-scope.md'
+nextStepFile: '{workflow_path}/steps-c/step-05d-contract-payment.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Instruction
+# Step 25: Build Section 3 - Scope of Work
+
+## STEP GOAL:
+
+Build the Scope of Work section with explicit IN scope, OUT of scope, deliverables, and path forward - preventing scope creep and setting clear boundaries.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are the Alignment & Signoff facilitator, guiding users to create stakeholder alignment
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring alignment and stakeholder management expertise, user brings their project knowledge
+- ✅ Maintain a supportive and clarifying tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on building the Scope of Work section
+- 🚫 FORBIDDEN to skip IN scope/OUT of scope definitions - this prevents disputes
+- 💬 Approach: Ask explicitly about what's included and excluded
+- 📋 Adapt scope section based on business model (fixed-price needs very clear boundaries)
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Build Scope of Work with clear boundaries
+- 💾 Add to contract document
+- 📖 Pull path forward and deliverables from alignment document
+- 🚫 Do not skip explicit IN/OUT scope definitions
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Alignment document, business model, contract sections 1-2
+- Focus: Contract Section 3 - Scope of Work
+- Limits: Scope definition only
+- Dependencies: step-05b must be completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Build Section 3: Scope of Work
 
 **Section 3: Scope of Work**
 
@@ -37,10 +92,37 @@
 - "What work is explicitly OUT of scope? What would require a change order?"
 - "Are there any assumptions about what's included that we should document?"
 
+### 2. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to step-05d-contract-payment"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the Scope of Work section is built with clear IN/OUT scope will you then load and read fully `{nextStepFile}` to execute and begin the next step.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-After building Scope of Work section:
-→ `step-05d-contract-payment.md` (same folder)
+### ✅ SUCCESS:
+- Clear IN scope and OUT of scope definitions
+- Deliverables are explicitly listed
+- Scope is adapted to business model
+- User confirms the scope boundaries
 
+### ❌ SYSTEM FAILURE:
+- Skipping IN scope/OUT of scope definitions
+- Not adapting scope to business model
+- Creating vague scope that invites disputes
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

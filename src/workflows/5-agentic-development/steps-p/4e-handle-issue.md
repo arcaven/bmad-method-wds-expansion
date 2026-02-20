@@ -1,30 +1,69 @@
-# Phase 4e: Handle Issue
+---
+name: '4e-handle-issue'
+description: 'Fix reported issues in the section, document, and re-verify'
 
-**Purpose**: Fix reported issues in the section
+# Path Definitions
+workflow_path: '{installed_path}'
 
-**Task**: Identify, fix, document, and re-test
-
+# File References
+thisStepFile: '{workflow_path}/steps-p/4e-handle-issue.md'
+nextStepFile: '{workflow_path}/steps-p/4f-handle-improvement.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-prototyping.md'
 ---
 
-## When to Use This Phase
+# Step 4e: Handle Issue
 
-- ✅ User reported an issue with the implemented section
+## STEP GOAL:
 
----
+Fix reported issues in the section. Identify, fix, document, and re-test.
 
-## Step 1: Acknowledge Issue
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-**Your response**:
-> "I see the issue with [specific problem].
->
-> **Analysis**: [Why it's happening]
-> **Fix**: [What needs to change]
->
-> Let me fix that now..."
+### Universal Rules:
 
----
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Step 2: Fix the Issue
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on acknowledging the issue, fixing it, updating the story file with learning, re-verifying, and re-presenting
+- 🚫 FORBIDDEN to add unrelated improvements while fixing an issue
+- 💬 Approach: Acknowledge, analyze, fix, document the learning, then re-verify
+- 📋 Update story file with what was wrong, why, and what was learned
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Issue fixed, documented in story file, re-verified with Puppeteer
+- 💾 Update story file with changes made section
+- 📖 Reference the reported issue and story file
+- 🚫 Do not add unrelated features or improvements
+
+## CONTEXT BOUNDARIES:
+
+- Available context: User's issue report; current implementation; story file
+- Focus: Issue identification, fix, documentation, re-verification
+- Limits: Only fix the reported issue — no scope expansion
+- Dependencies: User has reported an issue (from Step 4d)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Acknowledge Issue
+
+Acknowledge the specific problem, analyze why it is happening, and describe the fix.
+
+### 2. Fix the Issue
 
 **Actions**:
 
@@ -33,66 +72,65 @@
 3. Test the fix mentally (does it solve the problem?)
 4. Keep the fix focused and local
 
-**Console logging**:
-```
-🔧 Fixing issue: [description]
-✅ Fixed: [what was changed]
-```
+### 3. Update Story File with Learning
 
----
+Add to story file `stories/[View].[N]-[section-name].md`:
+- Problem: What was wrong
+- Root cause: Why it happened
+- Solution: What was changed
+- Code change: Specific change made
+- Learned: What to do differently next time
 
-## Step 3: Update Story File with Learning
-
-**Add to story file** `stories/[View].[N]-[section-name].md`:
-
-```markdown
-## Changes Made
-
-**[Date]**: Fixed [issue]
-- **Problem**: [What was wrong]
-- **Root cause**: [Why it happened]
-- **Solution**: [What was changed]
-- **Code change**: [Specific change made]
-- **Learned**: [What to do differently next time]
-```
-
----
-
-## Step 3.5: Re-Verify with Puppeteer
+### 3.5. Re-Verify with Puppeteer
 
 After fixing the issue, run Puppeteer verification before re-presenting:
 
 1. Open page in browser
 2. Verify the fix resolves the reported issue
 3. Verify no regressions on previously passing criteria
-4. Narrate findings with ✓/✗
+4. Narrate findings with pass/fail
 
 **Only proceed to re-present when all criteria pass.**
 
+### 4. Re-present for Testing
+
+Present the fix, explain what changed, why it works now, and request re-testing.
+
+**Note**: This may loop multiple times until issue is resolved. After re-presenting, route back to Step 4d for user feedback.
+
+### 5. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 4d: Present for Testing (re-test)"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute `{workflow_path}/steps-p/4d-present-for-testing.md`
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the issue is fixed and re-verified will you then loop back to present for testing again.
+
 ---
 
-## Step 4: Re-present for Testing
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-**Your response**:
-> "✅ **Issue fixed!**
->
-> **What changed**:
-> - [Specific change made]
->
-> **Why it works now**:
-> - [Explanation of fix]
->
-> Please test again:
-> 1. [Specific test for the fix]
-> 2. [General retest]
->
-> **Working correctly now?**"
+### ✅ SUCCESS:
+- Issue acknowledged and analyzed
+- Root cause identified
+- Focused fix implemented
+- Story file updated with learning
+- Re-verified with Puppeteer before re-presenting
 
----
+### ❌ SYSTEM FAILURE:
+- Not acknowledging or analyzing the issue
+- Fix does not address root cause
+- Not updating story file with learning
+- Skipping re-verification
+- Adding unrelated improvements during fix
 
-## Next Phase
-
-**Loop**: Go back to `4d-present-for-testing.md` (user tests again)
-
-**Note**: This may loop multiple times until issue is resolved
-
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

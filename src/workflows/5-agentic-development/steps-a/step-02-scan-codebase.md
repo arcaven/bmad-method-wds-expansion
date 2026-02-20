@@ -1,10 +1,63 @@
-# Step 02: Scan Codebase
+---
+name: 'step-02-scan-codebase'
+description: 'Build a mental model of the codebase through systematic exploration of structure, tech stack, and entry points'
 
-**Goal:** Build a mental model of the codebase through systematic exploration of structure, tech stack, and entry points.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-a/step-02-scan-codebase.md'
+nextStepFile: '{workflow_path}/steps-a/step-03-map-architecture.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-analysis.md'
 ---
 
-## Process
+# Step 2: Scan Codebase
+
+## STEP GOAL:
+
+Build a mental model of the codebase through systematic exploration of structure, tech stack, and entry points.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on scanning structure, tech stack, entry points, configuration, and build pipeline
+- 🚫 FORBIDDEN to begin deep architectural analysis — that is the next step
+- 💬 Approach: Systematically explore top-level structure and record observations with user
+- 📋 Document observations as you go — structure, stack, patterns
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Map directory structure, identify tech stack, locate entry points
+- 💾 Document structure overview, tech stack, entry points, configuration, pipeline, and initial patterns
+- 📖 Use the question and scope defined in Step 1 to guide scanning focus
+- 🚫 Do not trace data flows or map dependencies in detail yet
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Analysis question, scope, output format, and time box from Step 1
+- Focus: High-level codebase reconnaissance
+- Limits: No deep architectural mapping — stay at survey level
+- Dependencies: Step 1 must be complete (question and scope defined)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Read Project Structure
 
@@ -86,9 +139,7 @@ As you scan, note initial observations about:
 - Documentation level (thorough, sparse, outdated)
 - Apparent code quality signals (linting config, formatting config, type strictness)
 
----
-
-## Checklist
+### 7. Verify Checklist
 
 - [ ] Directory structure mapped (top 2 levels)
 - [ ] Tech stack and versions identified
@@ -97,8 +148,38 @@ As you scan, note initial observations about:
 - [ ] Build/deploy pipeline identified
 - [ ] Initial patterns and conventions noted
 
+### 8. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 3: Map Architecture"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the codebase scan is complete and observations documented will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-03-map-architecture.md
+### ✅ SUCCESS:
+- Directory structure mapped (top 2 levels)
+- Tech stack and versions identified
+- Entry points located
+- Configuration files read
+- Build/deploy pipeline identified
+- Initial patterns and conventions noted
+
+### ❌ SYSTEM FAILURE:
+- Jumping into deep architecture analysis before completing the scan
+- Skipping configuration or build pipeline investigation
+- Not documenting observations systematically
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

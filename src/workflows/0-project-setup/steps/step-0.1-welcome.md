@@ -1,15 +1,73 @@
-# Step 0.1: Welcome & Orientation
+---
+name: 'step-0.1-welcome'
+description: 'Welcome user to WDS introduce methodology and determine project type and alignment needs'
 
-## PRESENT WDS INTRODUCTION
+# Path Definitions
+workflow_path: '{installed_path}'
 
-<output>
+# File References
+thisStepFile: '{workflow_path}/steps/step-0.1-welcome.md'
+nextStepFile: '{workflow_path}/steps/step-0.2-structure.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
+# Step 1: Welcome & Orientation
+
+## STEP GOAL:
+
+Welcome the user to WDS, introduce the methodology and agents, determine if this is a greenfield or brownfield project, and assess if stakeholder alignment is needed.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are the Project Setup facilitator, onboarding users to WDS methodology
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring WDS methodology expertise, user brings their project knowledge
+- ✅ Maintain a welcoming and informative tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on WDS introduction, project type, and alignment assessment
+- 🚫 FORBIDDEN to skip the project type determination or assume it
+- 💬 Approach: Present information clearly, let user choose their path
+- 📋 Routing decisions here determine the entire workflow path
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Introduce WDS, determine project type, assess alignment needs
+- 💾 Record project type (greenfield/brownfield) and alignment decision
+- 📖 Present WDS overview including phases and agents
+- 🚫 Do not skip project type or alignment questions
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Fresh start - no prior project context
+- Focus: Orientation, project type, alignment needs
+- Limits: Do not configure project details yet (that is step 0.2)
+- Dependencies: None - this is the entry point
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Present WDS Introduction
+
 **Welcome to Whiteport Design Studio (WDS)**
 
 WDS is a **design methodology** that helps you create great digital products through structured workflows.
 
 ---
 
-### What WDS Does
+**What WDS Does**
 
 **For NEW products** (Greenfield):
 - Phase 1: Define your vision (Project Brief)
@@ -28,7 +86,7 @@ WDS is a **design methodology** that helps you create great digital products thr
 
 ---
 
-### What WDS is NOT
+**What WDS is NOT**
 
 - Not a code framework
 - Not a UI library
@@ -38,7 +96,7 @@ WDS is a **thinking framework** with templates to guide your design decisions.
 
 ---
 
-### The Agents
+**The Agents**
 
 Three specialized agents help you:
 
@@ -48,202 +106,84 @@ Three specialized agents help you:
 | **Freya** | Design | UX/UI, wireframes, specifications, prototypes |
 | **Idunn** | Technical | Architecture, APIs, implementation specs |
 
-You're currently working with one of these agents.
-</output>
+You are currently working with one of these agents.
 
----
+### 2. Ask Project Type
 
-## ASK PROJECT TYPE
-
-<ask>
 **What type of project is this?**
 
 Understanding your starting point ensures you follow the right workflow.
 
----
-
-**[A] NEW Product (Greenfield)**
-
-You're building something from scratch:
-- No existing codebase (or starting fresh)
-- Defining the product vision
-- Designing before coding
-
-→ *Leads to Phase 1: Project Brief*
-
----
-
-**[B] EXISTING Product (Brownfield)**
-
-You're improving something that exists:
-- Working codebase already built
-- Want to add features or fix issues
-- Improving, not rebuilding
-
-→ *Leads to Phase 10: Existing Product Entry*
-
----
-
-**[C] NOT SURE**
-
-You have some code but unsure of the approach:
-- Partial implementation exists
-- Unclear if you should continue or restart
-- Need help deciding
-
-→ *We'll analyze your project together*
-
----
+**[A] NEW Product (Greenfield)** - Building from scratch -> Phase 1
+**[B] EXISTING Product (Brownfield)** - Improving what exists -> Phase 10
+**[C] NOT SURE** - We will analyze together
 
 **Your choice (A, B, or C):**
-</ask>
 
----
+### 3. Ask Alignment Requirement
 
-## ASK ALIGNMENT REQUIREMENT
-
-<ask>
 **Do you need stakeholder approval before starting?**
 
----
-
-**[A] No — Ready to start**
-
-You have approval, this is your own project, or it's an informal agreement.
-→ *Continue to project configuration*
-
----
-
-**[B] Yes — Need to pitch/create agreement**
-
-You need to present this to stakeholders, create a proposal, or establish a contract before starting the product work.
-→ *Route to Alignment & Signoff workflow*
-→ *Includes: Pitch document, VTC, Service Agreement*
-
----
+**[A] No - Ready to start** -> Continue to project configuration
+**[B] Yes - Need to pitch/create agreement** -> Route to Alignment & Signoff workflow
 
 **Your choice (A or B):**
-</ask>
 
----
+### 4. Handle Routing
 
-## ROUTING
-
-<action>
 Based on user responses:
 
 **If alignment = [B] Need to pitch:**
-1. Confirm: "Let's create your pitch and alignment documents first."
-2. Route to: `{project-root}/_bmad/wds/workflows/0-alignment-signoff/workflow.md`
-3. After alignment complete → Return here for project configuration
+1. Route to: `{project-root}/_bmad/wds/workflows/0-alignment-signoff/workflow.md`
+2. After alignment complete -> Return here for project configuration
 
 **If alignment = [A] Ready to start:**
 
-Based on project type:
+**If [A] NEW Product:** Continue to `step-0.2-structure.md` then Phase 1
+**If [B] EXISTING Product:** Continue to `step-0.2-structure.md` then Phase 10.1
+**If [C] NOT SURE:** Scan project, recommend path, then continue
 
-**If [A] NEW Product:**
-1. Confirm: "Great! You'll follow Phases 1-7 to build your product."
-2. Continue to: `step-0.2-structure.md` (setup greenfield structure)
-3. Then route to: Phase 1 Project Brief
+### 5. Completion Output
 
-**If [B] EXISTING Product:**
-1. Confirm: "Perfect! You'll use Phase 10 with the Kaizen approach."
-2. Continue to: `step-0.2-structure.md` (setup brownfield structure)
-3. Then route to: Phase 10.1 Identify Opportunity
-
-**If [C] NOT SURE:**
-1. Ask: "Let me scan your project to understand what exists."
-2. Scan for:
-   - `src/` or `app/` folders with code
-   - `package.json` with dependencies
-   - Existing documentation
-3. Based on scan:
-   - Significant code exists → Recommend [B] Brownfield
-   - Minimal/no code → Recommend [A] Greenfield
-   - Ask user to confirm recommendation
-</action>
-
----
-
-## EXAMPLES
-
-### Example: User chooses [A] NEW
-
-```
-User: A
-
-Agent: Great! You're building a new product from scratch.
-
-You'll follow the Greenfield workflow:
-├─ Phase 1: Project Brief (define vision)
-├─ Phase 2: Trigger Mapping (understand users)
-├─ Phase 3: PRD Platform (specify features)
-├─ Phase 4: UX Design (design experience)
-├─ Phase 5: Design System (build consistency)
-├─ Phase 6: Design Deliveries (hand off)
-└─ Phase 7: Testing (validate quality)
-
-Let's set up your project structure first...
-```
-
-### Example: User chooses [B] EXISTING
-
-```
-User: B
-
-Agent: Perfect! You're improving an existing product.
-
-You'll use the Brownfield workflow (Phase 10):
-├─ Create Limited Brief (document what exists)
-├─ Identify improvement opportunities
-├─ Design focused updates (not complete redesigns)
-├─ Implement incrementally (Kaizen approach)
-└─ Monitor and iterate
-
-This approach respects your existing codebase while
-making strategic improvements.
-
-Let's set up your project structure...
-```
-
-### Example: User chooses [C] NOT SURE
-
-```
-User: C
-
-Agent: No problem! Let me scan your project...
-
-Scanning...
-├─ Found: src/ with 45 component files
-├─ Found: package.json (React, TypeScript)
-├─ Found: Functional authentication flow
-├─ Found: Database integration (Supabase)
-└─ No WDS documentation found
-
-Analysis: You have a substantial existing codebase.
-
-Recommendation: Use the BROWNFIELD workflow (Phase 10)
-- Document what exists with a Limited Brief
-- Identify specific improvements to make
-- Use Kaizen approach for incremental changes
-
-This preserves your work while adding WDS methodology.
-
-Does this recommendation sound right? (Y/N)
-```
-
----
-
-## COMPLETION
-
-<output>
 Project type confirmed: [Greenfield/Brownfield]
-
 Next: Set up your project structure.
 
-[Continue to Step 0.2: Project Structure]
-</output>
+### 6. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to step-0.2-structure"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the project type is confirmed and alignment decision is made will you then load and read fully `{nextStepFile}` to execute and begin the next step.
 
 ---
 
-_Phase 0: Project Setup — Step 0.1: Welcome & Orientation_
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+- User understands WDS methodology at a high level
+- Project type (greenfield/brownfield) is determined
+- Alignment needs are assessed and routed correctly
+- User feels oriented and confident about the path ahead
+
+### ❌ SYSTEM FAILURE:
+- Skipping project type determination
+- Assuming greenfield or brownfield without asking
+- Not assessing alignment needs
+- Routing to wrong workflow path
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.
+
+---
+
+_Phase 0: Project Setup - Step 0.1: Welcome & Orientation_

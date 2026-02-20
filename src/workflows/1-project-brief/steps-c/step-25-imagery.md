@@ -1,127 +1,162 @@
-# Step 6: Photography & Imagery
+---
+name: 'step-25-imagery'
+description: 'Define photography style, image sources, and imagery guidelines'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-25-imagery.md'
+nextStepFile: '{workflow_path}/steps-c/step-26-visual-synthesize.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
+# Step 25: Photography & Imagery
+
+## STEP GOAL:
 Define photography style, image sources, and imagery guidelines.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Imagery significantly impacts perception. Help the user plan realistic image sourcing while establishing quality standards.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Instructions
+### Role Reinforcement:
+- You are a Strategic Business Analyst helping plan realistic image sourcing while establishing quality standards
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-1. **Photography style direction**
+### Step-Specific Rules:
+- Focus: Photography style, existing photos, needs assessment, stock guidelines, icons/illustrations
+- FORBIDDEN: Do not skip assessing existing photography quality
+- Approach: Discuss style direction, inventory existing photos, identify needs, plan sourcing
 
-   Discuss the photographic feel:
+## EXECUTION PROTOCOLS:
+- Primary goal: Photography and imagery guidelines documented with sourcing plan
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-   | Style | Characteristics |
-   |-------|-----------------|
-   | **Authentic/Documentary** | Real people, real work, candid |
-   | **Professional/Polished** | Staged, high quality, idealized |
-   | **Lifestyle** | In context, aspirational |
-   | **Product-focused** | Clean, detailed, technical |
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, visual direction (style, layout, effects)
+- Focus: Photography and imagery direction
+- Limits: Guidelines and sourcing plan, not final image selection
+- Dependencies: Step 24 completed
 
-   For service businesses, authentic usually works best.
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-2. **Existing photography**
+### 1. Photography Style Direction
 
-   Ask: "Do you have photos of the business, team, or work?"
-   - Quality assessment
-   - What's usable as-is?
-   - What needs to be shot?
+Discuss the photographic feel:
 
-3. **Photography needs**
+| Style | Characteristics |
+|-------|-----------------|
+| **Authentic/Documentary** | Real people, real work, candid |
+| **Professional/Polished** | Staged, high quality, idealized |
+| **Lifestyle** | In context, aspirational |
+| **Product-focused** | Clean, detailed, technical |
 
-   Identify what's needed:
-   - Hero/header image(s)
-   - Team/owner photos
-   - Work/service photos
-   - Location/environment
-   - Detail shots
+For service businesses, authentic usually works best.
 
-   Discuss: "Would you be open to a photoshoot?"
+### 2. Existing Photography
 
-4. **Stock photography guidelines**
+Ask: "Do you have photos of the business, team, or work?"
+- Quality assessment
+- What's usable as-is?
+- What needs to be shot?
 
-   If stock photos are needed:
-   - Style consistency (same photographer/collection)
-   - Authenticity (avoid obviously staged)
-   - Diversity and representation
-   - Industry appropriateness
+### 3. Photography Needs
 
-   Recommend stock sources:
-   - Unsplash (free, good quality)
-   - Pexels (free)
-   - Shutterstock/Adobe Stock (paid, more options)
+Identify what's needed:
+- Hero/header image(s)
+- Team/owner photos
+- Work/service photos
+- Location/environment
+- Detail shots
 
-5. **Icon and illustration style**
+Discuss: "Would you be open to a photoshoot?"
 
-   If icons or illustrations are needed:
-   - Line icons vs. filled
-   - Custom vs. library (Heroicons, Feather, etc.)
-   - Illustration style if applicable
+### 4. Stock Photography Guidelines
 
-6. **Image guidelines**
+If stock photos are needed:
+- Style consistency (same photographer/collection)
+- Authenticity (avoid obviously staged)
+- Diversity and representation
+- Industry appropriateness
 
-   Document standards:
-   - Consistent color treatment?
-   - Aspect ratios for consistency
-   - Alt text requirements
-   - Compression/optimization
+Recommend stock sources:
+- Unsplash (free, good quality)
+- Pexels (free)
+- Shutterstock/Adobe Stock (paid, more options)
 
-7. **Document in output**
-   - Fill in Photography & Imagery section
-   - Note image sources and guidelines
+### 5. Icon and Illustration Style
 
-## Example Output
+If icons or illustrations are needed:
+- Line icons vs. filled
+- Custom vs. library (Heroicons, Feather, etc.)
+- Illustration style if applicable
 
-```
-Photography Style: Authentic/Documentary
-- Real workshop photos
-- Björn at work
-- Actual vehicles being serviced
-- Northern Öland environment
+### 6. Image Guidelines
 
-Image Sources:
-| Type | Source | Notes |
-|------|--------|-------|
-| Hero | Custom photoshoot | Workshop exterior/interior |
-| Team | Custom | Björn portrait |
-| Services | Custom + stock | Action shots |
-| Location | Custom | Öland landscape/sign |
+Document standards:
+- Consistent color treatment?
+- Aspect ratios for consistency
+- Alt text requirements
+- Compression/optimization
 
-Guidelines:
-- Natural lighting preferred
-- Warm color grading (not cold/clinical)
-- Show competence and professionalism
-- Include local Öland character
-```
+### 7. Document in Output
+- Fill in Photography & Imagery section
+- Note image sources and guidelines
 
-
-## Agent Dialog Update
-
+### 8. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### [Step Name]
-**Q:** [Key questions asked]
+### Step 25: Photography & Imagery
+**Q:** Photography style, existing photos, needs, stock guidelines?
 **A:** [User responses - summarized]
-**Documented in:** visual-direction.md ([section name])
+**Documented in:** visual-direction.md (Photography & Imagery section)
 **Key insights:** [Important decisions or revelations]
 **Status:** Complete
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing imagery, proceed to step-26-visual-synthesize.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-existing-brand.md', 'step-03-references.md', 'step-04-design-style.md', 'step-05-layout-effects.md', 'step-06-imagery.md']
-photography_style: '[style]'
-photoshoot_needed: '[yes/no]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Photography style direction defined
+- Existing photos assessed
+- Photography needs identified
+- Stock guidelines established (if needed)
+- Image sourcing plan documented
+- User confirmed
+
+### FAILURE:
+- Skipped existing photo assessment
+- Generated imagery guidelines without user input
+- Did not plan image sourcing
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

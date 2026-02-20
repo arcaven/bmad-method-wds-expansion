@@ -1,20 +1,58 @@
+---
+name: 'step-10a-platform-strategy'
+description: 'Define platform and device strategy'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-10a-platform-strategy.md'
+nextStepFile: '{workflow_path}/steps-c/step-11-tone-of-voice.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
 # Step 10A: Define Platform & Device Strategy
 
-## Purpose
-
+## STEP GOAL:
 Establish the technical platform strategy and device support requirements that will shape all design and development decisions.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-You are helping the user make critical architectural decisions about what platforms and devices their product will support. These decisions affect scope, budget, timeline, technical complexity, and user experience design.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Key Elements
+### Role Reinforcement:
+- You are a Strategic Business Analyst helping user make critical architectural decisions about platforms and devices
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-This step identifies primary platform(s), device support requirements, interaction models, and platform rationale.
+### Step-Specific Rules:
+- Focus: Platform choice, device support, interaction models, platform rationale
+- FORBIDDEN: Do not make technology decisions without user input
+- Approach: Present options with trade-offs, guide user to informed decision
 
-## Instructions
+## EXECUTION PROTOCOLS:
+- Primary goal: Platform strategy documented with rationale
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-Guide user to define their platform strategy by asking about primary platform choice, supported devices, device priority, interaction models needed, offline functionality requirements, native device features needed, and platform rationale including constraints and future plans.
+## CONTEXT BOUNDARIES:
+- Available context: All previous steps (vision, positioning, VTC, business model, users, success criteria, competitive landscape, constraints)
+- Focus: Platform and device strategy
+- Limits: Not detailed technical specs - strategic platform direction
+- Dependencies: Steps 1-10 completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Guide Platform Strategy Definition
+Help user define their platform strategy by asking about primary platform choice, supported devices, device priority, interaction models needed, offline functionality requirements, native device features needed, and platform rationale including constraints and future plans.
 
 **Common Platform Options:**
 
@@ -39,11 +77,10 @@ Guide user to define their platform strategy by asking about primary platform ch
 - Gesture controls
 - Accessibility devices (screen readers, switch controls)
 
+### 2. Capture and Validate
 Capture platform strategy, validate alignment with vision and constraints, and document in Product Brief under "Platform & Device Strategy" section including primary platform, supported devices, device priority with rationale, interaction models, technical requirements (offline, native features), platform rationale, constraints considered, future plans, and design/development implications.
 
-
-## Agent Dialog Update
-
+### 3. Agent Dialog Update
 **Mandatory:** Append to `dialog/decisions.md` if key decisions were made.
 
 **Record:**
@@ -53,33 +90,35 @@ Capture platform strategy, validate alignment with vision and constraints, and d
 
 **Then:** Mark Step 10a complete in `dialog/progress-tracker.md` progress tracker
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After capturing platform strategy, proceed to step-11-tone-of-voice.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted:
-  [
-    'step-01-init.md',
-    'step-02-vision.md',
-    'step-03-positioning.md',
-    'step-04-business-model.md',
-    'step-05-business-customers.md',
-    'step-06-target-users.md',
-    'step-07-success-criteria.md',
-    'step-08-competitive-landscape.md',
-    'step-09-constraints.md',
-    'step-10a-platform-strategy.md',
-  ]
-platform_strategy:
-  primary_platform: '{captured}'
-  supported_devices: '{captured}'
-  device_priority: '{captured}'
-  interaction_models: '{captured}'
-  offline_requirements: '{captured}'
-  native_features_needed: '{captured}'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Platform strategy captured with clear rationale
+- Device priority defined
+- Interaction models identified
+- Alignment with vision and constraints validated
+- User confirmed
+
+### FAILURE:
+- Made technology decisions without user input
+- Skipped platform rationale
+- Generated content without user collaboration
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

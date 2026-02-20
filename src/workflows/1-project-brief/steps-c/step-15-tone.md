@@ -1,82 +1,99 @@
-# Step 3: Tone of Voice
+---
+name: 'step-15-tone'
+description: 'Define specific tone of voice that expresses brand personality'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Define the specific tone of voice that expresses the brand personality.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-15-tone.md'
+nextStepFile: '{workflow_path}/steps-c/step-16-languages.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Context for Agent
+# Step 15: Tone of Voice
 
-Tone of voice is HOW the personality is expressed in words. It's more specific than personality — it guides actual word choices and sentence structures.
+## STEP GOAL:
+Define the specific tone of voice that expresses the brand personality - HOW the personality is expressed in words.
 
-## Instructions
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-1. **Explain the tone spectrum**
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-   Tone exists on spectrums. Ask the user to position the brand:
+### Role Reinforcement:
+- You are a Strategic Business Analyst guiding tone definition through spectrums and examples
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-   | Spectrum | Left | Right |
-   |----------|------|-------|
-   | Formality | Formal | Casual |
-   | Mood | Serious | Playful |
-   | Complexity | Technical | Simple |
-   | Energy | Reserved | Enthusiastic |
+### Step-Specific Rules:
+- Focus: Tone spectrums, "We Say / We Don't Say" examples, validation with user
+- FORBIDDEN: Do not skip validation with actual examples
+- Approach: Present spectrums, get positions, create contrasting examples, validate
 
-2. **For each spectrum, get position and example**
+## EXECUTION PROTOCOLS:
+- Primary goal: Tone spectrums defined with positions and examples
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-   Ask: "On a scale of 1-5, where 1 is [left] and 5 is [right], where does [business] sit?"
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, brand personality from step 14
+- Focus: Tone of voice as specific word choices and sentence structures
+- Limits: More specific than personality - guides actual word choices
+- Dependencies: Step 14 completed
 
-   Then: "Can you give me an example of how that sounds?"
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-3. **Create "We Say / We Don't Say" examples**
+### 1. Explain the Tone Spectrum
 
-   Based on the tone, generate contrasting examples:
+Tone exists on spectrums. Ask the user to position the brand:
 
-   | Context | We Say | We Don't Say |
-   |---------|--------|--------------|
-   | Greeting | "Hi, how can we help?" | "Dear valued customer..." |
-   | Problem | "Something went wrong" | "Error 503: Service unavailable" |
-   | Success | "All done!" | "Your request has been processed" |
+| Spectrum | Left | Right |
+|----------|------|-------|
+| Formality | Formal | Casual |
+| Mood | Serious | Playful |
+| Complexity | Technical | Simple |
+| Energy | Reserved | Enthusiastic |
 
-4. **Validate with the user**
+### 2. For Each Spectrum, Get Position and Example
 
-   Present examples and ask:
-   - "Does this sound like [business name]?"
-   - "Would [target user] respond well to this?"
+Ask: "On a scale of 1-5, where 1 is [left] and 5 is [right], where does [business] sit?"
 
-5. **Document in output**
-   - Fill in Tone of Voice section
-   - Include spectrum positions with examples
-   - Add We Say / We Don't Say lists
+Then: "Can you give me an example of how that sounds?"
 
-## Example for Local Mechanic
+### 3. Create "We Say / We Don't Say" Examples
 
-```
-Tone: Professional but approachable
+Based on the tone, generate contrasting examples:
 
-| Dimension | Position (1-5) | Example |
-|-----------|----------------|---------|
-| Formal ↔ Casual | 3 | "Give us a call" not "Contact our service department" |
-| Serious ↔ Playful | 2 | Friendly but not jokey |
-| Technical ↔ Simple | 4 | Plain language, explain jargon |
-| Reserved ↔ Enthusiastic | 3 | Warm, not over-the-top |
+| Context | We Say | We Don't Say |
+|---------|--------|--------------|
+| Greeting | "Hi, how can we help?" | "Dear valued customer..." |
+| Problem | "Something went wrong" | "Error 503: Service unavailable" |
+| Success | "All done!" | "Your request has been processed" |
 
-We say:
-- "Give us a call"
-- "We'll take a look"
-- "Here's what we found"
+### 4. Validate with the User
 
-We don't say:
-- "Submit your inquiry"
-- "Vehicle diagnostic assessment"
-- "Per our evaluation..."
-```
+Present examples and ask:
+- "Does this sound like [business name]?"
+- "Would [target user] respond well to this?"
 
-## Agent Dialog Update
+### 5. Document in Output
+- Fill in Tone of Voice section
+- Include spectrum positions with examples
+- Add We Say / We Don't Say lists
 
+### 6. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### Step 3: Tone of Voice
+### Step 15: Tone of Voice
 **Q:** Positioned brand on tone spectrums (formality, mood, complexity, energy)
 **A:** [Spectrum positions - e.g., "3/5 formality, 2/5 playful"]
 **Documented in:** content-language.md (Tone of Voice section)
@@ -85,15 +102,35 @@ After completing this step, update the agent dialog:
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing tone, proceed to step-16-languages.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-personality.md', 'step-03-tone.md']
-primary_tone: '[description]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Tone spectrums positioned with scores
+- "We Say / We Don't Say" examples created
+- Examples validated with user
+- Tone feels authentic to brand personality
+- Documented in output
+
+### FAILURE:
+- Skipped spectrum positioning
+- Generated examples without user validation
+- Tone disconnected from brand personality
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

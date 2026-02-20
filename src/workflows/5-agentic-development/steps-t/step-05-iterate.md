@@ -1,122 +1,91 @@
-# Step 05: Iterate or Approve
+---
+name: 'step-05-iterate'
+description: 'Either iterate with development team to fix issues, or approve the feature for production'
 
-## Your Task
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Either iterate with BMad to fix issues, or approve the feature for production.
-
+# File References
+thisStepFile: '{workflow_path}/steps-t/step-05-iterate.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-acceptance-testing.md'
 ---
 
-## Before You Start
+# Step 5: Iterate or Approve
 
-**Ensure you have:**
+## STEP GOAL:
 
-- ✅ Completed step-04-report (test report created)
-- ✅ Issues communicated to development team
-- ✅ Clear on next steps
+Either iterate with development team to fix issues, or approve the feature for production.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Two Paths
+### Universal Rules:
 
-### Path A: Issues Found → Iterate
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on two paths: iterate (fix issues and retest) or approve (sign off for production)
+- 🚫 FORBIDDEN to approve with unfixed high-severity issues or create endless iteration loops (max 3 iterations)
+- 💬 Approach: Guide user through the appropriate path based on test results
+- 📋 Maximum 3 iterations before escalation
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Feature either approved with sign-off document or issues fixed and retested
+- 💾 Create sign-off document if approved; create retest report if iterating
+- 📖 Reference test report from Step 4 and issues from Step 3
+- 🚫 Do not approve with unfixed high-severity issues
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Test report from Step 4; issues from Step 3; all test results
+- Focus: Decision — iterate or approve
+- Limits: Maximum 3 iterations before escalation
+- Dependencies: Step 4 must be complete (test report created)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### Two Paths
+
+#### Path A: Issues Found - Iterate
 
 **If test result was FAIL:**
-- BMad fixes issues
-- You retest
-- Repeat until approved
 
-### Path B: No Issues → Approve
+1. **Wait for Fixes** - Be available for questions, clarify issues, review early feedback
+2. **Receive Ready for Retest** notification
+3. **Retest** - Focus on:
+   - Fixed issues: Verify actually fixed
+   - Regression testing: Fixes did not break anything
+   - Related areas: Check affected parts
+   - Use abbreviated testing (do not rerun all tests)
+4. **Update Issues** - Mark fixed issues as Closed with version, date, and verifier
+5. **Create Retest Report** - Reference data/issue-templates.md for template
+6. **Decision Point**:
+   - If all high-severity fixed: proceed to Path B (Approve)
+   - If issues remain: Repeat iteration (max 3 total)
+
+#### Path B: No Issues - Approve
 
 **If test result was PASS:**
-- Feature approved
-- Ready for production
-- Acceptance Testing complete!
 
----
+1. **Create Sign-Off Document** - Reference data/issue-templates.md for template
+2. **Notify Development Team** - Formal approval notification
+3. **Update Status** - Set delivery status to 'approved' with timestamp and approver
 
-## Path A: Iterate (Issues Found)
-
-### Step 1: Wait for BMad Fixes
-
-**Your role during fixes:**
-- Be available for questions
-- Clarify issues if needed
-- Review fixes if BMad requests early feedback
-
-### Step 2: BMad Notifies Ready for Retest
-
-BMad notifies when all high-severity issues fixed and build ready.
-
-### Step 3: Retest
-
-**Focus on:**
-1. **Fixed issues** - Verify actually fixed
-2. **Regression testing** - Fixes didn't break anything
-3. **Related areas** - Check affected parts
-
-**Abbreviated testing:**
-- Don't rerun all tests
-- Focus on affected areas
-- Verify fixes work
-
-### Step 4: Update Issues
-
-For each fixed issue:
-```markdown
-**Status:** Closed
-**Fixed in:** v0.1.0-beta.2
-**Verified:** 2024-12-10
-**Verified by:** [Your name]
-```
-
-### Step 5: Create Retest Report
-
-**See:** [data/issue-templates.md](data/issue-templates.md) for retest report template
-
-### Step 6: Decision Point
-
-**If all high-severity fixed:** → Path B (Approve)
-**If issues remain:** → Repeat iteration
-
----
-
-## Path B: Approve (No Blocking Issues)
-
-### Step 1: Create Sign-Off Document
-
-**See:** [data/issue-templates.md](data/issue-templates.md) for sign-off template
-
-### Step 2: Notify BMad
-
-```
-WDS UX Expert → BMad Architect
-
-Subject: DD-XXX APPROVED for Production
-
-🎉 Design Delivery DD-XXX is approved!
-
-✅ All tests passed
-✅ Design system compliant
-✅ Accessibility verified
-✅ Ready for production
-
-Sign-off document: testing/DD-XXX/sign-off.md
-
-Congratulations on a great implementation!
-```
-
-### Step 3: Update Status
-
-```yaml
-delivery:
-  status: 'approved'
-  approved_at: '[timestamp]'
-  approved_by: '[your name]'
-```
-
----
-
-## Iteration Limits
+### Iteration Limits
 
 **Maximum iterations:** 3
 
@@ -125,32 +94,39 @@ If after 3 iterations issues persist:
 2. Review requirements
 3. Consider scope reduction
 
----
+### Present MENU OPTIONS
 
-## Next Step
+Display: "**Select an Option:** [M] Return to Activity Menu"
 
-After approval:
+#### Menu Handling Logic:
+- IF M: Update agent dialog, then load, read entire file, then execute {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-```
-[C] Return to activity menu
-```
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed when user selects 'M'
+- User can chat or ask questions - always respond and then redisplay menu options
 
----
+## CRITICAL STEP COMPLETION NOTE
 
-## Success Metrics
-
-✅ All high-severity issues fixed
-✅ Retesting complete
-✅ Sign-off document created
-✅ BMad notified of approval
-✅ Status updated to approved
+ONLY WHEN the feature is approved with sign-off document or escalated will you then load and read fully `{activityWorkflowFile}` to execute.
 
 ---
 
-## Failure Modes
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-❌ Approving with unfixed high-severity issues
-❌ No sign-off document
-❌ Status not updated
-❌ BMad not notified
-❌ Endless iteration loop
+### ✅ SUCCESS:
+- All high-severity issues fixed
+- Retesting complete
+- Sign-off document created
+- Development team notified of approval
+- Status updated to approved
+
+### ❌ SYSTEM FAILURE:
+- Approving with unfixed high-severity issues
+- No sign-off document
+- Status not updated
+- Development team not notified
+- Endless iteration loop (more than 3)
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

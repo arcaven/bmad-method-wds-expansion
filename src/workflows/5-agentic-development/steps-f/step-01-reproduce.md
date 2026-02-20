@@ -1,10 +1,63 @@
-# Step 01: Reproduce
+---
+name: 'step-01-reproduce'
+description: 'Confirm the bug exists and document exact reproduction steps'
 
-**Goal:** Confirm the bug exists and document exact reproduction steps.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-f/step-01-reproduce.md'
+nextStepFile: '{workflow_path}/steps-f/step-02-investigate.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-bugfixing.md'
 ---
 
-## Process
+# Step 1: Reproduce
+
+## STEP GOAL:
+
+Confirm the bug exists and document exact reproduction steps.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on gathering bug report details, setting up reproduction environment, and reproducing the bug
+- 🚫 FORBIDDEN to begin investigating root cause or implementing fixes — those are later steps
+- 💬 Approach: Methodically reproduce the issue with user, documenting every step and observation
+- 📋 Bug must be reproduced at least twice before proceeding; if non-reproducible, follow the non-reproducible protocol
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Confirm the bug exists with documented, repeatable reproduction steps
+- 💾 Update dialog file with reproduction details, screenshots/logs
+- 📖 Reference the bug report or user description
+- 🚫 Do not investigate code or attempt fixes during this step
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Bug report or user description of the issue
+- Focus: Reproduction — confirming the bug exists and documenting how to trigger it
+- Limits: No code investigation, no fix attempts
+- Dependencies: A bug report or description must exist
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Gather Bug Report Details
 
@@ -42,9 +95,7 @@ If the bug cannot be reproduced:
 - Document what was tried and what remains unknown
 - Do NOT proceed to investigation without reproduction or a clear theory
 
----
-
-## Checklist
+### 6. Verify Checklist
 
 - [ ] Bug report details gathered and understood
 - [ ] Reproduction environment matches reporter's setup
@@ -53,8 +104,39 @@ If the bug cannot be reproduced:
 - [ ] Screenshots/logs captured
 - [ ] Dialog file updated with reproduction details
 
+### 7. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 2: Investigate"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the bug has been reproduced and documented with exact steps will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-02-investigate.md
+### ✅ SUCCESS:
+- Bug report details gathered and understood
+- Reproduction environment matches reporter's setup
+- Bug reproduced at least twice
+- Reproduction steps documented precisely
+- Screenshots/logs captured
+- Dialog file updated with reproduction details
+
+### ❌ SYSTEM FAILURE:
+- Proceeding to investigation without reproducing the bug
+- Attempting to fix the bug before understanding how to trigger it
+- Not documenting reproduction steps
+- Skipping environment setup
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

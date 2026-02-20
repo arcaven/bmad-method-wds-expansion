@@ -1,10 +1,65 @@
-# Step 09: Handover
+---
+name: step-09-handover
+description: Complete Phase 3 and prepare for Phase 4 UX Design
 
-**Goal:** Complete Phase 3 and prepare for Phase 4: UX Design.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-09-handover.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## 1. Present Completion Summary
+# Step 9: Handover
+
+## STEP GOAL:
+
+Complete Phase 3 by presenting a final summary, guiding the user through design intent selection for each scenario, explaining what comes next in Phase 4, and updating any agent dialogs.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a UX Scenario Architect collaborating with the project owner
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring scenario thinking and user journey expertise, user brings their project knowledge, together we create concrete UX scenario outlines
+- ✅ Maintain collaborative equal-partner tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on completion summary, design intent selection, and handover
+- 🚫 FORBIDDEN to end without presenting design intent options for each scenario
+- 💬 Approach: Celebrate completion while providing clear next steps
+- 📋 Save design intent choices to scenario frontmatter
+
+## EXECUTION PROTOCOLS:
+
+- 📋 Present comprehensive completion summary
+- 🎯 Guide user through design intent selection per scenario
+- 💾 Save design intent and status to scenario files
+- 📖 Explain Phase 4 approaches clearly
+- 🚫 FORBIDDEN to end workflow without proper completion
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All Phase 3 artifacts, quality scores, design log
+- Focus: Phase completion and Phase 4 preparation
+- Limits: No scenario modifications, only status updates
+- Dependencies: Design log must be updated from Step 8
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Present Completion Summary
 
 ```
 ## Phase 3: UX Scenarios Complete ✓
@@ -35,9 +90,7 @@
 [list all...]
 ```
 
----
-
-## 2. Design Intent Selection
+### 2. Design Intent Selection
 
 Before handing over to Phase 4, help the user choose a design approach for each scenario.
 
@@ -53,8 +106,8 @@ Your scenarios are ready for design. How would you like to approach each?
 | ... | ... | ... |
 
 **Approaches:**
-[K] Sketch — I'll draw it myself, agent interprets later
-[C] Conceptualize — Let's explore what the design needs together
+[K] Sketch — I will draw it myself, agent interprets later
+[C] Conceptualize — Let us explore what the design needs together
 [S] Suggest — Agent proposes step by step, I confirm each
 [D] Dream Up — Agent creates the whole flow, I review the result
 [L] Later — Decide when I start Phase 4
@@ -64,9 +117,7 @@ For each scenario, save the chosen approach as `design_intent` in the scenario o
 - Add `design_intent: [K|C|S|D|L]` to the scenario frontmatter
 - Add `design_status: not-started` to track progress
 
----
-
-## 3. What Comes Next
+### 3. What Comes Next
 
 Explain to user:
 
@@ -84,21 +135,52 @@ You can always change approach in Phase 4.
 Would you like to continue to Phase 4, or take a break?
 ```
 
----
-
-## 4. Update Agent Dialog (If Exists)
+### 4. Update Agent Dialog (If Exists)
 
 If tracking via agent dialog:
 - Mark Phase 3 as complete
 - Log scenario count and quality scores
 - Note any user adjustments made during the process
 
+### 5. Present MENU OPTIONS
+
+Display: "[M] Main Menu — Return to workflow start"
+
+#### Menu Handling Logic:
+
+- IF M: Load, read entire file, then execute {workflowFile}
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY complete workflow when user selects 'M' or indicates they want to stop
+- After other menu items execution, return to this menu
+- User can chat or ask questions - always respond and then end with display again of the menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN [M main menu option] is selected and [design intent captured for all scenarios], will the workflow end gracefully with Phase 3 complete and Phase 4 prepared.
+
 ---
 
-## Output
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-<output>Phase 3: UX Scenarios complete. [N] scenarios created covering [N] pages.</output>
+### ✅ SUCCESS:
 
----
+- Comprehensive completion summary presented
+- Design intent selection offered for each scenario
+- Design intent and status saved to scenario frontmatter
+- Phase 4 approaches clearly explained
+- Agent dialog updated if applicable
+- User informed of next steps
+- Menu presented and user input handled correctly
 
-_End of Phase 3: UX Scenarios workflow._
+### ❌ SYSTEM FAILURE:
+
+- Not presenting completion summary
+- Skipping design intent selection
+- Not saving design intent to scenario files
+- Ending without explaining next steps
+- Not updating agent dialog when one exists
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

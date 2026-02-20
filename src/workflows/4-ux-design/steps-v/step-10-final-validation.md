@@ -1,20 +1,66 @@
 ---
-# Final step - no nextStepFile
+name: 'step-10-final-validation'
+description: 'Cross-reference all sections, verify sketch coverage, check for broken links, and generate comprehensive quality report'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-v/step-10-final-validation.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-validate.md'
 ---
 
-# Step 8: Final Validation & Quality Report
+# Step 10: Final Validation & Quality Report
 
-## Purpose
+## STEP GOAL:
 
 Cross-reference all sections, verify sketch coverage, check for broken links, validate naming conventions, and generate comprehensive quality report.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Final validation catches inconsistencies before handoff and ensures specification completeness. This step synthesizes findings from all previous steps and provides confidence for developers that the specification is production-ready.
+### Universal Rules:
 
-## Key Elements
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-This step validates:
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on comprehensive cross-referencing and quality report generation
+- 🚫 FORBIDDEN to skip sketch coverage or link validation
+- 💬 Approach: Synthesize findings from all previous steps, perform final cross-checks
+- 📋 Final validation catches inconsistencies before handoff and ensures production-readiness
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Perform final cross-checks and generate comprehensive quality report
+- 💾 Optionally add audit stamp to page spec for handoff tracking
+- 📖 Reference findings from all previous validation steps (1-9)
+- 🚫 FORBIDDEN to generate incomplete quality report
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Page specification, all previous validation results, design system, sketches
+- Focus: Final comprehensive validation and quality report
+- Limits: This is a synthesis step — do not repeat detailed checks from earlier steps
+- Dependencies: Steps 1-9 should be completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Cross-Reference Sections
+
+Verify:
 - Cross-references between sections are consistent
 - All sketch elements are documented in Page Sections
 - All Object IDs in sections appear in Object Registry
@@ -23,29 +69,28 @@ This step validates:
 - Page numbers match across all references
 - No orphaned or undocumented elements
 
-## Instructions
+### 2. Verify Sketch Coverage
 
-Perform final cross-checks across all sections. Verify every element visible in the sketch has corresponding documentation in Page Sections. Confirm all internal links work (navigation links, design system references, etc.).
+Confirm every element visible in the sketch has corresponding documentation in Page Sections.
 
-Check naming consistency (page numbers, Object ID format, component names). Identify any orphaned content or undocumented sketch elements.
+### 3. Validate Internal Links
 
-Synthesize findings from Steps 1-7 into comprehensive quality report showing overall status, critical issues, warnings, and recommendations.
+Check all internal links work (navigation links, design system references, etc.).
 
-Generate final quality report with:
-- Executive summary (overall status: PASS/NEEDS WORK/CRITICAL ISSUES)
-- Issues by category (Critical, Warning, Info)
-- Coverage metrics (Object Registry coverage, sketch coverage)
-- Recommendations prioritized by impact
-- Optional: Offer to add audit stamp to page spec for handoff tracking
+### 4. Check Naming Consistency
 
-## Quality Report Format
+Verify naming consistency (page numbers, Object ID format, component names) across the entire document.
+
+### 5. Generate Quality Report
+
+Synthesize findings from Steps 1-9 into comprehensive quality report:
 
 ```markdown
 # Page Specification Quality Report
 
 **Page:** [Page Number] [Page Name]
 **Audit Date:** [Date]
-**Overall Status:** ✅ PASS / ⚠️ NEEDS WORK / ❌ CRITICAL ISSUES
+**Overall Status:** PASS / NEEDS WORK / CRITICAL ISSUES
 
 ## Executive Summary
 [Brief overview of specification quality]
@@ -71,14 +116,7 @@ Generate final quality report with:
 [What to do next based on findings]
 ```
 
-## Next Step
-
-This is the final step. After generating quality report, ask user if they want to:
-- [F] Fix issues (you help implement fixes)
-- [S] Add audit stamp to page spec (optional handoff tracking)
-- [D] Done (end workflow)
-
-## Validation Checklist
+### 6. Record Final Validation Result
 
 ```yaml
 final_validation_complete:
@@ -90,3 +128,48 @@ final_validation_complete:
   quality_report_generated: [true/false]
   overall_status: [pass/needs_work/critical]
 ```
+
+### 7. Present MENU OPTIONS
+
+Display: "**Select an Option:** [F] Fix issues | [S] Add audit stamp to page spec | [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF F: Help user implement fixes for identified issues, then [Redisplay Menu Options](#7-present-menu-options)
+- IF S: Add audit stamp to page specification for handoff tracking, then [Redisplay Menu Options](#7-present-menu-options)
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#7-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user selects an option from the menu and the quality report has been generated will you proceed accordingly. This is the last step in the Validate activity.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- All cross-references validated
+- Sketch coverage verified
+- Internal links checked
+- Naming conventions validated
+- Comprehensive quality report generated with executive summary
+- Coverage metrics calculated
+- User presented with fix/stamp/return options
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping cross-reference validation
+- Not checking sketch coverage
+- Not validating internal links
+- Generating incomplete quality report
+- Not calculating coverage metrics
+- Not synthesizing findings from all previous steps
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,26 +1,82 @@
-# Step 05: Hand Off to BMad
+---
+name: 'step-02-hand-off'
+description: 'Hand off Design Delivery to BMad for implementation'
 
-## Your Task
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Hand off the Design Delivery (small scope) to BMad for implementation.
+# File References
+thisStepFile: '{workflow_path}/steps-p/step-02-hand-off.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-deploy.md'
 
+# Data References
+deliveryTemplates: '{workflow_path}/data/delivery-templates.md'
 ---
 
-## Before You Start
+# Step 5: Hand Off to BMad
 
-**Ensure you have:**
+## STEP GOAL:
 
-- ✅ Completed step 04 (Design Delivery created)
-- ✅ All artifacts ready
-- ✅ Test scenario created
+Hand off the Design Delivery (small scope) to BMad Developer for implementation - using simplified handoff for small updates or full dialog for larger ones.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Handoff Process
+### Universal Rules:
 
-### Small Updates: Simplified Handoff
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-**For small, focused updates (< 3 days effort):**
+### Role Reinforcement:
+
+- ✅ You are Idunn, a product evolution specialist guiding continuous improvement
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring handoff process expertise, user brings design delivery
+- ✅ Maintain clear and professional tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on clear handoff communication to BMad
+- 🚫 FORBIDDEN to modify design or add new requirements
+- 💬 Approach: Help user compose clear handoff message, ensure BMad has everything needed
+- 📋 Choose appropriate handoff method based on effort estimate
+- 📋 Update delivery status after handoff
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Guide user to choose handoff method (simplified vs full dialog)
+- 💾 Help user compose handoff notification with all necessary information
+- 📖 Update delivery status in DD file after handoff
+- 🚫 Do not allow handoff without all artifacts ready
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Completed step 04 (Design Delivery created), all artifacts ready, test scenario created
+- Focus: Handoff communication, status update
+- Limits: Do not modify design, do not add requirements, do not skip status update
+- Dependencies: Requires completed step 04, DD file created, TS file created, all artifacts ready
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Determine Handoff Method
+
+**Ask user about effort estimate:**
+
+Review the effort estimate in DD-XXX file:
+- **< 3 days total effort**: Use simplified handoff
+- **> 3 days total effort**: Use full handoff dialog
+
+Guide user to appropriate section below.
+
+### 2. Simplified Handoff (< 3 Days)
+
+**For small, focused updates:**
+
+Help user compose handoff notification:
 
 ```
 WDS Designer → BMad Developer
@@ -76,16 +132,17 @@ Thanks,
 WDS Designer
 ```
 
----
+**Work with user to fill in all bracketed values from DD file.**
 
-### Larger Updates: Full Handoff Dialog
+### 3. Full Handoff Dialog (> 3 Days)
 
-**For larger updates (> 3 days effort), use full handoff dialog:**
+**For larger updates:**
 
-Refer to Phase 8, Step 8.4 for complete handoff dialog process.
+Explain to user:
 
-**Key topics:**
+"For larger updates (> 3 days effort), use full handoff dialog process from Phase 8, Step 8.4."
 
+**Key topics to cover in dialog:**
 1. Problem and solution overview
 2. What's changing vs staying
 3. Technical requirements
@@ -94,11 +151,13 @@ Refer to Phase 8, Step 8.4 for complete handoff dialog process.
 6. Success metrics
 7. Rollback criteria
 
----
+**Note:** This is less common for Product Evolution workflow - most improvements are small scope.
 
-## BMad Acknowledges
+### 4. BMad Acknowledges
 
-**BMad Developer responds:**
+**Help user understand expected response:**
+
+BMad Developer should respond with:
 
 ```
 BMad Developer → WDS Designer
@@ -122,42 +181,71 @@ Thanks!
 BMad Developer
 ```
 
----
+**If user receives this acknowledgment, proceed to next step.**
 
-## Update Delivery Status
+**If BMad has questions, help user answer them clearly.**
 
-**Update `deliveries/DD-XXX-name.yaml`:**
+### 5. Update Delivery Status
+
+**Update the DD-XXX file:**
+
+Help user modify the delivery status section:
 
 ```yaml
 delivery:
   status: 'in_development' # Changed from "ready_for_handoff"
-  handed_off_at: '2024-12-09T15:00:00Z'
+  handed_off_at: '[timestamp]'
   developer: '[BMad Developer name]'
-  development_start: '2024-12-10T09:00:00Z'
-  expected_completion: '2024-12-12T17:00:00Z'
+  development_start: '[timestamp or estimate]'
+  expected_completion: '[timestamp or estimate]'
 ```
+
+**Verify:** Status updated correctly in DD file.
+
+### 6. Present MENU OPTIONS
+
+Display: "**Select an Option:** [M] Return to Activity Menu (suggest [T] Acceptance Test)"
+
+#### Menu Handling Logic:
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN user selects [M] and handoff is complete will you then return to the activity workflow to suggest next step [T] Acceptance Test (after BMad completes implementation).
 
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-After handoff:
+### ✅ SUCCESS:
+- Handoff notification composed with all required information
+- Appropriate handoff method chosen (simplified vs full dialog)
+- All artifacts referenced in handoff message
+- Goal, problem, expected impact clearly stated
+- Acceptance criteria included in notification
+- Timeline and effort estimate communicated
+- BMad Developer acknowledged receipt
+- Questions from BMad answered clearly (if any)
+- Delivery status updated to 'in_development'
+- handed_off_at timestamp recorded
+- Developer name and expected completion date recorded
+- User available for clarification questions during development
 
-```
-[M] Return to Activity Menu — suggest [T] Acceptance Test
-```
+### ❌ SYSTEM FAILURE:
+- Handoff without all artifacts ready
+- Vague or incomplete handoff message
+- Missing acceptance criteria or metrics
+- No timeline or effort estimate
+- Delivery status not updated after handoff
+- Not responding to BMad's questions
+- Adding new requirements during handoff (scope creep)
+- Modifying design after handoff without updating DD file
+- Generating handoff message without user input
+- Not recording developer name or timeline
 
----
-
-## Success Metrics
-
-✅ Handoff notification sent
-✅ All artifacts included
-✅ BMad acknowledged
-✅ Timeline confirmed
-✅ Delivery status updated
-✅ Available for questions
-
----
-
-**Remember:** Clear handoff = smooth implementation!
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

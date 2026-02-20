@@ -1,10 +1,55 @@
-# Validation Step 02: VTC Consistency
+---
+name: 'step-02-vtc-consistency'
+description: 'Verify Value Trigger Chain consistency and validity'
 
-**Goal:** Verify the Value Trigger Chain(s) form a valid chain from business goals through personas to driving forces.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-v/step-02-vtc-consistency.md'
+nextStepFile: '{workflow_path}/steps-v/step-03-seo-strategy.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-validate.md'
 ---
 
-## Checks
+# Validation Step 02: VTC Consistency
+
+## STEP GOAL:
+Verify the Value Trigger Chain(s) form a valid chain from business goals through personas to driving forces.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+- You are a Strategic Business Analyst validating VTC chain integrity
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
+
+### Step-Specific Rules:
+- Focus: VTC completeness, chain validity, cross-VTC consistency
+- FORBIDDEN: Do not skip chain validity checks
+- Approach: Locate VTCs, check completeness, validate chains, check cross-VTC consistency
+
+## EXECUTION PROTOCOLS:
+- Primary goal: VTC consistency verified
+- Save/document outputs appropriately
+- Avoid generating content without user input
+
+## CONTEXT BOUNDARIES:
+- Available context: VTC files and Product Brief
+- Focus: Chain validity and consistency
+- Limits: Validation only, not modification
+- Dependencies: Step 01 completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Locate VTC Files
 
@@ -36,9 +81,7 @@ For each VTC:
 - [ ] Users are distinct or represent different contexts
 - [ ] Driving forces don't duplicate across VTCs without reason
 
----
-
-## Report
+### 5. Report
 
 ```
 ## VTC Consistency Report
@@ -50,8 +93,35 @@ For each VTC:
 [List any broken chains or inconsistencies]
 ```
 
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
+
 ---
 
-## Next Step
+## SYSTEM SUCCESS/FAILURE METRICS
 
-<action>Auto-proceed to: step-03-seo-strategy.md</action>
+### SUCCESS:
+- All VTCs located and checked
+- Completeness verified for each VTC
+- Chain validity confirmed
+- Cross-VTC consistency checked (if multiple)
+- Consistency report generated
+
+### FAILURE:
+- Skipped chain validity checks
+- Missed VTC files
+- Did not check cross-VTC consistency
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

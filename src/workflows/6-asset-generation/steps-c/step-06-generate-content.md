@@ -1,247 +1,138 @@
-# Step 6: Generate & Review Content
+---
+name: 'step-06-generate-content'
+description: 'Generate strategically grounded content variations, review, and finalize'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-c/step-06-generate-content.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-content.md'
+---
 
-**Create content options and select the final version**
+# Step 6: Generate and Review Content
+
+## STEP GOAL:
+
+Generate 2-3 strategically grounded content variations based on all strategic context from Steps 0-5, guide user through selection and refinement, and produce the final content with full strategic traceability.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a strategic content creator synthesizing all previous analysis
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring content synthesis expertise, user brings final creative direction
+- ✅ Maintain a creative yet strategic tone
+
+### Step-Specific Rules:
+
+- 🎯 Generate content variations that differ in driving force emphasis, not random rewrites
+- 🚫 FORBIDDEN to skip strategic traceability in the final output
+- 💬 Present each variation with clear rationale for strategic choices
+- 📋 Verify final content against all strategic context (Steps 0-5)
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Save final content with strategic traceability using content-output template
+- 📖 Reference generation instructions data file for detailed variation guidance
+- 🚫 FORBIDDEN to finalize without user review and confirmation
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All outputs from Steps 0-5 (Purpose, VTC, Awareness, Action, Empowerment, Structure)
+- Focus: Synthesizing strategy into actual content text, then refining with user
+- Limits: Variations are strategic alternatives, not random drafts
+- Dependencies: Complete WHY-HOW-WHAT structure from Step 5
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Synthesize All Context
+
+Review and synthesize all strategic outputs from Steps 0-5 before generating.
+
+### 2. Generate 2-3 Variations
+
+Create variations that differ in which driving forces they emphasize:
+- **Variation A (Wish-focused):** Emphasizes positive driving force / aspiration
+- **Variation B (Fear-focused):** Emphasizes negative driving force / pain avoidance
+- **Variation C (Balanced):** Blends both, may shift awareness emphasis
+
+Present each with clear rationale explaining strategic choices.
+
+### 3. Gather Initial Reaction
+
+Ask: **"Which variation resonates most with you?"** Allow selection, combination, or element picking across variations.
+
+### 4. Alignment Check
+
+Ask: **"Does this feel aligned with the strategic context?"**
+
+Check against: VTC business goal, driving forces, awareness level, required action, capability framing, WHY-HOW-WHAT structure.
+
+### 5. Refinement
+
+Ask: **"What would you adjust or combine?"** Guide through specific changes: headline from A but body from B, stronger emphasis on X, softer tone on Y.
+
+### 6. Verify Completeness
+
+Ask: **"Is anything missing that we identified in previous steps?"** Check against essential information (Step 3), barriers (Step 3), aha moment (Step 4), cognitive load reductions (Step 4).
+
+### 7. Validate Awareness Journey
+
+Ask: **"Does this move the user from START to END awareness?"** Verify the journey is smooth, not jarring.
+
+### 8. Document Final Content
+
+Save using content-output template with full strategic traceability:
+- VTC reference, awareness journey, action enabled, empowerment achieved
+- Implementation notes (technical, design, language tags, asset needs)
+
+### 9. Present MENU OPTIONS
+
+Display: **"Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF M: Save final content, update design log, return to Activity Menu in {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#9-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then end with display again of the menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+This is the final step of the Content Creation workflow. When M is selected and final content is saved with traceability, return to the Activity Menu.
 
 ---
 
-## Purpose
-
-This is where the strategic work from Steps 1-5 becomes actual content. The agent generates 2-3 variations based on all the strategic context, and you select or combine them into the final version.
-
----
-
-## Duration
-
-⏱️ **5-10 minutes**
-
----
-
-## The Single Task
-
-**Generate strategically grounded content variations → User selects/combines → Finalize**
-
----
-
-## Context from Previous Steps
-
-**Step 1 - VTC Context:**
-- Business goal, solution, user, driving forces, customer awareness
-
-**Step 2 - Awareness Strategy:**
-- Language guidelines, information priorities, emotional journey
-
-**Step 3 - Action Filter:**
-- Required action, essential information, barriers to address
-
-**Step 4 - Empowerment Frame:**
-- Transformation (current → badass), "aha moment," capability framing
-
-**Step 5 - Structural Order:**
-- WHY-HOW-WHAT sequence, content mapped to sections
-
----
-
-## Agent Instructions
-
-### Generation Process
-
-**Reference:** See [data/06-generation-instructions.md](../data/06-generation-instructions.md) for detailed instructions on:
-1. Synthesizing all context
-2. Generating 2-3 variations (wish-focused, fear-focused, balanced)
-3. Presentation format
-4. Explaining strategic choices
-
-**Key Point:** Generate variations that differ in which driving forces they emphasize, then let user select or combine.
-
----
-
-## Questions for the User
-
-### 1. Initial Reaction
-
-**"Which variation resonates most with you?"**
-
-- Variation A (wish-focused)?
-- Variation B (fear-focused)?
-- Variation C (balanced/awareness-shifted)?
-- Combination of elements?
-
-### 2. Alignment Check
-
-**"Does this feel aligned with the strategic context?"**
-
-- Does it serve the VTC's business goal?
-- Does it speak to the user's driving forces?
-- Does it meet them at their awareness level?
-- Does it enable the required action?
-- Does it frame around capability?
-- Does it follow WHY → HOW → WHAT?
-
-### 3. Refinement
-
-**"What would you adjust or combine?"**
-
-- Headline from A, but body from B?
-- Stronger emphasis on X?
-- Softer tone on Y?
-- Add/remove specific element?
-
-### 4. Missing Anything?
-
-**"Is anything missing that we identified in previous steps?"**
-
-Check against:
-- Essential information (Step 3)
-- Barriers to address (Step 3)
-- "Aha moment" (Step 4)
-- Cognitive load reductions (Step 4)
-
-### 5. Awareness Journey Validation
-
-**"Does this move the user from START → END awareness?"**
-
-- At START, can they understand the opening?
-- By END, have they reached the target awareness level?
-- Is the journey smooth or jarring?
-
----
-
-## Agent Actions
-
-1. **Generate 2-3 variations** with clear rationale (see generation instructions)
-2. **Present them** using the structured format
-3. **Explain strategic choices** for each
-4. **Guide refinement** based on user feedback
-5. **Finalize content** incorporating adjustments
-6. **Document** final version with strategic traceability
-
----
-
-## Validation
-
-Before considering this workshop complete:
-
-- [ ] Multiple variations generated (2-3 options)
-- [ ] Each variation has clear rationale
-- [ ] Strategic choices are explained and visible
-- [ ] User has reviewed and selected/combined approach
-- [ ] Final content aligns with all strategic context (Steps 1-5)
-- [ ] Required action is enabled
-- [ ] Awareness journey is smooth (START → END)
-- [ ] User feels confident about the content
-
----
-
-## Output Format
-
-**Final Content Document:**
-
-```yaml
-content_generation:
-  variations_presented:
-    - name: "[Variation A name]"
-      approach: "[Wish-focused/Fear-focused/Balanced]"
-      rationale: "[Why this approach]"
-      content: |
-        [Full content for Variation A]
-
-    - name: "[Variation B name]"
-      approach: "[Approach type]"
-      rationale: "[Why this approach]"
-      content: |
-        [Full content for Variation B]
-
-    - name: "[Variation C name]"
-      approach: "[Approach type]"
-      rationale: "[Why this approach]"
-      content: |
-        [Full content for Variation C]
-
-  selection:
-    chosen: "[Which variation or combination]"
-    reasoning: "[Why user selected this]"
-    adjustments: "[Any refinements made]"
-
-  final_content:
-    section_why: |
-      [Final WHY content]
-
-    section_how: |
-      [Final HOW content]
-
-    section_what: |
-      [Final WHAT content]
-
-  strategic_traceability:
-    vtc_reference: "[Link or reference to VTC]"
-    serves_business_goal: "[How content drives goal]"
-    addresses_driving_forces: "[Which forces and how]"
-    awareness_journey: "[START → END validated]"
-    action_enabled: "[What user can now do]"
-    empowerment_achieved: "[How user feels capable]"
-
-  implementation_notes:
-    - "[Any technical or design notes for implementation]"
-    - "[Language tags if multi-language]"
-    - "[Asset needs: images, videos, etc.]"
-```
-
----
-
-## Complete Workshop Output
-
-**Save everything together:**
-
-Use the template: `content-output.template.md`
-
-This creates a complete record:
-1. VTC Context (Step 1)
-2. Awareness Strategy (Step 2)
-3. Action Filter (Step 3)
-4. Empowerment Frame (Step 4)
-5. Structural Order (Step 5)
-6. Content Generation (Step 6)
-
-**Result:** Strategically grounded content with full traceability.
-
----
-
-## Example
-
-**See:** [data/06-example-hairdresser-newsletter.md](../data/06-example-hairdresser-newsletter.md)
-
-This shows a complete example of:
-- Three variations (wish-focused, fear-focused, balanced)
-- User selection and combination
-- Final content with strategic traceability
-
----
-
-## Workshop Complete! 🎉
-
-**You now have:**
-- Strategically grounded content
-- Full traceability to business goals and user psychology
-- Content that serves a clear action
-- Empowering, capability-focused framing
-- Persuasive WHY → HOW → WHAT structure
-
-**Next Steps:**
-- Implement content in design/development
-- Test with real users
-- Iterate based on performance
-- Apply this workshop to next content section
-
----
-
-## Notes
-
-- Variations are not drafts—they're strategic alternatives
-- User may prefer different elements from different variations—that's expected
-- If no variation feels right, loop back to check strategic context (Steps 1-5)
-- The strategic traceability document is crucial—don't skip it
-- This is content creation as strategic craft, not guesswork
-
----
-
-**⚠️ ALPHA:** Was this final step satisfying? Did variations help or confuse? How was the refinement process? Feedback critical for improvement.
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Multiple variations generated with clear rationale
+- Strategic choices explained and visible
+- User reviewed and selected/combined approach
+- Final content aligns with all strategic context (Steps 0-5)
+- Required action is enabled
+- Awareness journey is smooth
+- Strategic traceability documented
+
+### ❌ SYSTEM FAILURE:
+
+- Generating only one variation without alternatives
+- Not explaining strategic choices per variation
+- Skipping traceability documentation
+- Finalizing without user confirmation
+- Not checking against all previous step outputs
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,33 +1,69 @@
-# Step 11: Create Value Trigger Chain
+---
+name: 'step-11a-create-vtc'
+description: 'Create simplified Value Trigger Chain for strategic summary'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-11a-create-vtc.md'
+nextStepFile: '{workflow_path}/steps-c/step-12-synthesize.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
+# Step 11A: Create Value Trigger Chain
+
+## STEP GOAL:
 Create a simplified Value Trigger Chain (VTC) to capture strategic essence for stakeholder communication.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-The Product Brief contains comprehensive strategic foundation. Now we'll distill this into a focused VTC that captures the essential strategic chain: Business Goal → Solution → User → Driving Forces → Customer Awareness.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-This VTC will be used for:
-- Pitching the project to stakeholders
-- Quick strategic reference during design
-- Foundation for scenario-specific VTCs later
+### Role Reinforcement:
+- You are a Strategic Business Analyst helping distill the Product Brief into a focused VTC
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-## Instructions
+### Step-Specific Rules:
+- Focus: VTC creation from Product Brief context - Business Goal, Solution, User, Driving Forces, Customer Awareness
+- FORBIDDEN: Do not start from zero - use the strategic work already completed
+- Approach: Leverage existing Product Brief context, route to VTC Workshop
+
+## EXECUTION PROTOCOLS:
+- Primary goal: VTC created and added to Product Brief
+- Save/document outputs appropriately
+- Avoid generating content without user input
+
+## CONTEXT BOUNDARIES:
+- Available context: Complete Product Brief content from steps 1-11
+- Focus: Strategic VTC summarizing the product's value chain
+- Limits: This is a simplified strategic summary, not detailed scenario VTCs
+- Dependencies: Steps 1-11 completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Explain VTC to User
 
 > "Before we finalize the Product Brief, let's create a Value Trigger Chain (VTC).
-> 
+>
 > This is a simplified strategic summary that captures:
 > - **Business Goal** - What measurable outcome we want
 > - **Solution** - What we're building
 > - **User** - Who the primary user is
 > - **Driving Forces** - What motivates them (positive + negative)
 > - **Customer Awareness** - Where they start and where we move them
-> 
+>
 > This will take about 20-30 minutes and gives you a powerful one-page strategic foundation.
-> 
+>
 > Shall we create the VTC now?"
 
 ### 2. Route to VTC Workshop
@@ -35,7 +71,7 @@ This VTC will be used for:
 **If user agrees:**
 
 Load and execute the VTC Workshop Router:
-`{project-root}/_bmad/wds/workflows/shared/vtc-workshop/workflow.md`
+`{workflow_path}/vtc-workshop/workflow.md`
 
 **Note:** Since Product Brief stage typically has NO Trigger Map yet, the router will likely send you to the **Creation Workshop**.
 
@@ -83,17 +119,29 @@ This VTC provides quick strategic reference and will inform all design decisions
 ### 6. Confirm Completion
 
 > "Excellent! Your Product Brief now includes a Value Trigger Chain.
-> 
+>
 > This VTC will:
 > - Help you pitch the project to stakeholders
 > - Guide early design decisions
 > - Serve as foundation for scenario-specific VTCs in Phase 4
-> 
+>
 > Product Brief is now complete!"
 
+### 7. If User Declines VTC
 
-## Agent Dialog Update
+**If user says:** "Let's skip the VTC for now"
 
+**Response:**
+> "No problem! You can create a VTC later using:
+> `{workflow_path}/vtc-workshop/workflow.md`
+>
+> However, I recommend creating it before pitching to stakeholders or starting Phase 4 (UX Design). It takes 30 minutes and provides valuable strategic clarity.
+>
+> Product Brief is complete. You can add VTC anytime."
+
+Then proceed to mark workflow as complete.
+
+### 8. Agent Dialog Update
 **Mandatory:** Append to `dialog/decisions.md` if key decisions were made.
 
 **Record:**
@@ -101,45 +149,37 @@ This VTC provides quick strategic reference and will inform all design decisions
 - Value/Transformation/Cost mapping
 - Strategic insights from framework
 
-**Then:** Mark Step 11 complete in `dialog/progress-tracker.md` progress tracker
+**Then:** Mark Step 11a complete in `dialog/progress-tracker.md` progress tracker
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-Workflow complete. Update state and present completion.
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted:
-  [
-    'step-01-init.md',
-    'step-02-vision.md',
-    'step-03-positioning.md',
-    'step-04-business-model.md',
-    'step-05-business-customers.md',
-    'step-06-target-users.md',
-    'step-07-success-criteria.md',
-    'step-08-competitive-landscape.md',
-    'step-09-constraints.md',
-    'step-10-synthesize.md',
-    'step-11-create-vtc.md',
-  ]
-status: 'complete'
-```
+---
 
-## If User Declines VTC
+## SYSTEM SUCCESS/FAILURE METRICS
 
-**If user says:** "Let's skip the VTC for now"
+### SUCCESS:
+- VTC created or user explicitly deferred
+- Product Brief context leveraged (not starting from zero)
+- VTC saved to correct location
+- VTC summary added to Product Brief document
+- User confirmed
 
-**Response:**
-> "No problem! You can create a VTC later using:
-> `_bmad/wds/workflows/shared/vtc-workshop/workflow.md`
-> 
-> However, I recommend creating it before pitching to stakeholders or starting Phase 4 (UX Design). It takes 30 minutes and provides valuable strategic clarity.
-> 
-> Product Brief is complete. You can add VTC anytime."
+### FAILURE:
+- Started VTC from zero ignoring existing Product Brief context
+- Skipped VTC without offering
+- Generated VTC without user collaboration
 
-Then proceed to mark workflow as complete.
-
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

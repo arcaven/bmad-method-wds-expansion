@@ -1,40 +1,96 @@
-# Step 5: Identify Business Customers (B2B)
+---
+name: 'step-06-business-customers'
+description: 'Help user define their ideal business customer profile for B2B contexts'
 
-## Goal
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Help user define their ideal business customer profile.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-06-business-customers.md'
+nextStepFile: '{workflow_path}/steps-c/step-07-target-users.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Key Elements
+# Step 6: Identify Business Customers (B2B)
 
-Business customer profile determines who buys the product and influences purchasing decisions.
+## STEP GOAL:
+Help the user define their ideal business customer profile, including company characteristics, decision-making structure, and buying roles.
 
-## Instructions
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-If business model is B2B or Both, guide user to define their ideal business customer. Ask about company size, industry, decision-making structure, and budget authority. Also identify buying roles (buyer vs. user).
+### Universal Rules:
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
+### Role Reinforcement:
+- ✅ You are Saga, a strategic guide helping define ideal business customers
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring B2B strategy knowledge, user brings customer knowledge
+- ✅ Maintain focused, strategic tone throughout
 
-## Agent Dialog Update
+### Step-Specific Rules:
+- 🎯 Focus on business customer profile: company size, industry, decision-making, budget authority
+- 🚫 FORBIDDEN to skip buyer vs end-user distinction
+- 💬 Approach: Guide user to think about who makes purchasing decisions
+- 📋 Only reached if business model is B2B or Both
 
+## EXECUTION PROTOCOLS:
+- 🎯 Define ideal business customer with decision-making structure
+- 💾 Append to `dialog/decisions.md` with business customer definition
+- 📖 Reference business model decision from Step 5
+- 🚫 Avoid confusing business customers with end users
+
+## CONTEXT BOUNDARIES:
+- Available context: Business model from Step 5, vision, positioning
+- Focus: Business customer profile and buying roles
+- Limits: Not end users — that is next step
+- Dependencies: Step 5 determined B2B or Both
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Guide Business Customer Definition
+Ask about company size, industry, decision-making structure, and budget authority. Also identify buying roles (buyer vs. user).
+
+### 2. Agent Dialog Update
 **Mandatory:** Append to `dialog/decisions.md` if key decisions were made.
 
-**Record:**
-- Business customer definition (B2B contexts)
-- Buyer vs end-user distinction
-- Business customer needs and decision criteria
+Record: Business customer definition, buyer vs end-user distinction, business customer needs and decision criteria.
 
-**Then:** Mark Step 6 complete in `dialog/progress-tracker.md` progress tracker
+Mark Step 6 complete in `dialog/progress-tracker.md` progress tracker.
 
-## Next Step
+### 3. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to Target Users"
 
-After identifying business customers, proceed to step-07-target-users.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN business customer profile is captured and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted:
-  ['step-01-init.md', 'step-02-vision.md', 'step-03-positioning.md', 'step-04-create-vtc.md', 'step-05-business-model.md', 'step-06-business-customers.md']
-business_customer_profile: '[captured business customer profile]'
-buying_roles: '[captured buying roles]'
-```
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+- Business customer profile defined with company characteristics
+- Buyer vs end-user distinction captured
+- Decision-making structure identified
+- User confirmed the profile
+
+### ❌ SYSTEM FAILURE:
+- Generated customer profile without user input
+- Skipped buyer vs user distinction
+- Confused business customers with end users
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,130 +1,125 @@
+---
+name: 'step-04-create-vtc'
+description: 'Create a simplified Value Trigger Chain to crystallize strategic thinking early'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-04-create-vtc.md'
+nextStepFile: '{workflow_path}/steps-c/step-05-business-model.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
 # Step 4: Create Value Trigger Chain
 
-## Purpose
+## STEP GOAL:
+Create a simplified Value Trigger Chain (VTC) to crystallize strategic thinking early and guide all subsequent discovery. The VTC serves as a strategic benchmark — capturing Business Goal, Solution, User, Driving Forces, and Customer Awareness.
 
-Create a simplified Value Trigger Chain (VTC) to crystallize strategic thinking early and guide all subsequent discovery.
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Context for Agent
+### Universal Rules:
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-You now have Vision and Positioning - the essential product idea. Before diving into detailed discovery, we'll create a VTC to serve as a **strategic benchmark**. This forces early clarity and ensures all subsequent work aligns with core strategy.
+### Role Reinforcement:
+- ✅ You are Saga, a strategic facilitator helping create VTC based on available context
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structured strategic thinking, user brings domain expertise
+- ✅ Maintain focused, strategic tone throughout
 
-This VTC will be used for:
-- **Strategic benchmark** - "Does this align with our VTC?"
-- **Guiding discovery** - Informs questions about users, success criteria, etc.
-- **Early validation** - If VTC isn't clear, vision needs work
-- **Quick reference** - One-page strategy throughout project
+### Step-Specific Rules:
+- 🎯 Focus on creating VTC leveraging existing Vision and Positioning context
+- 🚫 FORBIDDEN to start from zero — use the strategic work already completed
+- 💬 Approach: Leverage existing context, fill gaps collaboratively
+- 📋 VTC is saved separately, NOT added to brief document yet (that happens at Step 12)
 
-## Instructions
+## EXECUTION PROTOCOLS:
+- 🎯 Produce a complete VTC (Business Goal, Solution, User, Driving Forces, Customer Awareness)
+- 💾 Save VTC to `{output_folder}/A-Product-Brief/vtc-primary.yaml`
+- 📖 Route to VTC Workshop at `{workflow_path}/vtc-workshop/workflow.md` if user agrees
+- 🚫 Avoid starting from zero — leverage Vision and Positioning
+
+## CONTEXT BOUNDARIES:
+- Available context: Vision from Step 2, Positioning from Step 3
+- Focus: VTC creation as strategic benchmark
+- Limits: At this stage, estimates are fine — VTC will be refined later
+- Dependencies: Steps 1-3 completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Explain VTC to User
+Explain VTC components and purpose:
+- Business Goal — What measurable outcome we want
+- Solution — What we are building
+- User — Who the primary user is
+- Driving Forces — What motivates them (positive + negative)
+- Customer Awareness — Where they start and where we move them
 
-> "Now that we have your vision and positioning, let's create a Value Trigger Chain (VTC).
-> 
-> This is a strategic benchmark that will guide all remaining discovery work. It captures:
-> - **Business Goal** - What measurable outcome we want
-> - **Solution** - What we're building
-> - **User** - Who the primary user is
-> - **Driving Forces** - What motivates them (positive + negative)
-> - **Customer Awareness** - Where they start and where we move them
-> 
-> This takes 20-30 minutes but is incredibly valuable. It forces strategic clarity NOW and gives us a benchmark to evaluate all future decisions against.
-> 
-> As we continue discovery (business model, users, success criteria), we'll use this VTC to ensure everything aligns.
-> 
-> Shall we create the VTC now?"
+Explain this takes 20-30 minutes and is incredibly valuable for strategic clarity. Ask: "Shall we create the VTC now?"
 
 ### 2. Route to VTC Workshop
-
-**If user agrees:**
-
-Load and execute the VTC Workshop Router:
-`{project-root}/_bmad/wds/workflows/shared/vtc-workshop/workflow.md`
-
-**Note:** Since Product Brief stage typically has NO Trigger Map yet, the router will likely send you to the **Creation Workshop**.
+**If user agrees:** Load and execute the VTC Workshop Router at `{workflow_path}/vtc-workshop/workflow.md`. Since Product Brief stage typically has NO Trigger Map yet, the router will likely send to the Creation Workshop.
 
 ### 3. Leverage Vision and Positioning Context
-
-**Important:** You have vision and positioning completed! Use it:
-
-- **Solution:** From vision (what we're building)
-- **Business Goal:** Infer from vision (what outcome we want)
-- **User:** From positioning (target_customer)
-- **Driving Forces:** Infer from positioning (need/opportunity, differentiator)
-- **Customer Awareness:** Infer from positioning (where they are now)
-
-**Don't start from zero** - use the strategic work already completed.
-
-**Note:** At this stage, estimates are fine. The VTC will be validated and refined as we discover more detail in later steps.
+Use existing strategic work:
+- Solution: From vision (what we are building)
+- Business Goal: Infer from vision (what outcome we want)
+- User: From positioning (target_customer)
+- Driving Forces: Infer from positioning (need/opportunity, differentiator)
+- Customer Awareness: Infer from positioning (where they are now)
 
 ### 4. Save VTC
+Save to `{output_folder}/A-Product-Brief/vtc-primary.yaml`. VTC is saved but NOT yet added to brief document — that happens during final synthesis.
 
-VTC should be saved to:
-`{output_folder}/A-Product-Brief/vtc-primary.yaml`
+### 5. Confirm Completion
+Explain that VTC will serve as strategic benchmark. As discovery continues, we use this VTC to ensure everything aligns. If contradictions arise, either VTC needs adjustment or the discovery finding does not serve strategy.
 
-### 5. Save VTC (Brief Integration Later)
-
-VTC is saved but NOT yet added to brief document.
-
-**Why:** Product Brief document isn't complete yet. We'll add VTC section during final synthesis (Step 11).
-
-**For now:** VTC exists as separate file and serves as strategic benchmark for remaining discovery steps.
-
-### 6. Confirm Completion and Set Expectation
-
-> "Excellent! We've created your Value Trigger Chain.
-> 
-> This VTC will serve as our strategic benchmark. As we continue discovery (business model, target users, success criteria, etc.), we'll use this VTC to ensure everything aligns.
-> 
-> If anything in remaining discovery contradicts this VTC, it means either:
-> - The VTC needs adjustment (vision wasn't clear enough)
-> - The discovery finding doesn't serve our strategy
-> 
-> We'll validate and refine the VTC during final synthesis if needed.
-> 
-> Let's continue with the detailed discovery!"
-
-
-## Agent Dialog Update
-
+### 6. Agent Dialog Update
 **Mandatory:** Append to `dialog/decisions.md` if key decisions were made.
 
-**Record:**
-- Value/Transformation/Cost framework decisions
-- How value and transformation connect
-- Key insights about user journey
+Record: Value/Transformation/Cost framework decisions, how value and transformation connect, key insights about user journey.
 
-**Then:** Mark Step 4 complete in `dialog/progress-tracker.md` progress tracker
+Mark Step 4 complete in `dialog/progress-tracker.md` progress tracker.
 
-## Next Step
+### 7. If User Declines VTC
+If user says "Let's skip the VTC for now," explain they can create it later using `_bmad/wds/workflows/1-project-brief/vtc-workshop/workflow.md`. Recommend creating it before pitching to stakeholders or starting Phase 4. Then proceed to next step.
 
-Load, read full file, and execute: `step-05-business-model.md`
+### 8. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to Business Model"
 
-## State Update
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-Update frontmatter of output file:
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-```yaml
-stepsCompleted:
-  [
-    'step-01-init.md',
-    'step-02-vision.md',
-    'step-03-positioning.md',
-    'step-04-create-vtc.md',
-  ]
-status: 'in-progress'
-```
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN VTC is created (or user declines) and completion is confirmed will you then load and read fully `{nextStepFile}`.
 
-## If User Declines VTC
+---
 
-**If user says:** "Let's skip the VTC for now"
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-**Response:**
-> "No problem! You can create a VTC later using:
-> `_bmad/wds/workflows/shared/vtc-workshop/workflow.md`
-> 
-> However, I recommend creating it before pitching to stakeholders or starting Phase 4 (UX Design). It takes 30 minutes and provides valuable strategic clarity.
-> 
-> Product Brief is complete. You can add VTC anytime."
+### ✅ SUCCESS:
+- VTC created with all components or user explicitly declined
+- Existing Vision and Positioning context leveraged (not starting from zero)
+- VTC saved to correct output location
+- User understands VTC purpose as strategic benchmark
+- Agent dialog updated
 
-Then proceed to mark workflow as complete.
+### ❌ SYSTEM FAILURE:
+- Started VTC from zero without using existing context
+- Generated VTC components without user input
+- Did not save VTC to correct location
+- Skipped confirmation with user
 
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

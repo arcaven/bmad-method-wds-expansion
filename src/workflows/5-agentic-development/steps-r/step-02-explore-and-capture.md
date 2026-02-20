@@ -1,88 +1,100 @@
-# Step 02: Explore and Capture
+---
+name: 'step-02-explore-and-capture'
+description: 'Systematically explore the target and capture a complete inventory of pages, components, patterns, and design tokens'
 
-**Goal:** Systematically explore the target and capture a complete inventory of pages, components, patterns, and design tokens.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-r/step-02-explore-and-capture.md'
+nextStepFile: '{workflow_path}/steps-r/step-03-generate-specs.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-reverse-engineering.md'
 ---
 
-## Process
+# Step 2: Explore and Capture
 
-The approach depends on the access method defined in Step 01. Follow the relevant section below.
+## STEP GOAL:
+
+Systematically explore the target and capture a complete inventory of pages, components, patterns, and design tokens.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on crawling pages, capturing structure, noting interactions, and extracting design tokens
+- 🚫 FORBIDDEN to begin generating specs — that is the next step
+- 💬 Approach: Systematically explore using the access method, documenting everything as inventories
+- 📋 Use the appropriate exploration method (URL, source code, or screenshots) as determined in Step 1
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Complete inventories of pages, navigation, components, colors, typography, and spacing
+- 💾 Document all inventories in the dialog file
+- 📖 Reference the access method and extraction goals from Step 1
+- 🚫 Do not generate specs during exploration
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Target definition and access method from Step 1
+- Focus: Exploration and capturing — inventorying everything found
+- Limits: No spec generation, no design system document creation
+- Dependencies: Step 1 must be complete (target defined, access verified)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### If URL (Browser Access)
 
-#### 2a. Crawl Pages
+#### 1a. Crawl Pages
 
 1. Start at the home page or main entry point
 2. Follow navigation links to discover all pages
-3. For each page, note:
-   - URL and page title
-   - Primary purpose (landing, form, listing, detail, dashboard)
-   - Key content sections
-   - Interactive elements (forms, modals, dropdowns, accordions)
+3. For each page, note: URL, page title, primary purpose, key content sections, interactive elements
 4. Check for hidden pages: sitemap.xml, footer links, search results
 
-#### 2b. Capture Structure
+#### 1b. Capture Structure
 
-For each page:
-- Header: logo placement, navigation items, CTAs, user menu
-- Main content: sections, layout grid, content blocks
-- Footer: links, columns, newsletter, legal
-- Sidebar: if present, what it contains
+For each page: Header, Main content, Footer, Sidebar (if present)
 
-#### 2c. Note Interactions
+#### 1c. Note Interactions
 
-- Hover states on buttons and links
-- Dropdown/menu behavior
-- Form validation patterns
-- Modal/overlay triggers
-- Loading states and transitions
-- Responsive breakpoints (resize browser to observe)
+Hover states, dropdown behavior, form validation, modal triggers, loading states, responsive breakpoints
 
-#### 2d. Extract CSS and Design Tokens
+#### 1d. Extract CSS and Design Tokens
 
-From browser DevTools or computed styles:
-- Color values (backgrounds, text, borders, accents)
-- Font families, sizes, weights, line heights
-- Spacing patterns (padding, margin, gap values)
-- Border radius values
-- Shadow values
-- Breakpoint values
+From browser DevTools or computed styles: colors, fonts, spacing, border radius, shadows, breakpoints
 
 ### If Source Code Access
 
-#### 2e. Read Code Structure
+#### 1e. Read Code Structure
 
-1. Identify the component directory (e.g., `src/components/`)
-2. List all components and categorize: layout, navigation, form, display, feedback
-3. Map routes to pages/views
-4. Identify shared/global styles or theme configuration
-5. Read the theme/design token file if one exists
+Identify component directory, list and categorize components, map routes, identify shared styles and theme config
 
-#### 2f. Map Routes
+#### 1f. Map Routes
 
-Create a route inventory:
-
-```
-Routes:
-- / → HomePage
-- /about → AboutPage
-- /products → ProductListPage
-- /products/:id → ProductDetailPage
-- /cart → CartPage
-- /checkout → CheckoutPage
-```
+Create a route inventory mapping URLs to pages/views
 
 ### If Screenshots
 
-#### 2g. Analyze Visual Patterns
+#### 1g. Analyze Visual Patterns
 
-For each screenshot:
-1. Identify the page type and purpose
-2. Sketch the layout grid (columns, rows, sections)
-3. List visible components
-4. Note typography hierarchy (headings, body, labels, captions)
-5. Extract colors by sampling prominent areas
-6. Note spacing rhythm (consistent or variable)
+For each screenshot: identify page type, sketch layout grid, list components, note typography hierarchy, extract colors, note spacing rhythm
 
 ### Document Results (All Methods)
 
@@ -94,54 +106,31 @@ Compile findings into these inventories:
 |---|------|-------------|------|--------------|
 | 1 | Home | / | Landing | Hero, Features, Testimonials, CTA |
 | 2 | About | /about | Content | Story, Team, Values |
-| 3 | Products | /products | Listing | Filters, Grid, Pagination |
 
 #### Navigation Structure
 
-```
-Primary nav: Home | Products | About | Contact
-Secondary nav: [Login | Sign Up] or [Profile | Settings | Logout]
-Footer nav: [column structure]
-Mobile nav: [hamburger / bottom tabs / other]
-```
+Primary nav, secondary nav, footer nav, mobile nav
 
 #### Component Inventory
 
 | Component | Variants | Used On |
 |-----------|----------|---------|
-| Button | Primary, Secondary, Ghost, Disabled | All pages |
-| Card | Product card, Testimonial card, Feature card | Home, Products |
-| Form Input | Text, Email, Password, Textarea, Select | Contact, Auth |
-| Modal | Confirmation, Form, Info | Products, Cart |
-| Navigation | Desktop, Mobile hamburger | All pages |
 
 #### Color Palette
 
 | Name | Value | Usage |
 |------|-------|-------|
-| Primary | #2563EB | Buttons, links, accents |
-| Secondary | #7C3AED | Highlights, badges |
-| Neutral-900 | #111827 | Headings |
-| Neutral-600 | #4B5563 | Body text |
-| Neutral-100 | #F3F4F6 | Backgrounds |
 
 #### Typography Scale
 
 | Level | Size | Weight | Line Height | Usage |
 |-------|------|--------|-------------|-------|
-| H1 | 48px | 700 | 1.2 | Page titles |
-| H2 | 36px | 700 | 1.25 | Section headings |
-| H3 | 24px | 600 | 1.3 | Sub-headings |
-| Body | 16px | 400 | 1.5 | Paragraphs |
-| Small | 14px | 400 | 1.4 | Labels, captions |
 
 #### Spacing Patterns
 
-Note the base spacing unit and common values (e.g., 4px base: 4, 8, 12, 16, 24, 32, 48, 64).
+Note the base spacing unit and common values.
 
----
-
-## Checklist
+### Verify Checklist
 
 - [ ] All pages discovered and inventoried
 - [ ] Navigation structure documented
@@ -151,8 +140,40 @@ Note the base spacing unit and common values (e.g., 4px base: 4, 8, 12, 16, 24, 
 - [ ] Spacing patterns noted
 - [ ] Interactive patterns observed (hover, modal, form behavior)
 
+### Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 3: Generate Specs"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN all inventories are captured and documented will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-03-generate-specs.md
+### ✅ SUCCESS:
+- All pages discovered and inventoried
+- Navigation structure documented
+- Component inventory created
+- Color palette extracted
+- Typography scale documented
+- Spacing patterns noted
+- Interactive patterns observed
+
+### ❌ SYSTEM FAILURE:
+- Beginning spec generation before exploration is complete
+- Missing pages or components in inventory
+- Not extracting design tokens
+- Skipping interaction observation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

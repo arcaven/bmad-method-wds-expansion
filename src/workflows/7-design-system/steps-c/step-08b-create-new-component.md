@@ -1,14 +1,63 @@
-# Operation: Create New Component
-
-**Purpose:** Add a new component to the design system.
-
-**When:** No similar component exists, or designer chose to create new
-
-**Input:** Component specification
-
-**Output:** New component file in design system
-
 ---
+name: 'step-08b-create-new-component'
+description: 'Add a new component to the design system with full specification'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-08b-create-new-component.md'
+nextStepFile: '{workflow_path}/steps-c/step-08c-update-component.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-create.md'
+---
+
+# Step 8b: Create New Component
+
+## STEP GOAL:
+
+Add a new component to the design system: generate ID, determine category, extract attributes, create component file from template, update index and stats.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are the Design System Architect guiding design system creation and maintenance
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design system expertise and component analysis, user brings design knowledge and project context
+- ✅ Maintain systematic and analytical tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus ONLY on this step's specific goal — do not skip ahead
+- 🚫 FORBIDDEN to jump to later steps before this step is complete
+- 💬 Approach: Systematic execution with clear reporting
+- 📋 All outputs must be documented and presented to user
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Execute each instruction in the sequence below
+- 💾 Document all findings and decisions
+- 📖 Present results to user before proceeding
+- 🚫 FORBIDDEN to skip instructions or optimize the sequence
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Previous step outputs and project configuration
+- Focus: This step's specific goal only
+- Limits: Do not perform actions belonging to subsequent steps
+- Dependencies: Requires all previous steps to be completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ## Step 1: Generate Component ID
 
@@ -709,3 +758,44 @@ You can fill in details later.
 
 **This operation creates a new component. Return to Phase 4 with component reference.**
 ```
+
+### 10. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue or [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#10-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects the appropriate option
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN [component is created with full specification, index updated, and reference generated], will you then load and read fully `{nextStepFile}` to execute the next step.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Step goal achieved completely
+- All instructions executed in sequence
+- Results documented and presented to user
+- User confirmed before proceeding
+- Agent dialog updated
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping any instruction in the sequence
+- Generating content without user input
+- Jumping ahead to later steps
+- Not presenting results to user
+- Proceeding without user confirmation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

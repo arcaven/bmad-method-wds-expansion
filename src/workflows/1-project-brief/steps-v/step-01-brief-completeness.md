@@ -1,10 +1,55 @@
-# Validation Step 01: Brief Completeness
+---
+name: 'step-01-brief-completeness'
+description: 'Verify Product Brief contains all required sections'
 
-**Goal:** Verify the Product Brief contains all required sections and no section is left as a placeholder.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-v/step-01-brief-completeness.md'
+nextStepFile: '{workflow_path}/steps-v/step-02-vtc-consistency.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-validate.md'
 ---
 
-## Checks
+# Validation Step 01: Brief Completeness
+
+## STEP GOAL:
+Verify the Product Brief contains all required sections and no section is left as a placeholder.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+- You are a Strategic Business Analyst validating Product Brief completeness
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
+
+### Step-Specific Rules:
+- Focus: Verify all required sections present and filled with substantive content
+- FORBIDDEN: Do not skip any required section check
+- Approach: Load brief, check sections by brief level, assess quality, report
+
+## EXECUTION PROTOCOLS:
+- Primary goal: Product Brief completeness verified
+- Save/document outputs appropriately
+- Avoid generating content without user input
+
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief and project config
+- Focus: Section completeness and quality
+- Limits: Validation only, not modification
+- Dependencies: Phase 1 creation steps completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Load Product Brief
 
@@ -36,9 +81,7 @@ For each section:
 - [ ] No TODO/placeholder markers remain
 - [ ] Content aligns with section purpose
 
----
-
-## Report
+### 5. Report
 
 ```
 ## Brief Completeness Report
@@ -50,8 +93,34 @@ For each section:
 [List any missing or incomplete sections]
 ```
 
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
+
 ---
 
-## Next Step
+## SYSTEM SUCCESS/FAILURE METRICS
 
-<action>Auto-proceed to: step-02-vtc-consistency.md</action>
+### SUCCESS:
+- All required sections checked
+- Section quality assessed
+- Completeness report generated
+- Missing or incomplete sections identified
+
+### FAILURE:
+- Skipped required section checks
+- Did not assess section quality
+- Left sections unverified
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

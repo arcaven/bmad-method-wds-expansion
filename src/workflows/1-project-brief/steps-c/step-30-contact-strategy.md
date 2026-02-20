@@ -1,91 +1,139 @@
-# Step 4: Contact Strategy
+---
+name: 'step-30-contact-strategy'
+description: 'Define contact methods and communication strategy'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Define how users will contact the business and any special requirements.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-30-contact-strategy.md'
+nextStepFile: '{workflow_path}/steps-c/step-31-multilingual.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Context for Agent
+# Step 30: Contact Strategy
 
-Contact strategy directly affects UX design (prominence of phone numbers, form placement) and may involve technical integrations (booking systems, AI services).
+## STEP GOAL:
+Define how users will contact the business and any special requirements that affect UX design.
 
-## Key Elements
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-- Primary contact method
-- Contact channels and priority
-- Form requirements
-- Booking/scheduling needs
-- Future AI integration plans
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Instructions
+### Role Reinforcement:
+- You are a Strategic Business Analyst defining contact strategy that affects UX design and technical integrations
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-1. **Identify primary contact method**
+### Step-Specific Rules:
+- Focus: Primary contact method, channels, form requirements, booking/scheduling, AI integration opportunity
+- FORBIDDEN: Do not skip capturing UX implications of contact decisions
+- Approach: Identify primary method, explore phone/form needs, discuss AI opportunity, document UX constraints
 
-   Ask: "How do you primarily want customers to reach you?"
-   - **Phone** — Click-to-call, prominent display
-   - **Form** — Contact form with fields
-   - **Email** — Direct email link
-   - **Booking system** — Online scheduling
-   - **Chat** — Live chat or chatbot
-   - **Combination** — Multiple methods
+## EXECUTION PROTOCOLS:
+- Primary goal: Contact strategy documented with UX implications
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-2. **For phone-primary businesses:**
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, technology stack, integrations
+- Focus: Contact strategy and UX implications
+- Limits: Strategy, not detailed form design
+- Dependencies: Step 29 completed
 
-   - Phone number placement (header, hero, footer, sticky?)
-   - Click-to-call on mobile
-   - Business hours display
-   - After-hours handling
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-3. **For form-based contact:**
+### 1. Identify Primary Contact Method
 
-   - Required fields
-   - Optional fields
-   - Spam protection (CAPTCHA, honeypot)
-   - Response expectations
-   - Where submissions go (email, CRM?)
+Ask: "How do you primarily want customers to reach you?"
+- **Phone** - Click-to-call, prominent display
+- **Form** - Contact form with fields
+- **Email** - Direct email link
+- **Booking system** - Online scheduling
+- **Chat** - Live chat or chatbot
+- **Combination** - Multiple methods
 
-4. **AI Integration opportunity**
+### 2. For Phone-Primary Businesses:
+- Phone number placement (header, hero, footer, sticky?)
+- Click-to-call on mobile
+- Business hours display
+- After-hours handling
 
-   If relevant, discuss:
-   - "Have you considered AI-assisted phone handling?"
-   - Explain: AI can answer calls, triage urgent vs routine, book appointments
-   - Note as future integration if interested
+### 3. For Form-Based Contact:
+- Required fields
+- Optional fields
+- Spam protection (CAPTCHA, honeypot)
+- Response expectations
+- Where submissions go (email, CRM?)
 
-5. **Document UX implications**
+### 4. AI Integration Opportunity
 
-   Capture constraints for UX design:
-   - "Phone must be visible without scrolling"
-   - "Contact form should be accessible from every page"
-   - "No online booking — phone/form only"
+If relevant, discuss:
+- "Have you considered AI-assisted phone handling?"
+- Explain: AI can answer calls, triage urgent vs routine, book appointments
+- Note as future integration if interested
 
-6. **Update output document**
-   - Fill in Contact Strategy section
-   - Note UX Constraints
+### 5. Document UX Implications
 
+Capture constraints for UX design:
+- "Phone must be visible without scrolling"
+- "Contact form should be accessible from every page"
+- "No online booking - phone/form only"
 
-## Agent Dialog Update
+### 6. Update Output Document
+- Fill in Contact Strategy section
+- Note UX Constraints
 
+### 7. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### [Step Name]
-**Q:** [Key questions asked]
+### Step 30: Contact Strategy
+**Q:** Primary contact method? UX implications?
 **A:** [User responses - summarized]
-**Documented in:** platform-requirements.md ([section name])
+**Documented in:** platform-requirements.md (Contact Strategy section)
 **Key insights:** [Important decisions or revelations]
 **Status:** Complete
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing contact strategy, proceed to step-31-multilingual.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-tech-stack.md', 'step-03-integrations.md', 'step-04-contact-strategy.md']
-primary_contact: '[method]'
-ai_interest: '[yes/no/future]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Primary contact method identified
+- Channel requirements documented
+- UX implications captured
+- AI opportunity discussed (if relevant)
+- User confirmed
+
+### FAILURE:
+- Skipped UX implications
+- Generated contact strategy without user input
+- Did not capture form requirements (if applicable)
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

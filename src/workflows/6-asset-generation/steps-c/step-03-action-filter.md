@@ -1,196 +1,117 @@
+---
+name: 'step-03-action-filter'
+description: 'Apply Action Mapping to define the required user action and filter content for relevance'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-c/step-03-action-filter.md'
+nextStepFile: '{workflow_path}/steps-c/step-04-empowerment-frame.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-content.md'
+---
+
 # Step 3: Define Required Action
 
-**Apply Action Mapping to filter for relevance and purpose**
+## STEP GOAL:
 
----
+Apply Action Mapping (Cathy Moore) to identify the specific action the user must be able to take after reading this content, and use that to filter what information is truly necessary versus nice-to-know fluff.
 
-## Purpose
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Action Mapping (Cathy Moore) asks the critical question: **"What action does this content enable?"** 
+### Universal Rules:
 
-If content doesn't enable a specific, valuable action, it's likely fluff. This step ensures every word serves a purpose.
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
----
+### Role Reinforcement:
 
-## Duration
+- ✅ You are a strategic content analyst applying Action Mapping methodology
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring action-focused filtering methodology, user brings domain context
+- ✅ Maintain a sharp, purposeful tone — challenge anything that does not serve the action
 
-⏱️ **3-5 minutes**
+### Step-Specific Rules:
 
----
+- 🎯 Focus ONLY on identifying the required action and filtering information
+- 🚫 FORBIDDEN to generate content text in this step
+- 💬 Push for specific behavioral actions, not vague "understanding"
+- 📋 Challenge nice-to-know content that does not enable the action
 
-## What You're Doing
+## EXECUTION PROTOCOLS:
 
-Identifying the specific action the user must be able to take after reading this content, and using that to filter what information is truly necessary.
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document the action filter in structured format
+- 📖 Work backward from action to essential information
+- 🚫 FORBIDDEN to proceed without a specific action and information filter
 
----
+## CONTEXT BOUNDARIES:
 
-## Context from Previous Steps
+- Available context: Purpose (Step 0), VTC (Step 1), Awareness Strategy (Step 2)
+- Focus: What action must the user take, and what information enables it
+- Limits: Do not write content — filter what information to include
+- Dependencies: VTC and Awareness Strategy from previous steps
 
-**VTC:** Business goal, user, driving forces, awareness positioning  
-**Awareness Strategy:** Language guidelines, information priorities, emotional journey
-
----
-
-## The Action Mapping Principle (Quick Reference)
-
-**Cathy Moore's Core Question:**
-> "What does the user need to be able to DO?"
-
-**Not:**
-- "What do they need to know?"
-- "What information should we provide?"
-- "What sounds impressive?"
-
-**But:**
-- "What behavior enables success?"
-- "What action drives the business goal?"
-
-**Then work backward:**
-- What information enables that action?
-- What practice enables that action?
-- What environment enables that action?
-
----
-
-## Questions for the User
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Identify the Required Action
 
-**"After reading this content, what must the user be able to DO?"**
+Ask: **"After reading this content, what must the user be able to DO?"**
 
-Be specific. Not "understand" or "know about" - but actual behaviors:
+Push for specific behaviors, not vague understanding:
 
-**Good examples:**
-- "Click the signup button with confidence"
-- "Choose the right pricing tier for their needs"
-- "Complete the first step in the onboarding flow"
-- "Recognize if this product is right for them (or not)"
-- "Explain the value to their boss/team"
+**Good:** "Click the signup button with confidence" / "Choose the right pricing tier" / "Complete the first onboarding step"
 
-**Bad examples:**
-- "Understand our features" (too vague)
-- "Learn about our company" (no action)
-- "Be aware of the benefits" (awareness isn't action)
-
-**"What's the ONE action this content must enable?"**
+**Bad:** "Understand our features" / "Learn about our company" / "Be aware of the benefits"
 
 ### 2. Connect Action to Business Goal
 
-**"How does this action serve the business goal?"**
+Trace the logic: User does [action] → which leads to [outcome] → which drives [business goal from VTC].
 
-Trace the logic:
-- User does [action]
-- Which leads to [outcome]
-- Which drives [business goal from VTC]
-
-**Example:**
-- User clicks signup button (action)
-- Which leads to email capture (outcome)
-- Which drives "500 newsletter signups" goal (business goal)
-
-**"Does this action clearly serve the VTC's business goal?"**
-
-- If YES → Continue
-- If NO → Reconsider if this content is needed, or if the action is defined correctly
+Ask: **"Does this action clearly serve the VTC's business goal?"**
 
 ### 3. Connect Action to Driving Forces
 
-**"How does this action satisfy the user's driving forces?"**
-
-From VTC, we know:
-- Positive driving force (wish): [from VTC]
-- Negative driving force (fear): [from VTC]
-
-**"By taking this action, how does the user move toward their wish or away from their fear?"**
-
-**Example:**
-- Action: Sign up for newsletter
-- Wish satisfied: "Become local beauty authority" (gets trend info)
-- Fear addressed: "Stop missing industry trends" (regular updates)
+From VTC driving forces: **"By taking this action, how does the user move toward their wish or away from their fear?"**
 
 ### 4. Determine Essential Information
 
-**"What information is REQUIRED to enable this action?"**
-
 Work backward from the action:
+- To do the action, the user must understand X
+- To understand X, they need to know Y
+- To know Y, we must tell them Z
 
-- To [do the action], the user must understand [X]
-- To understand [X], they need to know [Y]
-- To know [Y], we must tell them [Z]
-
-**Strip away everything else.**
-
-**"What can we cut without preventing the action?"**
-
-- Nice-to-know company history? → Cut
-- Impressive but irrelevant features? → Cut
-- Background context that doesn't enable action? → Cut
+Ask: **"What can we cut without preventing the action?"** Strip away everything else.
 
 ### 5. Identify Action Barriers
 
-**"What might prevent the user from taking this action?"**
+Ask: **"What might prevent the user from taking this action?"**
 
-Common barriers:
-- **Confusion:** Don't understand what to do
-- **Fear:** Worried about consequences
-- **Effort:** Seems too hard or time-consuming
-- **Distrust:** Don't believe it will work
-- **Irrelevance:** Don't see how it helps them
+Common barriers: Confusion, Fear, Effort, Distrust, Irrelevance.
 
-**"What content is needed to remove these barriers?"**
+For each barrier, identify what content removes it.
 
----
-
-## Agent Actions
-
-1. **Guide user to identify specific action** (not vague understanding)
-2. **Validate action connects** to business goal and driving forces
-3. **Work backward** to determine essential information
-4. **Challenge "nice to know"** content that doesn't enable action
-5. **Document** the required action and supporting information
-
----
-
-## Validation
-
-Before proceeding to Step 4:
-
-- [ ] Specific action identified (not vague "understanding")
-- [ ] Action connects to VTC business goal
-- [ ] Action satisfies user's driving forces
-- [ ] Essential information determined (what enables the action)
-- [ ] Unnecessary information identified (what doesn't enable action)
-- [ ] Action barriers identified and addressed
-
----
-
-## Output
-
-**Action Filter Document:**
+### 6. Document Action Filter
 
 ```yaml
 action_filter:
   required_action:
     description: "[Specific action user must be able to take]"
     success_criteria: "[How we know they can do it]"
-  
   business_impact:
     connection: "[How this action drives the VTC business goal]"
     logic: "[Action → Outcome → Goal]"
-  
   user_motivation:
     positive_driver: "[How action satisfies their wish]"
     negative_driver: "[How action addresses their fear]"
-  
   essential_information:
-    - "[Information element 1 - WHY needed for action]"
-    - "[Information element 2 - WHY needed for action]"
-    - "[Information element 3 - WHY needed for action]"
-  
+    - "[Information element 1 — WHY needed for action]"
+    - "[Information element 2 — WHY needed for action]"
+    - "[Information element 3 — WHY needed for action]"
   cut_list:
     - "[Nice-to-know info that doesn't enable action]"
     - "[Impressive but irrelevant content]"
-  
   action_barriers:
     - barrier: "[e.g., confusion about next steps]"
       solution: "[Content that removes this barrier]"
@@ -198,33 +119,44 @@ action_filter:
       solution: "[Content that addresses this fear]"
 ```
 
----
+### 7. Present MENU OPTIONS
 
-## Next Step
+Display: **"Select an Option:** [C] Continue"
 
-Once the required action is clear and information is filtered:
+#### Menu Handling Logic:
 
-**→ Proceed to [Step 4: Frame User Empowerment](step-04-empowerment-frame.md)**
+- IF C: Save action filter, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#7-present-menu-options)
 
----
+#### EXECUTION RULES:
 
-## Example
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
 
-**See:** [data/03-action-filter-example.md](../data/03-action-filter-example.md)
+## CRITICAL STEP COMPLETION NOTE
 
-This shows complete Action Mapping for hairdresser newsletter signup, demonstrating how to filter essential information through required action, identify barriers, and create a cut list.
-
----
-
-## Notes
-
-- This step often reveals that pages have too much content that doesn't serve the action
-- It's normal to identify 30-50% of planned content as "cut-able"
-- If you can't identify a clear action, question whether this content section is needed at all
-- Multiple small actions are fine (e.g., "read OR watch video")
-- But vague goals like "learn about us" indicate unfocused content
+ONLY WHEN C is selected and the action filter is documented will you load {nextStepFile} to begin framing user empowerment.
 
 ---
 
-**⚠️ ALPHA:** Was this filtering process helpful or did it feel limiting? Feedback appreciated.
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
+### ✅ SUCCESS:
+
+- Specific action identified (not vague "understanding")
+- Action connects to VTC business goal
+- Action satisfies user's driving forces
+- Essential information determined (what enables the action)
+- Unnecessary information identified (what does not enable action)
+- Action barriers identified and addressed
+
+### ❌ SYSTEM FAILURE:
+
+- Accepting vague goals like "learn about us"
+- Generating content text in this step
+- Not challenging nice-to-know content
+- Proceeding without a specific required action
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

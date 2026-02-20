@@ -1,10 +1,62 @@
-# Step 05: Finalize
+---
+name: 'step-05-finalize'
+description: 'Clean up, run the full test suite, document deviations, and prepare the work for review'
 
-**Goal:** Clean up, run the full test suite, document deviations, and prepare the work for review.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-d/step-05-finalize.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-development.md'
 ---
 
-## Process
+# Step 5: Finalize
+
+## STEP GOAL:
+
+Clean up, run the full test suite, document deviations, and prepare the work for review.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on cleanup, full test suite, deviation documentation, and PR preparation
+- 🚫 FORBIDDEN to add new features or make non-cleanup changes
+- 💬 Approach: Systematically clean up, test, document, and prepare for review with user
+- 📋 Ensure deviations are documented with rationale for reviewer context
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Code cleaned, tests passing, deviations documented, PR prepared
+- 💾 Document spec deviations and PR description in the dialog file
+- 📖 Reference test baseline from Step 2 to distinguish regressions from pre-existing failures
+- 🚫 Do not add features or refactor beyond cleanup
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Implementation from Step 3; verification from Step 4; test baseline from Step 2; spec
+- Focus: Final cleanup, testing, documentation, and review preparation
+- Limits: No new features, no major refactoring
+- Dependencies: Step 4 must be complete (verification passed)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Clean Up Code
 
@@ -83,9 +135,7 @@ Based on what was built, recommend next steps:
 - If stakeholder demo is needed, note what to demonstrate
 - If the feature has user-facing copy, suggest copy review
 
----
-
-## Checklist
+### 7. Verify Checklist
 
 - [ ] Debug statements removed
 - [ ] Unused code and imports removed
@@ -97,8 +147,41 @@ Based on what was built, recommend next steps:
 - [ ] PR description written with summary, changes, testing steps, and deviations
 - [ ] Next steps recommended (acceptance testing, design review, etc.)
 
+### 8. Present MENU OPTIONS
+
+Display: "**Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+- IF M: Update agent dialog, then load, read entire file, then execute {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed when user selects 'M'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN all cleanup is done, tests pass, deviations are documented, and PR is prepared will you then load and read fully `{activityWorkflowFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Return to **activity menu**
+### ✅ SUCCESS:
+- Debug statements removed
+- Unused code and imports removed
+- Full test suite passes (or pre-existing failures match baseline)
+- Linting and type checking pass
+- Spec deviations documented with rationale
+- PR description written
+- Next steps recommended
+
+### ❌ SYSTEM FAILURE:
+- Leaving debug statements in code
+- Not running the full test suite
+- Not documenting spec deviations
+- Not preparing a PR description
+- Skipping linting or type checking
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

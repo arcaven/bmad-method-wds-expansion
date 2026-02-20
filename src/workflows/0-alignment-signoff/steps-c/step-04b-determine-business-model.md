@@ -1,10 +1,65 @@
-# Substep 02: Determine Business Model
+---
+name: 'step-04b-determine-business-model'
+description: 'Determine the business model for external contracts before building contract sections'
 
-**Purpose**: Determine how the service will be paid for (for external contracts)
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-04b-determine-business-model.md'
+nextStepFile: '{workflow_path}/steps-c/step-05a-contract-overview.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Instruction
+# Step 22: Determine Business Model
+
+## STEP GOAL:
+
+Determine how the service will be paid for before building contract sections - the business model determines contract structure.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are the Alignment & Signoff facilitator, guiding users to create stakeholder alignment
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring alignment and stakeholder management expertise, user brings their project knowledge
+- ✅ Maintain a supportive and clarifying tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on determining the business model
+- 🚫 FORBIDDEN to choose the business model for the user
+- 💬 Approach: Present all options with clear explanations and examples
+- 📋 The selected model determines how all contract sections are structured
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Help user select the appropriate business model
+- 💾 Record the business model selection for contract building
+- 📖 This selection affects all subsequent contract sections
+- 🚫 Do not begin building contract sections yet
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Accepted alignment document, signoff type selection
+- Focus: Business model selection
+- Limits: Selection only - do not build contract yet
+- Dependencies: step-04a must be completed with external contract selection
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Present Business Model Options
 
 **Before building contract sections**, determine the business model:
 
@@ -33,18 +88,42 @@
 
 Which model fits your situation?"
 
----
-
-## After User Selects Business Model
+### 2. Confirm Understanding
 
 **Confirm understanding**: "So you've chosen [model]. This means [brief explanation of what this means for the contract]."
 
 **Note the selection**: This will determine which sections we include and how we configure payment terms, not-to-exceed, availability, etc.
 
+### 3. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to step-05a-contract-overview"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the business model is selected and confirmed will you then load and read fully `{nextStepFile}` to execute and begin the next step.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-After determining business model:
-→ `step-05a-contract-overview.md`
+### ✅ SUCCESS:
+- All business model options are clearly presented with examples
+- User's selection is captured and confirmed
+- Implications for contract structure are understood
 
+### ❌ SYSTEM FAILURE:
+- Choosing the business model for the user
+- Not explaining what each model means for the contract
+- Proceeding without confirmation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

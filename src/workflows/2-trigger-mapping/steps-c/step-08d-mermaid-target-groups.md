@@ -1,113 +1,145 @@
-# Step 04: Format Target Group Nodes
+---
+name: 'step-08d-mermaid-target-groups'
+description: 'Format target group nodes with emojis, priority levels, and profile traits'
 
-**Goal:** Create persona nodes with emojis, priority levels, and key profile traits
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-08d-mermaid-target-groups.md'
+nextStepFile: '{workflow_path}/steps-c/step-08e-mermaid-driving-forces.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Node Structure Template
+# Step 27: Format Target Group Nodes
 
+## STEP GOAL:
+
+Create persona nodes with emojis, ALL CAPS names, priority levels (PRIMARY/SECONDARY/TERTIARY TARGET), and 3-4 key profile traits.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Saga the Analyst - creating professional diagram nodes
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structured facilitation and pattern recognition, user brings business knowledge and user insight
+- ✅ Work together as equals in a partnership, not a client-vendor relationship
+
+### Step-Specific Rules:
+
+- 🎯 Focus on creating target group nodes with consistent structure
+- 🚫 FORBIDDEN to use different emojis for TG and its corresponding DF node
+- 💬 Approach: Consistent formatting with proper padding
+- 📋 Use same emoji for TG node and its corresponding DF node (critical!)
+- 📋 Priority levels in ALL CAPS: PRIMARY TARGET, SECONDARY TARGET, etc.
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Format each persona as a properly structured TG node
+- 💾 Store target_group_nodes, persona_emojis (for DF matching), persona_count
+- 📖 Record emoji assignments for use in DF nodes
+- 🚫 Do not forget to record persona emojis for DF matching
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Personas from workshops, platform node from step-08c
+- Focus: Formatting TG nodes for Mermaid diagram
+- Limits: Follow exact template pattern, record emojis for DF matching
+- Dependencies: Requires platform node from step-08c
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Format Each Target Group Node
+
+**Node Structure Template:**
 ```
 TGX["<br/>EMOJI PERSONA NAME<br/>PRIORITY LEVEL<br/><br/>Profile trait 1<br/>Profile trait 2<br/>Profile trait 3<br/><br/>"]
 ```
 
----
-
-## Instructions
-
-### 1. For Each Persona/Target Group
-
-**Required elements:**
+**Required elements per node:**
 1. Start with `<br/>` (top padding)
 2. Emoji + Persona name in ALL CAPS
-3. Priority level (PRIMARY TARGET, SECONDARY TARGET, etc.)
+3. Priority level (PRIMARY TARGET, SECONDARY TARGET, etc.) in ALL CAPS
 4. Blank line (`<br/><br/>`)
 5. 3-4 key profile traits (concise, one line each with `<br/>`)
 6. End with `<br/><br/>` (bottom padding)
 
----
+### 2. Choose and Record Persona Emojis
 
-### 2. Choose Persona Emoji
+**Important:** Use same emoji for both TG node and corresponding DF node.
 
-**Common persona emojis:**
-- 🎯 Strategic/Primary personas
-- 💼 Business/Leadership personas
-- 💻 Technical/Developer personas
-- 👥 Team/Group personas
-- 🎨 Creative/Designer personas
-- 📱 User/Customer personas
+Common persona emojis:
+- Target/Strategic: target emoji
+- Business/Leadership: briefcase emoji
+- Technical/Developer: computer emoji
+- Team/Group: people emoji
+- Creative/Designer: art emoji
+- User/Customer: phone emoji
 
-**Important:** Use same emoji for both TG node and corresponding DF node
+Record emoji assignments: TG0 emoji -> DF0, TG1 emoji -> DF1, etc.
 
----
+### 3. Verify Rules Checklist
 
-### 3. Priority Levels
+- Node ID follows pattern TG0, TG1, TG2
+- Starts with `<br/>`
+- Emoji matches persona type
+- Persona name in ALL CAPS
+- Priority level in ALL CAPS
+- Blank line after priority (`<br/><br/>`)
+- 3-4 profile traits
+- Each trait ends with `<br/>`
+- Ends with `<br/><br/>`
+- No HTML tags
+- Proper quote and bracket closure `"]`
 
-**Use consistent format:**
-- PRIMARY TARGET
-- SECONDARY TARGET  
-- TERTIARY TARGET
-- FOURTH TARGET
-- FIFTH TARGET
+Store target_group_nodes, persona_emojis, persona_count.
 
-**Always in ALL CAPS**
+### 4. Present MENU OPTIONS
 
----
+Display: "**Select an Option:** [C] Continue to Format Driving Forces | [M] Return to Activity Menu"
 
-### 4. Profile Traits
+#### Menu Handling Logic:
+- IF C: Load and execute {nextStepFile}
+- IF M: Return to {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-**Keep traits:**
-- Concise (one line each)
-- Descriptive but brief
-- Connected with dashes for readability
-- 3-4 traits per persona
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-**Examples:**
-- `Designer - Psychology background`
-- `Job hunting - Overwhelmed`
-- `AI curious but lacks confidence`
+## CRITICAL STEP COMPLETION NOTE
 
----
-
-### 5. Example Implementation
-
-```mermaid
-TG0["<br/>🎓 SARAH THE STUDENT<br/>PRIMARY TARGET<br/><br/>University student - Limited budget<br/>Wants to learn guitar<br/>Has painting skills to trade<br/><br/>"]
-
-TG1["<br/>💼 MARCUS THE MENTOR<br/>SECONDARY TARGET<br/><br/>Professional - Career changer<br/>Expert in coding<br/>Wants to learn business skills<br/><br/>"]
-
-TG2["<br/>🏠 EMMA THE ENTHUSIAST<br/>TERTIARY TARGET<br/><br/>Hobbyist - Retired teacher<br/>Wants to share life experience<br/>Eager to learn new things<br/><br/>"]
-```
+ONLY WHEN user selects [C] will you load the next step file. All TG nodes must be formatted and emojis recorded before proceeding.
 
 ---
 
-## Rules Checklist
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-- [ ] Node ID follows pattern `TG0`, `TG1`, `TG2`
-- [ ] Starts with `<br/>`
-- [ ] Emoji matches persona type
-- [ ] Persona name in ALL CAPS
-- [ ] Priority level in ALL CAPS
-- [ ] Blank line after priority (`<br/><br/>`)
-- [ ] 3-4 profile traits
-- [ ] Each trait ends with `<br/>`
-- [ ] Ends with `<br/><br/>`
-- [ ] No HTML tags
-- [ ] Proper quote and bracket closure `"]`
+### ✅ SUCCESS:
+- All persona nodes formatted following template
+- Emojis selected and RECORDED for DF matching
+- Priority levels in ALL CAPS
+- 3-4 profile traits per node
+- Proper padding and closure
+- No HTML tags
 
----
+### ❌ SYSTEM FAILURE:
+- Not recording emojis for DF matching
+- Missing priority levels
+- Traits not concise
+- HTML tags in nodes
+- Inconsistent formatting
+- Wrong node ID pattern
 
-## Output
-
-Store:
-- `target_group_nodes`: Array of formatted TG nodes
-- `persona_emojis`: Map of persona ID to emoji (for DF nodes)
-- `persona_count`: Number of personas
-
----
-
-## Next Step
-
-→ **[Step 08e: Format Driving Forces](step-08e-mermaid-driving-forces.md)**
-
-Create driving forces nodes with ✅ wants and ❌ fears.
-
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

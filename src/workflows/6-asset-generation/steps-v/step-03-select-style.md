@@ -1,61 +1,113 @@
-# Step 03: Select Style
-
-**Goal:** Define the motion style — speed, feel, and visual treatment for animations and video.
-
+---
+name: 'step-03-select-style'
+description: 'Define motion personality, timing parameters, and video visual treatment'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-v/step-03-select-style.md'
+nextStepFile: '{workflow_path}/steps-v/step-04-generate.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-videos.md'
 ---
 
-## Actions
+# Step 3: Select Style
 
-### 1. Motion Personality
+## STEP GOAL:
 
-```
-Overall motion feel:
+Define the motion style — personality (subtle/fluid/energetic/precise), timing parameters, video visual treatment, and color direction — so all motion content feels cohesive.
 
-[S] Subtle       — Barely noticeable, professional (corporate, medical, finance)
-[F] Fluid        — Smooth, organic movement (wellness, lifestyle, creative)
-[E] Energetic    — Fast, dynamic, attention-grabbing (startup, gaming, youth)
-[P] Precise      — Mechanical, deliberate, technical (engineering, data, SaaS)
-```
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-### 2. Timing Parameters
+### Universal Rules:
 
-Based on personality, set:
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-| Parameter | Subtle | Fluid | Energetic | Precise |
-|-----------|--------|-------|-----------|---------|
-| **Base duration** | 500ms | 400ms | 200ms | 300ms |
-| **Easing** | ease-in-out | cubic-bezier(.4,0,.2,1) | spring(1,80,10) | linear/steps |
-| **Stagger** | 100ms | 80ms | 50ms | 60ms |
-| **Loop delay** | 3s | 2s | 1s | 2s |
+### Role Reinforcement:
 
-### 3. Video Style (for generated/produced video)
+- ✅ You are a creative production partner defining motion visual standards
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring motion design expertise, user brings brand preferences
 
-```
-Video visual treatment:
+### Step-Specific Rules:
 
-[C] Cinematic     — Shallow depth of field, color graded, film-like
-[D] Documentary   — Natural, authentic, handheld feel
-[M] Motion design — Graphics-driven, animated typography, data viz
-[A] Abstract      — Textures, shapes, ambient, no recognizable subjects
-```
+- 🎯 Focus ONLY on defining motion style parameters
+- 🚫 FORBIDDEN to generate motion content in this step
+- 💬 Set timing parameters based on personality selection
+- 📋 Confirm complete style configuration before proceeding
 
-### 4. Color and Lighting
+## EXECUTION PROTOCOLS:
 
-- Match brand palette
-- Dark/light preference for backgrounds
-- Contrast level for overlaid text
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document complete motion style configuration
+- 🚫 FORBIDDEN to proceed without confirmed style
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Motion inventory (Step 2), design system motion tokens
+- Focus: Defining motion style parameters
+- Limits: Do not generate — just define style
+- Dependencies: Inventory and scope from Step 2
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Select Motion Personality
+
+[S] Subtle (corporate, medical), [F] Fluid (wellness, lifestyle), [E] Energetic (startup, gaming), [P] Precise (engineering, SaaS).
+
+### 2. Configure Timing Parameters
+
+Based on personality: base duration, easing curve, stagger delay, loop delay.
+
+### 3. Select Video Treatment (for produced/generated video)
+
+[C] Cinematic (shallow DOF, color graded), [D] Documentary (natural, handheld), [M] Motion design (graphics-driven), [A] Abstract (textures, ambient).
+
+### 4. Define Color and Lighting
+
+Match brand palette, dark/light preference, contrast level for overlaid text.
 
 ### 5. Confirm Style
 
-```
-Motion Style:
-- Personality: [selected]
-- Base duration: [ms]
-- Easing: [curve]
-- Video treatment: [selected]
-- Color direction: [summary]
-```
+Present: personality, timing parameters, video treatment, color direction.
+
+### 6. Present MENU OPTIONS
+
+Display: **"Select an Option:** [C] Continue"
+
+#### Menu Handling Logic:
+
+- IF C: Save style, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and style is confirmed will you load {nextStepFile} to begin generating motion content.
 
 ---
 
-**Next:** → step-04-generate.md
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Motion personality selected
+- Timing parameters configured
+- Video treatment selected
+- Color direction defined
+- Complete style confirmed
+
+### ❌ SYSTEM FAILURE:
+
+- Generating without defined style
+- Not configuring timing parameters
+- Skipping video treatment selection
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

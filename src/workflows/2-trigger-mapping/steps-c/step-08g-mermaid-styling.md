@@ -1,24 +1,68 @@
-# Step 07: Apply Styling
+---
+name: 'step-08g-mermaid-styling'
+description: 'Apply professional light gray styling with dark text to all diagram nodes'
 
-**Goal:** Apply professional light gray styling with dark text to all nodes
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-08g-mermaid-styling.md'
+nextStepFile: '{workflow_path}/steps-c/step-08h-mermaid-quality.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Styling System
+# Step 30: Apply Styling
 
-**Four style classes:**
-1. `businessGoal` - Business goals (lightest gray, consistent styling)
-2. `platform` - Platform (medium gray, thick border)
-3. `targetGroup` - Target groups (near white)
-4. `drivingForces` - Driving forces (light gray)
+## STEP GOAL:
 
----
+Apply professional light gray styling with dark text to all nodes using four style classes: businessGoal, platform, targetGroup, and drivingForces, with exact color specifications.
 
-## Instructions
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Saga the Analyst - applying professional visual styling
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structured facilitation and pattern recognition, user brings business knowledge and user insight
+- ✅ Work together as equals in a partnership, not a client-vendor relationship
+
+### Step-Specific Rules:
+
+- 🎯 Focus on applying EXACT color specifications
+- 🚫 FORBIDDEN to modify colors or create custom color schemes
+- 💬 Approach: Apply exact specifications, no creative liberties with colors
+- 📋 Use these EXACT colors - do not modify
+- 📋 Platform gets 3px border (thicker than others at 2px)
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Define all four classDef statements with exact colors
+- 💾 Store styling_definitions, styling_applications, complete_diagram
+- 📖 Apply classes to correct node groups
+- 🚫 Do not modify the color specifications
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All nodes and connections from previous steps
+- Focus: Applying consistent professional styling
+- Limits: Use EXACT colors specified - no variations
+- Dependencies: Requires all nodes and connections created
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Define Style Classes
 
-**Add these exact class definitions:**
+Add these EXACT class definitions:
 
 ```css
 classDef businessGoal fill:#f3f4f6,color:#1f2937,stroke:#d1d5db,stroke-width:2px
@@ -27,18 +71,7 @@ classDef targetGroup fill:#f9fafb,color:#1f2937,stroke:#d1d5db,stroke-width:2px
 classDef drivingForces fill:#f3f4f6,color:#1f2937,stroke:#d1d5db,stroke-width:2px
 ```
 
-**Rules:**
-- Use these EXACT colors - do not modify
-- All business goals use consistent light gray styling (#f3f4f6)
-- Business goals & driving forces use same light gray (#f3f4f6)
-- Platform uses medium gray (#e5e7eb) with 3px border
-- Target groups use near white (#f9fafb)
-- All text is dark gray (#1f2937 or #111827 for platform)
-- All borders are light gray (#d1d5db or #9ca3af for platform)
-
----
-
-### 2. Color Specifications
+**Color Specifications:**
 
 **Background fills:**
 - `#f3f4f6` - Light gray (business goals, driving forces)
@@ -55,18 +88,11 @@ classDef drivingForces fill:#f3f4f6,color:#1f2937,stroke:#d1d5db,stroke-width:2p
 
 **Border widths:**
 - `2px` - Standard (business goals, target groups, driving forces)
-- `3px` - Thick (platform only - makes it stand out)
+- `3px` - Thick (platform only)
 
----
+### 2. Apply Classes to Nodes
 
-### 3. Apply Classes to Nodes
-
-**Format:**
-```
-class NodeID1,NodeID2,NodeID3 className
-```
-
-**Implementation:**
+Format:
 ```
 class BG0,BG1,BG2 businessGoal
 class PLATFORM platform
@@ -74,93 +100,57 @@ class TG0,TG1,TG2 targetGroup
 class DF0,DF1,DF2 drivingForces
 ```
 
-**Note:** All business goals use consistent styling. Priority is indicated by vertical position (top to bottom).
+Adjust node counts to match actual diagram.
 
-**Rules:**
-- List all node IDs of same type on one line
-- Separate IDs with commas (no spaces)
-- One class assignment per line
-- Match node count to actual diagram
+### 3. Verify Rules Checklist
 
----
+- All four classDef statements included
+- Colors EXACTLY match specification
+- Platform has 3px border
+- All BG nodes assigned to businessGoal
+- PLATFORM assigned to platform
+- All TG nodes assigned to targetGroup
+- All DF nodes assigned to drivingForces
+- Node counts match actual diagram
+- Comment header included
 
-### 4. Complete Example
+Store styling_definitions, styling_applications, and complete_diagram.
 
-```mermaid
-%% Light Gray Styling with Dark Text
-classDef businessGoal fill:#f3f4f6,color:#1f2937,stroke:#d1d5db,stroke-width:2px
-classDef platform fill:#e5e7eb,color:#111827,stroke:#9ca3af,stroke-width:3px
-classDef targetGroup fill:#f9fafb,color:#1f2937,stroke:#d1d5db,stroke-width:2px
-classDef drivingForces fill:#f3f4f6,color:#1f2937,stroke:#d1d5db,stroke-width:2px
+### 4. Present MENU OPTIONS
 
-class BG0,BG1,BG2 businessGoal
-class PLATFORM platform
-class TG0,TG1,TG2 targetGroup
-class DF0,DF1,DF2 drivingForces
-```
+Display: "**Select an Option:** [C] Continue to Quality Check | [M] Return to Activity Menu"
 
----
+#### Menu Handling Logic:
+- IF C: Load and execute {nextStepFile}
+- IF M: Return to {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-### 5. Variable Node Counts
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-**Adjust class application based on actual count:**
+## CRITICAL STEP COMPLETION NOTE
 
-**2 personas:**
-```
-class BG0,BG1 businessGoal
-class PLATFORM platform
-class TG0,TG1 targetGroup
-class DF0,DF1 drivingForces
-```
-
-**4 business goals / 4 personas:**
-```
-class BG0,BG1,BG2,BG3 businessGoal
-class PLATFORM platform
-class TG0,TG1,TG2,TG3 targetGroup
-class DF0,DF1,DF2,DF3 drivingForces
-```
+ONLY WHEN user selects [C] will you load the next step file. Styling must be applied correctly before quality check.
 
 ---
 
-## Rules Checklist
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-- [ ] All four classDef statements included
-- [ ] Colors EXACTLY match specification (no variations)
-- [ ] Platform has 3px border (thicker than others)
-- [ ] All BG nodes assigned to businessGoal class (consistent styling)
-- [ ] PLATFORM assigned to platform class
-- [ ] All TG nodes assigned to targetGroup class
-- [ ] All DF nodes assigned to drivingForces class
-- [ ] Node counts match actual diagram
-- [ ] Comment header included
+### ✅ SUCCESS:
+- All four classDef statements with exact colors
+- Platform thicker border (3px vs 2px)
+- All nodes assigned to correct classes
+- Node counts match actual diagram
+- Professional, subtle, print-friendly appearance
+- Complete diagram assembled
 
----
+### ❌ SYSTEM FAILURE:
+- Wrong color codes
+- Missing classDef statements
+- Nodes not assigned to classes
+- Wrong border widths
+- Node count mismatch
+- Custom colors used instead of specified
 
-## Visual Result
-
-**When properly styled, the diagram should have:**
-- Subtle, professional gray tones
-- Easy-to-read dark text
-- Platform visually emphasized (thicker border)
-- Consistent, clean appearance
-- No harsh colors or gradients
-- Print-friendly design
-
----
-
-## Output
-
-Store:
-- `styling_definitions`: The classDef statements
-- `styling_applications`: The class assignments
-- `complete_diagram`: Full diagram with styling
-
----
-
-## Next Step
-
-→ **[Step 08h: Quality Check](step-08h-mermaid-quality.md)**
-
-Verify diagram meets all quality standards.
-
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

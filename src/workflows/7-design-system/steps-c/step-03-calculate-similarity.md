@@ -1,12 +1,63 @@
-# Assessment Step 3: Calculate Similarity
-
-**Purpose:** Interpret comparison data and determine similarity level.
-
-**Input:** Detailed comparison with scores
-
-**Output:** Similarity classification and recommendation
-
 ---
+name: 'step-03-calculate-similarity'
+description: 'Interpret comparison data, calculate weighted similarity score, and classify similarity level'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-03-calculate-similarity.md'
+nextStepFile: '{workflow_path}/steps-c/step-04-identify-opportunities.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-create.md'
+---
+
+# Step 3: Calculate Similarity
+
+## STEP GOAL:
+
+Interpret the comparison data, apply weighted scoring to calculate an overall similarity percentage, classify the similarity level, and generate an initial recommendation.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are the Design System Architect guiding design system creation and maintenance
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design system expertise and component analysis, user brings design knowledge and project context
+- ✅ Maintain systematic and analytical tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus ONLY on this step's specific goal — do not skip ahead
+- 🚫 FORBIDDEN to jump to later steps before this step is complete
+- 💬 Approach: Systematic execution with clear reporting
+- 📋 All outputs must be documented and presented to user
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Execute each instruction in the sequence below
+- 💾 Document all findings and decisions
+- 📖 Present results to user before proceeding
+- 🚫 FORBIDDEN to skip instructions or optimize the sequence
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Previous step outputs and project configuration
+- Focus: This step's specific goal only
+- Limits: Do not perform actions belonging to subsequent steps
+- Dependencies: Requires all previous steps to be completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ## Similarity Levels
 
@@ -352,6 +403,43 @@ This might indicate:
 }
 ````
 
+### 6. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Identify Opportunities"
+
+#### Menu Handling Logic:
+
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects the appropriate option
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN [C continue option is selected and similarity calculated and classified], will you then load and read fully `{nextStepFile}` to execute the next step.
+
 ---
 
-**This step calculates and classifies. Opportunity/risk analysis happens in the next steps.**
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Step goal achieved completely
+- All instructions executed in sequence
+- Results documented and presented to user
+- User confirmed before proceeding
+- Agent dialog updated
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping any instruction in the sequence
+- Generating content without user input
+- Jumping ahead to later steps
+- Not presenting results to user
+- Proceeding without user confirmation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,46 +1,57 @@
+---
+name: 'step-11-tone-of-voice'
+description: 'Establish the product communication personality and style'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-11-tone-of-voice.md'
+nextStepFile: '{workflow_path}/steps-c/step-11a-create-vtc.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
 # Step 11: Define Tone of Voice
 
-## Purpose
-
+## STEP GOAL:
 Establish the product's communication personality and style for consistent UI microcopy and system messages throughout the product.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-**Philosophy:** Don't ask the user to define tone of voice - YOU suggest appropriate attributes based on everything you've learned (users, positioning, context), then refine through conversation.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-**Your role:** Strategic brand guide synthesizing the right voice from product context.
+### Role Reinforcement:
+- You are a Strategic Business Analyst and brand guide synthesizing the right voice from product context
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-**Important:** Tone of Voice is for **UI microcopy** (buttons, labels, errors, system messages), NOT strategic content (headlines, feature descriptions, value propositions).
+### Step-Specific Rules:
+- Focus: Tone of Voice for UI microcopy, NOT strategic content
+- FORBIDDEN: Do not ask the user to define tone of voice - YOU suggest appropriate attributes based on what you've learned, then refine through conversation
+- Approach: Analyze product context, suggest attributes, provide examples, refine with user
 
-## Key Elements
+## EXECUTION PROTOCOLS:
+- Primary goal: Tone of voice attributes defined with examples
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-### What is Tone of Voice?
+## CONTEXT BOUNDARIES:
+- Available context: Vision, positioning, VTC, business model, users, success criteria, competitive landscape, constraints, platform strategy
+- Focus: Communication personality and microcopy style
+- Limits: Tone of Voice is for UI microcopy (buttons, labels, errors, system messages), NOT strategic content (headlines, feature descriptions, value propositions)
+- Dependencies: Steps 1-10a completed
 
-Tone of Voice defines:
-- **Brand personality:** Who are we as a company?
-- **Communication style:** How do we speak to users?
-- **Emotional tone:** What feeling do we create?
-- **Voice attributes:** Friendly, professional, quirky, authoritative, empathetic, technical, casual, formal, playful, serious, etc.
-
-### Tone of Voice vs Strategic Content
-
-**Tone of Voice applies to:**
-- ✅ Form field labels ("Email" vs "Email address" vs "Your email")
-- ✅ Button text ("Submit" vs "Continue" vs "Let's go")
-- ✅ Error messages ("Invalid email" vs "Hmm, that doesn't look like an email")
-- ✅ System messages ("Loading..." vs "Hang tight..." vs "Processing your request")
-- ✅ Empty states ("No items" vs "Nothing here yet" vs "Your list is empty")
-- ✅ Tooltips and instructions
-
-**Strategic Content uses:**
-- ❌ Content Creation Workshop (purpose-driven, context-specific)
-- ❌ Headlines, hero sections, feature descriptions
-- ❌ Value propositions, testimonials, case studies
-
-## Instructions
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Analyze Product Context
-
 Review what you've learned:
 - Vision & positioning
 - Target users and their characteristics
@@ -49,8 +60,7 @@ Review what you've learned:
 - Product category and context
 
 ### 2. Suggest Tone of Voice Attributes
-
-Based on the product context, suggest 3-5 tone attributes:
+Based on the product context, suggest 3-5 tone attributes.
 
 **Present in this format:**
 
@@ -76,11 +86,23 @@ Does this feel aligned with your brand vision?
 - Warm & personal (for services)
 
 ### 3. Provide Examples
+Show the tone in action with side-by-side comparisons.
 
-Show the tone in action with side-by-side comparisons. **See:** [../data/tone-of-voice-output-template.md](../data/tone-of-voice-output-template.md) for the example format.
+**Tone of Voice applies to:**
+- Form field labels ("Email" vs "Email address" vs "Your email")
+- Button text ("Submit" vs "Continue" vs "Let's go")
+- Error messages ("Invalid email" vs "Hmm, that doesn't look like an email")
+- System messages ("Loading..." vs "Hang tight..." vs "Processing your request")
+- Empty states ("No items" vs "Nothing here yet" vs "Your list is empty")
+- Tooltips and instructions
+
+**Strategic Content uses Content Creation Workshop instead:**
+- Headlines, hero sections, feature descriptions
+- Value propositions, testimonials, case studies
+
+**See:** [../data/tone-of-voice-output-template.md](../data/tone-of-voice-output-template.md) for the example format.
 
 ### 4. Refine Based on Feedback
-
 **Ask:**
 - "Does this tone feel right for your brand?"
 - "Should we adjust any attributes? (more/less formal, friendly, technical, etc.)"
@@ -89,45 +111,22 @@ Show the tone in action with side-by-side comparisons. **See:** [../data/tone-of
 **Iterate until confirmed.**
 
 ### 5. Document Final Tone of Voice
-
 Once confirmed, document:
 - Tone attributes (3-5 clear characteristics)
 - Example microcopy showing tone in action
 - Do's and Don'ts (brief guidelines)
 
-## Questions to Ask
-
-### If User Needs Guidance:
+### 6. Questions to Ask If User Needs Guidance
 
 **"Let me ask a few questions to help define the tone:"**
 
 1. **Relationship:** "How do you want users to feel about your brand? Like a trusted advisor? A helpful friend? An expert authority? A fun companion?"
-
 2. **Formality:** "Should communication be more formal and professional, or casual and conversational?"
-
 3. **Personality:** "If your product were a person, how would they speak? (serious, playful, quirky, straightforward, warm, technical)"
-
 4. **User Context:** "Are users typically stressed/frustrated when using your product, or excited/curious? How should tone respond to their state?"
-
 5. **Differentiation:** "How do competitors communicate? Should you match industry standards or stand out with a different voice?"
 
-## Validation
-
-Before proceeding:
-
-- [ ] Tone attributes are clearly defined (3-5 specific characteristics)
-- [ ] Attributes align with target users and positioning
-- [ ] Examples demonstrate the tone clearly
-- [ ] User confirms this feels right for their brand
-- [ ] Tone is documented for reference
-
-## Output Format
-
-**See:** [../data/tone-of-voice-output-template.md](../data/tone-of-voice-output-template.md) for the complete Product Brief template.
-
-
-## Agent Dialog Update
-
+### 7. Agent Dialog Update
 **Mandatory:** Append to `dialog/decisions.md` if key decisions were made.
 
 **Record:**
@@ -137,40 +136,35 @@ Before proceeding:
 
 **Then:** Mark Step 11 complete in `dialog/progress-tracker.md` progress tracker
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-**→ Proceed to [Step 12: Synthesize and Create Brief](step-12-synthesize.md)**
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
-
-```yaml
-stepsCompleted:
-  [
-    'step-01-init.md',
-    'step-02-vision.md',
-    'step-03-positioning.md',
-    'step-04-create-vtc.md',
-    'step-05-business-model.md',
-    'step-06-business-customers.md',
-    'step-07-target-users.md',
-    'step-08-success-criteria.md',
-    'step-09-competitive-landscape.md',
-    'step-10-constraints.md',
-    'step-11-tone-of-voice.md',
-  ]
-```
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
 ---
 
-## Example
+## SYSTEM SUCCESS/FAILURE METRICS
 
-**See:** [../data/tone-of-voice-example.md](../data/tone-of-voice-example.md)
+### SUCCESS:
+- Tone attributes clearly defined (3-5 specific characteristics)
+- Attributes align with target users and positioning
+- Examples demonstrate the tone clearly
+- User confirmed this feels right for their brand
+- Tone documented for reference
 
-This shows a complete Tone of Voice definition for a B2B SaaS onboarding tool, demonstrating how to define attributes based on user context (stressed HR managers) and provide clear before/after examples.
+### FAILURE:
+- Simply asked user to define tone without analysis
+- Generated tone attributes without product context
+- Mixed up UI microcopy tone with strategic content
 
----
-
-**⚠️ ALPHA:** This is a new addition to the Product Brief workflow. Feedback welcome on placement, questions, and output format.
-
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

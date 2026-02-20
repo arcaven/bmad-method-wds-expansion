@@ -1,10 +1,63 @@
-# Step 03: Plan Implementation
+---
+name: 'step-03-plan-implementation'
+description: 'Create an ordered, incremental implementation plan with verification points'
 
-**Goal:** Create an ordered, incremental implementation plan with verification points.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-e/step-03-plan-implementation.md'
+nextStepFile: '{workflow_path}/steps-e/step-04-implement.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-evolution.md'
 ---
 
-## Process
+# Step 3: Plan Implementation
+
+## STEP GOAL:
+
+Create an ordered, incremental implementation plan with verification points.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on ordering changes, planning incremental commits, defining verification points, and estimating effort
+- 🚫 FORBIDDEN to begin writing code — that is the next step
+- 💬 Approach: Collaboratively sequence the implementation with user, ensuring each step leaves the system working
+- 📋 Each commit must be a complete, working unit with clear verification criteria
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Produce a sequenced implementation plan with verification points between steps
+- 💾 Write implementation plan to the dialog file
+- 📖 Reference the scope from Step 1 and risk assessment from Step 2
+- 🚫 Do not write any code during this step
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Scope and boundary map from Step 1; impact analysis and risks from Step 2
+- Focus: Implementation planning — order, commits, verification, feature flags
+- Limits: No code writing
+- Dependencies: Steps 1 and 2 must be complete
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Order Changes by Dependency
 
@@ -51,9 +104,7 @@ Between steps, define what to check:
 - Identify steps that may need designer/stakeholder input
 - Flag any steps that might require splitting into sub-steps
 
----
-
-## Checklist
+### 6. Verify Checklist
 
 - [ ] Changes ordered by dependency
 - [ ] Feature flag decision made and documented
@@ -62,8 +113,39 @@ Between steps, define what to check:
 - [ ] Effort estimated, risks flagged
 - [ ] Implementation plan written to dialog file
 
+### 7. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 4: Implement"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the implementation plan is complete with ordered steps, verification points, and feature flag decisions will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-04-implement.md
+### ✅ SUCCESS:
+- Changes ordered by dependency
+- Feature flag decision made and documented
+- Incremental commits planned (each leaves system working)
+- Verification points defined between steps
+- Effort estimated, risks flagged
+- Implementation plan written to dialog file
+
+### ❌ SYSTEM FAILURE:
+- Beginning implementation without a complete plan
+- Planning commits that leave the system in a broken state
+- Not defining verification points
+- Skipping feature flag assessment
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,16 +1,67 @@
-# Step 01: Detect Epic Completion
+---
+name: 'step-01-detect-completion'
+description: 'Check if you have a complete testable flow ready for handoff'
 
-## Your Task
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-h/step-01-detect-completion.md'
+nextStepFile: '{workflow_path}/steps-h/step-02-create-delivery.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-handover.md'
+---
+
+# Step 1: Detect Epic Completion
+
+## STEP GOAL:
 
 Check if you have a complete testable flow ready for handoff.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Completion Checklist
+### Universal Rules:
 
-**Review your work from Phase 4-5:**
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-### Phase 4: UX Design Complete?
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on verifying completeness of the flow before handoff
+- 🚫 FORBIDDEN to proceed with incomplete flows
+- 💬 Approach: Systematic checklist review of Phase 4-5 outputs
+- 📋 Do NOT proceed until the flow is truly complete
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Review Phase 4 and Phase 5 outputs for completeness
+- 💾 Record completion status for each checklist item
+- 📖 Reference scenario specifications and design system components
+- 🚫 FORBIDDEN to skip any checklist category
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Scenario specifications, design system components, user flows
+- Focus: Completion detection only
+- Limits: Do not create deliverables (that is step 02)
+- Dependencies: Phase 4 (UX Design) and Phase 5 (Design System) work must be done
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Phase 4: UX Design Complete?
+
+Review with user:
 
 - [ ] All scenarios for this flow are specified
 - [ ] Each scenario has complete specifications
@@ -20,9 +71,9 @@ Check if you have a complete testable flow ready for handoff.
 
 **Location:** `C-UX-Scenarios/XX-scenario-name/`
 
----
+### 2. Phase 5: Design System Complete?
 
-### Phase 5: Design System Complete?
+Review with user:
 
 - [ ] All components for this flow are defined
 - [ ] Design tokens are documented
@@ -32,100 +83,61 @@ Check if you have a complete testable flow ready for handoff.
 
 **Location:** `D-Design-System/03-Atomic-Components/`
 
----
+### 3. Flow Completeness
 
-### Flow Completeness
+Verify with user:
 
-- [ ] **Flow is testable:** Entry point → Exit point, complete
+- [ ] **Flow is testable:** Entry point -> Exit point, complete
 - [ ] **Flow delivers business value:** Measurable business outcome
 - [ ] **Flow delivers user value:** Solves user problem
 - [ ] **No blockers:** All dependencies resolved
 - [ ] **No unknowns:** All design decisions made
 
----
+### 4. Present MENU OPTIONS
 
-## Example: Login & Onboarding Flow
+Display: "**Select an Option:** [C] Continue to Create Delivery | [M] Return to Activity Menu"
 
-```
-✓ Scenario 01: Welcome screen (complete)
-✓ Scenario 02: Login (complete)
-✓ Scenario 03: Signup (complete)
-✓ Scenario 04: Family setup (complete)
+**If flow is NOT complete**, guide user back to the appropriate phase:
 
-✓ Components: Button, Input, Card (all defined)
-✓ Design tokens: Colors, Typography, Spacing (documented)
+- If scenarios are incomplete: Return to Phase 4 UX Design
+- If components are incomplete: Return to Phase 5 Design System
+- If flow is not testable: Identify missing pieces
 
-✓ Testable: App open → Dashboard (complete flow)
-✓ Business value: Users can access the app
-✓ User value: Easy onboarding experience
-✓ No blockers: All technical requirements clear
+#### Menu Handling Logic:
 
-→ Ready for Handover step 02!
-```
+- IF C: Load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#4-present-menu-options)
 
----
+#### EXECUTION RULES:
 
-## Decision Point
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
 
-**Is your flow complete and ready for handoff?**
+## CRITICAL STEP COMPLETION NOTE
 
-### ✅ YES - Flow is Complete
-
-**Proceed to Handover step 02:**
-
-```
-[C] Continue to steps-h/step-02-create-delivery.md
-```
+ONLY WHEN the user selects an option from the menu and has confirmed the flow is complete will you proceed to the next step or return as directed.
 
 ---
 
-### ❌ NO - Flow is Not Complete
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-**What's missing?**
+### ✅ SUCCESS:
 
-**If scenarios are incomplete:**
+- All scenarios for this flow verified as specified
+- All components for this flow verified as defined
+- Flow confirmed as testable end-to-end
+- Flow delivers measurable value
+- No blockers or unknowns remain
+- User confirmed readiness to proceed
 
-- Return to Phase 4: UX Design
-- Complete missing scenarios
-- Return to this step when done
+### ❌ SYSTEM FAILURE:
 
-**If components are incomplete:**
+- Proceeding with incomplete scenarios
+- Missing component definitions
+- Flow has gaps or unknowns
+- Dependencies not resolved
+- Design decisions not finalized
+- Not confirming with user before proceeding
 
-- Return to Phase 5: Design System
-- Define missing components
-- Return to this step when done
-
-**If flow is not testable:**
-
-- Identify missing pieces
-- Complete the flow
-- Return to this step when done
-
----
-
-## Success Metrics
-
-✅ All scenarios for this flow are specified
-✅ All components for this flow are defined
-✅ Flow is testable end-to-end
-✅ Flow delivers measurable value
-✅ No blockers or unknowns
-✅ User confirmed readiness to proceed
-
----
-
-## Failure Modes
-
-❌ Proceeding with incomplete scenarios
-❌ Missing component definitions
-❌ Flow has gaps or unknowns
-❌ Dependencies not resolved
-❌ Design decisions not finalized
-
----
-
-## Next Step
-
-After confirming completion, load `./step-02-create-delivery.md` to create the Design Delivery.
-
-**Remember:** Do NOT proceed until the flow is truly complete!
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,22 +1,69 @@
-# Step 08: Update Design Log
+---
+name: step-08-update-design-log
+description: Document Phase 3 completion in the project design log
 
-**Goal:** Document Phase 3 completion in the project design log.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-08-update-design-log.md'
+nextStepFile: '{workflow_path}/steps-c/step-09-handover.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Why This Step Exists
+# Step 8: Update Design Log
 
-The design log is the project's memory. It lets any agent or human understand what happened, when, and why — without re-reading all artifacts. Do not skip this step.
+## STEP GOAL:
 
----
+Document Phase 3 completion in the project design log, recording all artifacts created, key decisions made, and quality scores achieved.
 
-## 1. Read the Current Log
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a UX Scenario Architect collaborating with the project owner
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring scenario thinking and user journey expertise, user brings their project knowledge, together we create concrete UX scenario outlines
+- ✅ Maintain collaborative equal-partner tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on updating the design log with accurate Phase 3 data
+- 🚫 FORBIDDEN to overwrite existing log entries — only append
+- 💬 Approach: Be specific and factual in documentation
+- 📋 List every artifact file created — no summarizing with "etc."
+
+## EXECUTION PROTOCOLS:
+
+- 📖 Read the existing design log before making changes
+- 📋 Append progress entry after the last existing entry
+- ✅ Record key decisions if any were made during Phase 3
+- 🚫 FORBIDDEN to use generic summaries — be specific
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All Phase 3 artifacts, quality review results, scenario data
+- Focus: Design log documentation only
+- Limits: No scenario modifications, only log updates
+- Dependencies: Quality review must be complete from Step 7
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Read the Current Log
 
 Read `{output_folder}/_progress/00-progress.md` to understand existing entries and format.
 
----
-
-## 2. Append Progress Entry
+### 2. Append Progress Entry
 
 Add the following under the `## Progress` section (after the last entry):
 
@@ -42,9 +89,7 @@ Add the following under the `## Progress` section (after the last entry):
 - Summary must mention specific decisions, not generic statements
 - Use the actual date, not a placeholder
 
----
-
-## 3. Record Key Decisions
+### 3. Record Key Decisions
 
 Add rows to the `## Key Decisions` table for any significant choices made during Phase 3:
 
@@ -60,25 +105,52 @@ Examples of key decisions worth logging:
 
 If no significant decisions were made, skip this section.
 
----
-
-## 4. Verify
+### 4. Verify
 
 - [ ] Progress entry appended (not overwriting existing entries)
 - [ ] All artifact files listed
 - [ ] Summary is specific, not generic
 - [ ] Key decisions recorded (if any)
 
+### 5. Present MENU OPTIONS
+
+Display: "Are you ready to [C] Continue to Handover?"
+
+#### Menu Handling Logic:
+
+- IF C: Load, read entire file, then execute {nextStepFile}
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- After other menu items execution, return to this menu
+- User can chat or ask questions - always respond and then end with display again of the menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN [C continue option] is selected and [design log updated with all required information], will you then load and read fully `{nextStepFile}` to execute and begin the handover process.
+
 ---
 
-## Output
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-<output>Design log updated. Phase 3: UX Scenarios documented in _progress/00-progress.md</output>
+### ✅ SUCCESS:
 
----
+- Existing log read before making changes
+- Progress entry appended (not overwriting)
+- All artifact files listed individually
+- Summary is specific with concrete decisions mentioned
+- Key decisions recorded where applicable
+- Verification checklist passes
+- Menu presented and user input handled correctly
 
-## Next Step
+### ❌ SYSTEM FAILURE:
 
-<action>Load and execute: step-09-handover.md</action>
+- Overwriting existing log entries
+- Summarizing artifacts with "etc." instead of listing each
+- Using generic summary statements
+- Not reading existing log first
+- Missing artifact files from the list
 
-Do NOT skip ahead.
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

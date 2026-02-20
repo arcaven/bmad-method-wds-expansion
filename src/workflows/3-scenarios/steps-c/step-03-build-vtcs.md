@@ -1,10 +1,67 @@
-# Step 03: Build Value Trigger Chains
+---
+name: 'step-03-build-vtcs'
+description: 'Extract Value Trigger Chains from Trigger Map to identify which scenarios to create'
 
-**Goal:** Extract Value Trigger Chains (VTCs) from the Trigger Map to identify which scenarios to create.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-03-build-vtcs.md'
+nextStepFile: '{workflow_path}/steps-c/step-04-suggest-scenarios.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## What is a Value Trigger Chain?
+# Step 3: Build Value Trigger Chains
+
+## STEP GOAL:
+
+Extract Value Trigger Chains (VTCs) from the Trigger Map, assign pages to each VTC, prioritize them, and verify complete coverage of all pages.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a UX Scenario Architect collaborating with the project owner
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring scenario thinking and user journey expertise, user brings their project knowledge, together we create concrete UX scenario outlines
+- ✅ Maintain collaborative equal-partner tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on building VTCs, assigning pages, and prioritizing
+- 🚫 FORBIDDEN to create scenario outlines — only identify and plan scenarios
+- 💬 Approach: Systematically trace paths from business goals to user actions
+- 📋 Every page from the inventory must be assigned to exactly one VTC
+
+## EXECUTION PROTOCOLS:
+
+- 🔗 Trace complete chains from Business Goal → Persona → Force → Transaction → Scenario
+- 📋 Answer all 7 Decision Matrix questions for each VTC
+- 📊 Assign pages ensuring no repetition and full coverage
+- 🚫 FORBIDDEN to leave any page unassigned
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Product Brief, Trigger Map, approved page inventory from Step 2
+- Focus: VTC extraction, page assignment, prioritization
+- Limits: No scenario outlining, no file creation — only planning
+- Dependencies: Approved scope analysis from Step 2
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Build VTCs
+
+**What is a Value Trigger Chain?**
 
 A VTC traces the path from business strategy to user action:
 
@@ -20,10 +77,6 @@ BG01: Reduce info calls by 40%
       → Transaction: Confirm mechanic capability + get directions
         → 01: "Hasse's Emergency Search"
 ```
-
----
-
-## 1. Build VTCs
 
 For **each business goal** from the Trigger Map:
 
@@ -44,9 +97,7 @@ For **each business goal** from the Trigger Map:
 | 6 | What value does user get? | [Tangible outcome] |
 | 7 | What value does business get? | [Measurable result] |
 
----
-
-## 2. Assign Pages to VTCs
+### 2. Assign Pages to VTCs
 
 For each VTC, list which pages from the inventory (Step 02) the user visits.
 
@@ -55,9 +106,7 @@ For each VTC, list which pages from the inventory (Step 02) the user visits.
 - If a page could fit multiple scenarios, assign it to the highest-priority one
 - Shared elements (navigation, footer) are excluded from page assignment
 
----
-
-## 3. Prioritize
+### 3. Prioritize
 
 Rank the VTCs:
 
@@ -73,9 +122,7 @@ Rank the VTCs:
 - Admin tasks, rare user segments, error recovery
 - May be deferred to later phases
 
----
-
-## 4. Coverage Check
+### 4. Coverage Check
 
 After building all VTCs, verify:
 
@@ -86,9 +133,7 @@ After building all VTCs, verify:
 
 **If pages are unassigned:** Create additional VTCs or expand existing ones to cover them.
 
----
-
-## Output
+### 5. Present VTC List
 
 Present the complete VTC list:
 
@@ -108,10 +153,45 @@ Present the complete VTC list:
 ### Coverage: [X/Y] pages assigned
 ```
 
+### 6. Present MENU OPTIONS
+
+Display: "Are you ready to [C] Continue to Scenario Suggestions?"
+
+#### Menu Handling Logic:
+
+- IF C: Load, read entire file, then execute {nextStepFile}
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- After other menu items execution, return to this menu
+- User can chat or ask questions - always respond and then end with display again of the menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN [C continue option] is selected and [VTC list with full page coverage presented], will you then load and read fully `{nextStepFile}` to execute and begin scenario suggestions.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-<action>Load and execute: step-04-suggest-scenarios.md</action>
+### ✅ SUCCESS:
 
-Do NOT skip ahead.
+- All business goals traced through complete VTC chains
+- All 7 Decision Matrix questions answered for each VTC
+- Every page from inventory assigned to exactly one VTC
+- VTCs prioritized with clear rationale
+- Coverage check passes (all pages assigned, no duplicates)
+- Complete VTC list presented to user
+- Menu presented and user input handled correctly
+
+### ❌ SYSTEM FAILURE:
+
+- Leaving pages unassigned
+- Assigning pages to multiple VTCs
+- Skipping Decision Matrix questions
+- Creating scenario outlines during this step
+- Not verifying coverage before proceeding
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

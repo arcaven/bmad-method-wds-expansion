@@ -1,12 +1,67 @@
-# Substep 4C-01: Page Basics
+---
+name: 'step-01-page-basics'
+description: 'Capture fundamental page information including title, route, goals, and SEO data'
 
-**Goal:** Capture fundamental page information
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-p/step-01-page-basics.md'
+nextStepFile: '{workflow_path}/steps-p/step-02-layout-sections.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-specify.md'
 ---
 
-## EXECUTION
+# Step 1: Page Basics
 
-<output>**Let's start with the page basics.** 📝</output>
+## STEP GOAL:
+
+Capture fundamental page information including title, URL/route, user goal, entry/exit points, and SEO data for public pages.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on capturing page basics — title, route, goals, entry/exit points, SEO
+- 🚫 FORBIDDEN to define layout sections or components yet
+- 💬 Approach: Structured information gathering with examples
+- 📋 Reference project brief SEO strategy for keyword data
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Gather all page basics through structured questions
+- 💾 Store page_basics (title, route, goal, entry/exit points, SEO data)
+- 📖 Reference project brief for SEO keywords
+- 🚫 FORBIDDEN to skip SEO fields for public pages
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Scenario data, page definition from Suggest activity
+- Focus: Fundamental page information only
+- Limits: Do not define layout or components (next steps)
+- Dependencies: Page must exist in scenario structure
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Gather Page Basics
+
+<output>**Let's start with the page basics.**</output>
 
 <ask>**Page basics:**
 
@@ -34,35 +89,45 @@ Check the project brief's SEO Strategy for this page's target keywords.
 - url_slug (if public page)
   </action>
 
-<output>✅ **Page basics captured!**
+<output>**Page basics captured!**
 
 **Next:** We'll define the layout sections.</output>
 
----
+### 2. Present MENU OPTIONS
 
-## MENU
+Display: "**Select an Option:** [C] Continue to Layout Sections | [M] Return to Activity Menu"
 
-<ask>[C] Continue to 4C-02 (Layout Sections)</ask>
+#### Menu Handling Logic:
 
----
+- IF C: Load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#2-present-menu-options)
 
-## EXAMPLE OUTPUT
+#### EXECUTION RULES:
 
-```yaml
-page_basics:
-  title: 'Sign In'
-  route: '/auth/signin'
-  user_goal: 'Authenticate to access their account'
-  entry_points:
-    - "Landing page 'Sign In' button"
-    - 'Protected route redirects'
-  exit_points:
-    - 'Dashboard (success)'
-    - 'Password reset (forgot password)'
-```
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user selects an option from the menu and all page basics have been captured will you proceed to the next step or return as directed.
 
 ---
 
-## NEXT STEP
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Load `step-02-layout-sections.md`
+### ✅ SUCCESS:
+
+- Page title, route, and user goal captured
+- Entry and exit points defined
+- SEO data captured for public pages
+- All page_basics stored
+
+### ❌ SYSTEM FAILURE:
+
+- Generating page basics without user input
+- Skipping SEO fields for public pages
+- Proceeding to layout without capturing basics
+- Not storing page_basics
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

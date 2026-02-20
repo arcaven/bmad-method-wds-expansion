@@ -1,10 +1,63 @@
-# Step 01: Identify Target
+---
+name: 'step-01-identify-target'
+description: 'Define what to reverse engineer, how to access it, and what to extract'
 
-**Goal:** Define what to reverse engineer, how to access it, and what to extract.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-r/step-01-identify-target.md'
+nextStepFile: '{workflow_path}/steps-r/step-02-explore-and-capture.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-reverse-engineering.md'
 ---
 
-## Process
+# Step 1: Identify Target
+
+## STEP GOAL:
+
+Define what to reverse engineer, how to access it, and what to extract.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on defining the target, determining access method, defining extraction goals, and documenting the target overview
+- 🚫 FORBIDDEN to begin exploring or capturing the target — that is the next step
+- 💬 Approach: Help user clearly define what they want to reverse engineer and what they need from it
+- 📋 Access method must be verified before proceeding
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Clear target definition with access method and extraction goals
+- 💾 Document target overview in dialog file
+- 📖 Reference the target type table and extraction goals checklist
+- 🚫 Do not begin exploring or capturing any content
+
+## CONTEXT BOUNDARIES:
+
+- Available context: User's initial request or target description
+- Focus: Target identification — what, how, and what to extract
+- Limits: No exploration, no capturing
+- Dependencies: None — this is the first step
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Define the Target
 
@@ -66,17 +119,44 @@ Target Overview:
 - Notes: [Login required? Special states? Known complexity?]
 ```
 
----
-
-## Checklist
+### 5. Verify Checklist
 
 - [ ] Target clearly identified with name and type
 - [ ] Access method determined and verified (URL loads, source exists, screenshots provided)
 - [ ] Extraction goals defined
 - [ ] Target overview documented
 
+### 6. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 2: Explore and Capture"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the target is defined with access method verified and extraction goals documented will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-02-explore-and-capture.md
+### ✅ SUCCESS:
+- Target clearly identified with name and type
+- Access method determined and verified
+- Extraction goals defined
+- Target overview documented
+
+### ❌ SYSTEM FAILURE:
+- Beginning exploration before target is fully defined
+- Not verifying access method
+- Not defining extraction goals
+- Skipping target documentation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

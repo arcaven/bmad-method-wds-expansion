@@ -1,288 +1,139 @@
-# Step 01: Prepare for Acceptance Testing
+---
+name: 'step-01-prepare'
+description: 'Gather all materials and set up testing environment before starting validation'
 
-## Your Task
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-t/step-01-prepare.md'
+nextStepFile: '{workflow_path}/steps-t/step-02-execute.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-acceptance-testing.md'
+---
+
+# Step 1: Prepare for Acceptance Testing
+
+## STEP GOAL:
 
 Gather all materials and set up your testing environment before starting validation.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Before You Start
+### Universal Rules:
 
-**Ensure you have:**
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-- ✅ Testing dialog created or resumed
-- ✅ Testing time scheduled
-- ✅ Build information verified
+### Role Reinforcement:
 
----
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
 
-## Gather Materials
+### Step-Specific Rules:
 
-### Test Scenario
+- 🎯 Focus only on gathering test materials, setting up environment, preparing test data, and creating testing workspace
+- 🚫 FORBIDDEN to begin executing tests — that is the next step
+- 💬 Approach: Systematically walk through preparation with user, ensuring nothing is missed
+- 📋 All materials must be gathered and environment verified before testing begins
 
-**Load test scenario file:**
+## EXECUTION PROTOCOLS:
 
-- File: `test-scenarios/TS-XXX.yaml`
+- 🎯 All materials gathered, environment set up, test data prepared, workspace created
+- 💾 Document preparation status in dialog file
+- 📖 Reference test scenario file and design delivery file
+- 🚫 Do not execute any tests during preparation
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Test scenario file, design delivery file, scenario specifications, design system specs
+- Focus: Preparation — materials, environment, data, workspace, time estimation
+- Limits: No test execution
+- Dependencies: Test scenario file and design delivery must exist
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Gather Materials
+
+#### Test Scenario
+- Load test scenario file: `test-scenarios/TS-XXX.yaml`
 - Review all test cases
 - Understand success criteria
 - Note any special setup needed
 
-**Print or display:**
-
-- Have test scenario visible while testing
-- Check off tests as you complete them
-- Take notes on deviations
-
----
-
-### Design Delivery
-
-**Load Design Delivery file:**
-
-- File: `deliveries/DD-XXX.yaml`
+#### Design Delivery
+- Load Design Delivery file: `deliveries/DD-XXX.yaml`
 - Review user value and success criteria
 - Review acceptance criteria
 - Understand what "done" looks like
 
----
-
-### Scenario Specifications
-
-**Load all scenario specs:**
-
-- Directory: `C-UX-Scenarios/`
+#### Scenario Specifications
+- Load all scenario specs from `C-UX-Scenarios/`
 - Review each scenario specification
 - Note design details
 - Understand expected behavior
 
-**Example:**
-
-```
-C-UX-Scenarios/
-├── 01-welcome/Frontend/specifications.md
-├── 02-login/Frontend/specifications.md
-├── 03-signup/Frontend/specifications.md
-└── 04-family-setup/Frontend/specifications.md
-```
-
----
-
-### Design System Specs
-
-**Load design system specs:**
-
-- Directory: `D-Design-System/`
+#### Design System Specs
+- Load design system specs from `D-Design-System/`
 - Review component specifications
 - Review design tokens
 - Note exact colors, sizes, spacing
 
-**Example:**
+### 2. Set Up Environment
 
-```
-D-Design-System/
-├── 02-Foundation/
-│   ├── Colors/tokens.json
-│   ├── Typography/tokens.json
-│   └── Spacing/tokens.json
-└── 03-Atomic-Components/
-    ├── Buttons/Button-Primary.md
-    ├── Inputs/Input-Text.md
-    └── Cards/Card-Default.md
-```
+#### Access the Build
+- Staging URL, credentials, platform
+- Install build if needed (TestFlight, APK, or web staging)
 
----
+#### Prepare Test Devices
+- Primary device: charged, WiFi, screen recording enabled, screenshot tools ready
+- Secondary device (if needed): different platform, screen size, OS version
 
-## Set Up Environment
+#### Set Up Tools
+- Screen recording (QuickTime, built-in, OBS Studio)
+- Screenshot tools with annotation
+- Markdown editor and note-taking
+- Accessibility tools (VoiceOver/TalkBack, contrast checker, zoom)
 
-### Access the Build
+### 3. Prepare Test Data
 
-**Staging environment:**
+Create test accounts and prepare test data:
+- Valid and invalid emails
+- Strong and weak passwords
+- Special characters
+- Edge case data (long names, etc.)
 
-- URL: [Staging URL]
-- Credentials: [Username/Password]
-- Platform: [iOS/Android/Web]
+### 4. Create Testing Workspace
 
-**Install build (if needed):**
-
-```bash
-# iOS TestFlight
-- Open TestFlight app
-- Install build v0.1.0-beta.1
-
-# Android
-- Download APK from [URL]
-- Install on device
-
-# Web
-- Navigate to [Staging URL]
-- Clear cache first
-```
-
----
-
-### Prepare Test Devices
-
-**Primary device:**
-
-- [ ] Device charged (>80%)
-- [ ] Connected to WiFi
-- [ ] Screen recording enabled
-- [ ] Screenshot tools ready
-
-**Secondary device (if needed):**
-
-- [ ] Different platform (iOS vs Android)
-- [ ] Different screen size
-- [ ] Different OS version
-
----
-
-### Set Up Tools
-
-**Screen recording:**
-
-- [ ] QuickTime (Mac)
-- [ ] Built-in screen recorder (iOS/Android)
-- [ ] OBS Studio (Desktop)
-
-**Screenshot tools:**
-
-- [ ] Native screenshot (Command+Shift+4)
-- [ ] Annotate screenshots (Preview, Skitch)
-
-**Note-taking:**
-
-- [ ] Markdown editor open
-- [ ] Test tracking document ready
-- [ ] Issue template ready
-
-**Accessibility tools:**
-
-- [ ] VoiceOver (iOS) or TalkBack (Android)
-- [ ] Color contrast checker
-- [ ] Zoom/magnification
-
----
-
-## Prepare Test Data
-
-**Create test accounts:**
-
-```
-Test User 1:
-- Email: test1@example.com
-- Password: TestPass123!
-- Purpose: Happy path testing
-
-Test User 2:
-- Email: test2@example.com
-- Password: TestPass123!
-- Purpose: Error state testing
-
-Test User 3:
-- Email: existing@example.com
-- Password: TestPass123!
-- Purpose: "Email already exists" error
-```
-
-**Prepare test data:**
-
-- [ ] Valid emails
-- [ ] Invalid emails (for error testing)
-- [ ] Strong passwords
-- [ ] Weak passwords (for validation testing)
-- [ ] Special characters
-- [ ] Edge case data (very long names, etc.)
-
----
-
-## Create Testing Workspace
-
-**File structure:**
-
+Create file structure:
 ```
 testing/DD-XXX/
 ├── screenshots/
-│   ├── HP-001-step-1.png
-│   ├── HP-001-step-2.png
-│   └── ISS-001-button-color.png
 ├── screen-recordings/
-│   ├── happy-path-full-flow.mov
-│   └── error-state-email-exists.mov
 ├── notes.md
 └── issues-found.md
 ```
 
-**Create directories:**
+### 5. Review Test Plan
 
-```bash
-mkdir -p testing/DD-XXX/screenshots
-mkdir -p testing/DD-XXX/screen-recordings
-touch testing/DD-XXX/notes.md
-touch testing/DD-XXX/issues-found.md
-```
+Understand what you are testing:
+- Happy Path Tests: count, flows, expected results
+- Error State Tests: count, scenarios, error messages
+- Edge Case Tests: count, unusual scenarios, expected behavior
+- Design System Validation: components to check, specifications
+- Accessibility Tests: screen reader, contrast, touch targets
 
----
+### 6. Time Estimate
 
-## Review Test Plan
+Calculate total testing time with 20% buffer.
 
-**Understand what you're testing:**
-
-### Happy Path Tests
-
-- [ ] [Number] tests defined
-- [ ] Understand each test flow
-- [ ] Know expected results
-
-### Error State Tests
-
-- [ ] [Number] tests defined
-- [ ] Understand error scenarios
-- [ ] Know expected error messages
-
-### Edge Case Tests
-
-- [ ] [Number] tests defined
-- [ ] Understand unusual scenarios
-- [ ] Know expected behavior
-
-### Design System Validation
-
-- [ ] [Number] components to check
-- [ ] Know exact specifications
-- [ ] Have design tokens ready
-
-### Accessibility Tests
-
-- [ ] Screen reader testing
-- [ ] Color contrast checking
-- [ ] Touch target verification
-
----
-
-## Time Estimate
-
-**Calculate testing time:**
-
-```
-Happy Path Tests: [number] tests × 5 min = [time]
-Error State Tests: [number] tests × 3 min = [time]
-Edge Case Tests: [number] tests × 5 min = [time]
-Design System: [number] components × 10 min = [time]
-Accessibility: 30 min
-Documentation: 1 hour
-
-Total: [time]
-Buffer (20%): [time]
-
-Estimated Total: [time]
-```
-
----
-
-## Final Checklist
-
-**Before starting testing:**
+### 7. Verify Checklist
 
 - [ ] Test scenario loaded and reviewed
 - [ ] Design Delivery loaded and reviewed
@@ -294,106 +145,44 @@ Estimated Total: [time]
 - [ ] Test data prepared
 - [ ] Workspace created
 - [ ] Time blocked on calendar
-- [ ] BMad notified you're starting
+
+### 8. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 2: Execute"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN all materials are gathered, environment is set up, and workspace is ready will you then load and read fully `{nextStepFile}` to execute.
 
 ---
 
-## Start Testing
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-**When ready:**
+### ✅ SUCCESS:
+- All materials gathered
+- Environment set up and accessible
+- Test devices ready
+- Tools configured
+- Test data prepared
+- Workspace created
+- Test plan reviewed
+- Time estimated
 
-```
-WDS Designer → BMad Developer
+### ❌ SYSTEM FAILURE:
+- Starting testing without materials
+- Cannot access staging environment
+- Test devices not ready
+- No screen recording capability
+- No test data prepared
+- No time estimate
 
-"Starting validation testing for DD-XXX now.
-
-Environment: Staging
-Device: iPhone 14 Pro (iOS 17)
-Test Scenario: TS-XXX.yaml
-
-Will report back with results by [date/time].
-
-Thanks!"
-```
-
----
-
-## Next Step
-
-After preparation is complete:
-
-```
-[C] Continue to step-02-execute.md
-```
-
----
-
-## Success Metrics
-
-✅ All materials gathered
-✅ Environment set up and accessible
-✅ Test devices ready
-✅ Tools configured
-✅ Test data prepared
-✅ Workspace created
-✅ Test plan reviewed
-✅ Time estimated
-✅ BMad notified
-
----
-
-## Failure Modes
-
-❌ Starting testing without materials
-❌ Can't access staging environment
-❌ Test devices not ready
-❌ No screen recording capability
-❌ No test data prepared
-❌ No time estimate
-❌ Not notifying BMad
-
----
-
-## Tips
-
-### DO ✅
-
-**Be thorough:**
-
-- Gather everything before starting
-- Don't interrupt testing to find files
-
-**Be organized:**
-
-- Create workspace structure
-- Name files clearly
-- Take notes as you go
-
-**Be realistic:**
-
-- Estimate time accurately
-- Add buffer for issues
-- Block calendar time
-
-### DON'T ❌
-
-**Don't rush:**
-
-- Take time to prepare properly
-- Don't skip setup steps
-
-**Don't improvise:**
-
-- Follow test scenario
-- Use prepared test data
-- Stick to the plan
-
-**Don't forget tools:**
-
-- Screen recording is critical
-- Screenshots document issues
-- Notes capture details
-
----
-
-**Remember:** Good preparation = efficient testing. Take time to set up properly!
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

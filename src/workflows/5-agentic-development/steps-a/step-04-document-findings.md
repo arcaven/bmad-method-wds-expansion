@@ -1,10 +1,62 @@
-# Step 04: Document Findings
+---
+name: 'step-04-document-findings'
+description: 'Create a structured architecture document that answers the original questions, includes diagrams, and provides actionable recommendations'
 
-**Goal:** Create a structured architecture document that answers the original questions, includes diagrams, and provides actionable recommendations.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-a/step-04-document-findings.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-analysis.md'
 ---
 
-## Process
+# Step 4: Document Findings
+
+## STEP GOAL:
+
+Create a structured architecture document that answers the original questions, includes diagrams, and provides actionable recommendations.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on creating the final architecture document with diagrams and recommendations
+- 🚫 FORBIDDEN to redo analysis — use findings from Steps 2 and 3
+- 💬 Approach: Collaboratively structure and write the document with user, ensuring original questions are answered
+- 📋 Include at least one Mermaid diagram and prioritized recommendations
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Produce a complete architecture document answering the original questions
+- 💾 Save the document to the project's output location
+- 📖 Reference all findings from Steps 1-3
+- 🚫 Do not restart analysis — synthesize existing findings
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Question and scope from Step 1; scan from Step 2; architecture map from Step 3
+- Focus: Document synthesis, diagrams, risk assessment, recommendations
+- Limits: No new analysis — document what was found
+- Dependencies: Steps 1, 2, and 3 must be complete
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Create the Architecture Document
 
@@ -148,9 +200,7 @@ Save the document to the project's output location. If no output location is def
 - `docs/architecture/` in the analyzed project, or
 - The dialog output folder if using the agent dialog system
 
----
-
-## Checklist
+### 6. Verify Checklist
 
 - [ ] Document answers the original questions from Step 01
 - [ ] Summary is clear and concise (2-3 sentences)
@@ -159,8 +209,39 @@ Save the document to the project's output location. If no output location is def
 - [ ] Recommendations are specific, actionable, and prioritized
 - [ ] Document saved to output folder
 
+### 7. Present MENU OPTIONS
+
+Display: "**Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+- IF M: Update agent dialog, then load, read entire file, then execute {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed when user selects 'M'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the architecture document is complete and saved will you then load and read fully `{activityWorkflowFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Return to activity menu
+### ✅ SUCCESS:
+- Document answers the original questions from Step 01
+- Summary is clear and concise (2-3 sentences)
+- At least one Mermaid diagram included
+- Risks and tech debt listed with severity
+- Recommendations are specific, actionable, and prioritized
+- Document saved to output folder
+
+### ❌ SYSTEM FAILURE:
+- Document does not answer original questions
+- No diagrams included
+- Recommendations are vague or not prioritized
+- Document not saved
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

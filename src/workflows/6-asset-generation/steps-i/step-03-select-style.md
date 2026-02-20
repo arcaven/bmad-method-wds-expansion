@@ -1,70 +1,118 @@
-# Step 03: Select Style
-
-**Goal:** Define the icon style — outline weight, fill treatment, and visual consistency rules.
-
+---
+name: 'step-03-select-style'
+description: 'Define the icon style including outline weight, fill treatment, grid, and color mode'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-i/step-03-select-style.md'
+nextStepFile: '{workflow_path}/steps-i/step-04-generate.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-icons.md'
 ---
 
-## Actions
+# Step 3: Select Style
 
-### 1. Icon Style
+## STEP GOAL:
 
-```
-Icon style:
+Define the complete icon style — outline weight, fill treatment, grid alignment, and color mode — ensuring visual consistency rules are established before generation begins.
 
-[O] Outline        — Line icons with consistent stroke weight
-[F] Filled         — Solid filled shapes
-[D] Duotone        — Two-tone with primary + lighter secondary
-[G] Glyph          — Minimal, symbol-like
-```
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-### 2. Style Parameters
+### Universal Rules:
 
-Based on selection, configure:
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-**Outline:**
-- Stroke width: [1px / 1.5px / 2px]
-- Line cap: [round / square]
-- Line join: [round / miter]
-- Corner radius: [sharp / rounded]
+### Role Reinforcement:
 
-**Filled:**
-- Fill style: [solid / gradient-subtle]
-- Corner radius: [sharp / rounded / circular]
+- ✅ You are a creative production partner defining icon visual standards
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring icon design system expertise, user brings aesthetic preferences
+- ✅ Maintain a design-focused, precise tone
 
-**Duotone:**
-- Primary color: [from design system]
-- Secondary opacity: [20% / 30% / 40%]
+### Step-Specific Rules:
 
-### 3. Grid and Alignment
+- 🎯 Focus ONLY on defining icon style parameters
+- 🚫 FORBIDDEN to generate any icons in this step
+- 💬 Present clear options for each style dimension
+- 📋 Confirm complete style configuration before proceeding
 
-```
-Icon grid:
-- Canvas: [24x24] with [2px] padding = [20x20] live area
-- Alignment: centered on pixel grid
-- Optical sizing: adjust to appear equal visual weight
-```
+## EXECUTION PROTOCOLS:
 
-### 4. Color Treatment
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document complete icon style configuration
+- 📖 Align style choices with design system tokens
+- 🚫 FORBIDDEN to proceed without confirmed style
 
-```
-Color mode:
+## CONTEXT BOUNDARIES:
 
-[M] Monochrome     — Single color (inherits from context via currentColor)
-[B] Brand colors   — Use brand palette for category distinction
-[F] Fixed color    — Specific hex per icon
-```
+- Available context: Icon inventory (Step 2), design system tokens
+- Focus: Defining visual style rules for icon generation
+- Limits: Do not generate — just define the style
+- Dependencies: Icon inventory and scope from Step 2
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Select Icon Style
+
+Present options: [O] Outline, [F] Filled, [D] Duotone, [G] Glyph. Wait for selection.
+
+### 2. Configure Style Parameters
+
+Based on selection, configure detailed parameters:
+- Outline: stroke width, line cap, line join, corner radius
+- Filled: fill style, corner radius
+- Duotone: primary color, secondary opacity
+
+### 3. Define Grid and Alignment
+
+Canvas size (e.g., 24x24 with 2px padding = 20x20 live area), pixel grid alignment, optical sizing rules.
+
+### 4. Select Color Treatment
+
+Present options: [M] Monochrome (currentColor), [B] Brand colors (category distinction), [F] Fixed color (specific hex per icon).
 
 ### 5. Confirm Style
 
-```
-Icon Style:
-- Style: [outline/filled/duotone/glyph]
-- Parameters: [stroke/fill details]
-- Grid: [size] with [padding] padding
-- Color: [mode]
-- Format: SVG primary, PNG fallback at [sizes]
-```
+Present complete configuration summary: style, parameters, grid, color, output format (SVG primary, PNG fallback).
+
+### 6. Present MENU OPTIONS
+
+Display: **"Select an Option:** [C] Continue"
+
+#### Menu Handling Logic:
+
+- IF C: Save style configuration, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN C is selected and the style is confirmed will you load {nextStepFile} to begin generating icons.
 
 ---
 
-**Next:** → step-04-generate.md
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Icon style selected and parameters configured
+- Grid and alignment rules defined
+- Color treatment selected
+- Complete style summary confirmed by user
+
+### ❌ SYSTEM FAILURE:
+
+- Generating icons without defined style
+- Not configuring detailed parameters for selected style
+- Skipping grid alignment definition
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

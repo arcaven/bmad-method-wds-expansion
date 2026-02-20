@@ -1,47 +1,89 @@
 ---
-nextStepFile: './step-05-section-order.md'
+name: 'step-04-page-sections'
+description: 'Verify that page specification has properly structured Page Sections with Object IDs, component references, and behavior specifications'
+
+# Path Definitions
+workflow_path: '{installed_path}'
+
+# File References
+thisStepFile: '{workflow_path}/steps-v/step-04-page-sections.md'
+nextStepFile: '{workflow_path}/steps-v/step-05-section-order.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-validate.md'
 ---
 
 # Step 4: Validate Page Sections
 
-## Purpose
+## STEP GOAL:
 
 Verify that page specification has properly structured Page Sections with Object IDs, component references, and behavior specifications.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Page Sections define the actual UI components and their behavior. Object IDs enable traceability from spec → code → Figma. Component references ensure design system consistency. Behavior specs reduce developer guesswork. This is the core implementation guidance section.
+### Universal Rules:
 
-## Key Elements
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-This step validates:
-- "## Page Sections" header present
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on validating Page Sections structure, Object IDs, and component references
+- 🚫 FORBIDDEN to skip Object ID format validation
+- 💬 Approach: Check hierarchy, Object IDs, component refs, behavior specs, responsive docs
+- 📋 Page Sections are the core implementation guidance — Object IDs enable traceability
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Validate Page Sections header, hierarchy, Object IDs, component references, behavior specs
+- 💾 Update page specification if fixes are approved by user
+- 📖 Reference design system for component validation
+- 🚫 FORBIDDEN to skip responsive behavior check when platform declares responsive
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Page specification, design system components, page metadata
+- Focus: Page Sections structure validation only
+- Limits: Do not validate section order (that is step 05)
+- Dependencies: Page specification must exist with Page Metadata validated
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Check Page Sections Structure
+
+Check for "## Page Sections" header. Verify:
 - Section Objects (H3) with clear purpose statements
 - Component specs (H4) with Object IDs in format `OBJECT ID: object-name`
 - Design system component references
 - Content specifications for each component
 - Behavior specifications (interactions, states, validation)
 - Proper hierarchy (H3 for sections, H4 for components)
-- **Responsive behavior documentation** (if page metadata declares responsive platform)
 
-## Instructions
+### 2. Platform-Specific Validation
 
-Check for "## Page Sections" header. Verify all sections use H3 headers with purpose statements. Confirm all components use H4 headers with Object IDs in correct format.
-
-Validate that components reference design system (links to component docs), specify content clearly, and document behavior/interactions.
-
-**Platform-Specific Validation:**
 If Page Metadata declares **Responsive Web Application** or **Primary Viewport: Mobile-first/Desktop-first**, check that responsive behavior is documented for key components (layout changes, navigation patterns, content reflow, viewport-specific interactions).
+
+### 3. Generate Diagnostic Report
 
 If Page Sections missing, report as CRITICAL. If Object IDs missing or malformed, report as CRITICAL. If component references or behavior specs missing, report as WARNING. If responsive platform declared but no responsive behavior documented, report as WARNING.
 
 Generate diagnostic report showing missing Object IDs, incorrect formatting, missing component references, missing responsive documentation, and provide examples of correct structure.
 
-## Next Step
+### 4. Resolve Issues
 
-After validating page sections, proceed to step-05-section-order.md
+If issues found, present to user and ask if they want you to fix the Page Sections structure.
 
-## Validation Checklist
+### 5. Record Validation Result
 
 ```yaml
 page_sections_validated:
@@ -56,3 +98,46 @@ page_sections_validated:
   responsive_behavior_documented: [true/false/not_applicable]
   status: [pass/warning/critical]
 ```
+
+### 6. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Validate Section Order | [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF C: Load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user selects an option from the menu and the page sections validation is complete will you proceed to the next step or return as directed.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Page Sections header and hierarchy validated
+- All Object IDs checked for presence and format
+- Component references validated against design system
+- Behavior specifications checked
+- Responsive behavior validated when applicable
+- Diagnostic report generated
+- Issues resolved with user approval
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping Object ID format validation
+- Not checking component references against design system
+- Ignoring responsive behavior when platform requires it
+- Auto-fixing issues without user approval
+- Proceeding without recording validation result
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

@@ -1,141 +1,156 @@
-# Documentation Synthesis - Step 5: Gap Analysis & Validation
+---
+name: 'step-00f-gap-analysis'
+description: 'Analyze gaps and validate strategic alignment of documentation synthesis'
 
-<critical>Identify what's strong vs. weak in documentation</critical>
-<critical>Validate strategic alignment between docs and plans</critical>
+# Path Definitions
+workflow_path: '{installed_path}'
 
-<step>
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-00f-gap-analysis.md'
+nextStepFile: '{workflow_path}/steps-c/step-01-overview.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-<output>**Gap Analysis & Validation**
+# Step 6: Gap Analysis & Validation
 
-Let me analyze what we've built from your documentation...</output>
+## STEP GOAL:
 
-<action>Compare original documentation to synthesized Trigger Map:
-- What was clear and strong?
-- What was vague or missing?
-- What did we fill through conversation?
-- Are there contradictions or misalignments?
-</action>
+Analyze what was strong vs. weak in the documentation, validate strategic alignment between documentation and plans, and prepare a comprehensive summary of what has been built from the existing documentation.
 
-<output>**Documentation Strengths:**
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-{{#each strengths}}
-✅ {{this.area}}: {{this.description}}
-{{/each}}</output>
+### Universal Rules:
 
-<check if="gaps_identified">
-  <output>**Gaps Identified:**
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-{{#each gaps}}
-⚠️ **{{this.area}}**: {{this.gap}}
-   - Impact: {{this.impact}}
-   - What we did: {{this.how_filled}}
-{{/each}}</output>
-</check>
+### Role Reinforcement:
 
-<check if="critical_gaps">
-  <output>**Critical Gaps:**
+- ✅ You are Saga the Analyst - validating strategic alignment and identifying gaps
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structured facilitation and pattern recognition, user brings business knowledge and user insight
+- ✅ Work together as equals in a partnership, not a client-vendor relationship
 
-{{#each critical_gaps}}
-❌ **{{this.area}}**: {{this.gap}}
-   - **Impact:** {{this.impact}}
-   - **Recommendation:** {{this.recommendation}}
-{{/each}}</output>
+### Step-Specific Rules:
 
-  <ask>These gaps could affect your strategy. Would you like to:
+- 🎯 Focus on identifying strengths, gaps, and strategic alignment
+- 🚫 FORBIDDEN to skip alignment validation or ignore contradictions
+- 💬 Approach: Honest assessment of documentation quality with constructive recommendations
+- 📋 Identify what was strong vs. weak in documentation
+- 📋 Validate strategic alignment between stated vision and actual plans
 
+## EXECUTION PROTOCOLS:
+
+- 🎯 Compare original documentation to synthesized Trigger Map
+- 💾 Store gap_analysis and alignment_check results
+- 📖 Present clear summary of strengths, gaps, and alignment
+- 🚫 Do not proceed until user decides how to handle gaps
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Original documentation, all synthesized outputs (vision, objectives, personas, forces, priorities)
+- Focus: Gap analysis, strategic alignment validation, summary
+- Limits: Be honest about gaps - do not gloss over weaknesses
+- Dependencies: Requires all previous extraction steps completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Analyze Documentation Strengths
+
+Compare original documentation to synthesized Trigger Map. Identify what was clear and strong.
+
+Present documentation strengths.
+
+### 2. Identify Gaps
+
+Determine what was vague or missing, what was filled through conversation, and any contradictions or misalignments.
+
+Present gaps identified with their impact and how they were filled.
+
+### 3. Handle Critical Gaps (If Any)
+
+If critical gaps exist, present them and ask:
+"These gaps could affect your strategy. Would you like to:
 a. **Address now** - Fill these gaps through focused conversation
 b. **Note for later** - Document as areas for future research
-c. **Accept as-is** - Work with what we have
+c. **Accept as-is** - Work with what we have"
 
-Which approach?</ask>
+If address now: Run targeted mini-workshops for critical gaps.
+If note for later: Document gaps in handover notes.
 
-  <check if="address_now">
-    <action>Run targeted mini-workshops for critical gaps</action>
-  </check>
+### 4. Strategic Alignment Check
 
-  <check if="note_for_later">
-    <action>Document gaps in handover notes</action>
-  </check>
-</check>
-
-<output>---
-
-**Strategic Alignment Check**</output>
-
-<action>Reverse engineer: Does the plan match the vision?
+Reverse engineer alignment: Does the plan match the vision?
 - Compare stated vision to implied vision from plans
 - Check if objectives align with vision
 - Verify target groups serve objectives
 - Validate features address drivers
-</action>
 
-<output>**Consistency Check:**
+**If alignment good:** Confirm strong alignment and explain how objectives, groups, and forces connect to support the vision.
 
-Your documentation says you want:
-> {{vision_statement}}
+**If alignment issues:** Present potential misalignments with what documentation says vs. what plan implies. Ask if these should be addressed before finalizing.
 
-Your plan/features suggest:
-> {{plan_implications}}</output>
+Discuss and resolve misalignments if needed.
 
-<check if="alignment_good">
-  <output>✅ **Strong alignment** - Your plans effectively support your vision.
+### 5. Present Accomplishment Summary
 
-The Trigger Map reveals a coherent strategy where:
-- Objectives measure progress toward vision
-- Target groups drive objectives through their usage
-- Driving forces are addressed by planned approach</output>
-</check>
+Output what was accomplished:
+- Clear Vision (statement)
+- Strategic Objectives (count and SMART status)
+- Prioritized Target Groups (count with behavioral profiles)
+- Driving Forces (count, both positive and negative)
+- Strategic Focus (statement)
+- Gap Analysis (areas identified for future research)
 
-<check if="alignment_issues">
-  <output>⚠️ **Potential misalignment detected:**
+Explain what they now have (single-slide reference instead of extensive docs) and what they can do with it (reference in design work, share in AI chats, team alignment, feature prioritization, design decisions).
 
-{{#each misalignments}}
-**Issue {{@index + 1}}:** {{this.issue}}
-- **Documentation says:** {{this.doc_says}}
-- **Plan implies:** {{this.plan_implies}}
-- **Recommendation:** {{this.recommendation}}
-{{/each}}</output>
+Ask: "Ready to proceed to documentation generation and handover?"
 
-  <ask>These misalignments could indicate:
-- Vision and plan aren't fully aligned
-- Documentation is outdated
-- Hidden assumptions need surfacing
+Store gap_analysis and alignment_check.
 
-Should we address these before finalizing the Trigger Map?</ask>
+### 6. Present MENU OPTIONS
 
-  <action>Discuss and resolve misalignments</action>
-</check>
+Display: "**Select an Option:** [C] Continue to Overview | [M] Return to Activity Menu"
 
-<output>---
+#### Menu Handling Logic:
+- IF C: Load and execute {nextStepFile}
+- IF M: Return to {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-**What You've Accomplished**
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-From your documentation, we've created:
+## CRITICAL STEP COMPLETION NOTE
 
-✅ **Clear Vision**: {{vision_statement}}
-✅ **{{objective_count}} Strategic Objectives**: Measurable and SMART
-✅ **{{group_count}} Prioritized Target Groups**: Behavioral profiles with psychological depth
-✅ **{{driver_count}} Driving Forces**: Both positive and negative
-✅ **Strategic Focus**: {{focus_statement}}
-✅ **Gap Analysis**: {{gap_count}} areas identified for future research
+ONLY WHEN user selects [C] will you load the next step file. Gap analysis and alignment check must be complete and user must confirm readiness to proceed.
 
-**What you now have:**
-- Single-slide strategic reference (instead of {{page_count}} pages)
-- Clear priorities for design decisions
-- Psychological insights organized and actionable
-- Gaps identified for future research
-- Validated strategic alignment
+---
 
-**What you can do with this:**
-- Reference it in daily design work
-- Share it in AI chats for context (much better than pasting extensive docs)
-- Use it for team alignment
-- Guide feature prioritization
-- Validate design decisions</output>
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-<ask>Ready to proceed to documentation generation and handover?</ask>
+### ✅ SUCCESS:
+- Documentation strengths clearly identified
+- Gaps identified with impact assessment
+- Critical gaps addressed or documented for later
+- Strategic alignment validated (vision vs. plan vs. groups vs. forces)
+- Misalignments surfaced and discussed
+- Comprehensive summary presented
+- User confirmed readiness to proceed
+- gap_analysis and alignment_check stored
 
-<template-output>gap_analysis</template-output>
-<template-output>alignment_check</template-output>
+### ❌ SYSTEM FAILURE:
+- Skipping gap analysis
+- Not checking strategic alignment
+- Glossing over contradictions in documentation
+- Not giving user choice on how to handle gaps
+- Missing critical gaps that could affect strategy
+- Not presenting accomplishment summary
+- Proceeding without user confirmation
 
-</step>
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

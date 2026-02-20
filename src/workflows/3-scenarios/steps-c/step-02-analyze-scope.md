@@ -1,10 +1,65 @@
-# Step 02: Analyze Scope & Scale Strategy
+---
+name: 'step-02-analyze-scope'
+description: 'Determine site type, list all pages/views, assess scale, and select approach mode'
 
-**Goal:** Determine site type, list all pages/views, assess scale, and select approach mode.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-02-analyze-scope.md'
+nextStepFile: '{workflow_path}/steps-c/step-03-build-vtcs.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## 1. Site Type Detection
+# Step 2: Analyze Scope & Scale Strategy
+
+## STEP GOAL:
+
+Determine site type, list all pages/views, assess scale, select approach mode, and present the analysis for user approval at this critical checkpoint.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a UX Scenario Architect collaborating with the project owner
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring scenario thinking and user journey expertise, user brings their project knowledge, together we create concrete UX scenario outlines
+- ✅ Maintain collaborative equal-partner tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on scope analysis, page inventory, and scale strategy
+- 🚫 FORBIDDEN to proceed past the user checkpoint without explicit user approval
+- 💬 Approach: Present structured analysis and wait for user confirmation
+- 📋 This is a USER CHECKPOINT — do not auto-proceed
+
+## EXECUTION PROTOCOLS:
+
+- 🔍 Classify site type based on Product Brief data
+- 📋 Create complete page inventory from all sources
+- 📊 Assess scale and recommend approach mode
+- 🚫 FORBIDDEN to skip user checkpoint — must wait for explicit approval
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Product Brief data, Trigger Map data loaded in Step 1
+- Focus: Site classification, page inventory, scale assessment
+- Limits: No scenario creation, no VTC building — only scope analysis
+- Dependencies: Step 1 context must be loaded
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Site Type Detection
 
 Based on Product Brief, classify the site:
 
@@ -21,9 +76,7 @@ Based on Product Brief, classify the site:
 **Mixed** (presentation site with dynamic features):
 - Use both formats as needed per scenario
 
----
-
-## 2. List All Pages/Views
+### 2. List All Pages/Views
 
 Create a complete list of every page or view from the Product Brief.
 
@@ -45,9 +98,7 @@ Create a complete list of every page or view from the Product Brief.
 - Include pages implied by business goals (e.g., if goal mentions "booking" there's a booking page)
 - Do NOT include generic shared elements (header, footer, navigation) — these are documented separately
 
----
-
-## 3. Scale Assessment
+### 3. Scale Assessment
 
 Based on page count, determine strategy:
 
@@ -66,9 +117,7 @@ Based on page count, determine strategy:
 - Mode recommendation: **Dialog**
 - Deep work on business-critical flow (learning effect reveals patterns for rest)
 
----
-
-## 4. Page Documentation Strategy
+### 4. Page Documentation Strategy
 
 Determine how to handle similar pages:
 
@@ -80,9 +129,7 @@ Determine how to handle similar pages:
 - Structurally identical pages with only content differences
 - Example: 500 product pages with same layout, different product data
 
----
-
-## 5. Present Analysis (USER CHECKPOINT)
+### 5. Present Analysis (USER CHECKPOINT)
 
 Present to user and **wait for approval**:
 
@@ -107,16 +154,45 @@ Present to user and **wait for approval**:
 
 **WAIT for user response.** Do not proceed until user confirms.
 
+### 6. Present MENU OPTIONS
+
+Display: "Are you ready to [C] Continue to Building Value Trigger Chains?"
+
+#### Menu Handling Logic:
+
+- IF C: Load, read entire file, then execute {nextStepFile}
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- After other menu items execution, return to this menu
+- User can chat or ask questions - always respond and then end with display again of the menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN [C continue option] is selected and [user has explicitly approved the scope analysis], will you then load and read fully `{nextStepFile}` to execute and begin building VTCs.
+
 ---
 
-## Output
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-User-confirmed page inventory, site type, scale strategy, and mode.
+### ✅ SUCCESS:
 
----
+- Site type correctly classified from Product Brief data
+- Complete page inventory created with all pages accounted for
+- Scale assessment matches page count
+- Page documentation strategy determined
+- Analysis presented clearly at user checkpoint
+- User explicitly approves before proceeding
+- Menu presented and user input handled correctly
 
-## Next Step
+### ❌ SYSTEM FAILURE:
 
-<action>Load and execute: step-03-build-vtcs.md</action>
+- Proceeding without user approval at checkpoint
+- Missing pages from the inventory
+- Incorrect site type classification
+- Skipping scale assessment or mode recommendation
+- Auto-proceeding past the user checkpoint
 
-Do NOT skip ahead.
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

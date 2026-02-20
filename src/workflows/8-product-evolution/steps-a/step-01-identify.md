@@ -1,99 +1,104 @@
-# Step 01: Identify Opportunity
+---
+name: 'step-01-identify'
+description: 'Identify the strategic challenge or improvement opportunity for this Kaizen cycle'
 
-## Your Task
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Identify the strategic challenge or improvement opportunity you'll address in this Kaizen cycle.
+# File References
+thisStepFile: '{workflow_path}/steps-a/step-01-identify.md'
+nextStepFile: '{workflow_path}/steps-a/step-02-gather-context.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-analyze.md'
 
+# Data References
+contextTemplates: '{workflow_path}/data/context-templates.md'
+kaizenPrinciples: '{workflow_path}/data/kaizen-principles.md'
 ---
 
-## Two Contexts
+# Step 1: Identify Opportunity
 
-This step works differently depending on your context:
+## STEP GOAL:
 
-### Context A: Existing Product Entry Point
+Identify the strategic challenge or improvement opportunity to address in this Kaizen cycle. This step works differently depending on context: entering an existing product for the first time, or continuously improving a live product you already designed.
 
-You're joining an existing product to solve a strategic challenge
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-### Context B: Continuous Improvement (Post-Launch)
+### Universal Rules:
 
-You're iterating on a live product based on data and feedback
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
----
+### Role Reinforcement:
 
-## Context A: Existing Product Entry Point
+- ✅ You are Idunn, a product evolution specialist guiding continuous improvement
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring systematic improvement expertise and Kaizen methodology, user brings product knowledge and business context
+- ✅ Maintain analytical and strategic tone throughout
 
-### You're Brought In to Solve a Problem
+### Step-Specific Rules:
 
-**Typical scenarios:**
+- 🎯 Focus ONLY on identifying the opportunity — do not design solutions yet
+- 🚫 FORBIDDEN to jump to solutions before the problem is clearly defined
+- 💬 Approach: Ask strategic questions, use data, quantify impact
+- 📋 Every opportunity must connect to a persona or business goal
 
-- Product has a critical UX issue (high drop-off, low engagement)
-- New feature needs expert design
-- Product needs strategic improvement
-- Team needs a linchpin designer
+## EXECUTION PROTOCOLS:
 
----
+- 🎯 Determine context (existing product entry vs continuous improvement)
+- 💾 Document opportunity in limited brief or improvement file
+- 📖 Ensure opportunity is specific, measurable, and scoped for Kaizen
+- 🚫 FORBIDDEN to accept vague problem definitions — push for specifics
 
-### Understand the Strategic Challenge
+## CONTEXT BOUNDARIES:
 
-**Ask these questions:**
+- Available context: Agent dialog from workflow entry, project configuration
+- Focus: Problem identification and opportunity framing only
+- Limits: Do not gather detailed context yet (that's step 02), do not design solutions
+- Dependencies: Active agent dialog created during workflow initialization
 
-1. **What's the problem?** - What specific issue, what's broken, what metrics show it?
-2. **Why now?** - Why priority, business impact, what if we don't fix?
-3. **What's the scope?** - Which screens/features, what can we change?
-4. **What's success?** - How to measure, target metric, when?
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
----
+### 1. Determine Context
 
-### Document the Challenge
+Ask the user which context applies:
 
-**Create:** `A-Project-Brief/limited-brief.md`
+**Context A: Existing Product Entry Point** — You're joining an existing product to solve a strategic challenge
 
-**See:** [data/context-templates.md](../data/context-templates.md) for Limited Project Brief template
+**Context B: Continuous Improvement (Post-Launch)** — You're iterating on a live product based on data and feedback
 
----
+### 2. Context A: Existing Product Entry Point
 
-## Context B: Continuous Improvement (Post-Launch)
+If the user is entering an existing product:
 
-### Your Product is Live
+**Ask these strategic questions:**
 
-You're monitoring performance and iterating based on data.
+1. **What's the problem?** — What specific issue, what's broken, what metrics show it?
+2. **Why now?** — Why is this a priority, business impact, what if we don't fix?
+3. **What's the scope?** — Which screens/features, what can we change?
+4. **What's success?** — How to measure, target metric, when?
 
----
+**Document the challenge:**
 
-### Monitor Product Performance
+Create `A-Project-Brief/limited-brief.md` using the Limited Project Brief template from {contextTemplates}.
+
+### 3. Context B: Continuous Improvement
+
+If the user is improving a live product:
 
 **Gather data from multiple sources:**
 
-#### 1. Analytics
+- **Analytics:** User engagement (DAU, WAU, MAU), feature usage, drop-off points, conversion rates
+- **User Feedback:** Support tickets, app store reviews, in-app feedback, user interviews
+- **Team Insights:** What are developers, support, and stakeholders noticing?
 
-Check key metrics:
-- User engagement (DAU, WAU, MAU)
-- Feature usage (which features are used?)
-- Drop-off points (where do users leave?)
-- Conversion rates (are users completing goals?)
+**Apply Kaizen prioritization framework:**
 
-#### 2. User Feedback
-
-Review feedback channels:
-- Support tickets
-- App store reviews
-- In-app feedback
-- User interviews
-
-#### 3. Team Insights
-
-Talk to your team:
-- What are developers noticing?
-- What are support seeing?
-- What are stakeholders concerned about?
-
----
-
-### Identify Improvement Opportunity
-
-**Use the Kaizen prioritization framework:**
-
-### Priority = Impact × Effort × Learning
+Priority = Impact × Effort × Learning
 
 | Factor | High | Medium | Low |
 |--------|------|--------|-----|
@@ -101,63 +106,50 @@ Talk to your team:
 | **Effort** | 1-2 days | 3-5 days | 1-2 weeks |
 | **Learning** | Tests hypothesis | Validates assumption | Incremental |
 
----
+**Document the opportunity:**
 
-### Document the Opportunity
+Create `improvements/IMP-XXX-description.md` using the Improvement Opportunity template from {contextTemplates}.
 
-**Create:** `improvements/IMP-XXX-description.md`
+### 4. Present MENU OPTIONS
 
-**See:** [data/context-templates.md](../data/context-templates.md) for Improvement Opportunity template
+Display: "**Select an Option:** [C] Continue to Gather Context"
 
----
+#### Menu Handling Logic:
 
-## Next Step
+- IF C: Update agent dialog with identified opportunity, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#4-present-menu-options)
 
-After identifying the opportunity:
+#### EXECUTION RULES:
 
-```
-[C] Continue to step-02-gather-context.md (next step in this activity)
-```
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then redisplay menu options
 
----
+## CRITICAL STEP COMPLETION NOTE
 
-## Success Metrics
-
-✅ Strategic challenge or opportunity identified
-✅ Problem clearly defined
-✅ Impact quantified
-✅ Scope defined
-✅ Success criteria established
-✅ Documented in limited brief or improvement file
+ONLY WHEN [C continue option] is selected and [opportunity identified, documented, and connected to persona or business goal], will you then load and read fully `{nextStepFile}` to execute and begin context gathering.
 
 ---
 
-## Failure Modes
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-❌ Vague problem definition
-❌ No data to support priority
-❌ Scope too large (not Kaizen)
-❌ No success metrics
-❌ Not understanding root cause
+### ✅ SUCCESS:
 
----
+- Strategic challenge or improvement opportunity clearly identified
+- Problem defined with specifics and data (not vague)
+- Impact quantified or estimated
+- Scope defined and appropriate for Kaizen (small, focused)
+- Success criteria established
+- Documented in limited brief or improvement file
+- Agent dialog updated with opportunity summary
 
-## Tips
+### ❌ SYSTEM FAILURE:
 
-### DO ✅
+- Accepting vague problem definitions ("make it better")
+- Jumping to solutions before problem is understood
+- Scope too large for a Kaizen cycle
+- No connection to persona or business goal
+- No success metrics defined
+- Proceeding without user confirmation
 
-**Be specific:** Quantify the problem, use real data, define clear scope
-
-**Be strategic:** Focus on high-impact changes, small incremental improvements
-
-**Be data-driven:** Use analytics, listen to user feedback, test hypotheses
-
-### DON'T ❌
-
-**Don't be vague:** "Make it better" ❌ → "40% drop-off at onboarding" ✅
-
-**Don't boil the ocean:** Complete redesign ❌ → Targeted improvement ✅
-
----
-
-**Remember:** Kaizen is about small, strategic improvements that compound over time!
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

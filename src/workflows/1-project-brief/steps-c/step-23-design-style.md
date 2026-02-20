@@ -1,123 +1,148 @@
-# Step 4: Design Style
+---
+name: 'step-23-design-style'
+description: 'Define design style choices using Design Nomenclature vocabulary'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Define specific design style choices using the Design Nomenclature vocabulary.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-23-design-style.md'
+nextStepFile: '{workflow_path}/steps-c/step-24-layout-effects.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Context for Agent
+# Step 23: Design Style
 
-Use the Design Nomenclature reference to precisely define visual direction. This creates shared vocabulary between strategy, design, and development.
+## STEP GOAL:
+Define specific design style choices using the Design Nomenclature vocabulary to create shared vocabulary between strategy, design, and development.
 
-## Reference Documents
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-Load and reference as needed:
-- `docs/models/design-nomenclature/ui-visual-styles.md`
-- `docs/models/design-nomenclature/design-aesthetics.md`
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Instructions
+### Role Reinforcement:
+- You are a Strategic Business Analyst guiding design style decisions with precise vocabulary
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-1. **Determine UI visual style**
+### Step-Specific Rules:
+- Focus: UI visual style, design aesthetic, color direction, typography direction
+- FORBIDDEN: Do not make style decisions without presenting rationale based on references and mood
+- Approach: Recommend with rationale, confirm or adjust, document decisions
 
-   Based on references and mood, recommend a UI style:
+## EXECUTION PROTOCOLS:
+- Primary goal: Design style, color direction, and typography direction defined
+- Save/document outputs appropriately
+- Avoid generating content without user input
+- **Reference Documents:** Load as needed: `docs/models/design-nomenclature/ui-visual-styles.md`, `docs/models/design-nomenclature/design-aesthetics.md`, `docs/models/design-nomenclature/color-terminology.md`, `docs/models/design-nomenclature/typography-classification.md`
 
-   | Style | When to Use |
-   |-------|-------------|
-   | **Flat Design** | Clean, simple, content-focused |
-   | **Material Design** | Structured, Android alignment |
-   | **Neobrutalism** | Bold, modern, startup feel |
-   | **Glassmorphism** | Premium, layered, Apple-like |
-   | **Minimal** | Maximum restraint, luxury |
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, existing brand, visual references, mood keywords
+- Focus: Design style decisions with precise vocabulary
+- Limits: Direction, not final design choices - informing designers
+- Dependencies: Step 22 completed
 
-   Present recommendation with rationale:
-   "Based on your references, I'd recommend [style] because [reasons]."
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-   Confirm or adjust with user.
+### 1. Determine UI Visual Style
 
-2. **Determine design aesthetic**
+Based on references and mood, recommend a UI style:
 
-   Beyond UI style, what era/movement influences apply?
+| Style | When to Use |
+|-------|-------------|
+| **Flat Design** | Clean, simple, content-focused |
+| **Material Design** | Structured, Android alignment |
+| **Neobrutalism** | Bold, modern, startup feel |
+| **Glassmorphism** | Premium, layered, Apple-like |
+| **Minimal** | Maximum restraint, luxury |
 
-   | Aesthetic | Markers |
-   |-----------|---------|
-   | **Minimalism** | White space, essential elements |
-   | **Mid-Century Modern** | Clean lines, organic curves |
-   | **Service Center** | Practical, trust-focused |
-   | **Corporate** | Professional, conventional |
-   | **Local/Artisan** | Warm, personal, handcrafted feel |
+Present recommendation with rationale:
+"Based on your references, I'd recommend [style] because [reasons]."
 
-3. **Color direction**
+Confirm or adjust with user.
 
-   Based on existing brand and preferences:
-   - Color scheme type: Monochromatic, Complementary, etc.
-   - Palette direction: Warm/cool, light/dark, saturated/muted
-   - Any colors to avoid?
+### 2. Determine Design Aesthetic
 
-   Reference: `docs/models/design-nomenclature/color-terminology.md`
+Beyond UI style, what era/movement influences apply?
 
-4. **Typography direction**
+| Aesthetic | Markers |
+|-----------|---------|
+| **Minimalism** | White space, essential elements |
+| **Mid-Century Modern** | Clean lines, organic curves |
+| **Service Center** | Practical, trust-focused |
+| **Corporate** | Professional, conventional |
+| **Local/Artisan** | Warm, personal, handcrafted feel |
 
-   Based on tone and style:
-   - Headlines: Geometric, Humanist, Serif?
-   - Body: Readable, Neo-grotesque?
-   - Personality: Bold, refined, friendly?
+### 3. Color Direction
 
-   Reference: `docs/models/design-nomenclature/typography-classification.md`
+Based on existing brand and preferences:
+- Color scheme type: Monochromatic, Complementary, etc.
+- Palette direction: Warm/cool, light/dark, saturated/muted
+- Any colors to avoid?
 
-5. **Document in output**
-   - Fill in Design Style section
-   - Fill in Color Direction section
-   - Fill in Typography Direction section
+### 4. Typography Direction
 
-## Example Output
+Based on tone and style:
+- Headlines: Geometric, Humanist, Serif?
+- Body: Readable, Neo-grotesque?
+- Personality: Bold, refined, friendly?
 
-```
-UI Style: Flat/Material hybrid
-- Clean, minimal decoration
-- Subtle shadows for hierarchy
-- Consistent with Autoexperten alignment
+### 5. Document in Output
+- Fill in Design Style section
+- Fill in Color Direction section
+- Fill in Typography Direction section
 
-Aesthetic: "Service Center" meets "Local"
-- Professional and trustworthy
-- Warm, personal touches
-- Not cold corporate
-
-Colors:
-- Dark navy base (Autoexperten alignment)
-- White/light text for contrast
-- Warm accent (to soften)
-- Scheme: Analogous warm accents on cool base
-
-Typography:
-- Headlines: Geometric sans (modern, clean)
-- Body: Humanist sans (readable, warm)
-- Examples: Inter, Open Sans, Poppins
-```
-
-
-## Agent Dialog Update
-
+### 6. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### [Step Name]
-**Q:** [Key questions asked]
+### Step 23: Design Style
+**Q:** UI style, aesthetic, color direction, typography?
 **A:** [User responses - summarized]
-**Documented in:** visual-direction.md ([section name])
+**Documented in:** visual-direction.md (Design Style, Color, Typography sections)
 **Key insights:** [Important decisions or revelations]
 **Status:** Complete
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing design style, proceed to step-24-layout-effects.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-existing-brand.md', 'step-03-references.md', 'step-04-design-style.md']
-ui_style: '[style]'
-aesthetic: '[aesthetic]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- UI visual style defined with rationale
+- Design aesthetic identified
+- Color direction established
+- Typography direction set
+- User confirmed all decisions
+- Documented in output
+
+### FAILURE:
+- Made style decisions without rationale from references
+- Skipped user confirmation
+- Generated design style without user collaboration
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

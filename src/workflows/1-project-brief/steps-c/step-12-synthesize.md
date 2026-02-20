@@ -1,18 +1,55 @@
-# Step 12: Synthesize and Create Brief
+---
+name: 'step-12-synthesize'
+description: 'Synthesize all captured information and generate the complete Product Brief document'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Present a cohesive synthesis of everything captured, get final confirmation, and generate the complete Product Brief document.
-
-## Context for Agent
-
-**Philosophy:** This isn't a template-fill exercise - tell the story of what you've learned. Present the strategic narrative, invite reflection, make it feel complete and purposeful.
-
-**Your role:** Strategic synthesizer helping user see the whole picture.
-
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-12-synthesize.md'
+nextStepFile: '{workflow_path}/steps-c/step-13-content-init.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
 ---
 
-## Instructions
+# Step 12: Synthesize and Create Brief
+
+## STEP GOAL:
+Present a cohesive synthesis of everything captured, get final confirmation, and generate the complete Product Brief document.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+- You are a Strategic Business Analyst and synthesizer helping user see the whole picture
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
+
+### Step-Specific Rules:
+- Focus: Tell the strategic narrative, not a template-fill exercise
+- FORBIDDEN: Do not present as a checklist - present as a coherent story
+- Approach: Present narrative, invite reflection, handle adjustments, generate document
+
+## EXECUTION PROTOCOLS:
+- Primary goal: Complete Product Brief document generated and confirmed
+- Save/document outputs appropriately
+- Avoid generating content without user input
+
+## CONTEXT BOUNDARIES:
+- Available context: All steps 1-11a completed
+- Focus: Synthesis and document generation
+- Limits: Not adding new strategic elements - synthesizing what exists
+- Dependencies: Steps 1-11a completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Present the Strategic Narrative
 
@@ -126,7 +163,7 @@ Present a cohesive synthesis of everything captured, get final confirmation, and
 
 **Show the completed brief and celebrate:**
 
-> "✅ **Product Brief complete!**
+> "Product Brief complete!
 >
 > I've documented everything in `[output_location]/product-brief.md`
 >
@@ -168,88 +205,35 @@ Present a cohesive synthesis of everything captured, get final confirmation, and
 **Completion:** [Timestamp]
 ```
 
----
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-## State Update
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-Update frontmatter:
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-```yaml
-stepsCompleted:
-  [
-    'step-01-init.md',
-    'step-02-vision.md',
-    'step-03-positioning.md',
-    'step-04-create-vtc.md',
-    'step-05-business-model.md',
-    'step-06-business-customers.md',
-    'step-07-target-users.md',
-    'step-08-success-criteria.md',
-    'step-09-competitive-landscape.md',
-    'step-10-constraints.md',
-    'step-11-tone-of-voice.md',
-    'step-12-synthesize.md',
-  ]
-status: 'complete'
-completed_date: '[YYYY-MM-DD]'
-```
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
 ---
 
-## Workflow Complete
+## SYSTEM SUCCESS/FAILURE METRICS
 
-**The user now has:**
-- ✅ Complete Product Brief document
-- ✅ Full agent dialog history documenting the conversation
-- ✅ Strategic foundation for Phase 2 (Trigger Mapping)
+### SUCCESS:
+- Strategic narrative presented as coherent story
+- User confirmed or refined the narrative
+- Complete Product Brief document generated
+- Document is readable and useful (not template-speak)
+- All dialog files updated
 
-**Next Phase:** Phase 2 - Trigger Mapping
+### FAILURE:
+- Presented as checklist instead of narrative
+- Generated document without user confirmation
+- Skipped reflection/adjustment opportunity
 
----
-
-## Example
-
-**Agent:** "We've covered a lot of ground! Let me share back the strategic foundation we've built for Källa Fordonservice:
-
-**The Vision**
-A professional website that showcases comprehensive vehicle service capability (lawnmowers to tour buses) and establishes credibility for northern Öland's trusted auto service expert.
-
-**Who It's For**
-- **Primary:** Year-round local vehicle owners needing reliable full-service garage
-- **Secondary:** Summer tourists with breakdown needs, uncertain if garages can handle their vehicle type
-
-**The Problem & Opportunity**
-Vehicle owners on northern Öland waste time calling around asking 'do you service X?'Källa handles all vehicles but has no web presence to communicate this breadth + expertise.
-
-**Positioning**
-For vehicle owners in northern Öland who need reliable service for any type of vehicle, Källa Fordonservice is a full-spectrum certified garage that provides peace of mind with 20+ years of trusted expertise. Unlike garages that specialize or can't handle certain vehicles, we service everything from lawnmowers to tour buses as the region's only AutoExperten-certified comprehensive option.
-
-**Success Looks Like**
-50% reduction in basic inquiry calls ('do you service X?') by end of June, measured against current 20-30% of calls. Summer tourist discovery increase measured by new customer calls June-August.
-
-**The Reality**
-- Launch by May (before summer season)
-- Budget: 20-30k SEK
-- Simple build (standalone, contact form)
-- Design through Whiteport
-
-**What Makes You Win**
-20+ years comprehensive expertise + equipment for all vehicle types + northern Öland geographic monopoly. Hard to replicate all three.
-
-Does this capture the strategic foundation?"
-
-**User:** "Yeah, that's perfect - that's exactly it."
-
-**Agent:** "Excellent! I'll generate the complete Product Brief document now."
-
-**[Generates document, presents completion]**
-
-**Agent:** "✅ **Product Brief complete!**
-
-I've documented everything in `design-process/A-Product-Brief/product-brief.md`
-
-This gives you the strategic foundation for all design decisions - who it's for, why it matters, and what success looks like.
-
-**What's next:** Phase 2: Trigger Mapping to identify key user scenarios (like stressed tourist breakdown vs year-round local annual service).
-
-Ready to move forward?"
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

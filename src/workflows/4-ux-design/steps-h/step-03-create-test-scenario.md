@@ -1,37 +1,63 @@
-# Step 03: Create Test Scenario
+---
+name: 'step-03-create-test-scenario'
+description: 'Define how to validate Design Delivery after implementation'
 
-**Goal:** Define how to validate Design Delivery after implementation
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-h/step-03-create-test-scenario.md'
+nextStepFile: '{workflow_path}/steps-h/step-04-handoff-dialog.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-handover.md'
 ---
 
-## Purpose
+# Step 3: Create Test Scenario
 
-Create a Test Scenario file that guides validation testing.
+## STEP GOAL:
 
-This file documents:
-- What to test (test objectives)
-- Happy path flows
-- Error states to verify
-- Edge cases to handle
-- Design system validation
-- Accessibility testing
-- Sign-off criteria
+Define how to validate Design Delivery after implementation by creating a Test Scenario file.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## Before You Start
+### Universal Rules:
 
-**Ensure you have:**
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-- Completed step 02 (Design Delivery created)
-- Design Delivery file: `deliveries/DD-XXX-name.yaml`
-- Clear understanding of what needs testing
+### Role Reinforcement:
 
----
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
 
-## Instructions
+### Step-Specific Rules:
 
-Work through each section in sequence to build the Test Scenario file.
+- 🎯 Focus on creating a complete Test Scenario file
+- 🚫 FORBIDDEN to skip any test type category
+- 💬 Approach: Work through each test category sequentially with user input
+- 📋 Test Scenario guides validation testing after implementation
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Build Test Scenario file section by section with user input
+- 💾 Save test scenario file to `test-scenarios/TS-XXX-name.yaml`
+- 📖 Reference Design Delivery file for test objectives
+- 🚫 FORBIDDEN to save incomplete test scenario
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Design Delivery file, scenario specifications, design system
+- Focus: Test scenario creation only
+- Limits: Do not conduct tests (that is a later phase)
+- Dependencies: Design Delivery file must be created (step 02)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Initialize Test Scenario File
 
@@ -92,9 +118,7 @@ For boundary conditions and unusual scenarios:
 - **Nice-to-fix**: Issues to track but not blocking (minor visual differences)
 - **Approval process**: Who signs off and how
 
----
-
-## Validation
+### 8. Validate Test Scenario File
 
 Before proceeding, verify:
 
@@ -105,14 +129,49 @@ Before proceeding, verify:
 - [ ] Accessibility tests are included
 - [ ] Sign-off criteria are clear
 
----
-
-## Next Step
-
-After Test Scenario file is complete:
-
 <output>Test Scenario file created: `test-scenarios/TS-XXX-name.yaml`</output>
 
-<action>Load and execute: step-04-handoff-dialog.md</action>
+### 9. Present MENU OPTIONS
 
-Do NOT skip ahead.
+Display: "**Select an Option:** [C] Continue to Handoff Dialog | [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF C: Load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#9-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user selects an option from the menu and the Test Scenario file has been created and validated will you proceed to the next step or return as directed.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Test scenario ID matches delivery ID
+- Happy path tests defined for all main flows
+- Error state tests defined
+- Edge case tests defined
+- Design system validation defined
+- Accessibility tests included
+- Sign-off criteria clear
+- Test scenario file saved
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping any test type category
+- Saving incomplete test scenario
+- Not linking to Design Delivery
+- Tests without clear expected results
+- Missing accessibility tests
+- Generating tests without user input
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

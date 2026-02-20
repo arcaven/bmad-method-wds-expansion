@@ -1,10 +1,63 @@
-# Step 04: Implement
+---
+name: 'step-04-implement'
+description: 'Implement changes incrementally, verifying at each step'
 
-**Goal:** Implement changes incrementally, verifying at each step.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-e/step-04-implement.md'
+nextStepFile: '{workflow_path}/steps-e/step-05-verify-and-document.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-evolution.md'
 ---
 
-## Process
+# Step 4: Implement
+
+## STEP GOAL:
+
+Implement changes incrementally, verifying at each step.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on implementing each planned commit, testing after each, and ensuring backward compatibility
+- 🚫 FORBIDDEN to skip verification points or proceed with broken tests
+- 💬 Approach: Execute each planned step methodically — implement, self-check, test, commit
+- 📋 Backward compatibility must be verified at every commit
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 All planned steps implemented with passing tests and backward compatibility
+- 💾 Update dialog file with implementation progress after each commit
+- 📖 Reference the implementation plan from Step 3 and verification points
+- 🚫 Do not proceed to next commit if current one is broken
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Scope from Step 1; risks from Step 2; implementation plan from Step 3
+- Focus: Incremental implementation following the plan
+- Limits: Only implement what is in the plan — no scope creep
+- Dependencies: Step 3 must be complete (plan exists)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Create Feature Branch
 
@@ -45,9 +98,7 @@ When the plan calls for feature flags:
 - Ensure the "off" path is identical to the pre-change behavior
 - Test both flag states: on (new behavior) and off (old behavior)
 
----
-
-## Checklist
+### 6. Verify Checklist
 
 - [ ] Feature branch created
 - [ ] Each planned step implemented and committed separately
@@ -56,8 +107,39 @@ When the plan calls for feature flags:
 - [ ] Feature flags implemented correctly (if applicable)
 - [ ] Dialog file updated with implementation progress
 
+### 7. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Step 5: Verify and Document"
+
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN all planned steps are implemented, tested, and committed with backward compatibility verified will you then load and read fully `{nextStepFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Continue to step-05-verify-and-document.md
+### ✅ SUCCESS:
+- Feature branch created
+- Each planned step implemented and committed separately
+- Tests pass after each commit
+- Backward compatibility verified at each commit
+- Feature flags implemented correctly (if applicable)
+- Dialog file updated with implementation progress
+
+### ❌ SYSTEM FAILURE:
+- Proceeding to next step with broken tests
+- Not verifying backward compatibility
+- Implementing outside the planned scope
+- Not testing feature flag on/off states
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

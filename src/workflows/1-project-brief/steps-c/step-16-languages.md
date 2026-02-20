@@ -1,80 +1,103 @@
-# Step 4: Language Strategy
+---
+name: 'step-16-languages'
+description: 'Define language requirements and translation approach'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
-Define language requirements and translation approach.
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-16-languages.md'
+nextStepFile: '{workflow_path}/steps-c/step-17-seo-keywords.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-## Context for Agent
+# Step 16: Language Strategy
 
-Language strategy affects content creation, maintenance, and SEO. Capture not just which languages, but why and how they'll be managed.
+## STEP GOAL:
+Define language requirements and translation approach that affects content creation, maintenance, and SEO.
 
-## Instructions
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-1. **Identify required languages**
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-   Ask: "What languages does the site need to support?"
+### Role Reinforcement:
+- You are a Strategic Business Analyst helping define language strategy for content and SEO
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-   For each language:
-   - Why is it needed? (local audience, tourists, business partners)
-   - What priority? (primary, secondary, tertiary)
-   - Full translation or partial?
+### Step-Specific Rules:
+- Focus: Languages needed, primary language, translation approach, localization, tone consistency
+- FORBIDDEN: Do not assume single language - always ask
+- Approach: Identify languages, determine priority, define translation workflow, consider localization
 
-2. **Determine primary language**
+## EXECUTION PROTOCOLS:
+- Primary goal: Language strategy documented with priorities and workflow
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-   - Which language is the "source" language?
-   - Will content be created first in this language?
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, brand personality, tone of voice
+- Focus: Language requirements and translation approach
+- Limits: Not keyword-level SEO yet - language strategy
+- Dependencies: Steps 13-15 completed
 
-3. **Translation approach**
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
-   Options to discuss:
-   - **Full translation**: All pages in all languages
-   - **Priority pages**: Key pages translated, others primary only
-   - **Machine + review**: AI translation with human review
-   - **Professional translation**: Human translators
-   - **Client-managed**: Client handles translations
+### 1. Identify Required Languages
 
-4. **Localization considerations**
+Ask: "What languages does the site need to support?"
 
-   Beyond translation, ask about:
-   - Date/time formats
-   - Currency (if applicable)
-   - Phone number formats
-   - Address formats
-   - Cultural considerations
+For each language:
+- Why is it needed? (local audience, tourists, business partners)
+- What priority? (primary, secondary, tertiary)
+- Full translation or partial?
 
-5. **Tone consistency across languages**
+### 2. Determine Primary Language
+- Which language is the "source" language?
+- Will content be created first in this language?
 
-   Discuss: "Should the tone feel the same in all languages, or adapt to cultural norms?"
+### 3. Translation Approach
 
-   Example: German business communication is often more formal than Swedish.
+Options to discuss:
+- **Full translation**: All pages in all languages
+- **Priority pages**: Key pages translated, others primary only
+- **Machine + review**: AI translation with human review
+- **Professional translation**: Human translators
+- **Client-managed**: Client handles translations
 
-6. **Document in output**
-   - Fill in Language Strategy section
-   - Create language table with priority and coverage
-   - Document translation approach
+### 4. Localization Considerations
 
-## Example for Trilingual Site
+Beyond translation, ask about:
+- Date/time formats
+- Currency (if applicable)
+- Phone number formats
+- Address formats
+- Cultural considerations
 
-```
-| Language | Priority | Coverage | Notes |
-|----------|----------|----------|-------|
-| Swedish | Primary | 100% | Source language |
-| English | Secondary | 100% | For tourists |
-| German | Secondary | 100% | Large tourist segment |
+### 5. Tone Consistency Across Languages
 
-Translation approach:
-- Swedish content created first
-- Mårten provides Swedish → English
-- Professional translator for Swedish → German
-- Review all translations for tone consistency
-```
+Discuss: "Should the tone feel the same in all languages, or adapt to cultural norms?"
 
-## Agent Dialog Update
+Example: German business communication is often more formal than Swedish.
 
+### 6. Document in Output
+- Fill in Language Strategy section
+- Create language table with priority and coverage
+- Document translation approach
+
+### 7. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### Step 4: Language Strategy
+### Step 16: Language Strategy
 **Q:** What languages does the site need to support? Translation approach?
 **A:** [Languages identified with priorities and coverage]
 **Documented in:** content-language.md (Language Strategy section)
@@ -83,16 +106,36 @@ After completing this step, update the agent dialog:
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing languages, proceed to step-17-seo-keywords.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md', 'step-02-personality.md', 'step-03-tone.md', 'step-04-languages.md']
-languages: '[list]'
-translation_approach: '[approach]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Languages identified with priorities
+- Primary language defined
+- Translation approach documented
+- Localization considerations captured
+- Tone consistency across languages addressed
+- User confirmed
+
+### FAILURE:
+- Assumed single language without asking
+- Skipped translation approach
+- Generated language strategy without user input
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

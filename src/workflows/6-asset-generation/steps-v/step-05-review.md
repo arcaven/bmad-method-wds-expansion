@@ -1,80 +1,124 @@
-# Step 05: Review and Iterate
-
-**Goal:** Review all motion content for consistency, performance, and user experience quality.
-
+---
+name: 'step-05-review'
+description: 'Review all motion content for consistency, performance, and accessibility compliance'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-v/step-05-review.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-videos.md'
 ---
 
-## Actions
+# Step 5: Review and Iterate
+
+## STEP GOAL:
+
+Review all motion content for consistency, performance, accessibility compliance, and user experience quality — then save the approved motion set.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are a creative production partner conducting motion quality review
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring motion UX and performance expertise, user brings final approval
+
+### Step-Specific Rules:
+
+- 🎯 Check four dimensions: consistency, performance, accessibility, UX quality
+- 🚫 FORBIDDEN to save without user approval
+- 💬 Preview in page context alongside static versions
+- 📋 Verify `prefers-reduced-motion` coverage
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Save to `{output_folder}/E-Assets/motion/`
+- 📖 Check: timing consistency, file sizes, flash rate, reduced-motion support
+- 🚫 FORBIDDEN to skip performance or accessibility checks
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All generated motion content, style configuration
+- Focus: Quality review, performance, and accessibility
+- Limits: This is the final step — focus on quality and delivery
+- Dependencies: Generated motion content from Step 4
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Preview All Motion
 
-For each motion asset, show:
-- The animation/video in isolation
-- The animation in page context (placed in layout)
-- Before/after: static vs. animated version
+Show each: in isolation, in page context, before/after (static vs. animated).
 
 ### 2. Motion Consistency
 
-Across the full set, verify:
-- [ ] Timing feels consistent (nothing jarringly faster or slower)
-- [ ] Easing curves match (same springy or smooth feel)
-- [ ] Motion direction is logical (follows reading direction, hierarchy)
-- [ ] No competing animations (two things moving simultaneously fighting for attention)
-- [ ] Loop transitions are seamless (for looping content)
+Verify: timing consistent, easing curves match, motion direction logical, no competing animations, loops seamless.
 
 ### 3. Performance Check
 
-For each asset:
-- [ ] File size within target
-- [ ] No excessive frame count or complexity
-- [ ] CSS animations use GPU-accelerated properties (transform, opacity)
-- [ ] Videos are properly compressed
-- [ ] Lazy loading strategy for below-fold motion
+Per asset: file size within target, no excessive complexity, CSS uses GPU-accelerated properties, videos compressed, lazy loading for below-fold.
 
 ### 4. Accessibility Check
 
-- [ ] Motion respects `prefers-reduced-motion` media query
-- [ ] No flashing content (< 3 flashes per second)
-- [ ] Motion doesn't interfere with content readability
-- [ ] Video has pause/stop controls
-- [ ] Alternative static content for motion-sensitive users
+Respects `prefers-reduced-motion`, no flashing (<3 per second), does not interfere with readability, video has pause/stop, alternative static content provided.
 
 ### 5. User Review
 
-```
-[A] Approve all           — Save complete motion set
-[R] Regenerate [asset]    — Redo specific motion assets
-[T] Timing adjust         — Speed up or slow down globally
-[E] Easing adjust         — Change motion curve
-[C] Context preview       — Full page preview with all motion
-[P] Performance report    — Show file sizes and load impact
-```
+Present: [A] Approve all, [R] Regenerate specific, [T] Timing adjust, [E] Easing adjust, [C] Full page context preview, [P] Performance report.
 
 ### 6. Iterate
 
-For assets needing changes:
-- Adjust timing, easing, or content
-- Regenerate or re-code
-- Re-preview in context
+For flagged assets: adjust timing/easing/content, regenerate or re-code, re-preview in context.
 
 ### 7. Save Approved Set
 
-Save to `{output_folder}/E-Assets/motion/`:
-- `css/` — CSS animation code files
-- `svg/` — Animated SVG files
-- `lottie/` — Lottie JSON files
-- `video/` — MP4/WebM files
-- `motion-set-summary.md` — catalog with specs and usage
+Save to `{output_folder}/E-Assets/motion/`: `css/`, `svg/`, `lottie/`, `video/`, `motion-set-summary.md`.
 
 ### 8. Update Design Log
 
-Record:
-- Motion assets created: [count]
-- Types: [breakdown by complexity]
-- Motion personality: [selected]
-- Performance: [total added weight]
-- Accessibility: [prefers-reduced-motion coverage]
+Record: assets created count, type breakdown, motion personality, total added weight, reduced-motion coverage.
+
+### 9. Present MENU OPTIONS
+
+Display: **"Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF M: Save set, update design log, return to Activity Menu in {workflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#9-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+
+## CRITICAL STEP COMPLETION NOTE
+
+This is the final step of the Videos/Motion workflow. When M is selected and set is saved, return to the Activity Menu.
 
 ---
 
-**Complete.** → [M] Return to Activity Menu
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- All motion content reviewed
+- Consistency, performance, accessibility verified
+- User approved final set
+- Saved to correct locations by type
+- Design log updated
+
+### ❌ SYSTEM FAILURE:
+
+- Saving without user approval
+- Skipping performance or accessibility checks
+- Not verifying reduced-motion support
+- Not updating design log
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

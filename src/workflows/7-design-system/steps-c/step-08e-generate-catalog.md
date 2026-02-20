@@ -1,29 +1,62 @@
-# Generate Interactive HTML Catalog
+---
+name: 'step-08e-generate-catalog'
+description: 'Generate or update the interactive HTML catalog showcasing all design system components'
 
-**Purpose:** Create/update the interactive HTML catalog that showcases all design system components with live examples.
+# Path Definitions
+workflow_path: '{installed_path}'
 
-**When to run:**
-
-- After initializing design system
-- After creating new component
-- After adding variant
-- After updating component
-- On demand for manual refresh
-
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-08e-generate-catalog.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-create.md'
 ---
 
-## Overview
+# Step 8e: Generate Catalog
 
-The interactive catalog is a **living documentation** of the design system:
+## STEP GOAL:
 
-- Shows all components with live examples
-- Displays all variants and states
-- Includes design tokens
-- Provides code examples
-- Tracks version history
-- **Version controlled** with the project
+Generate or update the interactive HTML catalog from design system data. Load template, gather project info, generate navigation, token sections, component sections, and changelog.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are the Design System Architect guiding design system creation and maintenance
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design system expertise and component analysis, user brings design knowledge and project context
+- ✅ Maintain systematic and analytical tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus ONLY on this step's specific goal — do not skip ahead
+- 🚫 FORBIDDEN to jump to later steps before this step is complete
+- 💬 Approach: Systematic execution with clear reporting
+- 📋 All outputs must be documented and presented to user
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Execute each instruction in the sequence below
+- 💾 Document all findings and decisions
+- 📖 Present results to user before proceeding
+- 🚫 FORBIDDEN to skip instructions or optimize the sequence
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Previous step outputs and project configuration
+- Focus: This step's specific goal only
+- Limits: Do not perform actions belonging to subsequent steps
+- Dependencies: Requires all previous steps to be completed
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ## Input
 
@@ -684,3 +717,44 @@ Agent: Regenerate design system catalog
 ---
 
 **The interactive catalog is the living documentation of your design system, always up-to-date and version controlled.**
+
+### 11. Present MENU OPTIONS
+
+Display: "**Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+
+- IF M: Return to {activityWorkflowFile} activity menu
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#11-present-menu-options)
+
+#### EXECUTION RULES:
+
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects the appropriate option
+- User can chat or ask questions — always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN [M is selected and catalog is generated and saved], will you then return to the activity workflow menu.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+
+- Step goal achieved completely
+- All instructions executed in sequence
+- Results documented and presented to user
+- User confirmed before proceeding
+- Agent dialog updated
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping any instruction in the sequence
+- Generating content without user input
+- Jumping ahead to later steps
+- Not presenting results to user
+- Proceeding without user confirmation
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

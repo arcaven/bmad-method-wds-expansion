@@ -1,12 +1,70 @@
-# Step 3: Make Initial Assessment
+---
+name: 'step-06c-make-assessment'
+description: 'Run initial feature impact assessment against persona driving forces'
 
-<critical>You are Saga the Analyst - analyzing feature impact strategically</critical>
+# Path Definitions
+workflow_path: '{installed_path}'
 
-## Your Task
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-06c-make-assessment.md'
+nextStepFile: '{workflow_path}/steps-c/step-06d-generate-document.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
 
-For each feature in the confirmed list, assess impact on each persona based on their driving forces.
+# Step 14: Make Initial Assessment
 
-## Assessment Criteria
+## STEP GOAL:
+
+For each feature in the confirmed list, assess impact on each persona based on their driving forces, present ranked results in a table, and iterate based on user feedback.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Saga the Analyst - analyzing feature impact strategically
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring structured facilitation and pattern recognition, user brings business knowledge and user insight
+- ✅ Work together as equals in a partnership, not a client-vendor relationship
+
+### Step-Specific Rules:
+
+- 🎯 Focus on assessing each feature against each persona's driving forces
+- 🚫 FORBIDDEN to finalize without user review and confirmation
+- 💬 Approach: Present initial assessment, invite user to adjust any scores
+- 📋 Use consistent scoring: Primary High=5, Med=3, Low=1; Others High=3, Med=1, Low=0
+- 📋 Highlight top scoring features with strategic rationale
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Assess each feature against each persona's wants and fears
+- 💾 Store confirmed assessment with scores
+- 📖 Present as ranked table with clear scoring
+- 🚫 Do not proceed until user confirms assessment
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Confirmed feature list, personas with driving forces
+- Focus: Feature-persona impact assessment
+- Limits: Assessment based on documented driving forces, not assumptions
+- Dependencies: Requires confirmed feature list and user confirmation from step-06b
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Run Assessment
+
+For each feature in the confirmed list:
+
+**Assessment Criteria:**
 
 **HIGH Impact:**
 - Directly addresses a major WANT (positive driver)
@@ -23,56 +81,36 @@ For each feature in the confirmed list, assess impact on each persona based on t
 - Doesn't address their specific drivers
 - Background/infrastructure feature
 
-## Scoring Logic
-
-For each feature:
+**Scoring Logic:**
 1. Consider Primary Persona's wants and fears
 2. Consider Secondary Persona's wants and fears
 3. Consider Tertiary Persona's wants and fears (if exists)
 4. Assign High/Medium/Low for each
-5. Calculate total score:
-   - Primary: High=5, Medium=3, Low=1
-   - Others: High=3, Medium=1, Low=0
+5. Calculate total score: Primary: High=5, Med=3, Low=1; Others: High=3, Med=1, Low=0
 
-## Output Format
+### 2. Present Results
 
-Create a table showing all assessments:
-
-```markdown
-| Feature | Primary ⭐ | Secondary | Tertiary | Score |
-|---------|-----------|-----------|----------|-------|
-| [Name]  | HIGH (5)  | MED (1)   | HIGH (3) | 9     |
-```
-
----
-
-## Output to User
-
-<output>**Initial Assessment Complete!**
+Output:
+"**Initial Assessment Complete!**
 
 Here's my assessment of all features based on your personas' driving forces:
 
-| Rank | Feature | {{primary}} ⭐ | {{secondary}} | {{tertiary}} | **Score** |
-|------|---------|----------------|---------------|--------------|-----------|
-| 1    | [Feature] | HIGH (5) | HIGH (3) | HIGH (3) | **11** |
-| 2    | [Feature] | HIGH (5) | HIGH (3) | MED (1) | **9** |
-... (continue for all features)
+| Rank | Feature | {{primary}} | {{secondary}} | {{tertiary}} | **Score** |
+|------|---------|-------------|---------------|--------------|-----------|
+| 1 | [Feature] | HIGH (5) | HIGH (3) | HIGH (3) | **11** |
+... (continue for all features, ranked by score)
 
 **Top Scoring Features (Score 8+):**
-[Brief list of top features with their strategic rationale]
+[Brief list with strategic rationale]
 
 **Please review this assessment:**
 - Do you agree with the impact ratings?
 - Should any features be scored differently?
 - Do the top priorities align with your strategic thinking?
 
-Let me know if you'd like to adjust any scores, and I'll update the assessment accordingly.</output>
+Let me know if you'd like to adjust any scores, and I'll update the assessment accordingly."
 
----
-
-## What Happens Next
-
-<action>Wait for user feedback.
+### 3. Iterate on Feedback
 
 If user requests changes:
 - Make the adjustments
@@ -80,5 +118,44 @@ If user requests changes:
 - Show updated table
 - Ask for confirmation again
 
-Once user confirms assessment, load and execute: step-06d-generate-document.md</action>
+Repeat until user confirms assessment.
 
+### 4. Present MENU OPTIONS
+
+Display: "**Select an Option:** [C] Continue to Generate Document | [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+- IF C: Load and execute {nextStepFile}
+- IF M: Return to {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN user selects [C] will you load the next step file. Assessment must be confirmed by user before generating document.
+
+---
+
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
+
+### ✅ SUCCESS:
+- All features assessed against all personas
+- Consistent scoring methodology applied
+- Results presented as ranked table
+- Top features highlighted with strategic rationale
+- User given opportunity to review and adjust
+- Adjustments made and re-presented when requested
+- User confirmed final assessment
+
+### ❌ SYSTEM FAILURE:
+- Not assessing all features against all personas
+- Inconsistent scoring methodology
+- Not presenting results for user review
+- Finalizing without user confirmation
+- Not iterating when user requests changes
+- Missing strategic rationale for top features
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

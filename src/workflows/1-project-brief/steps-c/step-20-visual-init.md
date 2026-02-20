@@ -1,65 +1,124 @@
-# Step 1: Initialize Visual Direction
+---
+name: 'step-20-visual-init'
+description: 'Initialize visual direction capture'
 
-## Purpose
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-c/step-20-visual-init.md'
+nextStepFile: '{workflow_path}/steps-c/step-21-existing-brand.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow.md'
+---
+
+# Step 20: Initialize Visual Direction
+
+## STEP GOAL:
 Welcome user and set context for capturing visual direction.
 
-## Context for Agent
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-You are helping define the visual identity and design direction. This is creative work — be open to exploring possibilities while guiding toward actionable decisions.
+### Universal Rules:
+- NEVER generate content without user input
+- CRITICAL: Read the complete step file before taking any action
+- CRITICAL: When loading next step with 'C', ensure entire file is read
+- YOU ARE A FACILITATOR, not a content generator
+- YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Instructions
+### Role Reinforcement:
+- You are a Strategic Business Analyst helping define visual identity and design direction
+- If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- We engage in collaborative dialogue, not command-response
+- You bring structured thinking and facilitation skills, user brings domain expertise and product vision
+- Maintain collaborative and strategic tone throughout
 
-1. **Create output structure**
-   - Create `visual-direction.md` in the output folder using the template
-   - Create `visual-references/` folder for collected assets
-   - Initialize frontmatter with `stepsCompleted: []`
+### Step-Specific Rules:
+- Focus: Initialize visual direction, check for existing assets, set creative context
+- FORBIDDEN: Do not skip checking for existing visual identity
+- Approach: Welcome, contextualize, explain approach, check for existing assets
 
-2. **Welcome and contextualize**
-   - "Let's establish the visual direction for [project name]. This will guide all design decisions — from colors to layout to imagery."
-   - Reference positioning from Product Brief if available
-   - Reference tone from Content & Language if available
+## EXECUTION PROTOCOLS:
+- Primary goal: Visual direction output structure created, context established
+- Save/document outputs appropriately
+- Avoid generating content without user input
 
-3. **Explain the approach**
-   - "We'll explore this through three inputs:"
-     1. Existing brand assets (if any)
-     2. Reference sites and inspiration
-     3. Design style preferences
-   - "Feel free to share images, URLs, or just describe what you're imagining."
+## CONTEXT BOUNDARIES:
+- Available context: Product Brief, Content & Language document, inspiration analysis
+- Focus: Visual direction initialization
+- Limits: Not making design decisions yet - setting context
+- Dependencies: Steps 1-19 completed
 
-4. **Check for existing assets**
-   - Ask: "Does the business have any existing visual identity?"
-     - Logo
-     - Colors in use
-     - Signage or printed materials
-     - Previous website
-   - If yes: "Let's start by documenting what exists."
-   - If no: "Great, we have a blank canvas to work with."
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
+### 1. Create Output Structure
+- Create `visual-direction.md` in the output folder using the template
+- Create `visual-references/` folder for collected assets
+- Initialize frontmatter with `stepsCompleted: []`
 
-## Agent Dialog Update
+### 2. Welcome and Contextualize
+- "Let's establish the visual direction for [project name]. This will guide all design decisions - from colors to layout to imagery."
+- Reference positioning from Product Brief if available
+- Reference tone from Content & Language if available
 
+### 3. Explain the Approach
+- "We'll explore this through three inputs:"
+  1. Existing brand assets (if any)
+  2. Reference sites and inspiration
+  3. Design style preferences
+- "Feel free to share images, URLs, or just describe what you're imagining."
+
+### 4. Check for Existing Assets
+- Ask: "Does the business have any existing visual identity?"
+  - Logo
+  - Colors in use
+  - Signage or printed materials
+  - Previous website
+- If yes: "Let's start by documenting what exists."
+- If no: "Great, we have a blank canvas to work with."
+
+### 5. Agent Dialog Update
 After completing this step, update the agent dialog:
 
 ```markdown
-### [Step Name]
-**Q:** [Key questions asked]
+### Step 20: Visual Direction Init
+**Q:** Does the business have existing visual identity?
 **A:** [User responses - summarized]
-**Documented in:** visual-direction.md ([section name])
+**Documented in:** visual-direction.md (initialized)
 **Key insights:** [Important decisions or revelations]
 **Status:** Complete
 **Timestamp:** [HH:MM]
 ```
 
-## Next Step
+### N. Present MENU OPTIONS
+Display: "**Select an Option:** [C] Continue to next step"
 
-After completing initialization, proceed to step-21-existing-brand.md
+#### Menu Handling Logic:
+- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
-## State Update
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions - always respond and then redisplay menu options
 
-Update frontmatter of output file:
+## CRITICAL STEP COMPLETION NOTE
+ONLY WHEN step objectives are met and user confirms will you then load and read fully `{nextStepFile}`.
 
-```yaml
-stepsCompleted: ['step-01-init.md']
-has_existing_brand: '[yes/no]'
-```
+---
+
+## SYSTEM SUCCESS/FAILURE METRICS
+
+### SUCCESS:
+- Output structure created
+- User welcomed with proper context
+- Existing assets status checked
+- Approach explained
+- User confirmed readiness
+
+### FAILURE:
+- Skipped checking for existing visual identity
+- Generated visual direction without user input
+- Did not create output structure before proceeding
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

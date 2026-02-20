@@ -1,22 +1,64 @@
-# Step 4B: Sketch Analysis (AI-Interprets, User-Confirms)
+---
+name: 'step-01-sketch-analysis'
+description: 'AI reads entire sketch, identifies sections, interprets function/purpose, user confirms before detailed specification'
 
-**Goal:** AI reads entire sketch, identifies sections, interprets function/purpose, user confirms before detailed specification.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-k/step-01-sketch-analysis.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-sketch.md'
 ---
 
-## WORKFLOW APPROACH
+# Step 1: Sketch Analysis
 
-**Balance: AI Enhancement + User Control**
+## STEP GOAL:
 
-1. **AI Reads Entire Sketch** → Identifies all sections holistically
-2. **Designer Confirms Structure** → Validates section breakdown
-3. **Section-by-Section AI Interpretation** → AI reads each section, interprets objects, function, purpose
-4. **User Refinement Dialog** → Designer adds specifics, confirms/adjusts
-5. **Batch Generation** → AI generates complete section spec with all translations
+AI reads entire sketch, identifies sections, interprets function and purpose. User confirms structure before detailed specification begins. This balances AI enhancement with user control.
 
----
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-## STEP 1: HOLISTIC SKETCH READING
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on interpreting sketch structure, sections, objects, and purpose
+- 🚫 FORBIDDEN to generate detailed specifications without user confirmation of structure
+- 💬 Approach: Read holistically first, then section-by-section with user validation
+- 📋 Cross-reference with previous pages for consistency and design system patterns
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Analyze sketch holistically before breaking into sections
+- 💾 Store confirmed interpretations for specification generation
+- 📖 Reference established patterns from previously analyzed pages
+- 🚫 FORBIDDEN to proceed to specification without user confirmation of section structure
+
+## CONTEXT BOUNDARIES:
+
+- Available context: User's sketch (image, description, or file reference), previous page analyses, design system
+- Focus: Interpreting sketch into structured sections and objects
+- Limits: Do not generate final specifications — that is the Specify activity (steps-p/)
+- Dependencies: User must provide sketch input
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Holistic Sketch Reading
 
 <output>**Let me read your entire sketch and identify the main sections...**</output>
 
@@ -48,10 +90,10 @@ Your sketch:</ask>
    - Note potential design system components
      </action>
 
-<output>**📊 I've analyzed your sketch. Here's what I see:**
+<output>**I've analyzed your sketch. Here's what I see:**
 
 {{#if has_previous_pages}}
-**🔗 Cross-Page References Detected:**
+**Cross-Page References Detected:**
 {{#each established_patterns}}
 
 - {{pattern_name}}: {{specification}} (from {{source_page}})
@@ -72,10 +114,10 @@ I'll use these as reference points for consistency.
 - **Contains:** {{object_count}} objects/elements
 - **Layout:** {{layout_description}}
   {{#if looks_like_previous_component}}
-- 💡 **Component?** Similar to {{component_name}} from {{previous_page}}
+- **Component?** Similar to {{component_name}} from {{previous_page}}
   {{/if}}
   {{#if matches_established_pattern}}
-- ✅ **Pattern Match:** Text styles match {{pattern_name}} from {{source_page}}
+- **Pattern Match:** Text styles match {{pattern_name}} from {{source_page}}
   {{/if}}
   {{/each}}
 
@@ -116,16 +158,16 @@ Does this look better?</output>
 
 ---
 
-## STEP 2: COMPONENT IDENTIFICATION
+### 2. Component Identification
 
 <check if="any_sections_look_like_components">
-  <output>**🔄 I noticed some sections might be reusable components:**
-  
+  <output>**I noticed some sections might be reusable components:**
+
   {{#each potential_components}}
   - **{{section_name}}** looks similar to **{{component_name}}** from {{previous_page}}
   {{/each}}
   </output>
-  
+
   <ask>Should these be components (reusable across pages)?
 
 1. **Yes, make them components** - Define once, reference later
@@ -139,7 +181,7 @@ Choice [1/2/3]:</ask>
 
 ---
 
-## STEP 3: SECTION-BY-SECTION AI INTERPRETATION
+### 3. Section-by-Section AI Interpretation
 
 <output>**Perfect! Now I'll analyze each section in detail, one at a time.**
 
@@ -147,15 +189,15 @@ I'll interpret the objects, functions, and content for each section. You can con
 
 ---
 
-**📍 Section {{current_index}}/{{total_sections}}: {{section_name}}**</output>
+**Section {{current_index}}/{{total_sections}}: {{section_name}}**</output>
 
-### 3A: AI Reads & Interprets Section (Recursive)
+#### 3A: AI Reads & Interprets Section (Recursive)
 
 <action>For current section, identify objects **Top-Left to Bottom-Right**:
 
 1. **Identify Top-Level Containers** (e.g., Cards, Rows, Groups)
-   - IF container has children → Dive in and identify child elements
-   - IF repeating group (e.g., 3 Feature Cards) → Identify as "Repeating Pattern"
+   - IF container has children -> Dive in and identify child elements
+   - IF repeating group (e.g., 3 Feature Cards) -> Identify as "Repeating Pattern"
 
 2. **Handle Repeating Objects:**
    - **Fixed Count (e.g., 3 Cards):** Name individually (`card-01`, `card-02`, `card-03`)
@@ -197,7 +239,7 @@ I'll interpret the objects, functions, and content for each section. You can con
 
 **Overall Function:** {{section_function_summary}}</output>
 
-### 3B: User Refinement Dialog
+#### 3B: User Refinement Dialog
 
 <ask>**Does this interpretation look right?**
 
@@ -210,33 +252,33 @@ Choice [1/2/3/4]:</ask>
 
 <check if="choice == 2">
   <ask>**Which interpretations need adjustment?**
-  
+
   {{#each interpreted_objects}}
   {{object_index}}. {{interpreted_type}} - {{interpreted_function}}
   {{/each}}
-  
+
   Your corrections:</ask>
-  
+
   <action>Update interpretations based on user feedback</action>
 </check>
 
 <check if="choice == 3">
   <ask>**What did I miss?**
-  
+
   Describe the missing object(s):</ask>
-  
+
   <action>Add missed objects to interpretation</action>
 </check>
 
 <check if="choice == 4">
   <ask>**Which objects should I remove?**
-  
+
   {{#each interpreted_objects}}
   {{object_index}}. {{interpreted_type}}
   {{/each}}
-  
+
   Remove numbers:</ask>
-  
+
   <action>Remove specified objects</action>
 </check>
 
@@ -245,7 +287,7 @@ Choice [1/2/3/4]:</ask>
 
 ---
 
-## STEP 4: CONTENT & TRANSLATION GATHERING
+### 4. Content & Translation Gathering
 
 <output>**Great! Now let's gather the content for all text elements in this section.**
 
@@ -300,7 +342,7 @@ Use these? [1] Yes [2] Adjust [3] Manual</output>
 
 ---
 
-## STEP 5: BATCH SPECIFICATION GENERATION
+### 5. Batch Specification Generation
 
 <output>**Perfect! I have everything I need for "{{section_name}}".**
 
@@ -317,7 +359,7 @@ Let me generate the complete section specification...</output>
 7. Validation rules if applicable
    </action>
 
-<output>**✅ Section "{{section_name}}" specification generated!**
+<output>**Section "{{section_name}}" specification generated!**
 
 ```markdown
 ### {{Section_Name}}
@@ -353,184 +395,65 @@ Let me generate the complete section specification...</output>
 
 <check if="more_sections">
   <action>Move to next section</action>
-  <action>Repeat STEP 3 for next section</action>
+  <action>Repeat from step 3 for next section</action>
 </check>
 
 <check if="!more_sections">
-  <output>**🎉 All sections complete!**
-  
+  <output>**All sections complete!**
+
   Your page specification includes:
   - {{total_sections}} sections
   - {{total_objects}} objects
   - {{total_text_elements}} text elements with {{language_count}} languages
   - {{component_count}} reusable components identified
-  
+
   Ready to generate prototype!</output>
-  
-  <action>Proceed to 4C-08 (Generate Final Spec)</action>
+
+  <action>Proceed to specification generation</action>
 </check>
 
 ---
 
-## KEY PRINCIPLES
+### 6. Present MENU OPTIONS
 
-### ✅ AI Enhancement
+Display: "**Select an Option:** [M] Return to Activity Menu"
 
-- **Reads entire sketch** holistically
-- **Identifies sections** automatically
-- **Interprets function & purpose** from context
-- **Suggests translations** proactively
-- **Batch generates** complete specs
+#### Menu Handling Logic:
 
-### ✅ User Control
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#6-present-menu-options)
 
-- **Confirms structure** before detailed work
-- **Refines interpretations** through dialog
-- **Reviews translations** before acceptance
-- **Stays in the loop** at key decision points
-- **Can adjust** at any step
+#### EXECUTION RULES:
 
-### ✅ Efficient Workflow
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
 
-- **Section-by-section** keeps focus manageable
-- **AI does heavy lifting** (interpretation, translation)
-- **User does validation** (confirm, adjust, approve)
-- **Batch generation** produces complete specs
-- **Faster than pure manual** while maintaining quality
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN the user has completed sketch analysis for all sections and chosen to return to the menu will you proceed accordingly. This is the only step in the Sketch activity.
 
 ---
 
-## EXAMPLE: Dog Week Start Page
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-### Step 1: Holistic Reading
+### ✅ SUCCESS:
 
-**AI:**
+- Sketch analyzed holistically with scale calibration
+- All sections identified and confirmed by user
+- Cross-page patterns detected and referenced
+- Section-by-section interpretation completed with user validation
+- Content and translations gathered for all text elements
+- Batch specification generated for each confirmed section
+- Component reuse opportunities identified
 
-```
-I've analyzed your sketch. Here's what I see:
+### ❌ SYSTEM FAILURE:
 
-Start Page contains 5 main sections:
+- Generating specifications without user confirmation of structure
+- Skipping holistic analysis and jumping to details
+- Not cross-referencing with previous page analyses
+- Proceeding without user confirming section breakdown
+- Missing objects or sections in the interpretation
+- Not gathering translations for all supported languages
+- Ignoring repeating patterns or component opportunities
 
-1. Header (Top)
-   - Purpose: Navigation and user access
-   - Contains: 3 objects (logo, sign-in button, language selector)
-   - Layout: Horizontal bar, logo left, buttons right
-
-2. Hero (Center)
-   - Purpose: Primary value proposition and CTA
-   - Contains: 3 objects (headline, supporting text, CTA button)
-   - Layout: Centered, vertical stack
-   - 💡 Component? Similar to Hero from other landing pages
-
-3. Illustration (Center)
-   - Purpose: Visual storytelling
-   - Contains: 1 object (hero image)
-   - Layout: Full-width image
-
-4. Message (Below illustration)
-   - Purpose: Supporting messaging
-   - Contains: 2 objects (preheader, secondary headline)
-   - Layout: Centered text
-
-5. Feature Cards (Bottom)
-   - Purpose: Key benefits showcase
-   - Contains: 9 objects (3 cards × 3 elements each)
-   - Layout: 3-column grid
-
-Does this structure look right?
-```
-
-**User:** `1` (Confirms)
-
-### Step 2: Section 1 - Header
-
-**AI interprets:**
-
-```
-My interpretation of "Header":
-
-Section Purpose: Primary navigation and user access
-
-Objects I see:
-
-1. Image/Logo (Top-left)
-   - Object ID: `start-header-logo`
-   - Function: Brand identity, links to home
-   - Purpose: Establish brand presence
-
-2. Button (Top-right, before language)
-   - Object ID: `start-header-signin`
-   - Function: Navigate to sign-in page
-   - Purpose: User authentication access
-   - Text in sketch: "Sign in"
-
-3. Dropdown (Top-right, far right)
-   - Object ID: `start-header-language`
-   - Function: Toggle language
-   - Purpose: Language selection
-   - Text in sketch: "SE ▼"
-
-Overall Function: Provide navigation and access to core functionality
-
-Does this interpretation look right?
-```
-
-**User:** `1` (Confirms)
-
-**AI suggests content:**
-
-```
-Content for "Sign In Button":
-
-I found text in your sketch: "Sign in"
-
-Suggested translations:
-EN: Sign in
-SE: Logga in
-
-Use these? [1] Yes [2] Adjust [3] Manual
-```
-
-**User:** `1` (Accepts)
-
-**AI generates:**
-
-```markdown
-### Header Object
-
-**Purpose**: Navigation and user access with language selection
-
-#### Dog Week Logo
-
-**OBJECT ID**: `start-header-logo`
-
-- **Component**: [Logo Component](/docs/D-Design-System/.../Logo.md)
-- **Position**: Left-aligned
-- **Behavior**: Links to home page
-
-#### Sign In Button
-
-**OBJECT ID**: `start-header-signin`
-
-- **Component**: [Button Secondary](/docs/D-Design-System/.../Button-Secondary.md)
-- **Position**: Right side (before language selector)
-- **Behavior**: Navigate to sign-in page
-- **Content**:
-  - EN: "Sign in"
-  - SE: "Logga in"
-
-#### Language Selector
-
-**OBJECT ID**: `start-header-language`
-
-- **Component**: [Language Selector](/docs/D-Design-System/.../LanguageSelector.md)
-- **Position**: Right side (after sign-in button)
-- **Behavior**: onChange → toggle language
-- **Content**: Globe icon + language code dropdown
-```
-
-**Next: Section 2 - Hero** 🎯
-
----
-
-**This workflow balances AI power with designer control perfectly!** 🎨🤖✨
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

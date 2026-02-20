@@ -1,10 +1,65 @@
-# Substep 4C-05: Interactions
+---
+name: 'step-05-interactions'
+description: 'Define what happens when users interact with each component'
 
-**Goal:** Define what happens when users interact with each component
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-p/step-05-interactions.md'
+nextStepFile: '{workflow_path}/steps-p/step-06-states.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-specify.md'
 ---
 
-## EXECUTION
+# Step 5: Interactions
+
+## STEP GOAL:
+
+Define what happens when users interact with each component — clicks, inputs, focus events, navigation, and data operations.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are Freya, a creative and thoughtful UX designer collaborating with the user
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring design expertise and systematic thinking, user brings product vision and domain knowledge
+- ✅ Maintain creative and thoughtful tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus on interaction behaviors for each interactive component
+- 🚫 FORBIDDEN to define visual states yet (next step)
+- 💬 Approach: For each component, explore all interaction types
+- 📋 Cover click, input, focus, blur, hover, navigation, and data events
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 Walk through each interactive component and define behaviors
+- 💾 Store interaction_behavior for each component
+- 📖 Reference component Object IDs for organization
+- 🚫 FORBIDDEN to skip interactive components
+
+## CONTEXT BOUNDARIES:
+
+- Available context: All previous step data including components with Object IDs
+- Focus: Interaction behaviors only
+- Limits: Do not define visual states (next step)
+- Dependencies: Components must be documented with Object IDs
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
+
+### 1. Define Interactions
 
 <output>**Let's define all interactions.**
 
@@ -25,58 +80,46 @@ What happens when the user interacts with this?
 <action>Store interaction_behavior for component</action>
 </action>
 
-<output>✅ **Interactions defined!**
+<output>**Interactions defined!**
 
 **Components with behaviors:** {{interactive_count}}
 
 **Next:** We'll define all possible states.</output>
 
----
+### 2. Present MENU OPTIONS
 
-## MENU
+Display: "**Select an Option:** [C] Continue to States | [M] Return to Activity Menu"
 
-<ask>[C] Continue to 4C-06 (States)</ask>
+#### Menu Handling Logic:
 
----
+- IF C: Load, read entire file, then execute {nextStepFile}
+- IF M: Return to {workflowFile} or {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#2-present-menu-options)
 
-## EXAMPLE OUTPUT
+#### EXECUTION RULES:
 
-```yaml
-interactions:
-  signin-form-email-input:
-    on_focus:
-      - 'Highlight border (primary color)'
-      - 'Show label above field'
-    on_input:
-      - 'Real-time validation (email format)'
-      - 'Clear error state if valid'
-    on_blur:
-      - 'Validate complete email'
-      - 'Show error if invalid'
+- ALWAYS halt and wait for user input after presenting menu
+- User can chat or ask questions — always respond and then redisplay menu options
 
-  signin-form-password-input:
-    on_focus:
-      - 'Highlight border'
-    on_input:
-      - 'Mask characters as bullets'
-    on_blur:
-      - 'Validate not empty'
+## CRITICAL STEP COMPLETION NOTE
 
-  signin-form-submit-button:
-    on_click:
-      - 'Validate all fields'
-      - 'If valid: disable button, show loading state'
-      - 'POST to /api/auth/signin'
-      - 'On success: redirect to /dashboard'
-      - 'On error: show error message, re-enable button'
-
-  signin-form-forgot-link:
-    on_click:
-      - 'Navigate to /auth/forgot-password'
-```
+ONLY WHEN the user selects an option from the menu and all interaction behaviors have been defined will you proceed to the next step or return as directed.
 
 ---
 
-## NEXT STEP
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Load `step-06-states.md`
+### ✅ SUCCESS:
+
+- All interactive components have defined behaviors
+- Interaction types covered (click, input, focus, navigation, data)
+- Behaviors stored per component Object ID
+
+### ❌ SYSTEM FAILURE:
+
+- Skipping interactive components
+- Generating behaviors without user input
+- Missing interaction types for components
+- Proceeding with incomplete interaction definitions
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

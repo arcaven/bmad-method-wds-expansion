@@ -1,148 +1,103 @@
+---
+name: 'step-02-awareness-strategy'
+description: 'Apply Customer Awareness Cycle to determine language, information, and proof strategy'
+workflow_path: '{installed_path}'
+thisStepFile: '{workflow_path}/steps-c/step-02-awareness-strategy.md'
+nextStepFile: '{workflow_path}/steps-c/step-03-action-filter.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-content.md'
+---
+
 # Step 2: Apply Customer Awareness Strategy
 
-**Determine the right language, information, and proof for the user's awareness level**
+## STEP GOAL:
 
----
+Translate the VTC's awareness positioning into a concrete content strategy — determining what language the user can understand, what information they need, what proof is required, and what emotional journey we are facilitating.
 
-## Purpose
+## MANDATORY EXECUTION RULES (READ FIRST):
 
-The Customer Awareness Cycle determines WHAT you can say and HOW you say it. A user who is "Problem Aware" needs completely different language than one who is "Product Aware." This step translates the VTC's awareness positioning into concrete content strategy.
+### Universal Rules:
 
----
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
 
-## Duration
+### Role Reinforcement:
 
-⏱️ **5-7 minutes**
+- ✅ You are a strategic content analyst applying the Customer Awareness Cycle
+- ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring awareness level methodology, user brings audience insight
+- ✅ Maintain an empathetic, audience-focused tone
 
----
+### Step-Specific Rules:
 
-## What You're Doing
+- 🎯 Focus ONLY on awareness strategy — language, information, proof, emotion
+- 🚫 FORBIDDEN to generate actual content text in this step
+- 💬 Explore each awareness dimension collaboratively with the user
+- 📋 All six areas must be addressed before proceeding
 
-Using the Customer Awareness Cycle model to determine:
-- What language the user can understand
-- What information they need at this stage
-- What proof/credibility is required
-- What emotional journey we're facilitating
+## EXECUTION PROTOCOLS:
 
----
+- 🎯 Follow the Sequence of Instructions exactly
+- 💾 Document the awareness strategy in structured format
+- 📖 Reference the 5 awareness levels (Unaware, Problem Aware, Solution Aware, Product Aware, Most Aware)
+- 🚫 FORBIDDEN to proceed without a complete awareness strategy
 
-## Context from Previous Step
+## CONTEXT BOUNDARIES:
 
-**VTC loaded in Step 1:**
-- Customer Awareness: **[START] → [END]**
+- Available context: Purpose definition (Step 0), VTC context (Step 1)
+- Focus: Translating awareness levels into content strategy decisions
+- Limits: Do not write content — define the strategy for it
+- Dependencies: Confirmed VTC with awareness START and END levels
 
----
-
-## The Customer Awareness Cycle (Quick Reference)
-
-**5 Levels (Eugene Schwartz):**
-
-1. **Unaware** - Don't know they have a problem
-2. **Problem Aware** - Know the problem, don't know solutions exist
-3. **Solution Aware** - Know solutions exist, exploring options
-4. **Product Aware** - Know your product, evaluating it
-5. **Most Aware** - Ready to buy/use, need final push
-
----
-
-## Questions for the User
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Validate Starting Awareness Level
 
-**"Let's confirm where the user is when they encounter this content:"**
-
-Present the START level from VTC and describe what it means:
-
-**Example:** *"The VTC says users are 'Problem Aware' - meaning they know they're struggling with [problem], but might not know that solutions like [your solution type] exist. Does this match your understanding of where users are when they encounter this [page/section]?"*
-
-- If YES → Continue
-- If NO → Discuss and adjust VTC
+Present the START level from VTC and describe what it means. Confirm with user: does this match where users are when they encounter this content?
 
 ### 2. Clarify Target Awareness Level
 
-**"And where do we want them after reading this content?"**
+Present the END level from VTC and describe the shift. Confirm: is this the right awareness goal for this content?
 
-Present the END level from VTC and describe the shift:
+### 3. Determine Awareness-Appropriate Language
 
-**Example:** *"We want to move them to 'Solution Aware' - meaning after this section, they should understand that [solution category] exists and can solve their [problem]. Is that the right goal for this content?"*
+Explore together: What words will resonate vs. confuse at their starting level?
 
-- If YES → Continue
-- If NO → Discuss and adjust VTC
+- Problem Aware: Speak in problem language first, product names later
+- Solution Aware: Can use solution category terminology
+- Product Aware: Specific features and comparisons matter
 
-### 3. Awareness-Appropriate Language
+### 4. Define Information Priorities
 
-**"What can they understand at their STARTING level?"**
+What do they NEED to know at this stage?
 
-Explore together:
+- Problem Aware: Problem validation, emotional recognition, hint solutions exist
+- Solution Aware: How solutions work, what makes them good/bad
+- Product Aware: Specific features, proof, competitive comparison
 
-- **If Problem Aware:** Can we use your product name? Or should we speak in problem language first?
-- **If Solution Aware:** Do they understand the solution category terminology? Or do we need to explain it?
-- **If Product Aware:** What specific features matter to them? What comparisons are they making?
+Separate essential from overwhelming.
 
-**"What words will resonate vs. confuse?"**
+### 5. Identify Credibility Requirements
 
-### 4. Information Priorities
+What proof do they need to believe us?
 
-**"What do they NEED to know at this stage?"**
+- Problem Aware: Personal stories, emotional validation
+- Solution Aware: Expert credentials, how-it-works explanations
+- Product Aware: Social proof, testimonials, data, comparisons
 
-Different awareness levels need different information:
+### 6. Map Emotional Journey
 
-- **Problem Aware needs:** Problem validation, emotional recognition, hint that solutions exist
-- **Solution Aware needs:** How this type of solution works, why it's effective, what makes solutions good/bad
-- **Product Aware needs:** Specific features, proof it works, why choose you vs. competitors
+What emotional shift happens from START to END?
 
-**"What's essential vs. overwhelming at their starting point?"**
+- Starting emotion: How they feel at START level
+- Ending emotion: How they should feel at END level
+- The emotional bridge we are building
 
-### 5. Credibility Requirements
-
-**"What proof do they need to believe us?"**
-
-Different awareness levels trust different things:
-
-- **Problem Aware:** Personal stories, emotional validation ("You're not alone")
-- **Solution Aware:** Expert credentials, how it works explanations, logic
-- **Product Aware:** Social proof, testimonials, data, comparisons
-
-**"What will make this credible to them?"**
-
-### 6. Emotional Journey
-
-**"What emotional shift happens from START → END?"**
-
-Explore the transformation:
-
-- **Starting emotion:** How do they FEEL at START level? (frustrated, confused, overwhelmed, cautious?)
-- **Ending emotion:** How should they FEEL at END level? (hopeful, informed, confident, excited?)
-
-**"What's the emotional bridge we're building?"**
-
----
-
-## Agent Actions
-
-1. **Present awareness level analysis** based on VTC
-2. **Explore each question** with the user
-3. **Document the answers** in structured format
-4. **Validate strategy** before moving forward
-
----
-
-## Validation
-
-Before proceeding to Step 3:
-
-- [ ] Start awareness level is confirmed and understood
-- [ ] End awareness level is confirmed and understood
-- [ ] Appropriate language identified (what words to use/avoid)
-- [ ] Information priorities clear (what to include/exclude)
-- [ ] Credibility requirements identified (what proof is needed)
-- [ ] Emotional journey mapped (start feeling → end feeling)
-
----
-
-## Output
-
-**Awareness Strategy Document:**
+### 7. Document Awareness Strategy
 
 ```yaml
 awareness_strategy:
@@ -151,95 +106,66 @@ awareness_strategy:
     - "[what they know]"
     - "[what they don't know]"
     - "[how they feel]"
-  
   end_level: "[awareness level]"
   end_characteristics:
     - "[what they'll know]"
     - "[what they'll understand]"
     - "[how they'll feel]"
-  
   language_guidelines:
     use: ["[appropriate terms]"]
     avoid: ["[confusing jargon]"]
     tone: "[conversational, authoritative, empathetic, etc.]"
-  
   information_priorities:
     essential: ["[must include]"]
     helpful: ["[nice to include if space]"]
     avoid: ["[too advanced, confusing, or premature]"]
-  
   credibility_required:
     type: "[personal story, expert credentials, data, social proof]"
     examples: ["[specific proof elements]"]
-  
   emotional_journey:
     starting_emotion: "[frustrated, confused, etc.]"
     bridge: "[how we facilitate the shift]"
     ending_emotion: "[hopeful, confident, etc.]"
 ```
 
----
+### 8. Present MENU OPTIONS
 
-## Next Step
+Display: **"Select an Option:** [C] Continue"
 
-Once awareness strategy is defined:
+#### Menu Handling Logic:
 
-**→ Proceed to [Step 3: Define Required Action](step-03-action-filter.md)**
+- IF C: Save awareness strategy, then load, read entire file, then execute {nextStepFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options](#8-present-menu-options)
 
----
+#### EXECUTION RULES:
 
-## Example
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed to next step when user selects 'C'
+- User can chat or ask questions — always respond and then end with display again of the menu options
 
-**VTC Context:** Hairdresser newsletter signup
-- Start: Problem Aware ("I feel behind on trends")
-- End: Product Aware ("This newsletter will keep me current")
+## CRITICAL STEP COMPLETION NOTE
 
-**Awareness Strategy:**
-
-```yaml
-awareness_strategy:
-  start_level: "Problem Aware"
-  start_characteristics:
-    - "Knows she's missing trends"
-    - "Doesn't know trend newsletters exist"
-    - "Feels frustrated and behind"
-  
-  end_level: "Product Aware"
-  end_characteristics:
-    - "Knows trend newsletters exist"
-    - "Understands how TrendWeek works"
-    - "Feels hopeful about staying current"
-  
-  language_guidelines:
-    use: ["missing trends", "falling behind", "your clients ask", "stay current"]
-    avoid: ["TrendWeek" in headline, technical jargon, assuming knowledge]
-    tone: "Empathetic and empowering"
-  
-  information_priorities:
-    essential: 
-      - "Validate the problem (you're not alone)"
-      - "Introduce solution category (trend newsletters)"
-      - "Show how it works (weekly digest)"
-    helpful:
-      - "Social proof (2,000 stylists)"
-      - "Time commitment (60 seconds per trend)"
-    avoid:
-      - "Company history"
-      - "Technical newsletter infrastructure"
-  
-  credibility_required:
-    type: "Social proof + Practical value"
-    examples: 
-      - "Testimonial: 'My clients always ask how I stay so current'"
-      - "Specific: 'Top 5 trends every Monday'"
-  
-  emotional_journey:
-    starting_emotion: "Frustrated and behind"
-    bridge: "Recognition → Hope → Confidence"
-    ending_emotion: "Empowered and excited to try"
-```
+ONLY WHEN C is selected and the awareness strategy is fully documented will you load {nextStepFile} to begin defining the required action.
 
 ---
 
-**⚠️ ALPHA:** If this step felt too long or certain questions were unhelpful, please note feedback.
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
+### ✅ SUCCESS:
+
+- Start awareness level confirmed and understood
+- End awareness level confirmed and understood
+- Appropriate language identified (what words to use/avoid)
+- Information priorities clear (what to include/exclude)
+- Credibility requirements identified
+- Emotional journey mapped
+
+### ❌ SYSTEM FAILURE:
+
+- Generating content text in this step
+- Skipping any of the six awareness dimensions
+- Not confirming awareness levels with user
+- Proceeding without documented strategy
+- Not waiting for user input at menu
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

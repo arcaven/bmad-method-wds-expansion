@@ -1,10 +1,62 @@
-# Step 05: Verify and Document
+---
+name: 'step-05-verify-and-document'
+description: 'Comprehensive verification of all new and existing functionality, then document and create PR'
 
-**Goal:** Comprehensive verification of all new and existing functionality, then document and PR.
+# Path Definitions
+workflow_path: '{installed_path}'
 
+# File References
+thisStepFile: '{workflow_path}/steps-e/step-05-verify-and-document.md'
+workflowFile: '{workflow_path}/workflow.md'
+activityWorkflowFile: '{workflow_path}/workflow-evolution.md'
 ---
 
-## Process
+# Step 5: Verify and Document
+
+## STEP GOAL:
+
+Comprehensive verification of all new and existing functionality, then document and PR.
+
+## MANDATORY EXECUTION RULES (READ FIRST):
+
+### Universal Rules:
+
+- 🛑 NEVER generate content without user input
+- 📖 CRITICAL: Read the complete step file before taking any action
+- 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
+- 📋 YOU ARE A FACILITATOR, not a content generator
+- ✅ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `{communication_language}`
+
+### Role Reinforcement:
+
+- ✅ You are an Implementation Partner guiding structured development activities
+- ✅ If you already have been given a name, communication_style and persona, continue to use those while playing this new role
+- ✅ We engage in collaborative dialogue, not command-response
+- ✅ You bring software development methodology expertise, user brings domain knowledge and codebase familiarity
+- ✅ Maintain clear and structured tone throughout
+
+### Step-Specific Rules:
+
+- 🎯 Focus only on verifying new functionality, running regression, verifying backward compatibility, checking performance, documenting, and creating PR
+- 🚫 FORBIDDEN to add new features — only verify, fix issues, and document
+- 💬 Approach: Comprehensive end-to-end verification with user, then collaborative PR creation
+- 📋 Any regression failure must be fixed before proceeding
+
+## EXECUTION PROTOCOLS:
+
+- 🎯 All new and existing functionality verified, documented, and PR created
+- 💾 Finalize dialog file with status, deviations, and PR link
+- 📖 Reference the boundary map from Step 1 for backward compatibility checks
+- 🚫 Do not add scope — only verify and document
+
+## CONTEXT BOUNDARIES:
+
+- Available context: Scope from Step 1; risks from Step 2; plan from Step 3; implementation from Step 4
+- Focus: Final verification, documentation, and PR creation
+- Limits: No new features
+- Dependencies: Step 4 must be complete (implementation done)
+
+## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Test All New Functionality
 
@@ -51,9 +103,7 @@
   - **Risks:** Any known risks or areas to watch
 - Link to the feature spec or dialog file
 
----
-
-## Checklist
+### 7. Verify Checklist
 
 - [ ] All new functionality tested and working
 - [ ] Regression suite passes
@@ -64,8 +114,40 @@
 - [ ] Feature flags documented (if used)
 - [ ] Dialog file finalized
 
+### 8. Present MENU OPTIONS
+
+Display: "**Select an Option:** [M] Return to Activity Menu"
+
+#### Menu Handling Logic:
+- IF M: Update agent dialog, then load, read entire file, then execute {activityWorkflowFile}
+- IF Any other comments or queries: help user respond then [Redisplay Menu Options]
+
+#### EXECUTION RULES:
+- ALWAYS halt and wait for user input after presenting menu
+- ONLY proceed when user selects 'M'
+- User can chat or ask questions - always respond and then redisplay menu options
+
+## CRITICAL STEP COMPLETION NOTE
+
+ONLY WHEN all verification is complete, changes documented, and PR created will you then load and read fully `{activityWorkflowFile}` to execute.
+
 ---
 
-## Next Step
+## 🚨 SYSTEM SUCCESS/FAILURE METRICS
 
-Return to activity menu
+### ✅ SUCCESS:
+- All new functionality tested and working
+- Regression suite passes
+- Backward compatibility verified
+- Performance acceptable
+- Changes documented in dialog file
+- PR created with clear description
+
+### ❌ SYSTEM FAILURE:
+- Not running regression suite
+- Not verifying backward compatibility
+- Skipping performance check
+- Creating PR without clear description
+- Not documenting deviations from the plan
+
+**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.
