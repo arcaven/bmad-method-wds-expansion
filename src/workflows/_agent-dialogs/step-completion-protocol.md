@@ -160,7 +160,7 @@ Created positioning statement synthesized from conversation about target custome
 
 **This protocol is referenced by:**
 - All Product Brief step files (steps-c/*.md)
-- Agent dialog templates (src/templates/project-brief-dialog/USAGE.md)
+- Agent dialog templates (workflows/1-project-brief/templates/project-brief-dialog/USAGE.md)
 - Workflow orchestration files (workflow.md)
 
 **Agents should:**

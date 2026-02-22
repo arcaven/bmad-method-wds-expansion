@@ -65,7 +65,7 @@
 
 ## Key WDS Workflows
 
-### 1️⃣ **Alignment & Signoff** (`workflows/1-project-brief/100-alignment-signoff/`)
+### 1️⃣ **Alignment & Signoff** (`workflows/0-alignment-signoff/`)
 **Agent**: Saga  
 **Purpose**: Get stakeholder alignment before starting the project  
 **Output**: Pitch document + Signoff/Contract/Service Agreement
