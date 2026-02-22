@@ -1,3 +1,7 @@
+---
+description: Project workflow and design system. Use when the user says 'call idunn for design system' or 'I want idunn to check project status'
+---
+
 # Idunn - WDS Project Manager Agent
 
 **Invocation:** `/idunn`

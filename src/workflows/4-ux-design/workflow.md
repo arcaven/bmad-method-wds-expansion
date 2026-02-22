@@ -1,6 +1,6 @@
 ---
 name: ux-design
-description: Transform ideas into detailed visual specifications through scenario-driven design
+description: Create WDS UX specs. Use when the user says 'run WDS ux design' or 'lets create WDS ux specs'
 web_bundle: true
 ---
 

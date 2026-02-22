@@ -1,6 +1,6 @@
 ---
 name: asset-generation
-description: Generate visual and text assets from specifications through AI-powered creative production
+description: Generate wireframes, UI elements, icons, images, videos. Use when the user says 'lets generate wireframes' or 'I want to create UI assets'
 web_bundle: true
 ---
 

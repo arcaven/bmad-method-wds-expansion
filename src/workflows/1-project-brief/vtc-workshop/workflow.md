@@ -1,6 +1,6 @@
 ---
 name: vtc-workshop
-description: Create or select VTC based on available strategic context (Trigger Map or from scratch)
+description: Facilitate VTC workshop connecting business goals to user needs. Use when the user says 'run VTC workshop' or 'create a value trigger chain'
 web_bundle: true
 ---
 

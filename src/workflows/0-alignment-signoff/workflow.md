@@ -1,6 +1,6 @@
 ---
 name: alignment-signoff
-description: Create alignment around your idea before starting the project
+description: Generate stakeholder alignment documents and signoff contracts. Use when the user says 'lets create alignment' or 'I want to create a signoff document'
 web_bundle: true
 ---
 

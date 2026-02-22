@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: Create, import, browse, and maintain design system components and tokens
+description: Build and manage design systems with components and tokens. Use when the user says 'lets create a design system' or 'I want to browse the design system'
 web_bundle: true
 ---
 

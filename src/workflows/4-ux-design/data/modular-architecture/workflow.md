@@ -1,6 +1,6 @@
 ---
 name: Modular Component Architecture
-description: Reference guides for three-tier specification system (Pages, Components, Features)
+description: Three-tier architecture for design specs. Use when the user says 'apply modular architecture' or 'decompose this component'
 web_bundle: true
 ---
 

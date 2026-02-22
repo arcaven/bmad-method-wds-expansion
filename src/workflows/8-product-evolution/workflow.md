@@ -1,6 +1,6 @@
 ---
 name: product-evolution
-description: Brownfield improvements — the full WDS pipeline in miniature for existing products
+description: WDS product improvement for existing projects. Use when the user says 'run WDS improvement cycle' or 'improve the WDS product'
 web_bundle: true
 ---
 

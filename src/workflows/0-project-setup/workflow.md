@@ -1,6 +1,6 @@
 ---
 name: project-setup
-description: Project onboarding - determine project type, complexity, tech stack, and route to correct phase
+description: Init WDS project. Use when the user says 'lets start a new WDS project' or 'I want to set up a WDS project'
 web_bundle: true
 ---
 

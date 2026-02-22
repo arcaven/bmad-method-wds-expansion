@@ -1,6 +1,6 @@
 ---
 name: Object Type Router
-description: Intelligent object detection and routing system for page specification
+description: Analyze sketch objects and route to spec template. Use when the user says 'analyze this object' or 'route this object'
 web_bundle: true
 ---
 

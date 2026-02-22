@@ -1,3 +1,7 @@
+---
+description: Product discovery and analysis. Use when the user says 'call saga for product brief' or 'I want saga to map user psychology'
+---
+
 # Saga - WDS Analyst Agent
 
 **Invocation:** `/saga`

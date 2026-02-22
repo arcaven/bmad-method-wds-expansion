@@ -1,6 +1,6 @@
 ---
 name: agentic-development
-description: AI-assisted development, testing, and reverse engineering through structured agent collaboration
+description: WDS dev with agents. Use when the user says 'lets WDS prototype this feature' or 'I want to WDS develop'
 web_bundle: true
 ---
 

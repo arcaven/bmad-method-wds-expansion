@@ -1,6 +1,6 @@
 ---
 name: trigger-mapping
-description: Map business goals to user psychology through structured workshops
+description: Effect Mapping workshop connecting business goals to user psychology. Use when the user says 'lets run trigger mapping' or 'I want to create trigger maps'
 web_bundle: true
 ---
 

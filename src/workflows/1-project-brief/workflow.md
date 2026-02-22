@@ -1,6 +1,6 @@
 ---
 name: project-brief
-description: Establish project context - foundation for all design work
+description: Define WDS project strategy. Use when the user says 'lets create a WDS project brief' or 'I want to define WDS strategy'
 web_bundle: true
 ---
 

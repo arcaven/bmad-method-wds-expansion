@@ -1,6 +1,6 @@
 ---
 name: scenarios
-description: Create UX scenario outlines from Trigger Map through structured micro-steps
+description: Transform Trigger Maps into UX scenario outlines. Use when the user says 'create UX scenarios' or 'generate scenario outlines'
 web_bundle: true
 ---
 

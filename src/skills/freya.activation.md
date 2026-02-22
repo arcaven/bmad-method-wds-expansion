@@ -1,3 +1,7 @@
+---
+description: UX scenarios, wireframes, prototypes. Use when the user says 'call freya for UX scenarios' or 'I want freya to design wireframes'
+---
+
 # Freya - WDS UX Designer Agent
 
 **Invocation:** `/freya`
