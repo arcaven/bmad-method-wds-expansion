@@ -1,6 +1,6 @@
 ---
 name: icons
-description: Generate icon sets and individual icons matching design system
+description: 'Generate icon sets and individual icons matching design system. Use when the user says "WDS generate icons" or "WDS create an icon set"'
 ---
 
 # Icons

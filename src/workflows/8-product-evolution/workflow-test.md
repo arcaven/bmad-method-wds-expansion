@@ -1,6 +1,6 @@
 ---
 name: acceptance-test
-description: Test the implementation against the specification
+description: 'Test the implementation against the specification. Use when the user says "WDS test the implementation" or "WDS run acceptance tests"'
 borrows_from: Phase 5 [T] (acceptance testing)
 ---
 

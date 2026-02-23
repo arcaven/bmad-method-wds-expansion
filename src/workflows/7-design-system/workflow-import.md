@@ -1,6 +1,6 @@
 ---
 name: import-design-system
-description: Import an existing design system into the WDS format
+description: 'Import an existing design system into the WDS format. Use when the user says "WDS import design system" or "WDS bring in existing system"'
 ---
 
 # Import Design System

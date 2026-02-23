@@ -1,6 +1,6 @@
 ---
 name: acceptance-testing
-description: Design and run acceptance tests from specification criteria
+description: 'Design and run acceptance tests from specification criteria. Use when the user says "WDS run acceptance tests" or "WDS test the implementation"'
 ---
 
 # [T] Acceptance Testing — Design & Run Tests from Spec Criteria

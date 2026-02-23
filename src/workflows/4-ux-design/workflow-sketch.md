@@ -1,6 +1,6 @@
 ---
 name: 'workflow-sketch'
-description: 'Analyze user-provided sketches (photos, screenshots, wireframes) and translate them into structured page specifications.'
+description: 'Analyze user-provided sketches (photos, screenshots, wireframes) and translate them into structured page specifications. Use when the user says "WDS analyze sketch" or "WDS interpret sketches"'
 ---
 
 # [K] Share Sketches — Interpret User Sketches

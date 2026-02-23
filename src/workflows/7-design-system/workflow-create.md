@@ -1,6 +1,6 @@
 ---
 name: create-design-system
-description: Build a new design system or add components from specifications
+description: 'Build a new design system or add components from specifications. Use when the user says "WDS create design system" or "WDS add components"'
 ---
 
 # Create Design System

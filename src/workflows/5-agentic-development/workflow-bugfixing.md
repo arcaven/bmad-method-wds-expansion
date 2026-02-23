@@ -1,6 +1,6 @@
 ---
 name: bugfixing
-description: Fix bugs in existing code through structured investigation and verification
+description: 'Fix bugs in existing code through structured investigation and verification. Use when the user says "WDS fix a bug" or "WDS debug this"'
 ---
 
 # [F] Bugfixing — Fix Bugs in Existing Code

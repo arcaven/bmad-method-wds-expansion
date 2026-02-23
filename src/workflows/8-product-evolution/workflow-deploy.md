@@ -1,6 +1,6 @@
 ---
 name: deploy
-description: Create PR and deliver the improvement to the team
+description: 'Create PR and deliver the improvement to the team. Use when the user says "WDS deploy the improvement" or "WDS create a PR"'
 borrows_from: Phase 4 [H] (design delivery)
 ---
 

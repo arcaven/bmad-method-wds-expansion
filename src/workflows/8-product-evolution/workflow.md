@@ -1,6 +1,6 @@
 ---
 name: product-evolution
-description: WDS product improvement for existing projects. Use when the user says 'run WDS improvement cycle' or 'improve the WDS product'
+description: 'WDS product improvement for existing projects. Use when the user says "WDS run improvement cycle" or "WDS improve the product"'
 web_bundle: true
 ---
 

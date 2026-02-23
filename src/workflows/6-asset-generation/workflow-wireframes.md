@@ -1,6 +1,6 @@
 ---
 name: wireframes
-description: Generate outline wireframes from page specifications
+description: 'Generate outline wireframes from page specifications. Use when the user says "WDS generate wireframes" or "WDS create wireframes"'
 ---
 
 # Wireframes

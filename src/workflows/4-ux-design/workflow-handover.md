@@ -1,6 +1,6 @@
 ---
 name: handover
-description: Package complete testable flows and hand off to development
+description: 'Package complete testable flows and hand off to development. Use when the user says "WDS handoff to development" or "WDS package for delivery"'
 ---
 
 # [H] Handover — Package DD-XXX and Hand Off to BMad

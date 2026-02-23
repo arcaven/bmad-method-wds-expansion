@@ -1,6 +1,6 @@
 ---
 name: stitch-generation
-description: AI-assisted UI design using Google Stitch from specifications and sketches
+description: 'AI-assisted UI design using Google Stitch from specifications and sketches. Use when the user says "WDS use Stitch" or "WDS generate with Stitch"'
 web_bundle: true
 ---
 

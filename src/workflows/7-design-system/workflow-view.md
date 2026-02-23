@@ -1,6 +1,6 @@
 ---
 name: view-components
-description: Preview selected design system components rendered in localhost
+description: 'Preview selected design system components rendered in localhost. Use when the user says "WDS view components" or "WDS preview components"'
 ---
 
 # View Components

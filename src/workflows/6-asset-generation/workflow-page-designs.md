@@ -1,6 +1,6 @@
 ---
 name: page-designs
-description: Generate full page design compositions from specifications
+description: 'Generate full page design compositions from specifications. Use when the user says "WDS generate page designs" or "WDS create page compositions"'
 ---
 
 # Page Designs

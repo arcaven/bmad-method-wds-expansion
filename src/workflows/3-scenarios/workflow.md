@@ -1,6 +1,6 @@
 ---
 name: scenarios
-description: Transform Trigger Maps into UX scenario outlines. Use when the user says 'create UX scenarios' or 'generate scenario outlines'
+description: 'Transform Trigger Maps into UX scenario outlines. Use when the user says "WDS create UX scenarios" or "WDS generate scenario outlines"'
 web_bundle: true
 ---
 

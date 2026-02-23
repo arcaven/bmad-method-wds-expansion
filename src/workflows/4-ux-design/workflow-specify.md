@@ -1,6 +1,6 @@
 ---
 name: 'workflow-specify'
-description: 'Create a complete, implementation-ready page specification with layout, components, content, interactions, and states.'
+description: 'Create a complete, implementation-ready page specification with layout, components, content, interactions, and states. Use when the user says "WDS write specification" or "WDS create page spec"'
 ---
 
 # [P] Specify — Detail a Page Specification

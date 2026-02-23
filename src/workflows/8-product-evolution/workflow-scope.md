@@ -1,6 +1,6 @@
 ---
 name: scope-improvement
-description: Create a focused scenario for a specific product improvement
+description: 'Create a focused scenario for a specific product improvement. Use when the user says "WDS scope the improvement" or "WDS create a scenario"'
 borrows_from: Phase 3 (scenarios)
 ---
 

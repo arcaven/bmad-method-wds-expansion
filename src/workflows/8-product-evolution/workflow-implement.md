@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Code the designed improvement in a new branch
+description: 'Code the designed improvement in a new branch. Use when the user says "WDS implement this" or "WDS code the improvement"'
 borrows_from: Phase 5 (development)
 ---
 

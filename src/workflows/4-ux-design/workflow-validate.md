@@ -1,6 +1,6 @@
 ---
 name: 'workflow-validate'
-description: 'Systematically audit page specifications for completeness, consistency, and quality.'
+description: 'Systematically audit page specifications for completeness, consistency, and quality. Use when the user says "WDS validate specs" or "WDS audit specifications"'
 ---
 
 # [V] Validate — Quality Audit

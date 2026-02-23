@@ -1,6 +1,6 @@
 ---
 name: 'workflow-validate'
-description: 'Verify all Product Brief artifacts are complete, consistent, and ready for Phase 2.'
+description: 'Verify all Product Brief artifacts are complete, consistent, and ready for Phase 2. Use when the user says "WDS validate brief" or "WDS check product brief"'
 ---
 
 # Phase 1 Validation: Product Brief

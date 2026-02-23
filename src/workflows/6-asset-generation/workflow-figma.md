@@ -1,6 +1,6 @@
 ---
 name: figma-integration
-description: Code-to-Figma and Figma-to-code workflows for design review and visual iteration
+description: 'Code-to-Figma and Figma-to-code workflows for design review and visual iteration. Use when the user says "WDS export to Figma" or "WDS sync with Figma"'
 web_bundle: true
 ---
 

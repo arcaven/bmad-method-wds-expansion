@@ -1,6 +1,6 @@
 ---
 name: agentic-development
-description: WDS dev with agents. Use when the user says 'lets WDS prototype this feature' or 'I want to WDS develop'
+description: 'WDS dev with agents. Use when the user says "WDS prototype this feature" or "WDS develop"'
 web_bundle: true
 ---
 

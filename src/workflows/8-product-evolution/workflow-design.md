@@ -1,6 +1,6 @@
 ---
 name: design-solution
-description: Sketch and specify the update for a scoped improvement
+description: 'Sketch and specify the update for a scoped improvement. Use when the user says "WDS design the solution" or "WDS sketch the improvement"'
 borrows_from: Phase 4 (UX design)
 ---
 

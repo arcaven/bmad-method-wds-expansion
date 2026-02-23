@@ -1,6 +1,6 @@
 ---
 name: project-brief
-description: Define WDS project strategy. Use when the user says 'lets create a WDS project brief' or 'I want to define WDS strategy'
+description: 'Define WDS project strategy. Use when the user says "WDS create project brief" or "WDS define strategy"'
 web_bundle: true
 ---
 

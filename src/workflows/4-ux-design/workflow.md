@@ -1,6 +1,6 @@
 ---
 name: ux-design
-description: Create WDS UX specs. Use when the user says 'run WDS ux design' or 'lets create WDS ux specs'
+description: 'Create WDS UX specs. Use when the user says "WDS run ux design" or "WDS lets create ux specs"'
 web_bundle: true
 ---
 

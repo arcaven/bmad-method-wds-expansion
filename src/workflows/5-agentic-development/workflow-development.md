@@ -1,6 +1,6 @@
 ---
 name: development
-description: Write production code from approved specifications
+description: 'Write production code from approved specifications. Use when the user says "WDS write production code" or "WDS implement from spec"'
 ---
 
 # [D] Development — Write Production Code

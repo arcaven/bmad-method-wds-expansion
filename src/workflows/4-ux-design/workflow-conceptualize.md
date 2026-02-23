@@ -1,6 +1,6 @@
 ---
 name: 'workflow-conceptualize'
-description: 'Collaboratively explore what a scenario's design should achieve before committing to specific pages or layouts.'
+description: 'Collaboratively explore what a scenario's design should achieve before committing to specific pages or layouts. Use when the user says "WDS conceptualize" or "WDS explore design needs"'
 ---
 
 # [C] Conceptualize — Explore What the Design Needs

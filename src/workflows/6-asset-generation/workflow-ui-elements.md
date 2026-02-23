@@ -1,6 +1,6 @@
 ---
 name: ui-elements
-description: Generate UI components — buttons, cards, forms, navigation elements
+description: 'Generate UI components — buttons, cards, forms, navigation elements. Use when the user says "WDS generate UI elements" or "WDS create components"'
 ---
 
 # UI Elements

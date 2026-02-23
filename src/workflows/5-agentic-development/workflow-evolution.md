@@ -1,6 +1,6 @@
 ---
 name: evolution
-description: Add features to existing products through targeted changes
+description: 'Add features to existing products through targeted changes. Use when the user says "WDS add a feature" or "WDS extend the product"'
 ---
 
 # [E] Evolution — Add Features to Existing Product

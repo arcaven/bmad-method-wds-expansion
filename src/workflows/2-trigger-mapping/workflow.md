@@ -1,6 +1,6 @@
 ---
 name: trigger-mapping
-description: Effect Mapping workshop connecting business goals to user psychology. Use when the user says 'lets run trigger mapping' or 'I want to create trigger maps'
+description: 'Effect Mapping workshop connecting business goals to user psychology. Use when the user says "WDS lets run trigger mapping" or "WDS I want to create trigger maps"'
 web_bundle: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: content-creation
-description: Strategic text content generation using the 5-model framework
+description: 'Strategic text content generation using the 5-model framework. Use when the user says "WDS generate content" or "WDS create text content"'
 ---
 
 # Content Creation

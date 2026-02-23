@@ -1,6 +1,6 @@
 ---
 name: 'workflow-dream'
-description: 'The agent creates a complete scenario flow autonomously, then presents the result for user review.'
+description: 'The agent creates a complete scenario flow autonomously, then presents the result for user review. Use when the user says "WDS dream up interface" or "WDS create autonomously"'
 ---
 
 # [D] Dream Up — Agent Creates Autonomously, User Reviews

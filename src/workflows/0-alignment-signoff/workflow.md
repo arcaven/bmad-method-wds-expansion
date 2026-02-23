@@ -1,6 +1,6 @@
 ---
 name: alignment-signoff
-description: Generate stakeholder alignment documents and signoff contracts. Use when the user says 'lets create alignment' or 'I want to create a signoff document'
+description: 'Generate stakeholder alignment documents and signoff contracts. Use when the user says "WDS lets create alignment" or "WDS I want to create a signoff document"'
 web_bundle: true
 ---
 

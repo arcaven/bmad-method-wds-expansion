@@ -1,6 +1,6 @@
 ---
 name: 'workflow-visual'
-description: 'Create visual representations of page designs using external tools and integrate results back into specifications.'
+description: 'Create visual representations of page designs using external tools and integrate results back into specifications. Use when the user says "WDS visual design" or "WDS create visuals"'
 ---
 
 # [W] Visual Design — Work with Visual Tools

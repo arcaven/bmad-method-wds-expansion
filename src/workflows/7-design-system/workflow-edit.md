@@ -1,6 +1,6 @@
 ---
 name: edit-components
-description: Open design system components in Figma for visual editing
+description: 'Open design system components in Figma for visual editing. Use when the user says "WDS edit components" or "WDS open in Figma"'
 ---
 
 # Edit Components

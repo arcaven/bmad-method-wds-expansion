@@ -1,6 +1,6 @@
 ---
 name: browse-design-system
-description: Generate a disposable localhost app to explore tokens, components, and relationships
+description: 'Generate a disposable localhost app to explore tokens, components, and relationships. Use when the user says "WDS browse design system" or "WDS explore components"'
 ---
 
 # Browse Design System

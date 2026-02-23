@@ -1,6 +1,6 @@
 ---
 name: trigger-mapping-validate
-description: Validate Trigger Map documents against WDS quality standards
+description: 'Validate Trigger Map documents against WDS quality standards. Use when the user says "WDS validate trigger map" or "WDS check trigger mapping"'
 web_bundle: true
 validateWorkflow: './steps-v/step-01-target-group-coverage.md'
 ---

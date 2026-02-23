@@ -1,6 +1,6 @@
 ---
 name: 'workflow-design-system'
-description: 'Define, update, and review design system components used across page specifications.'
+description: 'Define, update, and review design system components used across page specifications. Use when the user says "WDS manage design system" or "WDS update components"'
 ---
 
 # [M] Manage Design System — Define and Update Components

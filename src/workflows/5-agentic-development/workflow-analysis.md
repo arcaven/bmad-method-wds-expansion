@@ -1,6 +1,6 @@
 ---
 name: analysis
-description: Understand an existing codebase through systematic exploration
+description: 'Understand an existing codebase through systematic exploration. Use when the user says "WDS analyze the codebase" or "WDS understand the code"'
 ---
 
 # [A] Analysis — Understand Your Own Codebase

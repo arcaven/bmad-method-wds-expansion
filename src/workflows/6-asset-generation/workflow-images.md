@@ -1,6 +1,6 @@
 ---
 name: images
-description: Generate photos, illustrations, and backgrounds from specifications
+description: 'Generate photos, illustrations, and backgrounds from specifications. Use when the user says "WDS generate images" or "WDS create photos"'
 ---
 
 # Images

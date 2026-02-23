@@ -1,6 +1,6 @@
 ---
 name: reverse-engineering
-description: Analyze any software or website to extract specifications and design patterns
+description: 'Analyze any software or website to extract specifications and design patterns. Use when the user says "WDS reverse engineer this" or "WDS extract specs"'
 ---
 
 # [R] Reverse Engineering — Any Software/Site → Specs & Extraction

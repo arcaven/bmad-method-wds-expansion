@@ -1,6 +1,6 @@
 ---
 name: project-setup
-description: Init WDS project. Use when the user says 'lets start a new WDS project' or 'I want to set up a WDS project'
+description: 'Init WDS project. Use when the user says "WDS start project" or "WDS set up project"'
 web_bundle: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: Build and manage design systems with components and tokens. Use when the user says 'lets create a design system' or 'I want to browse the design system'
+description: 'Build and manage design systems with components and tokens. Use when the user says "WDS create design system" or "WDS browse design system"'
 web_bundle: true
 ---
 

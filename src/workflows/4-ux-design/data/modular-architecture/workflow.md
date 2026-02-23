@@ -1,6 +1,6 @@
 ---
 name: Modular Component Architecture
-description: Three-tier architecture for design specs. Use when the user says 'apply modular architecture' or 'decompose this component'
+description: 'Three-tier architecture for design specs. Use when the user says "WDS apply modular architecture" or "WDS decompose this component"'
 web_bundle: true
 ---
 

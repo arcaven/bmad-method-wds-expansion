@@ -1,6 +1,6 @@
 ---
 name: agent-dialogs
-description: Create agent dialog folders for implementation tasks. Use when the user says 'lets create a dialog' or 'I want to create an agent dialog'
+description: 'Create agent dialog folders for implementation tasks. Use when the user says "WDS lets create a dialog" or "WDS I want to create an agent dialog"'
 web_bundle: true
 ---
 

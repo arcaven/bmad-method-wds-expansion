@@ -1,6 +1,6 @@
 ---
 name: videos
-description: Generate motion content and animations from specifications
+description: 'Generate motion content and animations from specifications. Use when the user says "WDS generate videos" or "WDS create animations"'
 ---
 
 # Videos

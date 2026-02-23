@@ -1,6 +1,6 @@
 ---
 name: vtc-workshop
-description: Facilitate VTC workshop connecting business goals to user needs. Use when the user says 'run VTC workshop' or 'create a value trigger chain'
+description: 'Facilitate VTC workshop connecting business goals to user needs. Use when the user says "WDS run VTC workshop" or "WDS create a value trigger chain"'
 web_bundle: true
 ---
 

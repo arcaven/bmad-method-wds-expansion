@@ -1,6 +1,6 @@
 ---
 name: asset-generation
-description: Generate wireframes, UI elements, icons, images, videos. Use when the user says 'lets generate wireframes' or 'I want to create UI assets'
+description: 'Generate wireframes, UI elements, icons, images, videos. Use when the user says "WDS lets generate wireframes" or "WDS I want to create UI assets"'
 web_bundle: true
 ---
 

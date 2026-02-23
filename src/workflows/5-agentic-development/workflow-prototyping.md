@@ -1,6 +1,6 @@
 ---
 name: prototyping
-description: Build interactive prototypes from specifications
+description: 'Build interactive prototypes from specifications. Use when the user says "WDS build a prototype" or "WDS create an interactive prototype"'
 ---
 
 # [P] Prototyping — Build Interactive Prototype from Specs

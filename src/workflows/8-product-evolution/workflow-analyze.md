@@ -1,6 +1,6 @@
 ---
 name: analyze-product
-description: Understand current product state and find improvement targets
+description: 'Understand current product state and find improvement targets. Use when the user says "WDS analyze the product" or "WDS find improvements"'
 borrows_from: Phase 3 (scenarios)
 ---
 
