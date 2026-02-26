@@ -26,12 +26,9 @@ This tutorial walks you through synthesizing your existing documentation into a 
 **Use Full Trigger Mapping instead if:**
 - ❌ Starting from scratch with no documentation
 - ❌ Documentation is minimal or non-existent
+- ❌ Need quick validation (use Suggest or Dream mode)
 
-**Use Slim Trigger Map instead if:**
-- ❌ Need quick validation (under 20 minutes)
-- ❌ Single user journey focus
-
-**Not sure which to use?** See [Lesson 2: Heritage & Evolution](lesson-02-heritage-evolution.md#three-approaches-choose-your-path)
+**Not sure which to use?** See [Lesson 2: Heritage & Evolution](lesson-02-heritage-evolution.md#two-approaches-choose-your-path)
 
 ---
 
@@ -467,7 +464,6 @@ A: Trigger Map organizes research into actionable structure, identifies gaps, va
 
 - [Lesson 2: Heritage & Evolution](lesson-02-heritage-evolution.md) - Understanding the three approaches
 - [Tutorial 06: Full Trigger Mapping](tutorial-06.md) - Starting from scratch
-- [Tutorial 06B: Slim Trigger Map](tutorial-06b-slim-trigger-map.md) - Quick validation
 - [Module 06 Overview](module-06-overview.md) - Complete module guide
 
 ---

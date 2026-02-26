@@ -180,18 +180,6 @@ Step-by-step hands-on guide to creating your complete Trigger Map with Saga thro
 
 ---
 
-### [Tutorial 06B: Create a Slim Trigger Map](tutorial-06b-slim-trigger-map.md)
-
-**Lightweight Alternative (Quick Validation)**
-
-Quick strategic validation for focused user journeys — one business goal, one target group, key driving forces.
-
-**Time:** 15-20 minutes
-**What you'll create:** Slim Trigger Map with one goal, one target group, key driving forces
-**Best for:** Smaller features, single journey, quick validation, time-constrained situations
-
----
-
 ### [Tutorial 06C: Synthesize from Documentation](tutorial-06c-documentation-synthesis.md)
 
 **Documentation Synthesis (Existing Research)**
@@ -202,7 +190,7 @@ Transform existing documentation into an actionable Trigger Map - validate and o
 **What you'll create:** Synthesized Trigger Map + gap analysis  
 **Best for:** Extensive vision docs, user research, plans, or interviews that need to be made actionable
 
-**Which tutorial should you use?** See [Lesson 2: Heritage & Evolution](lesson-02-heritage-evolution.md#three-approaches-choose-your-path) for guidance.
+**Which tutorial should you use?** See [Lesson 2: Heritage & Evolution](lesson-02-heritage-evolution.md#two-approaches-choose-your-path) for guidance.
 
 ---
 

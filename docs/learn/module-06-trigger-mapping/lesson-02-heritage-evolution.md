@@ -213,9 +213,9 @@ When all three layers are prioritized, you have perfect guidance for design:
 
 ---
 
-## Three Approaches: Choose Your Path
+## Two Approaches: Choose Your Path
 
-WDS offers three ways to apply Trigger Mapping methodology, depending on your situation:
+WDS offers two ways to create your Trigger Map, depending on whether you're starting from scratch or have existing documentation:
 
 ### 1. Full Trigger Mapping (Starting from Scratch)
 
@@ -226,41 +226,24 @@ WDS offers three ways to apply Trigger Mapping methodology, depending on your si
 - Comprehensive strategic foundation
 
 **When to use:**
-- Major product initiatives
 - No existing documentation
+- Major product initiatives
 - Complex user psychology
 - Multiple target groups
 - Long-term strategic planning
 - When you need defensible prioritization
 
-**Time investment:** 60-90 minutes  
-**Output:** Complete Trigger Map + scored feature list  
+**Three engagement modes** let you choose your speed:
+- **Workshop** — Saga facilitates, you provide insights (45-60 min)
+- **Suggest** — Saga suggests, you review each step (20-35 min)
+- **Dream** — Saga creates autonomously, you review final result (15-25 min)
+
+**Output:** Complete Trigger Map + scored feature list
 **Tutorial:** [Tutorial 06: Create Your Trigger Map](tutorial-06.md)
 
 ---
 
-### 2. Slim Trigger Map (Quick Validation)
-
-**What it is:**
-- Streamlined single-workshop approach
-- Focus on one primary business goal, target group, and their driving forces
-- Quick strategic validation
-- Essential connections only
-
-**When to use:**
-- Smaller features or iterations
-- Single user journey focus
-- Quick strategic check
-- Early-stage validation
-- Time-constrained situations
-
-**Time investment:** 15-20 minutes
-**Output:** Slim Trigger Map with one goal, one target group, key driving forces
-**Tutorial:** [Tutorial 06B: Create a Slim Trigger Map](tutorial-06b-slim-trigger-map.md)
-
----
-
-### 3. Documentation Synthesis (Existing Research)
+### 2. Documentation Synthesis (Existing Research)
 
 **What it is:**
 - Extract strategic elements from existing docs
@@ -275,8 +258,8 @@ WDS offers three ways to apply Trigger Mapping methodology, depending on your si
 - Need to make existing documentation actionable
 - Documentation is too long for anyone to read
 
-**Time investment:** 30-45 minutes  
-**Output:** Synthesized Trigger Map + gap analysis  
+**Time investment:** 30-45 minutes
+**Output:** Synthesized Trigger Map + gap analysis
 **Tutorial:** [Tutorial 06C: Synthesize from Documentation](tutorial-06c-documentation-synthesis.md)
 
 **The problem this solves:**
@@ -294,13 +277,6 @@ Organizations spend thousands on research that sits unused. 200-page reports nob
 - Stakeholders need strategic justification
 - Building long-term product strategy
 
-**Use Slim Trigger Map if:**
-- Iterating on existing features
-- One clear user journey to validate
-- Need quick strategic check
-- Early exploration phase
-- Time is very limited (under 20 minutes)
-
 **Use Documentation Synthesis if:**
 - You have vision docs, user research, or plans
 - Documentation exists but isn't being used
@@ -308,7 +284,7 @@ Organizations spend thousands on research that sits unused. 200-page reports nob
 - Want to validate strategic alignment
 - Need actionable artifact from existing investment
 
-**Pro tip:** Learn Full Trigger Mapping first (this module). Once you understand the complete process, you'll know when to use the lightweight version or documentation synthesis.
+**Note:** When you need strategic context for a scenario or content piece later, you don't create a separate map — you pick the relevant business goal, persona, and driving forces from the Trigger Map you already have.
 
 ---
 
