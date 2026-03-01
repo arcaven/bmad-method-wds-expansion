@@ -49,7 +49,7 @@ Document Phase 1 completion in the project design log - the project's memory.
 
 ### 1. Read the Current Log
 
-Read `{output_folder}/_progress/00-progress.md` to understand existing entries and format.
+Read `{output_folder}/_progress/00-design-log.md` to understand existing entries and format.
 
 ### 2. Append Progress Entry
 
@@ -58,7 +58,7 @@ Add the following under the `## Progress` section (after the last entry):
 ```
 ### [date] - Phase 1: Product Brief Complete
 
-**Agent:** Mimir (Project Brief)
+**Agent:** Saga (Product Brief)
 **Brief Level:** [standard / simplified]
 
 **Artifacts Created:**
@@ -80,7 +80,7 @@ Add the following under the `## Progress` section (after the last entry):
 Add rows to the `## Key Decisions` table for any significant choices made during Phase 1:
 
 ```
-| [date] | [decision] | Phase 1: Product Brief | Mimir + [user_name] |
+| [date] | [decision] | Phase 1: Product Brief | Saga + [user_name] |
 ```
 
 Examples of key decisions worth logging:
@@ -102,7 +102,7 @@ If no significant decisions were made, skip this section.
 Display: "**Select an Option:** [C] Continue to next step"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile} or {activityWorkflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 

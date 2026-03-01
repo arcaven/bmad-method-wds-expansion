@@ -3,7 +3,7 @@ name: 'step-17a-content-structure'
 description: 'Capture content structure principles and client vision for product pages'
 
 # File References
-nextStepFile: './step-18-content-synthesize.md'
+nextStepFile: './step-18-create-content-document.md'
 workflowFile: '../workflow.md'
 activityWorkflowFile: '../workflow.md'
 ---
@@ -78,7 +78,7 @@ Add a "Content Structure Principles" section with whatever emerged from the conv
 Display: "**Select an Option:** [C] Continue to next step"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile} or {activityWorkflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 

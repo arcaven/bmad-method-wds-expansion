@@ -1,6 +1,6 @@
 ---
 name: 'workflow-validate'
-description: 'Systematically audit page specifications for completeness, consistency, and quality. Use when the user says "WDS validate specs" or "WDS audit specifications"'
+description: 'Systematically audit page specifications for completeness, consistency, and quality.'
 ---
 
 # [V] Validate — Quality Audit
@@ -13,16 +13,12 @@ description: 'Systematically audit page specifications for completeness, consist
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
+Read design log at `{output_folder}/_progress/00-design-log.md` before starting.
 
 ### Configuration Loading
 
 1. Load project config
-2. Locate page specifications at `{output_folder}/D-UX-Design/`
+2. Locate page specifications at `{output_folder}/C-UX-Scenarios/`
 3. Begin: Load and execute `./steps-v/step-01-page-metadata.md`
 
 **Reference data:**
@@ -53,12 +49,12 @@ Execute each step in order. Each step produces a section of the validation repor
 
 ## Final Output
 
-Save validation report to `{output_folder}/D-UX-Design/validation-report.md`
+Save validation report to `{output_folder}/_progress/validation-report.md`
 
 ---
 
 ## AFTER COMPLETION
 
-1. Update design log
-2. Suggest next action
-3. Return to activity menu
+1. Append a progress entry to `{output_folder}/_progress/00-design-log.md` under `## Progress`:
+   `### [date] — Validation: [N] pages audited, [results summary]`
+2. If issues found, suggest fixing them. If all pass, suggest next logical step from the adaptive dashboard

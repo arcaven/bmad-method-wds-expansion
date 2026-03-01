@@ -1,6 +1,6 @@
 ---
 name: reverse-engineering
-description: 'Analyze any software or website to extract specifications and design patterns. Use when the user says "WDS reverse engineer this" or "WDS extract specs"'
+description: Analyze any software or website to extract specifications and design patterns
 ---
 
 # [R] Reverse Engineering — Any Software/Site → Specs & Extraction
@@ -25,11 +25,8 @@ description: 'Analyze any software or website to extract specifications and desi
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending reverse engineering dialogs
-2. If none, suggest creating one with target description
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### Essential Guides
 
@@ -63,6 +60,6 @@ Execute steps in `./steps-r/`:
 
 ## AFTER COMPLETION
 
-1. Update design log with extracted artifacts
-2. Suggest next action (feed specs into prototyping? analyze further? start development?)
-3. Return to activity menu
+1. Append a progress entry to `{output_folder}/_progress/00-design-log.md` under `## Progress`:
+   `### [date] — Reverse Engineering: [what was extracted]`
+2. Suggest next action: feed specs into prototyping, analyze further, or start development

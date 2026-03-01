@@ -67,7 +67,7 @@ Check if SEO/keyword content exists in the Content & Language document. If not, 
 ### 3. Cross-Phase Readiness
 
 - [ ] Keyword map is in a format Phase 3 (Scenarios) can reference
-- [ ] SEO priorities align with user priorities from VTC
+- [ ] SEO priorities align with user priorities from Trigger Map
 - [ ] Content structure supports keyword targeting
 
 ### 4. Report
@@ -87,7 +87,7 @@ Check if SEO/keyword content exists in the Content & Language document. If not, 
 Display: "**Select an Option:** [C] Continue to next step"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile} or {activityWorkflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 

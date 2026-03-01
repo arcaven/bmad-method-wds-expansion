@@ -118,53 +118,26 @@ cd ~/Projects
 
 ---
 
-## Lesson 04: WDS Initialization (15-20 min)
+## Lesson 04: WDS Initialization (10-15 min)
 
 *[Full lesson →](lesson-04-wds-initialization.md)*
 
-### Clone WDS Repository
+### Install WDS
 
-In terminal (in Projects folder):
-
-```bash
-cd ~/Projects  # or cd C:\Projects
-git clone https://github.com/whiteport-collective/whiteport-design-studio.git
-```
-
-- [ ] ✅ WDS cloned
-
-### Add WDS to Workspace
-
-- [ ] **File** → **Add Folder to Workspace**
-- [ ] Select `whiteport-design-studio` folder
-- [ ] ✅ Both folders in sidebar
-
-### Create Docs Structure
-
-In terminal (in YOUR project):
+In terminal (in YOUR project folder):
 
 ```bash
-cd ~/Projects/your-project-name
-
-# Mac/Linux
-mkdir -p docs/{1-project-brief,2-trigger-mapping,3-prd-platform,4-ux-design,5-design-system,6-design-deliveries,7-testing,8-ongoing-development}
-
-# Windows (if above doesn't work)
-mkdir docs
-cd docs
-mkdir 1-project-brief 2-trigger-mapping 3-prd-platform 4-ux-design 5-design-system 6-design-deliveries 7-testing 8-ongoing-development
-cd ..
+cd ~/Projects/your-project-name  # or cd C:\Projects\your-project-name
+npx whiteport-design-studio install
 ```
 
-- [ ] ✅ 8 folders in `docs/`
+- [ ] Follow the installer prompts (project type, experience level, IDE)
+- [ ] ✅ `_bmad/wds/` folder appears in your project
 
-### Activate Mimir
+### Activate an Agent
 
-- [ ] Find `whiteport-design-studio/src/modules/wds/MIMIR-WDS-ORCHESTRATOR.md`
-- [ ] Press **Ctrl+L** or **Cmd+L** (open AI chat)
-- [ ] Drag Mimir file to chat
-- [ ] Type: "Hello Mimir! I just completed setup."
-- [ ] ✅ Mimir responds!
+- [ ] Tell your AI IDE: `Read and activate the agent in _bmad/wds/agents/saga-analyst.md`
+- [ ] ✅ Saga responds and welcomes you!
 
 ---
 
@@ -173,9 +146,8 @@ cd ..
 - ✅ GitHub account & repository
 - ✅ IDE installed
 - ✅ Project cloned
-- ✅ WDS integrated
-- ✅ Docs structure created
-- ✅ Mimir activated
+- ✅ WDS installed
+- ✅ Agent activated
 
 **Next:** [Module 03: Alignment & Signoff](../module-03-alignment-signoff/module-03-overview.md)
 

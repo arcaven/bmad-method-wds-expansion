@@ -40,7 +40,7 @@ Help the user explore and define what success looks like through conversational 
 - Avoid generating content without user input
 
 ## CONTEXT BOUNDARIES:
-- Available context: Vision, positioning, VTC, business model, target users, product concept
+- Available context: Vision, positioning, Trigger Map, business model, target users, product concept
 - Focus: Measurable success criteria with primary/secondary metrics and timeline
 - Limits: Not business model changes, not competitive analysis
 - Dependencies: Steps 1-7a completed
@@ -62,14 +62,14 @@ Ask which is most important.
 ### 5. Confirm and Document
 Reflect back. Get confirmation. Document in product brief.
 
-### 6. Agent Dialog Update
+### 6. Design Log Update
 Mandatory: Append to dialog/decisions.md. Mark Step 8 complete.
 
 ### N. Present MENU OPTIONS
 Display: "**Select an Option:** [C] Continue to next step"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile} or {activityWorkflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 

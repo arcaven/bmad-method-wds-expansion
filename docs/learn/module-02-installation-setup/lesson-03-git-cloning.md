@@ -102,7 +102,7 @@ git clone https://github.com/john-designer/dog-walker-app.git
 
 ## What's Next?
 
-Project cloned! Now initialize WDS and meet Mimir.
+Project cloned! Now install WDS and start designing.
 
 **[Continue to Lesson 04: WDS Project Initialization →](lesson-04-wds-initialization.md)**
 

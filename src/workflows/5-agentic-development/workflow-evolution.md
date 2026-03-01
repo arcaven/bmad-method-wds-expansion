@@ -1,6 +1,6 @@
 ---
 name: evolution
-description: 'Add features to existing products through targeted changes. Use when the user says "WDS add a feature" or "WDS extend the product"'
+description: Add features to existing products through targeted changes
 ---
 
 # [E] Evolution — Add Features to Existing Product
@@ -21,11 +21,8 @@ description: 'Add features to existing products through targeted changes. Use wh
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending evolution dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### Essential Guides
 
@@ -62,6 +59,6 @@ Execute steps in `./steps-e/`:
 
 ## AFTER COMPLETION
 
-1. Update design log
-2. Suggest next action
-3. Return to activity menu
+1. Append a progress entry to `{output_folder}/_progress/00-design-log.md` under `## Progress`:
+   `### [date] — Evolution: [what was evolved/added]`
+2. Suggest acceptance testing (Phase 5 [T]) to validate the changes

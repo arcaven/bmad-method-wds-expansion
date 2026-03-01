@@ -1,6 +1,6 @@
 ---
 name: scenarios-validate
-description: 'Validate UX scenario outlines against WDS quality standards. Use when the user says "WDS validate scenarios" or "WDS check scenario quality"'
+description: Validate UX scenario outlines against WDS quality standards
 web_bundle: true
 validateWorkflow: './steps-v/step-01-scenario-coverage.md'
 ---
@@ -15,11 +15,8 @@ validateWorkflow: './steps-v/step-01-scenario-coverage.md'
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### Configuration Loading
 

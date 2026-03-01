@@ -120,110 +120,75 @@ When all levels are prioritized, you have perfect guidance for design:
 
 ---
 
+## Workflow Structure
+
+Phase 2 has two entry routes — from scratch or from existing documentation — that merge into the same main flow:
+
+```mermaid
+flowchart TD
+    START(["Phase 2: Trigger Mapping"]) --> ENTRY{Entry route?}
+
+    ENTRY -->|"From scratch"| OVERVIEW["Overview & Setup\nStep 01"]
+    ENTRY -->|"From existing docs"| SYNTH["Documentation Synthesis\nExtract goals, groups,\ndriving forces, priorities\nSteps 00a-00f"]
+    SYNTH --> OVERVIEW
+
+    OVERVIEW --> GOALS["Business Goals\nVision + SMART objectives\nStep 02"]
+    GOALS --> GROUPS["Target Groups\nWho needs to succeed?\nStep 03"]
+    GROUPS --> FORCES["Driving Forces\nPositive + negative triggers\nStep 04"]
+    FORCES --> PRIORITY["Prioritization\nRank goals, groups, forces\nStep 05"]
+
+    PRIORITY --> FIA["Feature Impact Analysis\nExtract features → assess impact\n→ score → generate document\nSteps 06a-06e"]
+
+    FIA --> GENERATE["Generate Trigger Map\nHub document + personas\n+ key insights + quality check\nSteps 07a-07g"]
+
+    GENERATE --> MERMAID["Mermaid Diagram\nBuild visual map incrementally\nGoals → platform → groups\n→ forces → connections → styling\nSteps 08a-08h"]
+
+    MERMAID --> FINALIZE["Finalize & Deliver\nHub doc + cross-references\n+ quality check + handover\nSteps 09a-09f"]
+
+    FINALIZE --> PHASE3(["→ Phase 3: UX Scenarios"])
+
+    START -.->|"validate / -v"| VALIDATE["Validation Mode\nTarget groups → prioritization\n→ personas → feature alignment\n→ cross-document coherence"]
+    VALIDATE -.-> REPORT["Validation Report"]
+```
+
+**Two entry routes:**
+- **From scratch** — full conversational discovery through all stages
+- **From existing documentation** — synthesize existing docs first, then fill gaps through the same stages
+
+**Key outputs:**
+- `trigger-map.md` — hub document with Mermaid diagram
+- Persona files for each target group
+- `feature-impact-analysis.md` — scored feature list
+
+---
+
 ## How It Works
 
 ### Stage 1: Business Goals (15-20 minutes)
 
 Starting question: "Looking at your product brief, what does 'winning' look like for your organization?"
 
-**Understanding Business Goals vs. Metrics**
+Business goals work at two levels:
 
-Business goals are **visionary aspirations** - what you want the business to BE, not metrics you want to hit. These are desirable, exciting outcomes that fill you with purpose.
+**Vision (Motivating, not easily quantifiable)**
+A statement that inspires and guides direction:
 
-**Common Business Goals:**
-- **Be profitable** - Financially healthy, sustainable
-- **Happy customers** - Satisfied, loyal, returning
-- **Constant customer flow** - Sustainable demand, steady growth
-- **Work smarter** - Reduce costs, less administrative burden, focus on craft
-- **Market leadership** - Recognized authority, trusted brand
+- "Become the most popular free and open source design support framework"
+- "Be the go-to partner for SMB digital transformation"
+- "Make professional UX accessible to every startup"
 
-Each visionary goal is then **measured using the SMART framework**:
+**Objectives (SMART metrics)**
+Specific, measurable targets that indicate progress toward the vision:
 
-**Example Structure:**
-```
-Business Goal: Be profitable (visionary aspiration)
-  └─ Measured by: 25% profit margin, €150K revenue by Q4 2026
+- "10,000 active designer users by 2027"
+- "100 community contributions accepted by Q4 2026"
+- "50% of users complete full 6-phase workflow"
+- "NPS score of 60+ from design professionals"
 
-Business Goal: Happy customers (visionary aspiration)
-  └─ Measured by: Maintain 4.8+ rating, 70% repeat customer rate, NPS 60+
+You'll define both levels:
 
-Business Goal: Constant customer flow (visionary aspiration)
-  └─ Measured by: 50 new customers per month, page 1 search ranking for key terms
-```
-
-**Critical Distinction:**
-- ❌ Don't say: "Business Goal: Reduce phone calls 40%" (this is a metric, not aspirational)
-- ✅ Do say: "Business Goal: Work smarter → Measured by: 40% reduction in repetitive info calls"
-
-**You'll define:**
-- **3 visionary business goals** (what winning looks like) - sometimes 4-5 if truly necessary
-- **3 objectives per goal** (how you track progress) - sometimes 4-5 if truly necessary
-
-**The 3×3 Structure:**
-
-Trigger Maps use a focused structure: **3 goals × 3 objectives = 9 total measurements**
-
-```
-Goal 1: [Visionary Aspiration]
-  Objective 1.1: [Specific, measurable]
-  Objective 1.2: [Specific, measurable]
-  Objective 1.3: [Specific, measurable]
-
-Goal 2: [Visionary Aspiration]
-  Objective 2.1: [Specific, measurable]
-  Objective 2.2: [Specific, measurable]
-  Objective 2.3: [Specific, measurable]
-
-Goal 3: [Visionary Aspiration]
-  Objective 3.1: [Specific, measurable]
-  Objective 3.2: [Specific, measurable]
-  Objective 3.3: [Specific, measurable]
-```
-
-**Why this structure:**
-- **Focus:** Forces hard prioritization - what are the 3 MOST important goals?
-- **Clarity:** Each goal has clear, measurable progress indicators
-- **Flexibility:** Can expand to 4-5 if truly necessary, but default is 3×3
-
-**Hierarchical Ordering:**
-
-Goals should be ordered by strategic priority:
-
-1. **Primary Outcome Goal** - The ultimate business success (e.g., "Become more profitable")
-2. **Prerequisite Goals** - What enables the primary goal (e.g., "Get happier customers", "Work smarter")
-
-The order itself signals priority - no need for explicit labels like "(PRIMARY)". If Goal 1 is listed first, it's the most important.
-
-**Objective Alignment:**
-
-Each objective must align with its parent goal:
-
-- **Profitability objectives:** Revenue growth, profit margin, market visibility (drives sales)
-- **Customer satisfaction objectives:** Ratings, repeat rate, service quality consistency
-- **Operational efficiency objectives:** Time savings, cost reduction, work-life balance
-
-**Example: Källa Fordonservice**
-```
-1. Become More Profitable (PRIMARY OUTCOME)
-   1.1: Maintain 20% profit margin annually
-   1.2: Grow revenue 10% year-over-year
-   1.3: Achieve Page 1 ranking (visibility drives revenue)
-
-2. Get Happier Customers (PREREQUISITE - enables profitability through loyalty)
-   2.1: Maintain 4.8+ Google rating
-   2.2: 70%+ repeat customer rate
-   2.3: Service quality consistent year-round
-
-3. Work Smarter (PREREQUISITE - enables profitability through efficiency)
-   3.1: Reduce repetitive calls by 40%
-   3.2: 70% questions answered by website
-   3.3: Healthy work-life balance maintained
-```
-
-Notice how:
-- Goal 1 is the ultimate outcome (profitability)
-- Goals 2 & 3 enable Goal 1 (customer loyalty + operational efficiency → profitability)
-- Each objective clearly belongs under its parent goal
+- Vision that motivates the team
+- Objectives with clear success metrics
 
 ### Stage 2: Target Groups (20-30 minutes)
 
@@ -286,31 +251,6 @@ Sometimes multiple contexts can overlap strategically:
 - **Value Chain Opportunity:** "35% restaurant booking rate - Provide golfers with free drink - Golfer - Want to feel taken care of / Not leave hungry"
 
 The person is the same, but their **active goals shift** with the context. Smart businesses can create value chains across contexts.
-
-**Writing Good Driving Forces: WHAT + WHY + WHEN Pattern**
-
-Good driving forces are specific, contextual, and actionable. Use this pattern:
-
-**[WHAT they want/fear] + [WHY it matters] + [WHEN/CONTEXT]**
-
-**✅ Good Examples:**
-
-- "Find immediate reassurance of capability within 30 seconds" (WHAT: reassurance, WHY: stressed/urgent, WHEN: searching on phone)
-- "Confirm specialized capability before calling" (WHAT: capability check, WHY: avoid wasted call, WHEN: planning seasonal service)
-- "Validate loyalty choice when showing website to others" (WHAT: validation, WHY: justify decision, WHEN: referral context)
-
-**❌ Too Vague:**
-
-- "Want convenience" → Too generic
-- "Want peace of mind" → What creates it?
-- "Want good experience" → What does "good" mean?
-
-**Test Your Driving Force:**
-1. Can a designer create a specific feature to address this?
-2. Does it reveal psychology beyond "wants it to work well"?
-3. Is it clear WHEN this force is active?
-
-If no to any question, add more specificity.
 
 ### Stage 4: Visual Strategy Map (15-20 minutes)
 
@@ -447,7 +387,7 @@ Bring:
 
 Your Trigger Map enables:
 
-- **Phase 3: Requirements** - Technical decisions aligned with user priorities
+- **Phase 3: UX Scenarios** - User journeys grounded in personas and driving forces
 - **Phase 4: UX Design** - Design work grounded in user psychology
 - **Development priorities** - Clear guidance on what to build first
 
@@ -485,8 +425,8 @@ See: `examples/dog-week-patterns/B-Trigger-Map/` for a complete Trigger Map with
 ## Related Resources
 
 **Method Guides:**
-- [Value Trigger Chain Guide](./value-trigger-chain-guide.md) - Extracting VTCs from Trigger Map
 - [Phase 1: Product Exploration](./phase-1-product-exploration-guide.md) - Strategic foundation (prerequisite)
+- [Phase 3: UX Scenarios Guide](./phase-3-ux-scenarios-guide.md) - User journeys from Trigger Map
 - [Phase 4: UX Design Guide](./phase-4-ux-design-guide.md) - Using Trigger Map in scenarios
 
 **Foundational Models:**

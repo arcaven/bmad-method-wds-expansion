@@ -122,7 +122,7 @@ Store as `brief_level`: complete | simplified
 **How deep should the user/market analysis go?** (Only ask if greenfield AND not simple)
 
 [A] **Full Trigger Map** (Recommended for complex) -> Phase 2 enabled
-[B] **Simplified VTC** -> VTC in Phase 1, skip Phase 2
+[B] **Simplified** -> Strategic context in Phase 1, skip Phase 2
 [C] **Skip** (Not recommended) -> Skip Phase 2
 
 Store as `strategic_analysis`: full | simplified | skip
@@ -157,14 +157,14 @@ Store all as `project_context` and `working_relationship` in outline.
 **Create folder structure:**
 1. Create root folder: `{{root_folder}}/`
 2. Create progress folder: `{{root_folder}}/_progress/`
-3. Create agent dialogs folder: `{{root_folder}}/_progress/agent-dialogs/`
+3. Create agent experiences folder: `{{root_folder}}/_progress/agent-experiences/`
 4. Create phase folders (greenfield vs brownfield)
 5. Create D-Design-System subfolders
 6. Install folder guide files from templates
 
 **Generate `{{root_folder}}/_progress/wds-project-outline.yaml`** with all configuration values.
 
-**Fill in `00-progress.md`** with initial Phase 0 entry.
+**Fill in `00-design-log.md`** with initial Phase 0 entry.
 
 ### 11. Summary & Next Steps
 

@@ -1,6 +1,6 @@
 ---
 name: implement
-description: 'Code the designed improvement in a new branch. Use when the user says "WDS implement this" or "WDS code the improvement"'
+description: Code the designed improvement in a new branch
 borrows_from: Phase 5 (development)
 ---
 
@@ -12,11 +12,8 @@ borrows_from: Phase 5 (development)
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 
 ## Steps

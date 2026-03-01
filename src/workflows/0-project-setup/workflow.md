@@ -1,6 +1,6 @@
 ---
 name: project-setup
-description: 'Init WDS project. Use when the user says "WDS start project" or "WDS set up project"'
+description: Project onboarding - determine project type, complexity, tech stack, and route to correct phase
 web_bundle: true
 ---
 
@@ -47,7 +47,7 @@ Phase 0: Project Setup
             ├─→ Tech stack (optional)
             ├─→ Component library (optional)
             ├─→ Brief level (complete/simplified)
-            ├─→ Strategic analysis (full/VTC/skip)
+            ├─→ Strategic analysis (full/simplified/skip)
             ├─→ Create folder structure
             └─→ Generate project outline
                     │
@@ -102,4 +102,4 @@ Phase 0: Project Setup
 | Tech Stack | react / vue / wordpress / etc. | Delivery format guidance |
 | Component Library | shadcn / tailwind / custom | Skip or enable Phase 5 |
 | Brief Level | complete / simplified | Depth of Phase 1 |
-| Strategic Analysis | full / simplified / skip | Full Trigger Map or VTC in brief |
+| Strategic Analysis | full / simplified / skip | Full Trigger Map or simplified in brief |

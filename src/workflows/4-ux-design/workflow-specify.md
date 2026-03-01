@@ -1,6 +1,6 @@
 ---
 name: 'workflow-specify'
-description: 'Create a complete, implementation-ready page specification with layout, components, content, interactions, and states. Use when the user says "WDS write specification" or "WDS create page spec"'
+description: 'Create a complete, implementation-ready page specification with layout, components, content, interactions, and states.'
 ---
 
 # [P] Specify — Detail a Page Specification
@@ -13,16 +13,11 @@ description: 'Create a complete, implementation-ready page specification with la
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
-
+Read design log at `{output_folder}/_progress/00-design-log.md` before starting.
 
 ## Entry
 
-Load page context from existing page structure in `{output_folder}/D-UX-Design/`.
+Load page context from the existing page specification in the scenario's page folder (`{output_folder}/C-UX-Scenarios/[NN-slug]/pages/[NN].[step]-[page-slug]/`).
 
 ## Steps
 
@@ -37,7 +32,8 @@ Execute steps in `./steps-p/`:
 | 05 | step-05-interactions.md | User interactions and behaviors |
 | 06 | step-06-states.md | Loading, error, empty states |
 | 07 | step-07-validation.md | Form validation and constraints |
-| 08 | step-08-generate-spec.md | Generate final specification document |
+| 08 | step-08-spacing-typography.md | Spacing objects and typography tokens |
+| 09 | step-09-generate-spec.md | Generate final specification document |
 
 **Reference data:**
 - `./data/object-types/` — component types and templates
@@ -49,6 +45,5 @@ Execute steps in `./steps-p/`:
 
 ## AFTER COMPLETION
 
-1. Update design log
-2. Suggest next action
-3. Return to activity menu
+1. Update design log: status → `specified`
+2. Return to the two-option transition from step-01-exploration.md (the calling step determines what comes next based on what was identified during specification)

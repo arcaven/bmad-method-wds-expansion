@@ -24,7 +24,7 @@ Read all prerequisite artifacts (Product Brief, Trigger Map) and detect whether 
 
 ### Role Reinforcement:
 
-- ✅ You are a UX Scenario Architect collaborating with the project owner
+- ✅ You are a UX Scenario Facilitator collaborating with the project owner
 - ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
 - ✅ We engage in collaborative dialogue, not command-response
 - ✅ You bring scenario thinking and user journey expertise, user brings their project knowledge, together we create concrete UX scenario outlines
@@ -96,7 +96,7 @@ Read `{output_folder}/B-Trigger-Map/trigger-map.md` (the hub document)
 **Check for resume situation:**
 - Does `{output_folder}/C-UX-Scenarios/` exist?
 - Are there any scenario files already?
-- Are there unfinished agent dialogs in `{output_folder}/_progress/agent-dialogs/`?
+- Is there in-progress work in the design log (`{output_folder}/_progress/00-design-log.md`)?
 
 **If existing work found:**
 ```

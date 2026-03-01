@@ -451,18 +451,17 @@ A scenario that only serves business (no user value) won't get used.
 ## Naming Scenarios
 
 ```
-S01-User-Registration
-S02-First-Booking
-S03-Profile-Setup
-S04-Payment-Processing
+01-felixs-quick-registration
+02-harriets-family-setup
+03-kids-daily-overview
 ```
 
-The `S##` prefix keeps them organized. The name describes the journey.
+The number indicates priority order. The name includes the **persona** and their **purpose**.
 
 **Good names:**
-- S01-User-Registration
-- S02-First-Dog-Profile
-- S03-Add-Family-Member
+- 01-felixs-quick-registration
+- 02-harriets-family-setup
+- 03-kids-daily-overview
 
 **Bad names:**
 - login-page
@@ -508,32 +507,38 @@ The detailed work (how each view looks, what happens in each step) comes in late
 
 ## What You'll Create
 
-For each scenario:
+For each scenario, Freya's 8-question dialog produces:
 
 ```markdown
-# S01-User-Registration
+# 01: Felix's Quick Registration
 
-## Current State
-Visitor on landing page, curious but uncommitted
+## Transaction (Q1)
+Create account and experience first success
 
-## Desired State
-Registered user, welcomed, ready to explore
+## Business Goal (Q2)
+BG01 - Increase trial signups by 40%
 
-## Value Check
-- User: Has an account, feels confident to proceed
-- Business: New user in activation funnel
+## User & Situation (Q3)
+Felix (Primary) — Full-stack parent, evening, skeptical but motivated
 
-## Persona
-Felix the Full-Stack
-- Driving force: "Want to try before committing"
+## Driving Forces (Q4)
+Hope: Find a simple app the family will use
+Worry: Complex onboarding that wastes time
 
-## Linear Flow
-1. Landing Page → (CTA click)
-2. Signup Form → (form submit)
-3. Welcome Screen ✓
+## Device & Starting Point (Q5 + Q6)
+Mobile — Googles "family dog care app", clicks top result
+
+## Best Outcome (Q7)
+User: Account created, feels confident
+Business: New user in activation funnel
+
+## Shortest Path (Q8)
+1. **Landing Page** — Sees value, clicks "Start Free"
+2. **Signup Form** — Enters credentials
+3. **Welcome Screen** — Greeted, ready to explore ✓
 ```
 
-Simple. Clear. Connected to strategy.
+Simple. Clear. Connected to strategy through every question.
 
 ---
 

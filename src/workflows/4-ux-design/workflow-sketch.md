@@ -1,6 +1,6 @@
 ---
 name: 'workflow-sketch'
-description: 'Analyze user-provided sketches (photos, screenshots, wireframes) and translate them into structured page specifications. Use when the user says "WDS analyze sketch" or "WDS interpret sketches"'
+description: 'Analyze user-provided sketches (photos, screenshots, wireframes) and translate them into structured page specifications.'
 ---
 
 # [K] Share Sketches — Interpret User Sketches
@@ -13,12 +13,7 @@ description: 'Analyze user-provided sketches (photos, screenshots, wireframes) a
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
-
+Read design log at `{output_folder}/_progress/00-design-log.md` before starting.
 
 ## Entry
 
@@ -41,6 +36,4 @@ Execute steps in `./steps-k/`:
 
 ## AFTER COMPLETION
 
-1. Update design log
-2. Suggest next action
-3. Return to activity menu
+After sketch analysis, the page returns to step-01-exploration.md's flow. The sketch analysis feeds into the wireframe/spec sync step — the calling step handles design log updates and transition options.

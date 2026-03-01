@@ -1,6 +1,6 @@
 ---
 name: figma-integration
-description: 'Code-to-Figma and Figma-to-code workflows for design review and visual iteration. Use when the user says "WDS export to Figma" or "WDS sync with Figma"'
+description: Code-to-Figma and Figma-to-code workflows for design review and visual iteration
 web_bundle: true
 ---
 
@@ -14,11 +14,8 @@ web_bundle: true
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 
 ## WHEN TO USE

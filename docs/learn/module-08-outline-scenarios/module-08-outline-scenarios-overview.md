@@ -151,57 +151,75 @@ What happens *within* each box (loading states, animations, validation feedback)
 ## Naming Convention
 
 ```
-S01-User-Registration
-S02-First-Booking
-S03-Profile-Setup
-S04-Payment-Processing
+01-felixs-quick-registration
+02-harriets-family-setup
+03-kids-daily-overview
 ```
 
-The `S##` prefix keeps them organized. The name describes the journey.
+The number prefix keeps them ordered by priority. The name includes the **persona** and their **purpose**.
 
 **Not:** `login-page`, `dashboard`, `settings`
 
 ---
 
-## The Freya Method
+## The 8-Question Dialog
 
-Freya helps you outline scenarios from your Trigger Map:
+Freya outlines scenarios through an 8-question dialog. Each question builds on the previous answer, creating a complete scenario outline from strategy to page flow.
 
-> "Looking at your personas, what's the first thing Harriet needs to accomplish?"
-> "What triggers would bring Felix to this point?"
-> "What does success look like for this scenario?"
+**Two modes — same 8 questions:**
+- **Conversation** (default): Freya asks, you answer. One question at a time.
+- **Suggest**: Freya answers all 8 based on your Trigger Map, then you review and adjust.
 
-She connects every scenario back to your strategic foundation.
+The questions:
+
+| # | Question | What it defines |
+|---|----------|----------------|
+| Q1 | What transaction do we need to get right? | The user purpose |
+| Q2 | Which business goal does it serve? | Strategic connection |
+| Q3 | Which user, in what situation? | Persona + context |
+| Q4 | What do they hope and fear? | Driving forces |
+| Q5 | What device? | Design approach |
+| Q6 | How do they arrive? | Entry point |
+| Q7 | Best outcome for both sides? | Success criteria |
+| Q8 | Shortest path through the site? | Linear page flow |
 
 ---
 
 ## Scenario Outline Template
 
 ```markdown
-# S01-User-Registration
+# 01: Felix's Quick Registration
 
-## Current State
-Visitor on landing page, curious but uncommitted
+## Transaction (Q1)
+Verify service availability before booking
 
-## Desired State
-Registered user, welcomed, ready to explore
+## Business Goal (Q2)
+BG01 - Increase trial signups by 40%
 
-## Value Check
-- User: Has an account, feels confident to proceed
-- Business: New user in activation funnel
+## User & Situation (Q3)
+Felix (Primary) — Full-stack parent, evening after kids asleep, skeptical but motivated
 
-## Persona
-Felix the Full-Stack
-- Driving force: "Want to try before committing"
+## Driving Forces (Q4)
+Hope: Find a simple app that the whole family will actually use
+Worry: Wasting time on another tool nobody adopts
 
-## Linear Flow
-1. Landing Page → (CTA click)
-2. Signup Form → (form submit)
-3. Welcome Screen ✓
+## Device & Starting Point (Q5 + Q6)
+Mobile — Googles "family dog care app", clicks top result
 
-## Connections
-- Feature: F03-Quick-Signup
-- Business Goal: Increase trial conversions
+## Best Outcome (Q7)
+User: Account created, feels confident this will help
+Business: New user in activation funnel, one step closer to subscription
+
+## Shortest Path (Q8)
+1. **Landing Page** — Sees value proposition, clicks "Start Free"
+2. **Signup Form** — Enters email and password
+3. **Welcome Screen** — Greeted, ready to explore ✓
+
+## Trigger Map Connections
+Persona: Felix (Primary)
+Want: Try before committing
+Fear: Complex onboarding that wastes time
+Business Goal: BG01 - Increase trial signups
 ```
 
 Error states and edge cases are documented in the page specifications, not the scenario outline.
@@ -212,11 +230,14 @@ Error states and edge cases are documented in the page specifications, not the s
 
 ```
 C-UX-Scenarios/
-└── S01-User-Registration/
-    └── scenario-overview.md
+└── 01-felixs-quick-registration/
+    ├── 01-felixs-quick-registration.md
+    ├── 1.1-landing-page/
+    ├── 1.2-signup-form/
+    └── 1.3-welcome-screen/
 ```
 
-Each scenario gets its own folder. Logical views (pages) will live inside.
+Each scenario gets its own folder. Pages use `NN.step-page-slug` naming and are created via the page outline dialog or when you jump to Phase 4 (UX Design).
 
 ---
 

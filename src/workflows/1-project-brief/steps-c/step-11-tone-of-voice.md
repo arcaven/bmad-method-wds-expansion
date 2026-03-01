@@ -3,7 +3,7 @@ name: 'step-11-tone-of-voice'
 description: 'Establish the product communication personality and style'
 
 # File References
-nextStepFile: './step-11a-create-vtc.md'
+nextStepFile: './step-12-create-product-brief.md'
 workflowFile: '../workflow.md'
 activityWorkflowFile: '../workflow.md'
 ---
@@ -40,7 +40,7 @@ Establish the product's communication personality and style for consistent UI mi
 - Avoid generating content without user input
 
 ## CONTEXT BOUNDARIES:
-- Available context: Vision, positioning, VTC, business model, users, success criteria, competitive landscape, constraints, platform strategy
+- Available context: Vision, positioning, Trigger Map, business model, users, success criteria, competitive landscape, constraints, platform strategy
 - Focus: Communication personality and microcopy style
 - Limits: Tone of Voice is for UI microcopy (buttons, labels, errors, system messages), NOT strategic content (headlines, feature descriptions, value propositions)
 - Dependencies: Steps 1-10a completed
@@ -122,7 +122,7 @@ Once confirmed, document:
 4. **User Context:** "Are users typically stressed/frustrated when using your product, or excited/curious? How should tone respond to their state?"
 5. **Differentiation:** "How do competitors communicate? Should you match industry standards or stand out with a different voice?"
 
-### 7. Agent Dialog Update
+### 7. Design Log Update
 **Mandatory:** Append to `dialog/decisions.md` if key decisions were made.
 
 **Record:**
@@ -136,7 +136,7 @@ Once confirmed, document:
 Display: "**Select an Option:** [C] Continue to next step"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile} or {activityWorkflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 

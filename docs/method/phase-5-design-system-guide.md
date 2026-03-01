@@ -221,7 +221,7 @@ WDS supports automated Figma integration via MCP server for visual design refine
 **Tools:**
 - **Figma MCP** (recommended): Automated integration via MCP server
 - **Figma**: Visual design tool for refinement
-- See: [Figma Integration Guide](../src/workflows/6-asset-generation/data/prototype-to-figma-workflow.md)
+- See: [Figma Integration Guide](../src/workflows/5-design-system/figma-integration/prototype-to-figma-workflow.md)
 
 ---
 

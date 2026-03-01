@@ -1,6 +1,6 @@
 ---
 name: analysis
-description: 'Understand an existing codebase through systematic exploration. Use when the user says "WDS analyze the codebase" or "WDS understand the code"'
+description: Understand an existing codebase through systematic exploration
 ---
 
 # [A] Analysis — Understand Your Own Codebase
@@ -21,11 +21,8 @@ description: 'Understand an existing codebase through systematic exploration. Us
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending analysis dialogs
-2. If none, suggest creating one with analysis focus
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### Essential Guides
 
@@ -59,6 +56,6 @@ Execute steps in `./steps-a/`:
 
 ## AFTER COMPLETION
 
-1. Update design log with analysis artifacts
-2. Suggest next action (feed into development? reverse engineer further? start prototyping?)
-3. Return to activity menu
+1. Append a progress entry to `{output_folder}/_progress/00-design-log.md` under `## Progress`:
+   `### [date] — Analysis: [what was analyzed, key findings]`
+2. Suggest next action: feed into development, reverse engineer further, or start prototyping

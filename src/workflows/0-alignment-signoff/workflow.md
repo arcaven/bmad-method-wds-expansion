@@ -1,6 +1,6 @@
 ---
 name: alignment-signoff
-description: 'Generate stakeholder alignment documents and signoff contracts. Use when the user says "WDS lets create alignment" or "WDS I want to create a signoff document"'
+description: Create alignment around your idea before starting the project
 web_bundle: true
 ---
 
@@ -39,11 +39,9 @@ web_bundle: true
 Load and read full config from `{project-root}/_bmad/wds/config.yaml` and resolve:
 - `project_name`, `output_folder`, `user_name`, `communication_language`
 
-### 2. Agent Dialog Gate
+### 2. Design Log
 
-1. Check `{output_folder}/_progress/agent-dialogs/` for pending alignment dialogs
-2. If pending, present with status
-3. If none, suggest creating one
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### 3. Start
 
@@ -87,7 +85,6 @@ Explore 10 alignment document sections (flexible order):
 |------|------|---------|
 | 03a | Reflect Back | Synthesize understanding, confirm |
 | 03b | Synthesize Document | Create alignment document |
-| 03c | Create VTC | Value Trigger Chain (refs `1-project-brief/vtc-workshop/`) |
 | 03d | Present for Approval | Share with stakeholders |
 
 ### Phase 4: Generate Signoff (step-04*)
@@ -139,7 +136,6 @@ Explore 10 alignment document sections (flexible order):
 ## OUTPUT
 
 - **Alignment Document**: `{output_folder}/A-Product-Brief/pitch.md`
-- **Value Trigger Chain**: `{output_folder}/A-Product-Brief/vtc-primary.yaml`
 - **Signoff Document**: `{output_folder}/A-Product-Brief/contract.md` (or `service-agreement.md` or `signoff.md`)
 
 ---

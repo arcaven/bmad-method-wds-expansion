@@ -1,6 +1,6 @@
 ---
 name: scenarios
-description: 'Transform Trigger Maps into UX scenario outlines. Use when the user says "WDS create UX scenarios" or "WDS generate scenario outlines"'
+description: Create UX scenario outlines from Trigger Map through structured micro-steps
 web_bundle: true
 ---
 
@@ -8,7 +8,7 @@ web_bundle: true
 
 **Goal:** Transform the Trigger Map into concrete UX scenario outlines — linear sunshine paths that expose all pages for design scrutiny.
 
-**Your Role:** UX Scenario Architect collaborating with the project owner. You bring scenario thinking and user journey expertise. Work together as equals.
+**Your Role:** UX Scenario Facilitator collaborating with the project owner — you ASK, the user DECIDES. You bring scenario thinking and user journey expertise. Work together as equals.
 
 ---
 
@@ -51,7 +51,7 @@ This uses **step-file architecture** for disciplined execution:
 |---|------|---------|
 | 01 | [Load Context](steps-c/step-01-load-context.md) | Read all prerequisite artifacts, detect project state |
 | 02 | [Analyze Scope](steps-c/step-02-analyze-scope.md) | Determine site type, pages, scale strategy (user checkpoint) |
-| 03 | [Build VTCs](steps-c/step-03-build-vtcs.md) | Extract Value Trigger Chains from Trigger Map |
+| 03 | [Build Strategic Context](steps-c/step-03-build-strategic-context.md) | Extract strategic context from Trigger Map |
 | 04 | [Suggest Scenarios](steps-c/step-04-suggest-scenarios.md) | Present scenario plan for approval (user checkpoint) |
 | 05 | [Outline Scenario](steps-c/step-05-outline-scenario.md) | Detail ONE scenario (loops for each) |
 | 06 | [Generate Overview](steps-c/step-06-generate-overview.md) | Create 00-ux-scenarios.md index file |
@@ -69,11 +69,9 @@ Load and read full config from `{project-root}/_bmad/wds/config.yaml` and resolv
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`
 
-### 2. Agent Dialog Gate
+### 2. Design Log
 
-1. Check `{output_folder}/_progress/agent-dialogs/` for pending scenario dialogs
-2. If pending, present with status
-3. If none, suggest creating one
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### 3. Mode Determination
 

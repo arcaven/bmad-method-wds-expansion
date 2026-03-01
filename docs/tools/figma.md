@@ -102,7 +102,7 @@ Styles: Typography
 **1. Match WDS Structure**
 - Page names: `[Scenario-Number]-[Scenario-Name] / [Page-Number]-[Page-Name]`
 - Example: `01-Customer-Onboarding / 1.2-Sign-In`
-- Mirrors `docs/C-UX-Scenarios/` structure
+- Mirrors `docs/C-Scenarios/` structure
 
 **2. Preserve Object IDs**
 - Include Object IDs in layer names
@@ -205,7 +205,7 @@ Styles: Typography
 
 **Related WDS Documentation:**
 - [Figma MCP](figma-mcp.md) - Automated integration
-- Figma Designer Guide: `workflows/6-asset-generation/data/figma-designer-guide.md`
+- Figma Designer Guide: `workflows/5-design-system/figma-integration/figma-designer-guide.md`
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: development
-description: 'Write production code from approved specifications. Use when the user says "WDS write production code" or "WDS implement from spec"'
+description: Write production code from approved specifications
 ---
 
 # [D] Development — Write Production Code
@@ -51,11 +51,8 @@ Guides in `./data/guides/` support this workflow:
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending development dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ---
 
@@ -73,8 +70,20 @@ Execute steps in `./steps-d/`:
 
 ---
 
+## DESIGN LOG REPORTING POINTS
+
+Append to the Design Loop Status table in `{output_folder}/_progress/00-design-log.md`:
+
+**On entry (step 01 complete):** `| [Scenario slug] | [NN.X] | [Page name] | building | [YYYY-MM-DD] |`
+**On completion (step 05 approved):** `| [Scenario slug] | [NN.X] | [Page name] | built | [YYYY-MM-DD] |`
+
 ## AFTER COMPLETION
 
-1. Update design log
-2. Suggest next action (acceptance testing? handover?)
-3. Return to activity menu
+Design log updated with `built` status (see above). Present the transition:
+
+<output>
+**"[page name]" is built!**
+
+1. **Run acceptance testing** — validate against the specification
+2. **Explore the next scenario step** — [next page name]
+</output>

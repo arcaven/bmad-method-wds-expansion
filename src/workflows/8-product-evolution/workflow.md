@@ -1,6 +1,6 @@
 ---
 name: product-evolution
-description: 'WDS product improvement for existing projects. Use when the user says "WDS run improvement cycle" or "WDS improve the product"'
+description: Brownfield improvements — the full WDS pipeline in miniature for existing products
 web_bundle: true
 ---
 
@@ -29,7 +29,7 @@ Phase 8 is **menu-driven**, not linear. Each activity is a compressed version of
 1. **READ COMPLETELY**: Always read the entire step file before action
 2. **FOLLOW SEQUENCE**: Execute all sections in order
 3. **WAIT FOR INPUT**: Halt at decision points and wait for user
-4. **SAVE STATE**: Update dialog tracking when completing steps
+4. **SAVE STATE**: Update design log when completing steps
 
 ---
 
@@ -41,11 +41,9 @@ Load and read full config from `{project-root}/_bmad/wds/config.yaml` and resolv
 - `project_name`, `output_folder`, `user_name`
 - `communication_language`, `document_output_language`
 
-### 2. Agent Dialog Gate
+### 2. Design Log
 
-1. Check `{output_folder}/_progress/agent-dialogs/` for pending evolution dialogs
-2. If pending, present with status
-3. If none, suggest creating one
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### 3. Activity Menu
 
@@ -62,12 +60,12 @@ What would you like to do?
 
 ### Activity Routing
 
-| Choice | Workflow File | Steps Folder | Borrows From |
-|--------|--------------|--------------|--------------|
+| Choice | Workflow File | Steps | Borrows From |
+|--------|--------------|-------|--------------|
 | [A] | workflow-analyze.md | steps-a/ | Phase 3 (scenarios) |
-| [S] | workflow-scope.md | steps-s/ | Phase 3 (scenarios) |
+| [S] | workflow-scope.md | Inline | Phase 3 (scenarios) |
 | [D] | workflow-design.md | steps-d/ | Phase 4 (UX design) |
-| [I] | workflow-implement.md | steps-i/ | Phase 5 (development) |
+| [I] | workflow-implement.md | Inline | Phase 5 (development) |
 | [T] | workflow-test.md | steps-t/ | Phase 5 [T] (testing) |
 | [P] | workflow-deploy.md | steps-p/ | Phase 4 [H] (delivery) |
 

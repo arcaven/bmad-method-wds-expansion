@@ -120,53 +120,46 @@ Each valuable transaction becomes a scenario.
 
 ---
 
-## The Three Required Elements
+## The Strategic Grounding (Q1-Q4)
 
-Every scenario needs:
+Before mapping any pages, Freya's 8-question dialog establishes the strategic grounding through the first four questions:
 
-### 1. Strategic Context
+### Q1: Transaction — What needs to happen?
 
-The strategic thread from business goal through user psychology to specific transaction, selected from your Trigger Map.
-
-```
-## Strategic Context
-- Business Goal: BG01 - 5,000 active teams
-- Persona: Harriet (Remote Team Lead)
-- Driving Forces: Fear of burnout, need for awareness
-- Transaction: Create first pulse check
-```
-
-### 2. Usage Situation
-
-**When and why would the user start this scenario?**
+The specific thing the user needs to accomplish, stated as user purpose.
 
 ```
-## Usage Situation
-Harriet has just created her team account. She's exploring what the product can do. She's motivated to try something simple that will show value quickly.
+Transaction: Create and send first pulse check to team
 ```
 
-The usage situation includes:
-- Temporal context (when in their journey)
-- Motivational state (why they're here)
-- Emotional state (how they feel)
+### Q2: Business Goal — Why does the business care?
 
-### 3. Natural Starting Point
-
-**How does the user arrive at the first screen in this scenario?**
+Direct connection to your Trigger Map business goals.
 
 ```
-## Natural Starting Point
-From: S01-Team-Setup (previous scenario completion)
-Entry: Automatically redirected to "Create Your First Pulse Check" wizard
-Alternative: Dashboard → "New Pulse Check" button (if returning later)
+Business Goal: BG01 - 5,000 active teams
+Objective: Drive trial-to-active conversion
 ```
 
-**Starting points can be:**
-- From previous scenario (most common in onboarding)
-- From email link (marketing, notifications)
-- From dashboard/main navigation (returning users)
-- From external link (invitations, sharing)
-- From search results (landing pages)
+### Q3: User & Situation — Who, where, when?
+
+The persona AND their real-life context — not just a name but a vivid picture.
+
+```
+Harriet (Primary) — Remote team lead, Monday morning before weekly meeting.
+Motivated to try something that shows value quickly. Cautiously optimistic.
+```
+
+### Q4: Driving Forces — What do they hope and fear?
+
+Visceral, specific driving forces. One sentence each.
+
+```
+Hope: Quick visibility into team health without seeming like a micromanager
+Worry: Wasting time on another tool the team won't use
+```
+
+**These four answers connect the scenario to strategy.** Q5-Q8 then define the entry point, success criteria, and page flow.
 
 ---
 
@@ -213,41 +206,44 @@ S01-First-Pulse-Check
 
 **This becomes:** S01-First-Pulse-Check
 
-### Scenario Outline (Abbreviated)
+### Scenario Outline (Q1-Q8 Format)
 
 ```markdown
-# S01-First-Pulse-Check
+# 01: Harriet's First Pulse Check
 
-## Strategic Context
-- Business Goal: BG01 - 5,000 active teams
-- Persona: Harriet (Remote Team Lead)
-- Driving Forces: Fear of burnout, awareness without micromanaging
-- Transaction: Create and send first pulse check
+## Transaction (Q1)
+Create and send first pulse check to team
 
-## Usage Situation
-Harriet has just set up her team account. She's motivated to try something simple that will show value quickly. She wants to check in with her team without seeming like she's micromanaging.
+## Business Goal (Q2)
+BG01 - 5,000 active teams
+Objective: Drive trial-to-active conversion
 
-## Natural Starting Point
-From: S01-Team-Setup (previous scenario)
-Entry: Auto-redirect after team creation → "Create Your First Pulse Check" wizard
+## User & Situation (Q3)
+Harriet (Primary) — Remote team lead, Monday morning before weekly meeting.
+Just set up her team account, motivated to try something that shows value quickly.
 
-## Current State
-On welcome screen after team setup, motivated but slightly uncertain about next steps
+## Driving Forces (Q4)
+Hope: Quick visibility into team health without seeming like a micromanager
+Worry: Wasting time on another tool the team won't use
 
-## Desired State
-First pulse check sent to team, Harriet feels productive and confident this will help
+## Device & Starting Point (Q5 + Q6)
+Desktop — Auto-redirected after team creation to "Create Your First Pulse Check"
 
-## Value Check
-- User: Checked in with team, feels proactive about team health
-- Business: User activated core feature, team members will receive first touchpoint
+## Best Outcome (Q7)
+User: Pulse check sent, feels proactive about team health
+Business: User activated core feature, team members receive first touchpoint
 
-## Linear Flow
-1. Welcome Screen → (Click "Create First Pulse Check")
-2. Pulse Check Builder → (Choose template)
-3. Customize Questions → (Review/edit)
-4. Select Recipients → (Choose team members)
-5. Schedule Send → (Send now / schedule)
-6. Confirmation Screen ✓
+## Shortest Path (Q8)
+1. **Welcome Screen** — Sees "Create First Pulse Check" prompt
+2. **Pulse Check Builder** — Chooses template, reviews questions
+3. **Select Recipients** — Picks team members
+4. **Confirmation** — Pulse check sent successfully ✓
+
+## Trigger Map Connections
+Persona: Harriet (Primary)
+Want: Team awareness without micromanaging
+Fear: Team burnout going unnoticed
+Business Goal: BG01 - 5,000 active teams
 ```
 
 ---
@@ -509,29 +505,25 @@ Freya presents scenarios in priority order with strategic reasoning:
 >
 > Should we start with S01?"
 
-**Phase 3: Build Scenario Outlines Together**
+**Phase 3: Walk Through the 8-Question Dialog**
 
-Once you select a scenario, Freya guides you through the outline:
+Once you select a scenario, Freya walks you through 8 questions — one at a time:
 
-> **Freya:** "Let's outline S01-First-Pulse-Check together. I'll start with what I know from your Trigger Map, and you fill in the details.
+> **Freya:** "Let's outline Harriet's First Pulse Check. Q1: What transaction do we need to get really right for Harriet?"
 >
-> **Strategic Context** ✓ (I have this from your Trigger Map)
-> - Business Goal: BG01 - 5,000 active teams
-> - Persona: Remote Team Leads
-> - Driver: Fear of team burnout without noticing
-> - Transaction: Create and send first pulse check
+> **You:** "Create and send her first pulse check to the team."
 >
-> **Usage Situation** - Where would Harriet be when she starts this journey? What's her motivation?"
+> **Freya:** "Q2: Which business goal does this serve?"
+>
+> **You:** "BG01 - getting 5,000 active teams."
+>
+> **Freya:** "Q3: Tell me about Harriet in this moment — who is she, where is she, what's happening?"
+>
+> **You:** "She just finished setting up her team. Monday morning before the weekly meeting. Cautiously optimistic but won't tolerate anything complicated."
+>
+> **Freya:** "Q4: What does she hope for and what does she fear?"
 
-You provide context, Freya documents it.
-
-> **You:** "She just finished setting up her team. She's motivated to try something that shows value quickly."
->
-> **Freya:** "Got it. And what's her emotional state?"
->
-> **You:** "Cautiously optimistic. She wants this to work but doesn't want to waste time if it's complicated."
->
-> **Freya:** ✓ "Usage Situation documented. Now, what's the natural starting point? How does she arrive at the first screen in this scenario?"
+Each answer shapes the next question naturally. By Q8, the scenario outline is complete.
 
 ### How Freya Ranks Scenario Suggestions
 
@@ -571,22 +563,15 @@ Freya scores potential scenarios using:
 
 ### What Freya Needs From You
 
-Freya can suggest scenarios automatically, but she needs your input for:
+Freya can answer Q1 and Q2 automatically from your Trigger Map. She needs your input for:
 
-**1. Usage Situation**
-- When/why does the user start this journey?
-- What's their emotional state?
-- What's the context?
+**Q3: The real-life situation** — Only you know when and why this persona would actually use your product.
 
-**2. Natural Starting Point**
-- How do they arrive at the first screen?
-- From another scenario? Email link? Dashboard?
-- What happened just before this?
+**Q4: Visceral driving forces** — Freya can reference your Trigger Map, but you refine the hope and worry to be specific to this transaction.
 
-**3. Linear Flow Details**
-- What are the specific logical views?
-- What triggers each transition?
-- What's the final success state?
+**Q6: How they actually arrive** — Only you know your marketing channels and discovery paths.
+
+**Q8: The page flow** — Only you know your product's structure and what screens exist.
 
 **Freya knows the "why" from your Trigger Map. You provide the "how" from your product knowledge.**
 
@@ -622,8 +607,6 @@ After suggesting scenarios, Freya asks clarifying questions:
 
 ---
 
----
-
 ## Red Flags
 
 Watch out for these signs that a scenario isn't ready:
@@ -644,25 +627,23 @@ Watch out for these signs that a scenario isn't ready:
 
 ## Practical Exercise
 
-**From your Trigger Map, identify your first scenario:**
+**From your Trigger Map, answer the first 4 questions for your top scenario:**
 
-1. What's your #1 business goal?
-2. Which persona is critical to that goal?
-3. What's their strongest driving force?
-4. What transaction would satisfy both?
-5. Where would they start this journey?
-6. What would success look like?
+1. **Q1:** What transaction do we need to get right? (user purpose, not feature name)
+2. **Q2:** Which business goal does it serve?
+3. **Q3:** Which persona, in what real-life situation?
+4. **Q4:** What do they hope and fear?
 
 **Write it down:**
 
 ```
-## Strategic Context
-- Business Goal: [Your top goal]
-- Persona: [Critical persona]
-- Driving Forces: [Top 2-3]
-- Transaction: [Specific action]
+Q1 Transaction: [What the user needs to accomplish]
+Q2 Business Goal: [Which goal from your Trigger Map]
+Q3 User & Situation: [Persona name + vivid context]
+Q4 Hope: [One sentence]
+Q4 Worry: [One sentence]
 
-## This becomes scenario: S01-[Name]
+This becomes scenario: 01-[personas-purpose]
 ```
 
 ---
@@ -673,7 +654,7 @@ Now you know:
 - ✓ What scenarios are (Lesson 1)
 - ✓ How to identify which scenarios to create (Lesson 2)
 
-Next lesson: **How to structure scenario outlines** — the template and format for documenting each scenario.
+Next lesson: **The 8-question dialog** — how Freya walks you through Q1-Q8 to create a complete scenario outline.
 
 ---
 

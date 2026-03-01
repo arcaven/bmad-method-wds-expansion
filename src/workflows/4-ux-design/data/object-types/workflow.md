@@ -1,6 +1,6 @@
 ---
 name: Object Type Router
-description: 'Analyze sketch objects and route to spec template. Use when the user says "WDS analyze this object" or "WDS route this object"'
+description: Intelligent object detection and routing system for page specification
 web_bundle: true
 ---
 

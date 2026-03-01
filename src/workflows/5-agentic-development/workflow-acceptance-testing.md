@@ -1,6 +1,6 @@
 ---
 name: acceptance-testing
-description: 'Design and run acceptance tests from specification criteria. Use when the user says "WDS run acceptance tests" or "WDS test the implementation"'
+description: Design and run acceptance tests from specification criteria
 ---
 
 # [T] Acceptance Testing — Design & Run Tests from Spec Criteria
@@ -13,11 +13,8 @@ description: 'Design and run acceptance tests from specification criteria. Use w
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending testing dialogs
-2. If none, suggest creating one with test target
-3. Load dialog context (which delivery/feature to test)
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ---
 
@@ -40,8 +37,36 @@ Execute steps in `./steps-t/`:
 
 ---
 
+## DESIGN LOG REPORTING POINT
+
+When all tests pass and the user approves, append to the Design Loop Status table in `{output_folder}/_progress/00-design-log.md`:
+
+```
+| [Scenario slug] | [NN.X] | [Page name] | approved | [YYYY-MM-DD] |
+```
+
+Do NOT skip this. The design log drives Phase 4's adaptive dashboard.
+
 ## AFTER COMPLETION
 
-1. Update design log
-2. If approved, suggest handover (Phase 4 [H]) or next iteration
-3. Return to activity menu
+**If all tests pass:**
+
+Design log updated with `approved` status (see above). Present the transition:
+
+<output>
+**"[page name]" is approved!**
+
+1. **Explore the next scenario step** — [next page name]
+2. **Design delivery** — package for development handoff (Phase 4 [H])
+</output>
+
+**If issues found:**
+
+Status stays `built`. Present:
+
+<output>
+**"[page name]" has [N] issues to fix.**
+
+1. **Fix the issues** — route to bugfixing
+2. **Explore the next scenario step** — fix later, continue designing
+</output>

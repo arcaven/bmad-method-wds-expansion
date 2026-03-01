@@ -1,6 +1,6 @@
 ---
 name: trigger-mapping
-description: 'Effect Mapping workshop connecting business goals to user psychology. Use when the user says "WDS lets run trigger mapping" or "WDS I want to create trigger maps"'
+description: Map business goals to user psychology through structured workshops
 web_bundle: true
 ---
 
@@ -51,11 +51,9 @@ Load and read full config from `{project-root}/_bmad/wds/config.yaml` and resolv
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`
 
-### 2. Agent Dialog Gate
+### 2. Design Log
 
-1. Check `{output_folder}/_progress/agent-dialogs/` for pending trigger mapping dialogs
-2. If pending, present with status
-3. If none, suggest creating one
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### 3. Mode Determination
 

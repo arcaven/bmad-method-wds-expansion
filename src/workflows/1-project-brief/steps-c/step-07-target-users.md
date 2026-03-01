@@ -41,17 +41,23 @@ Help the user define their ideal customer profile by exploring who we are design
 - 🚫 Avoid superficial user descriptions
 
 ## CONTEXT BOUNDARIES:
-- Available context: Vision, positioning, business model, VTC from previous steps
+- Available context: Vision, positioning, business model, Trigger Map from previous steps
 - Focus: User identification and behavioral profiling
 - Limits: Not detailed personas (that comes in Phase 2) — focus on who and why
 - Dependencies: Steps 1-5 (or 1-6 if B2B) completed
+
+## CONTEXT CARRY-FORWARD (READ BEFORE ASKING QUESTIONS):
+- From Step 3 (Positioning): Target segment already defined. DO NOT re-ask "who are your users?" — instead reference: "We've established your positioning targets [segment]. Now let's build behavioral profiles."
+- From Step 6 (Business Customers, if B2B): Buyer vs end-user distinction already captured. Reference it: "We defined the business buyers in the last step. Now let's focus on the end users who actually interact with the product."
+- From Trigger Map Workshop (if completed): User archetypes may exist. Use them as starting points rather than re-discovering.
+- RULE: If the user says "I already told you this," immediately acknowledge, reference the earlier answer, and ask only for NEW information not yet captured.
 
 ## Sequence of Instructions (Do not deviate, skip, or optimize)
 
 ### 1. Guide User Description
 Guide user to describe their ideal users in detail. Ask about their role, demographics, daily experience, frustrations, goals, and current solutions. Also identify any secondary users or stakeholders.
 
-### 2. Agent Dialog Update
+### 2. Design Log Update
 **Mandatory:** Update `dialog/03-users.md` before marking this step complete.
 
 Fill in: Opening question about users + user's initial response, key exchanges exploring who they are, frustrations, goals, current solutions, user scenarios captured, reflection checkpoint, primary user definition + secondary users.
@@ -62,7 +68,7 @@ Mark Step 7 complete in `dialog/progress-tracker.md` progress tracker.
 Display: "**Select an Option:** [C] Continue to Product Concept"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
@@ -81,7 +87,7 @@ ONLY WHEN target users are defined and user confirms will you then load and read
 - Primary user profile defined with behavioral depth
 - Secondary users identified if applicable
 - User confirmed the profiles match their target
-- Agent dialog updated
+- Design log updated
 
 ### ❌ SYSTEM FAILURE:
 - Accepted demographics-only user description

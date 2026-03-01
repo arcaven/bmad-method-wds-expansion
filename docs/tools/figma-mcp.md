@@ -94,7 +94,7 @@ sync:
 naming_conventions:
   page_format: "{scenario-number}-{scenario-name} / {page-number}-{page-name}"
   example: "01-Customer-Onboarding / 1.2-Sign-In"
-  source: "docs/C-UX-Scenarios/"
+  source: "docs/C-Scenarios/"
 ```
 
 ### 4. Initialize MCP Server
@@ -436,8 +436,8 @@ The extracted data was automatically converted from React/Tailwind format to str
 ## Resources
 
 **Documentation:**
-- MCP Server Integration Guide: `workflows/6-asset-generation/data/mcp-server-integration.md`
-- Prototype to Figma Workflow: `workflows/6-asset-generation/data/prototype-to-figma-workflow.md`
+- MCP Server Integration Guide: `workflows/5-design-system/figma-integration/mcp-server-integration.md`
+- Prototype to Figma Workflow: `workflows/5-design-system/figma-integration/prototype-to-figma-workflow.md`
 
 **Configuration:**
 - Example config: `.wds/figma-mcp-config.yaml`

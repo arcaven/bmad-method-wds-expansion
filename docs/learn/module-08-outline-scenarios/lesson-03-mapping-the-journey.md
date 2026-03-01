@@ -2,229 +2,165 @@
 
 ## Lesson 3: Mapping the Journey
 
-**How to structure scenario outlines for clarity and action**
+**How to structure scenario outlines using the 8-question dialog**
 
 ---
 
-## The Scenario Structure
+## The 8-Question Dialog
 
-Every scenario outline follows the same pattern:
+Every scenario outline is built through 8 strategic questions. Freya walks you through them one at a time — each answer shapes the next question naturally.
 
-1. **Strategic Context** — Strategic foundation from Trigger Map
-2. **Usage Situation** — When, why, and emotional context
-3. **Natural Starting Point** — How they arrive at first screen
-4. **Current State** — Where the user starts (location + mindset)
-5. **Desired State** — Where they end up (outcome + feeling)
-6. **Value Check** — Why this matters (user + business)
-7. **Persona** — Who is doing this
-8. **Linear Flow** — The steps in between
-9. **Connections** — Links to features and goals
+| # | Question | What it captures |
+|---|----------|-----------------|
+| Q1 | What transaction do we need to get right? | User purpose |
+| Q2 | Which business goal does it serve? | Strategic connection |
+| Q3 | Which user, in what situation? | Persona + real-life context |
+| Q4 | What do they hope and fear? | Driving forces |
+| Q5 | What device? | Design approach |
+| Q6 | How do they arrive? | Entry point + discovery |
+| Q7 | Best outcome for both sides? | Success criteria |
+| Q8 | Shortest path through the site? | Linear page flow |
 
-Let's walk through each section.
-
----
-
-## Section 1: Strategic Context
-
-**What connects this scenario to your strategic foundation?**
-
-Freya fills this in automatically from your Trigger Map. This shows the strategic path from your Trigger Map:
-
-```
-## Strategic Context
-- Business Goal: BG01 - 5,000 active teams (from Product Brief)
-- Persona: Remote Team Leads (Priority #1 from Workshop 4)
-- Driving Force: Fear of team burnout going unnoticed (Top driver)
-- Transaction: Create and send first pulse check
-```
-
-**Why this matters:**
-- Proves the scenario isn't designed in a vacuum
-- Connects to measurable business objectives
-- Addresses specific user psychology from research
-- Traces back to your Trigger Map
-
-**Freya provides this automatically** when she suggests scenarios (see Lesson 2).
+When all 8 are answered, the scenario outline writes itself.
 
 ---
 
-## Section 2: Usage Situation
+## Q1: "What transaction do we need to get really right?"
 
-**When and why does the user start this journey?**
+Start with the WHY. What's the most important thing a user needs to accomplish?
 
-Goes beyond just "where" to capture the full context:
+State as **user purpose**, not feature name.
 
-```
-## Usage Situation
-**When:** Monday morning, 15 minutes before weekly team meeting
-**Why:** Wants quick temperature check before discussing issues
-**Emotional State:** Anxious about blind spots in team morale
-**Context:** Last month missed early warning signs of burnout
-```
+- **Bad:** "Homepage and service pages"
+- **Good:** "Verify service availability before booking"
 
-**The usage situation includes:**
-- Timing (when does this typically happen?)
-- Motivation (what triggered this need right now?)
-- Emotional state (how do they feel?)
-- Context (what happened before this?)
-
-**This is different from Current State:**
-- Usage Situation = broader context and triggers
-- Current State = specific location and immediate mindset
+A **transaction** isn't just purchases. Browsing content page-by-page counts. Comparing options counts. Any meaningful journey where the user moves through the site with intent.
 
 ---
 
-## Section 3: Natural Starting Point
+## Q2: "Which business goal does it serve?"
 
-**How does the user arrive at the first screen?**
-
-Every scenario must have an entry point:
+Connect to your Trigger Map immediately. Which specific business goal and objective does this transaction advance?
 
 ```
-## Natural Starting Point
-Clicks "Create Pulse Check" from dashboard after logging in.
-Previous action: Completed S03-Team-Setup yesterday.
+Business Goal: BG01 - 5,000 active teams
+Objective: Drive trial-to-active conversion
 ```
 
-**Common natural starting points:**
-- From another scenario (S01 ends → S02 begins)
-- From email link (notification, magic link, invite)
-- From dashboard/main navigation
-- From external source (ad click, search result, direct URL)
-
-**Why this matters:**
-- Prevents "floating" scenarios with no clear entry
-- Helps identify scenario dependencies
-- Guides navigation design
-- Ensures complete user journey mapping
+This grounds the scenario in business strategy, not just user needs.
 
 ---
 
-## Section 4: Current State
+## Q3: "Which user experiences this most, and in what real-life situation?"
 
-**Where does this journey begin?**
+Identify the persona AND their context. Not just "who" but "who, where, when."
 
-Be specific. Not "user wants to sign up" but "visitor on landing page, curious but uncommitted."
+- **Bad:** "A customer looking for information"
+- **Good:** "Hasse, 55, motorhome tourist stranded in Byxelkrok with a broken vehicle during family vacation"
 
-**Good current states:**
-
-```
-- Visitor on landing page, arrived from Google ad
-- Registered user on dashboard, hasn't added any data yet
-- Family member who received an invite link, has never seen the app
-- Returning user who forgot their password, frustrated
-```
-
-**The current state includes:**
-- Physical location (what page/screen)
-- Mental state (how they feel)
-- Context (how they got here)
+Use actual personas from your Trigger Map. The situation should feel visceral and specific.
 
 ---
 
-## Section 5: Desired State
+## Q4: "What do they hope and fear?"
 
-**Where does this journey end?**
+The driving forces — hope and worry. These must be visceral and specific.
 
-Again, be specific. Include both outcome and feeling.
+- **Hope:** What they're hoping to find or achieve
+- **Worry:** What they're afraid of or want to avoid
 
-**Good desired states:**
+**One sentence max per component.** Phrases, not paragraphs.
 
-```
-- Registered user, welcomed, ready to explore
-- User with complete profile, feeling accomplished
-- Family member added to household, understanding their role
-- User back in account, relieved and continuing their task
-```
-
-**The desired state includes:**
-- Concrete outcome (what's now true)
-- Emotional state (how they feel)
-- Next action (what they can now do)
+- **Bad:** "User is interested in the product"
+- **Good:** Hope: "Find trustworthy mechanic nearby, get back on road today." Worry: "Being stranded for days, getting ripped off by unknown mechanic."
 
 ---
 
-## Section 6: Value Check
+## Q5: "What device are they on?"
 
-**Why does this journey matter?**
+Mobile, desktop, or tablet. This shapes the entire design approach.
 
-Every scenario must satisfy both user and business:
-
-```
-## Value Check
-- User: Has an account, feels confident to proceed
-- Business: New user in activation funnel
-```
-
-**User value template:**
-> "The user now [has/can/feels] [specific outcome]"
-
-**Business value template:**
-> "The business gains [specific measurable outcome]"
-
-**If you can't fill in both, question whether this scenario should exist.**
+Simple question, but it matters — a panicked tourist on mobile needs a completely different experience than a manager at their desk.
 
 ---
 
-## Section 7: Persona Connection
+## Q6: "How do they actually arrive?"
 
-**Who is doing this?**
+How the user ACTUALLY gets to the site. Be specific about discovery method.
 
-Link directly to your Trigger Map:
+- **Bad:** "User opens the website"
+- **Good:** "Googles 'car repair Öland' on mobile while parked at gas station, clicks top organic result"
 
-```
-## Persona
-Felix the Full-Stack
-- Driving force: "Want to try before committing"
-- Fear: Complex onboarding that wastes time
-```
-
-This connection matters because:
-- It guides design decisions
-- It reminds you of emotional context
-- It ensures you're designing for real people, not abstractions
+**1-2 sentences max.** Device + context + discovery method.
 
 ---
 
-## Section 8: Linear Flow
+## Q7: "What does the best possible outcome look like — for both sides?"
 
-**What's the path?**
+Mutual success — user AND business. Both specific and measurable.
 
-List the logical views in order:
+- **User Success:** Tangible outcome the user achieves
+- **Business Success:** Measurable result for the business
 
-```
-## Linear Flow
-1. Landing Page → (CTA click)
-2. Signup Form → (form submit)
-3. Email Verification Prompt → (check email)
-4. Email Link Clicked → (auto redirect)
-5. Welcome Screen ✓
-```
-
-**For each step:**
-- Name the logical view
-- Note the trigger that moves to next step
-- Mark the final step with ✓
-
-**Keep it linear.** No branches. No "if this then that."
+- **Bad:** User: "Successfully use the site" / Business: "Get more customers"
+- **Good:** User: "Confirmed mechanic fixes motorhomes, has location and hours, feels confident calling" / Business: "High-intent tourist call captured, positioned as emergency-capable, info call avoided"
 
 ---
 
-## Section 9: Connections
+## Q8: "What's the shortest path through the site?"
 
-**How does this link to your strategic foundation?**
+The linear sunshine path. Numbered steps, each with page name + what the user accomplishes.
+
+**Rules:**
+- Completely linear — ZERO "if" statements, ZERO branches
+- Minimum viable steps — can you remove any without breaking the flow?
+- Each step moves meaningfully toward success
 
 ```
-## Connections
-- Feature: F03-Quick-Signup
-- Business Goal: Increase trial conversions by 40%
-- Trigger Map: Felix → Try-Before-Buy driving force
+1. **Start Page** — Sees hero with emergency message, clicks "Vehicle Service"
+2. **Service Page** — Confirms motorhome service available, sees phone number
+3. **Contact Page** — Gets address, hours, and map directions ✓
 ```
 
-These connections ensure:
-- Nothing floats in isolation
-- Every scenario traces to business value
-- Design decisions can reference the "why"
+---
+
+## After the 8 Questions
+
+### Name the Scenario
+
+Use the persona name + purpose:
+
+```
+01: Hasse's Emergency Search
+02: Harriet's Family Setup
+03: Felix's Quick Registration
+```
+
+The number indicates priority order. The name tells you who and what.
+
+### Trigger Map Connections
+
+Explicitly link back to your strategic foundation:
+
+```
+## Trigger Map Connections
+Persona: Hasse (Primary)
+Want: Find trustworthy mechanic nearby
+Fear: Being stranded, getting ripped off
+Business Goal: BG01 - Capture high-intent service calls
+```
+
+### Pages Table
+
+List the pages that will be designed:
+
+```
+| Page | Folder | Purpose | Exit Action |
+|------|--------|---------|-------------|
+| 1.1 | 1.1-start-page/ | See value, find service | Click "Vehicle Service" |
+| 1.2 | 1.2-service-page/ | Confirm capability | Click "Contact" |
+| 1.3 | 1.3-contact-page/ | Get address + hours | Call or navigate ✓ |
+```
 
 ---
 
@@ -234,12 +170,12 @@ This is crucial to understand:
 
 **Scenario = Journey between logical views**
 ```
-Landing Page → Signup Form → Welcome Screen
+Start Page → Service Page → Contact Page
 ```
 
 **Storyboard = Transformations within a logical view**
 ```
-Signup Form: Empty → Filled → Validating → Success Animation
+Service Page: Loading → Content visible → Phone number copied
 ```
 
 | Question | Answer |
@@ -255,11 +191,10 @@ Signup Form: Empty → Filled → Validating → Success Animation
 
 Edge cases are real. They need documentation. But not in the scenario outline.
 
-**In scenario outline:**
+**In scenario outline (Q8):**
 ```
-## Linear Flow
-1. Signup Form → (submit)
-2. Welcome Screen ✓
+1. **Signup Form** — Enters email and password
+2. **Welcome Screen** — Greeted, ready to explore ✓
 ```
 
 **In page specification (Module 11):**
@@ -269,20 +204,19 @@ Edge cases are real. They need documentation. But not in the scenario outline.
 ### Email Already Exists
 - Message: "This email is already registered. [Log in instead]"
 - User action: Click link to login flow
-- Alternate path: S05-Login-Existing-User
 
 ### Network Error
 - Message: "Connection lost. Your data is saved. [Retry]"
 - User action: Click retry to resubmit
 ```
 
-The scenario outline is the sunshine path. Page specifications (Module 11) handle the shadows.
+The scenario outline is the sunshine path. Page specifications handle the shadows.
 
 **Module progression:**
-- **Module 08** (now): Outline scenarios - linear flow between screens
-- **Module 09**: Conceptual sketching - visualize each screen's default state
-- **Module 10**: Storyboarding - document state transformations within each screen
-- **Module 11**: Detailed specifications - document edge cases, error states, business rules
+- **Module 08** (now): Outline scenarios — 8-question dialog defines the journey
+- **Module 09**: Conceptual sketching — visualize each screen's default state
+- **Module 10**: Storyboarding — document state transformations within each screen
+- **Module 11**: Detailed specifications — document edge cases, error states, business rules
 
 ---
 
@@ -291,52 +225,54 @@ The scenario outline is the sunshine path. Page specifications (Module 11) handl
 Here's what a finished scenario outline looks like:
 
 ```markdown
-# S01-User-Registration
+# 01: Felix's Quick Registration
 
-## Strategic Context
-- Business Goal: BG01 - Increase trial signups by 40%
-- Persona: Felix the Full-Stack (Priority #1 from Trigger Map)
-- Driving Force: "Want to try before committing" (Top driver)
-- Transaction: Create account with minimal friction
+**Project:** Dog Walker App
+**Created:** 2026-02-26
+**Method:** Whiteport Design Studio (WDS)
 
-## Usage Situation
-**When:** Felix visits after seeing Google ad, late evening after kids are asleep
-**Why:** Motivated to find solution but skeptical of time investment
-**Emotional State:** Cautiously optimistic, won't tolerate complicated process
-**Context:** Has tried 2 other apps that were too complex
+---
 
-## Natural Starting Point
-Arrives at landing page from Google ad click.
-Previous action: Searched "family dog care app" on Google.
+## Transaction (Q1)
+Create account and experience first success with minimal friction
 
-## Current State
-Visitor on landing page, curious but uncommitted.
-Arrived from Google search for "family dog care app."
+## Business Goal (Q2)
+BG01 - Increase trial signups by 40%
+Objective: Drive visitor-to-registered conversion
 
-## Desired State
-Registered user, welcomed, ready to add their first dog profile.
-Feeling confident this app will help their family.
+## User & Situation (Q3)
+Felix (Primary) — Full-stack parent, late evening after kids asleep.
+Saw Google ad, motivated to find solution but skeptical of time investment.
 
-## Value Check
-- User: Has an account, feels confident to proceed
-- Business: New user in activation funnel, one step closer to subscription
+## Driving Forces (Q4)
+Hope: Find a simple app the whole family will actually use
+Worry: Complex onboarding that wastes his limited free time
 
-## Persona
-Felix the Full-Stack
-- Driving force: "Want to try before committing"
-- Fear: Complex onboarding that wastes time
+## Device & Starting Point (Q5 + Q6)
+Mobile — Googles "family dog care app", clicks top organic result
 
-## Linear Flow
-1. Landing Page → (Click "Start Free" CTA)
-2. Signup Form → (Submit email and password)
-3. Email Verification Prompt → (Check email, click link)
-4. Verification Complete → (Auto-redirect)
-5. Welcome Screen ✓
+## Best Outcome (Q7)
+User: Account created, feels confident this app will help the family
+Business: New user in activation funnel, one step closer to subscription
 
-## Connections
-- Feature: F03-Quick-Signup
-- Business Goal: BG01 - Increase trial signups
-- Platform: Web PWA (mobile-first)
+## Shortest Path (Q8)
+1. **Landing Page** — Sees value proposition, clicks "Start Free"
+2. **Signup Form** — Enters email and password
+3. **Welcome Screen** — Greeted, ready to add first dog profile ✓
+
+## Trigger Map Connections
+Persona: Felix (Primary)
+Want: Try before committing
+Fear: Complex onboarding that wastes time
+Business Goal: BG01 - Increase trial signups
+
+## Pages in This Scenario
+
+| Page | Folder | Purpose | Exit Action |
+|------|--------|---------|-------------|
+| 1.1 | 1.1-landing-page/ | See value, click CTA | Click "Start Free" |
+| 1.2 | 1.2-signup-form/ | Create account | Submit credentials |
+| 1.3 | 1.3-welcome-screen/ | Feel welcomed, ready to explore | Scenario complete ✓ |
 ```
 
 ---
@@ -347,32 +283,28 @@ Each scenario gets its own folder:
 
 ```
 C-UX-Scenarios/
-├── S01-User-Registration/
-│   ├── scenario-overview.md
-│   ├── 01-landing-page/
-│   ├── 02-signup-form/
-│   └── 03-welcome-screen/
-├── S02-First-Dog-Profile/
-│   ├── scenario-overview.md
+├── 01-felixs-quick-registration/
+│   ├── 01-felixs-quick-registration.md
+│   ├── 1.1-landing-page/
+│   ├── 1.2-signup-form/
+│   └── 1.3-welcome-screen/
+├── 02-harriets-family-setup/
+│   ├── 02-harriets-family-setup.md
 │   └── ...
 ```
 
-The scenario-overview.md contains what we've discussed.
-Subfolders will contain detailed page specifications (Module 11).
+The scenario file contains the 8-question outline.
+Page folders are created via Freya's page outline dialog or when you jump to Phase 4 (UX Design).
 
 ---
 
-## The Freya Method
+## Two Modes
 
-Freya helps you outline scenarios from your Trigger Map:
+Freya offers two ways to work through the 8 questions:
 
-> "Looking at your personas, what's the first thing Harriet needs to accomplish?"
+**Conversation mode** (default): Freya asks one question at a time. Your answers shape the next question naturally. Best for learning and complex scenarios.
 
-> "What triggers would bring Felix to this point?"
-
-> "What does success look like for this scenario — for Felix AND for the business?"
-
-She keeps asking "why" until every scenario connects to strategy.
+**Suggest mode**: Ask Freya to suggest, and she answers all 8 questions based on your Trigger Map and Product Brief. You review and adjust. Best when you want speed or have a clear Trigger Map.
 
 ---
 
@@ -380,11 +312,11 @@ She keeps asking "why" until every scenario connects to strategy.
 
 | Mistake | Fix |
 |---------|-----|
-| Starting with pages | Start with user goals |
-| Including branches | Keep it linear |
-| Mixing scenario and storyboard | Scenario = between views |
-| Skipping value check | Both user and business value |
-| Vague current/desired states | Be specific about location and emotion |
+| Starting with pages | Start with Q1 — the transaction |
+| Including branches in Q8 | Keep it linear — zero "if" statements |
+| Generic driving forces in Q4 | Make them visceral and specific |
+| Vague outcomes in Q7 | Both user and business must be measurable |
+| Skipping Q2 | Every scenario must connect to a business goal |
 
 ---
 
@@ -392,17 +324,17 @@ She keeps asking "why" until every scenario connects to strategy.
 
 From your Trigger Map:
 
-1. **List your personas**
-2. **For each persona, identify their primary goal**
-3. **That goal becomes a scenario**
-4. **Map the logical views they'll pass through**
-5. **Fill in the template**
+1. **Pick your highest-priority business goal**
+2. **Identify which persona is critical to that goal**
+3. **Find the transaction that satisfies both** — Q1
+4. **Walk through Q2-Q8** with Freya
+5. **Name it** using persona + purpose
 
 ---
 
 ## What's Next
 
-In the tutorial, you'll create scenario outlines for your own project. Freya will guide you through each section, asking the right questions to surface the information you need.
+In the tutorial, you'll create scenario outlines for your own project. Freya will guide you through the 8-question dialog, building each scenario from your Trigger Map.
 
 ---
 

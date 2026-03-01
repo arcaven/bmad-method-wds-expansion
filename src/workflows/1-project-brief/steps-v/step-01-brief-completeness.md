@@ -3,7 +3,7 @@ name: 'step-01-brief-completeness'
 description: 'Verify Product Brief contains all required sections'
 
 # File References
-nextStepFile: './step-02-vtc-consistency.md'
+nextStepFile: './step-02-trigger-map-consistency.md'
 workflowFile: '../workflow.md'
 activityWorkflowFile: '../workflow-validate.md'
 ---
@@ -93,7 +93,7 @@ For each section:
 Display: "**Select an Option:** [C] Continue to next step"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile} or {activityWorkflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 

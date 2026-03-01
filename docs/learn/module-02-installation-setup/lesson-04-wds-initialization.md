@@ -2,178 +2,107 @@
 
 ## Lesson 4: WDS Project Initialization
 
-**Add WDS, create structure, activate Mimir**
+**Install WDS and activate your first agent**
 
 ---
 
 ## What You'll Do
 
-- Clone WDS repository
-- Add WDS to workspace
-- Create docs structure (8 phases)
-- Activate Mimir
+- Install WDS via the CLI installer
+- Understand the folder structure
+- Activate an agent and start working
 
-**Time:** 15-20 minutes
+**Time:** 10-15 minutes
 
 ---
 
-## Step 1: Clone WDS Repository
+## Step 1: Install WDS
 
-**WDS lives separately from your project.**
-
-In terminal (make sure you're in Projects folder):
+Navigate to your project folder in the terminal:
 
 ```bash
-# Navigate to Projects
-cd ~/Projects  # Mac/Linux
-cd C:\Projects # Windows
-
-# Clone WDS
-git clone https://github.com/whiteport-collective/whiteport-design-studio.git
-```
-
-**✅ Checkpoint:** WDS cloned successfully
-
----
-
-## Step 2: Add WDS to Workspace
-
-1. **File** → **Add Folder to Workspace**
-2. Navigate to Projects folder
-3. Select `whiteport-design-studio` folder
-4. Click **"Add"**
-
-**✅ Checkpoint:** Both folders in sidebar:
-- your-project
-- whiteport-design-studio
-
----
-
-## Step 3: Create Docs Structure
-
-**What is docs?** Where all WDS specifications live. Your design source of truth.
-
-Navigate to YOUR project:
-
-```bash
-cd ~/Projects/your-project-name  # Use YOUR project name!
+cd ~/Projects/your-project-name  # Mac/Linux
 cd C:\Projects\your-project-name # Windows
 ```
 
-Create 8-phase structure:
+Run the installer:
 
 ```bash
-# Mac/Linux
-mkdir -p docs/1-project-brief
-mkdir -p docs/2-trigger-mapping
-mkdir -p docs/3-prd-platform
-mkdir -p docs/4-ux-design
-mkdir -p docs/5-design-system
-mkdir -p docs/6-design-deliveries
-mkdir -p docs/7-testing
-mkdir -p docs/8-ongoing-development
+npx whiteport-design-studio install
 ```
 
-**Windows alternative:**
-```bash
-mkdir docs
-cd docs
-mkdir 1-project-brief
-mkdir 2-trigger-mapping
-mkdir 3-prd-platform
-mkdir 4-ux-design
-mkdir 5-design-system
-mkdir 6-design-deliveries
-mkdir 7-testing
-mkdir 8-ongoing-development
-cd ..
-```
+The installer will guide you through:
+- **Project type** — What kind of product you're designing
+- **Experience level** — Beginner, Intermediate, or Expert
+- **IDE configuration** — Sets up your AI IDE automatically
 
-**✅ Checkpoint:** `docs/` folder with 8 numbered subfolders
+**✅ Checkpoint:** Installer completes, `_bmad/wds/` folder appears in your project
 
 ---
 
-## Step 4: Activate Mimir
+## Step 2: Understand the Structure
 
-### What is Mimir?
+After installation, your project has:
 
-Your WDS guide and orchestrator. He'll:
-- Assess your skill level
-- Check your setup
-- Guide your next steps
-- Connect you with specialist agents
+```
+your-project/
+├── _bmad/wds/               ← WDS system files
+│   ├── agents/              ← Agent files (.md)
+│   │   ├── saga-analyst.md
+│   │   ├── freya-ux.md
+│   ├── workflows/           ← Phase workflows
+│   ├── data/                ← Standards, frameworks
+│   ├── gems/                ← Reusable prompt components
+│   ├── templates/           ← Document templates
+│   └── config.yaml          ← Your project configuration
+├── _wds-learn/              ← Learning material (optional)
+├── docs/                    ← Design output (created by agents)
+│   ├── A-Product-Brief/
+│   ├── B-Trigger-Map/
+│   ├── C-UX-Scenarios/
+│   ├── D-Design-System/
+│   ├── E-PRD/
+│   └── _progress/
+└── .claude/instructions.md  ← IDE configuration
+```
 
-### Find Mimir
-
-In IDE sidebar:
-1. Expand `whiteport-design-studio`
-2. Expand `src` → `modules` → `wds`
-3. Find `MIMIR-WDS-ORCHESTRATOR.md`
-
-### Open AI Chat
-
-- **Windows/Linux:** Press **Ctrl+L**
-- **Mac:** Press **Cmd+L**
-- Or click chat icon
-
-### Activate
-
-1. Drag `MIMIR-WDS-ORCHESTRATOR.md` into chat
-2. OR type: `@MIMIR-WDS-ORCHESTRATOR.md`
-3. Type: "Hello Mimir! I just completed setup and I'm ready to start."
-4. Press **Enter**
-
-**✅ Checkpoint:** Mimir responds and welcomes you!
+**Key insight:** `_bmad/wds/` contains the methodology. `docs/` is where your design work lives.
 
 ---
 
-## Step 5: Answer Mimir's Questions
+## Step 3: Activate an Agent
 
-Be honest about:
-- Your skill level
-- Your project
-- How you're feeling
+WDS has three specialized agents:
 
-Mimir will:
-- Verify your installation
-- Guide your next steps
-- Connect you with specialists
+| Agent | What they do | When to use |
+|-------|-------------|-------------|
+| **Saga** | Business & Product Analyst | Product Brief, Trigger Mapping |
+| **Freya** | UX/UI Designer | Scenarios, UX Design, Visual Design |
 
-**Remember:** `@wds-mimir [your question]` anytime!
+### Start with Saga
 
----
+For a new project, start with Saga to create your Product Brief:
 
-## Quick Reference: File Structure
+Tell your AI IDE:
 
 ```
-Projects/
-├── your-project/                      ← YOUR PROJECT
-│   ├── docs/                          ← Specifications
-│   │   ├── 1-project-brief/
-│   │   ├── 2-trigger-mapping/
-│   │   ├── 3-prd-platform/
-│   │   ├── 4-ux-design/
-│   │   ├── 5-design-system/
-│   │   ├── 6-design-deliveries/
-│   │   ├── 7-testing/
-│   │   └── 8-ongoing-development/
-│   └── README.md
-│
-└── whiteport-design-studio/           ← WDS METHODOLOGY
-    └── src/modules/wds/
-        ├── agents/
-        ├── workflows/
-        ├── course/
-        └── MIMIR-WDS-ORCHESTRATOR.md
+Read and activate the agent in _bmad/wds/agents/saga-analyst.md
 ```
+
+Saga will:
+- Introduce herself
+- Scan your project for existing WDS work
+- Guide you to the right starting point
+
+**✅ Checkpoint:** Saga responds and welcomes you!
 
 ---
 
 ## Troubleshooting
 
-**Issue:** Can't find MIMIR file → Check WDS added to workspace
-**Issue:** Drag doesn't work → Use `@MIMIR-WDS-ORCHESTRATOR.md`
-**Issue:** mkdir fails → Make sure you're in your project folder
+**Issue:** `npx` command not found → Install Node.js from <https://nodejs.org>
+**Issue:** Installer fails → Make sure you're in your project folder
+**Issue:** Agent file not found → Check `_bmad/wds/agents/` folder exists
 
 ---
 
@@ -185,9 +114,8 @@ You've completed Module 02: Installation & Setup!
 - ✅ GitHub account & repository
 - ✅ IDE installed
 - ✅ Project cloned
-- ✅ WDS integrated
-- ✅ Docs structure created
-- ✅ Mimir activated
+- ✅ WDS installed
+- ✅ Agent activated
 
 **You're ready to design with WDS!**
 
@@ -197,7 +125,7 @@ You've completed Module 02: Installation & Setup!
 
 - **[Module 03: Alignment & Signoff](../module-03-alignment-signoff/module-03-overview.md)**
 - **[WDS Training Course](../00-course-overview/00-course-overview.md)**
-- **Ask Mimir:** "What should I do next?"
+- **Ask Saga:** "What should I do next?"
 
 ---
 

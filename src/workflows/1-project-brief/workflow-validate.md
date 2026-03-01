@@ -1,6 +1,6 @@
 ---
 name: 'workflow-validate'
-description: 'Verify all Product Brief artifacts are complete, consistent, and ready for Phase 2. Use when the user says "WDS validate brief" or "WDS check product brief"'
+description: 'Verify all Product Brief artifacts are complete, consistent, and ready for Phase 2.'
 ---
 
 # Phase 1 Validation: Product Brief
@@ -11,11 +11,9 @@ description: 'Verify all Product Brief artifacts are complete, consistent, and r
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
+### Design Log
 
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
+Read `{output_folder}/_progress/00-design-log.md` before starting.
 
 ### Configuration Loading
 
@@ -32,7 +30,7 @@ Execute each step in order. Each step produces a section of the final validation
 | Step | Name | Validates |
 |------|------|-----------|
 | 01 | Brief Completeness | All required sections present and filled |
-| 02 | VTC Consistency | Goals → personas → forces chain is valid |
+| 02 | Trigger Map Consistency | Goals → personas → forces chain is valid |
 | 03 | SEO Strategy | Keyword map complete, page assignments clear |
 | 04 | Content & Language | Tone, personality, guidelines coherent |
 | 05 | Visual Direction | Brand, style, references documented |

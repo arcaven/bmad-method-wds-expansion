@@ -1,6 +1,6 @@
 ---
 name: images
-description: 'Generate photos, illustrations, and backgrounds from specifications. Use when the user says "WDS generate images" or "WDS create photos"'
+description: Generate photos, illustrations, and backgrounds from specifications
 ---
 
 # Images
@@ -11,11 +11,8 @@ description: 'Generate photos, illustrations, and backgrounds from specification
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 
 ## Steps

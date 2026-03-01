@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: 'Build and manage design systems with components and tokens. Use when the user says "WDS create design system" or "WDS browse design system"'
+description: Create, import, browse, and maintain design system components and tokens
 web_bundle: true
 ---
 
@@ -29,7 +29,7 @@ Phase 7 is **menu-driven**, not linear. The user picks an activity.
 1. **READ COMPLETELY**: Always read the entire step file before action
 2. **FOLLOW SEQUENCE**: Execute all sections in order
 3. **WAIT FOR INPUT**: Halt at decision points and wait for user
-4. **SAVE STATE**: Update dialog tracking when completing steps
+4. **SAVE STATE**: Update design log when completing steps
 
 ---
 
@@ -42,11 +42,9 @@ Load and read full config from `{project-root}/_bmad/wds/config.yaml` and resolv
 - `communication_language`, `document_output_language`
 - `design_system_mode` (none / basic / full)
 
-### 2. Agent Dialog Gate
+### 2. Design Log
 
-1. Check `{output_folder}/_progress/agent-dialogs/` for pending design system dialogs
-2. If pending, present with status
-3. If none, suggest creating one
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### 3. Activity Menu
 
@@ -62,13 +60,13 @@ What would you like to do?
 
 ### Activity Routing
 
-| Choice | Workflow File | Steps Folder |
-|--------|--------------|--------------|
+| Choice | Workflow File | Steps |
+|--------|--------------|-------|
 | [C] | workflow-create.md | steps-c/ |
-| [I] | workflow-import.md | steps-i/ |
-| [V] | workflow-view.md | steps-v/ |
-| [E] | workflow-edit.md | steps-e/ |
-| [B] | workflow-browse.md | steps-b/ |
+| [I] | workflow-import.md | Inline |
+| [V] | workflow-view.md | Inline |
+| [E] | workflow-edit.md | Inline |
+| [B] | workflow-browse.md | Inline |
 
 ---
 

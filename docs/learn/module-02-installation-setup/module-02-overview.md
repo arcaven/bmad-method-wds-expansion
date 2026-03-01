@@ -26,7 +26,7 @@ This module takes you from having nothing to being fully set up with WDS, even i
 **10 minutes** | Clone your project to your computer
 
 ### [Lesson 04: WDS Project Initialization](lesson-04-wds-initialization.md)
-**15-20 minutes** | Add WDS, create docs structure, activate Mimir
+**10-15 minutes** | Install WDS, activate your first agent
 
 ---
 
@@ -47,9 +47,9 @@ Follow the lessons: [Start with Lesson 01 →](lesson-01-git-setup.md)
 - ✅ GitHub account and repository
 - ✅ IDE installed and configured
 - ✅ Project cloned to your computer
-- ✅ WDS integrated in workspace
+- ✅ WDS installed in project
 - ✅ Docs folder structure created
-- ✅ Mimir activated and ready
+- ✅ Agent activated and ready
 
 **Next:** [Module 03: Alignment & Signoff](../module-03-alignment-signoff/module-03-overview.md)
 

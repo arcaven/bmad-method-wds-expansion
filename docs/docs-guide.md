@@ -8,7 +8,7 @@ Complete documentation for Whiteport Design Studio - a design-first methodology 
 
 **New to WDS?** Start here:
 
-- **[About WDS](getting-started/about.md)** - What WDS is and why it exists (5 min)
+- **[About WDS](getting-started/about-wds.md)** - What WDS is and why it exists (5 min)
 - **[Installation](getting-started/installation.md)** - Set up WDS in your project (5 min)
 - **[Quick Start](getting-started/quick-start.md)** - Your first 5 minutes with WDS
 - **[Where to Go Next](getting-started/where-to-go-next.md)** - Choose your learning path
@@ -24,10 +24,8 @@ Complete documentation for Whiteport Design Studio - a design-first methodology 
 - **[WDS Method Overview](method/wds-method-guide.md)** - Complete methodology guide
 - **[Phase 1: Product Exploration](method/phase-1-product-exploration-guide.md)** - Strategic foundation
 - **[Phase 2: Trigger Mapping](method/phase-2-trigger-mapping-guide.md)** - User psychology & business goals
-- **[Phase 3: PRD Platform](method/phase-3-prd-platform-guide.md)** - Technical foundation
-- **[Phase 4: UX Design](method/phase-4-ux-design-guide.md)** - Scenarios & specifications
-- **[Phase 5: Design System](method/phase-5-design-system-guide.md)** - Component library (optional)
-- **[Phase 6: PRD Finalization](method/phase-6-prd-finalization-guide.md)** - PRD finalization & handoff
+- **[Phase 3: UX Scenarios](method/phase-3-ux-scenarios-guide.md)** - User journeys & scenario outlines
+- **[Phase 4: UX Design](method/phase-4-ux-design-guide.md)** - Page specifications & prototypes
 
 **These guides are tool-agnostic** - explaining the methodology regardless of how you apply it.
 
@@ -43,7 +41,6 @@ Complete documentation for Whiteport Design Studio - a design-first methodology 
 - **[Golden Circle](models/golden-circle.md)** - Simon Sinek (start with WHY)
 - **[Action Mapping](models/action-mapping.md)** - Cathy Moore (focus on what people DO)
 - **[Kathy Sierra Badass Users](models/kathy-sierra-badass-users.md)** - Kathy Sierra (make users awesome)
-- **[Value Trigger Chain](method/value-trigger-chain-guide.md)** - Whiteport method (lightweight strategic context)
 
 **These are external frameworks** with full attribution to original creators. Our methods build on these giants' shoulders.
 
@@ -63,6 +60,23 @@ Complete documentation for Whiteport Design Studio - a design-first methodology 
 - **[Module 06+](learn/)** - Continue through all phases
 
 **This course is WDS-specific** - teaching you to use Saga, Freya, and Idunn agents.
+
+---
+
+## 📋 Deliverables
+
+**What you create with WDS:** Specifications for each deliverable.
+
+- **[Product Brief](deliverables/product-brief.md)** - Strategic vision & positioning
+- **[Trigger Map](deliverables/trigger-map.md)** - User psychology & business goals
+- **[Platform PRD](deliverables/platform-prd.md)** - Technical requirements
+- **[Page Specifications](deliverables/page-specifications.md)** - Detailed page specs
+- **[Design System](deliverables/design-system.md)** - Component library
+- **[Design Delivery PRD](deliverables/design-delivery-prd.md)** - Complete handoff package
+- **[Project Pitch](deliverables/project-pitch.md)** - External presentations
+- **[Service Agreement](deliverables/service-agreement.md)** - Client contracts
+
+**These specs are universal** - defining structure regardless of how you create them.
 
 ---
 
@@ -93,7 +107,6 @@ Complete documentation for Whiteport Design Studio - a design-first methodology 
 - **[Saga WDS Analyst](getting-started/agent-activation/wds-saga-analyst.md)** - Business analysis
 - **[Freya WDS Designer](getting-started/agent-activation/wds-freya-ux.md)** - UX design
 - **[Idunn WDS PM](getting-started/agent-activation/wds-idunn-pm.md)** - Product management
-- **[Mimir Orchestrator](getting-started/agent-activation/wds-mimir.md)** - Workflow coordination
 
 ---
 
@@ -118,9 +131,9 @@ Complete documentation for Whiteport Design Studio - a design-first methodology 
 → Take the [Complete WDS Course](learn/)  
 → Follow sequential modules
 
-**See what WDS creates**
+**See what WDS creates**  
+→ Browse [Deliverables](deliverables/)  
 → Check [Examples](examples/)
-→ Browse [Quick Start](quick-start/00-start-here.md)
 
 **Start using WDS now**  
 → Follow [Getting Started](getting-started/getting-started-overview.md)  
@@ -136,19 +149,20 @@ Complete documentation for Whiteport Design Studio - a design-first methodology 
 
 ```
 docs/
-├── quick-start/          # Action-focused tutorials
-├── learn/            # WDS course (deep learning)
-├── method/               # Methodology guides (tool-agnostic)
+├── getting-started/      # Quick start guides (15 min total)
 ├── models/               # External strategic frameworks
+├── method/               # Whiteport's methodology guides
+├── learn/            # WDS-specific course (agent-driven)
+├── deliverables/         # Specifications for what you create
 ├── examples/             # Real project examples
-└── getting-started/      # Legacy getting started (redirects)
+└── README.md             # This navigation hub
 ```
 
 **Four clear purposes:**
 
-1. **quick-start/** → "Just show me how to do it" (action reference)
-2. **learn/** → "Teach me the methodology" (comprehensive course)
-3. **method/** → "How does WDS work?" (tool-agnostic guides)
+1. **models/** → "What are the foundational frameworks?" (external, attributed)
+2. **method/** → "How does WDS methodology work?" (Whiteport instruments)
+3. **learn/** → "How do I use WDS agents?" (WDS-specific)
 4. **examples/** → "Show me a real project" (reference implementation)
 
 ---
@@ -158,7 +172,7 @@ docs/
 ### Community and Support
 
 - **[Discord Community](https://discord.gg/gk8jAdXWmj)** - Get help from the community
-- **[GitHub Issues](https://github.com/bmad-code-org/bmad-method-wds-expansion/issues)** - Report bugs or request features
+- **[GitHub Issues](https://github.com/whiteport-collective/whiteport-design-studio/issues)** - Report bugs or request features
 - **[YouTube Channel](https://www.youtube.com/@WhiteportCollective)** - Video tutorials
 
 ### Additional Documentation

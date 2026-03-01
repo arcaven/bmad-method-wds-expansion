@@ -1,6 +1,6 @@
 ---
 name: bugfixing
-description: 'Fix bugs in existing code through structured investigation and verification. Use when the user says "WDS fix a bug" or "WDS debug this"'
+description: Fix bugs in existing code through structured investigation and verification
 ---
 
 # [F] Bugfixing — Fix Bugs in Existing Code
@@ -21,11 +21,8 @@ description: 'Fix bugs in existing code through structured investigation and ver
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending bugfix dialogs
-2. If none, suggest creating one with bug details
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### Essential Guides
 
@@ -62,6 +59,6 @@ Execute steps in `./steps-f/`:
 
 ## AFTER COMPLETION
 
-1. Update design log
-2. Suggest next action
-3. Return to activity menu
+1. Append a progress entry to `{output_folder}/_progress/00-design-log.md` under `## Progress`:
+   `### [date] — Bugfix: [what was fixed]`
+2. Suggest re-running acceptance testing (Phase 5 [T]) to verify the fix

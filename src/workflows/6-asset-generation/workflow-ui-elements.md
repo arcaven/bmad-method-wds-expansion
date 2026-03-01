@@ -1,6 +1,6 @@
 ---
 name: ui-elements
-description: 'Generate UI components — buttons, cards, forms, navigation elements. Use when the user says "WDS generate UI elements" or "WDS create components"'
+description: Generate UI components — buttons, cards, forms, navigation elements
 ---
 
 # UI Elements
@@ -11,11 +11,8 @@ description: 'Generate UI components — buttons, cards, forms, navigation eleme
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending activity dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 
 ## Steps

@@ -18,7 +18,7 @@ Create the physical folder structure and overview documents for the scenario bas
 
 ### Universal Rules:
 
-- 🛑 NEVER generate content without user input
+- 🛑 NEVER generate content without user input (Suggest mode) / Generate based on context and WDS patterns (Dream mode)
 - 📖 CRITICAL: Read the complete step file before taking any action
 - 🔄 CRITICAL: When loading next step with 'C', ensure entire file is read
 - 📋 YOU ARE A FACILITATOR, not a content generator
@@ -59,7 +59,7 @@ Create the physical folder structure and overview documents for the scenario bas
 
 <action>
 **Determine scenario number:**
-- Count existing scenario folders in `4-scenarios/`
+- Count existing scenario folders in `C-UX-Scenarios/`
 - If none exist, scenario_num = 1
 - Otherwise, scenario_num = (highest number + 1)
 - Store scenario_num
@@ -68,11 +68,11 @@ Create the physical folder structure and overview documents for the scenario bas
 <action>
 **Create physical folder structure:**
 
-1. Create `4-scenarios/{{scenario_num}}-{{scenario-slug}}/` directory
+1. Create `C-UX-Scenarios/{{scenario_num}}-{{scenario-slug}}/` directory
 
 **Generate 00-scenario-overview.md:**
 
-File: `4-scenarios/{{scenario_num}}-{{scenario-slug}}/00-scenario-overview.md`
+File: `C-UX-Scenarios/{{scenario_num}}-{{scenario-slug}}/00-scenario-overview.md`
 
 Content:
 ```markdown
@@ -145,7 +145,7 @@ When users arrive, they are feeling:
 
 **Generate scenario-tracking.yaml:**
 
-File: `4-scenarios/{{scenario_num}}-{{scenario-slug}}/scenario-tracking.yaml`
+File: `C-UX-Scenarios/{{scenario_num}}-{{scenario-slug}}/scenario-tracking.yaml`
 
 Content:
 ```yaml
@@ -176,7 +176,7 @@ total_pages: {{pages_list.length}}
 **Scenario {{scenario_num}}:** {{scenario_name}}
 
 **Folder:**
-- `4-scenarios/{{scenario_num}}-{{scenario-slug}}/`
+- `C-UX-Scenarios/{{scenario_num}}-{{scenario-slug}}/`
 
 **Documents:**
 - `00-scenario-overview.md` (detailed scenario metadata)
@@ -204,7 +204,8 @@ Display: "**Select an Option:** [C] Continue to Page Initialization Workshop | [
 
 #### EXECUTION RULES:
 
-- ALWAYS halt and wait for user input after presenting menu
+- **Suggest mode:** ALWAYS halt and wait for user input after presenting menu
+- **Dream mode:** Auto-proceed to next step after completing instructions. Skip menu display.
 - User can chat or ask questions — always respond and then redisplay menu options
 
 ## CRITICAL STEP COMPLETION NOTE

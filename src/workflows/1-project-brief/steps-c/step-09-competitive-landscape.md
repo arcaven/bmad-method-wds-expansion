@@ -40,7 +40,7 @@ Help user explore alternatives and discover their unfair advantage. Explore what
 - Avoid generating content without user input
 
 ## CONTEXT BOUNDARIES:
-- Available context: Vision, positioning, VTC, business model, users, success criteria
+- Available context: Vision, positioning, Trigger Map, business model, users, success criteria
 - Focus: Competitive landscape and unfair advantage
 - Limits: Not detailed feature comparison - strategic positioning
 - Dependencies: Steps 1-8 completed
@@ -65,14 +65,14 @@ What if the main alternative just adds your key feature?
 ### 6. Synthesize and Document
 Reflect back. Get confirmation. Document in product brief.
 
-### 7. Agent Dialog Update
+### 7. Design Log Update
 Append to dialog/decisions.md. Mark Step 9 complete.
 
 ### N. Present MENU OPTIONS
 Display: "**Select an Option:** [C] Continue to next step"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile} or {activityWorkflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 

@@ -1,6 +1,6 @@
 ---
 name: prototyping
-description: 'Build interactive prototypes from specifications. Use when the user says "WDS build a prototype" or "WDS create an interactive prototype"'
+description: Build interactive prototypes from specifications
 ---
 
 # [P] Prototyping — Build Interactive Prototype from Specs
@@ -13,11 +13,8 @@ description: 'Build interactive prototypes from specifications. Use when the use
 
 ## INITIALIZATION
 
-### Agent Dialog Gate
-
-1. Check for pending prototype dialogs
-2. If none, suggest creating one
-3. Load dialog context
+### Design Log
+Read `{output_folder}/_progress/00-design-log.md`. Check Current and Backlog for context.
 
 ### Essential Guides
 
@@ -59,8 +56,29 @@ Execute steps in `./steps-p/`:
 
 ---
 
+## DESIGN LOG REPORTING POINTS
+
+This workflow has TWO reporting points. Both append to the Design Loop Status table in `{output_folder}/_progress/00-design-log.md`:
+
+**1. On entry (step 1 complete):** Append status `building`
+```
+| [Scenario slug] | [NN.X] | [Page name] | building | [YYYY-MM-DD] |
+```
+
+**2. On completion (step 5 approved):** Append status `built`
+```
+| [Scenario slug] | [NN.X] | [Page name] | built | [YYYY-MM-DD] |
+```
+
+Do NOT skip these updates. The design log drives Phase 4's adaptive dashboard.
+
 ## AFTER COMPLETION
 
-1. Update design log
-2. Suggest next action (handover? next scenario?)
-3. Return to activity menu
+Design log already updated with `built` status (see above). Present the transition:
+
+<output>
+**"[page name]" is built!**
+
+1. **Run acceptance testing** — validate against the specification
+2. **Explore the next scenario step** — [next page name]
+</output>

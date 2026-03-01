@@ -10,7 +10,7 @@ workflowFile: '../workflow.md'
 
 ## STEP GOAL:
 
-Complete Phase 3 by presenting a final summary, guiding the user through design intent selection for each scenario, explaining what comes next in Phase 4, and updating any agent dialogs.
+Complete Phase 3 by presenting a final summary, guiding the user through design intent selection for each scenario, explaining what comes next in Phase 4, and updating the design log.
 
 ## MANDATORY EXECUTION RULES (READ FIRST):
 
@@ -24,7 +24,7 @@ Complete Phase 3 by presenting a final summary, guiding the user through design 
 
 ### Role Reinforcement:
 
-- ✅ You are a UX Scenario Architect collaborating with the project owner
+- ✅ You are a UX Scenario Facilitator collaborating with the project owner
 - ✅ If you already have been given a name, communication_style and identity, continue to use those while playing this new role
 - ✅ We engage in collaborative dialogue, not command-response
 - ✅ You bring scenario thinking and user journey expertise, user brings their project knowledge, together we create concrete UX scenario outlines
@@ -102,7 +102,7 @@ Your scenarios are ready for design. How would you like to approach each?
 
 **Approaches:**
 [K] Sketch — I will draw it myself, agent interprets later
-[C] Conceptualize — Let us explore what the design needs together
+[C] Discuss — Creative dialog for page design
 [S] Suggest — Agent proposes step by step, I confirm each
 [D] Dream Up — Agent creates the whole flow, I review the result
 [L] Later — Decide when I start Phase 4
@@ -121,7 +121,7 @@ Explain to user:
 
 **Phase 4: UX Design** takes each scenario outline and designs it using your chosen approach:
 - **Sketch** scenarios wait for your drawings
-- **Conceptualize** scenarios start with collaborative exploration
+- **Discuss** scenarios start with a creative dialog for each page
 - **Suggest** scenarios let the agent propose step by step
 - **Dream Up** scenarios let the agent create autonomously
 
@@ -130,9 +130,9 @@ You can always change approach in Phase 4.
 Would you like to continue to Phase 4, or take a break?
 ```
 
-### 4. Update Agent Dialog (If Exists)
+### 4. Update Design Log (If Exists)
 
-If tracking via agent dialog:
+If tracking via design log:
 - Mark Phase 3 as complete
 - Log scenario count and quality scores
 - Note any user adjustments made during the process
@@ -166,7 +166,7 @@ ONLY WHEN [M main menu option] is selected and [design intent captured for all s
 - Design intent selection offered for each scenario
 - Design intent and status saved to scenario frontmatter
 - Phase 4 approaches clearly explained
-- Agent dialog updated if applicable
+- Design log updated if applicable
 - User informed of next steps
 - Menu presented and user input handled correctly
 
@@ -176,6 +176,6 @@ ONLY WHEN [M main menu option] is selected and [design intent captured for all s
 - Skipping design intent selection
 - Not saving design intent to scenario files
 - Ending without explaining next steps
-- Not updating agent dialog when one exists
+- Not updating design log when one exists
 
 **Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.

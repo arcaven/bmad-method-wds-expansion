@@ -47,7 +47,7 @@ Present the completed alignment document and guide the user through the stakehol
 
 ## CONTEXT BOUNDARIES:
 
-- Available context: Complete alignment document (and VTC if created)
+- Available context: Complete alignment document (and strategic context if created)
 - Focus: Presentation and approval process
 - Limits: Do not create signoff document until alignment is accepted
 - Dependencies: step-03b (and optionally step-03c) must be completed
@@ -95,7 +95,7 @@ Proceed to Project Brief workflow
 Display: "**Select an Option:** [C] Continue to step-04a-offer-signoff"
 
 #### Menu Handling Logic:
-- IF C: Update agent dialog, then load, read entire file, then execute {nextStepFile}
+- IF C: Load, read entire file, then execute {nextStepFile}
 - IF M: Return to {workflowFile}
 - IF Any other comments or queries: help user respond then [Redisplay Menu Options]
 
