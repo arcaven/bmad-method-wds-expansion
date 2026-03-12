@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "bmad-method-wds-expansion",
+  "name": "bmad-wds",
   "version": "0.3.0",
   "description": "Whiteport Design Studio - BMAD expansion module for strategic design methodology",
   "keywords": [
@@ -16,7 +16,7 @@
     "url": "git+https://github.com/bmad-code-org/bmad-method-wds-expansion.git"
   },
   "license": "MIT",
-  "author": "Whiteport Collective",
+  "author": "Mårten Angner",
   "scripts": {
     "format:check": "prettier --check \"**/*.{js,cjs,mjs,json,yaml}\"",
     "format:fix": "prettier --write \"**/*.{js,cjs,mjs,json,yaml}\"",
@@ -76,5 +76,8 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
