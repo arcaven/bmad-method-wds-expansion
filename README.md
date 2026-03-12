@@ -1,5 +1,9 @@
 # Whiteport Design Studio (WDS) — BMAD Expansion Module
 
+[![Version](https://img.shields.io/npm/v/bmad-wds?color=blue&label=version)](https://www.npmjs.com/package/bmad-wds)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/gk8jAdXWmj)
+
 **Strategic design methodology for creating products users love, powered by AI agents.**
 
 This is the BMAD expansion module version of WDS. For the standalone installer, see [whiteport-design-studio](https://github.com/whiteport-collective/whiteport-design-studio).
